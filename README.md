@@ -1,6 +1,6 @@
 VinceRP
 ======================================
-An easy to use, easy to extend reactive framework for Swift. 
+An easy to use, easy to extend reactive framework for Swift.
 
 Easy to use
 -------------
@@ -13,7 +13,7 @@ import vincerp
 let source1 = reactive(1)
 let source2 = reactive(2)
 
-// define a calculated variable 
+// define a calculated variable
 let sum = definedAs{ source1* + source2* }
 
 // sum* is just a syntactic sugar for sum.value()
@@ -76,7 +76,7 @@ If you're interested in errors:
 import vincerp
 
 let source = reactive(1)
-                    
+
 source.onChange(true) { v in
     print(v)
 }.onError { e in
@@ -94,31 +94,31 @@ source <- NSError(domain: "test error", code: 1, userInfo: nil)
 Easy to extend
 -------------
 
- It's pretty easy to add UKit extensions using the amazing [ReactivePropertyGenerator](http://github-link-here) :
+ It's pretty easy to add UKit extensions using the amazing [ReactivePropertyGenerator](https://github.com/bvic23/VinceRP/blob/master/vincerp/Util/ReactivePropertyGenerator.swift) :
 
 ```swift
 public extension UILabel {
-    
+
     public var reactiveText: Rx<String> {
         get {
             return reactiveProperty(forProperty: "text", initValue: self.text!)
         }
-        
+
         set {
             newValue.onChange {
                 self.text = $0
             }
         }
     }
-    
+
 }
 ```
 
-As you can see in the more complex [example](http://github-link-here)  - called BasicExample :-) - you can add your own convenience extensions as well:
+As you can see in the more complex [example](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample)  - called BasicExample :-) - you can add your own convenience extensions as well:
 
 ```swift
 extension UITextField {
-   
+
     var isValidEmail: Bool {
         return definedAs {
             let range = self.reactiveText.value().rangeOfString(emailRegEx, options:.RegularExpressionSearch)
@@ -131,7 +131,7 @@ extension UITextField {
             self.reactiveText*.trim().length > 0
         }*
     }
-    
+
 }
 ```
 
