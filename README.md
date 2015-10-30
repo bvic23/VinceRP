@@ -21,10 +21,9 @@ The framework supports iOS & Mac for now.
 1. Add VinceRP to your
 [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile): `github "bvic23/VinceRP"`
 
-2. Update & install carthage:
-`brew update && brew install carthage`
+2. Download and install [the latest Carthage from binary](https://github.com/Carthage/Carthage/releases). (Homebrew is still on 0.8 which is outdated.)
 
-3. Set it up as a dependency to your project:
+3. Set VinceRP up as a dependency to your project:
 `carthage update --platform iOS, Mac`
 
 #Easy to use
