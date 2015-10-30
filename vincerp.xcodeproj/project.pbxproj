@@ -63,6 +63,8 @@
 		02C8B38A1BE3F81600203CF2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3841BE3F7FE00203CF2 /* Quick.framework */; };
 		02C8B38B1BE3F89C00203CF2 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* vincerp.framework */; };
 		02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
+		02C8B3961BE3FD6C00203CF2 /* vincerp.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* vincerp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C8B3971BE3FD7200203CF2 /* vincerp.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* vincerp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
@@ -601,6 +603,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C8B3971BE3FD7200203CF2 /* vincerp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +611,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C8B3961BE3FD6C00203CF2 /* vincerp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
