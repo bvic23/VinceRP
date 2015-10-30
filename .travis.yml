@@ -4,24 +4,18 @@ xcode_project: vincerp.xcodeproj
 xcode_scheme: vincerp
 xcode_sdk: iphonesimulator9.1
 before_install:
-  - brew update || brew update
-  - brew install carthage || brew outdated carthage || brew upgrade carthage
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
-  - gem install slather --no-rdoc --no-ri --no-document --quiet
+- brew update || brew update
+- brew install carthage || brew outdated carthage || brew upgrade carthage
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
+- gem install slather --no-rdoc --no-ri --no-document --quiet
 install:
-  - carthage bootstrap  --use-ssh --no-use-binaries --platform ios
-script:
-  xcodebuild clean test
-    -project vincerp.xcodeproj
-    -scheme vincerp -sdk iphonesimulator
-    ONLY_ACTIVE_ARCH=NO
-    GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
-    GCC_GENERATE_TEST_COVERAGE_FILES=YES
-    CODE_SIGN_IDENTITY=""
-    CODE_SIGNING_REQUIRED=NO
-    | xcpretty -c -f `xcpretty-travis-formatter`
+- carthage bootstrap --no-use-binaries --platform ios
+script: xcodebuild clean test -project vincerp.xcodeproj -scheme vincerp -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+  CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c -f `xcpretty-travis-formatter`
 env:
   global:
-    - LANG=en_US.UTF-8
-    - LC_ALL=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+  - secure: Q/dl9bNpJGMbibxFvR+cA9J+YIN0MNdQ8qOyzUmp4zFV5Q3DmjhpRh+mbKNlJF0Z0gy5ZIm+1rZKyhzFDFot86h6wpXg1zKxr1KqlYPHpU2U/EMvenHqbAV0peaKld6BBG9UGOjM0+eCtDHch7g399D0LLp2DBHft6B1fJu5d27LR3uQEAF82Gkqa5dTbyl5/t3dEz67F1TxDrZd0ORtSCpA6QtbPQMij39Lbex0uRmSiVkdSSRjX5lNTLIY1uNXdDiDmuA4SbVyK4s82NZcSR65ZwjprHUZzKVBbZuroAAC3QYm7gpYRvW5UlAMQSO7HG0gBVNuV4+xLBwiGhrYiWHdD0EJIHl39hOr2CgfGMqKlEVH5mdFzw8utQb0+SnuGTJmPwcvLBKcIHQqxQzfpJ8GrXhQIvQCHYYQg8DW+LQqL8b1v7YUZ5+rNQN6vGICw2PrdX8KZS77BqZuT8iccVi3aUUq+MaKjCBnKo2RwTjNtFkAxnAGGtJ9pu4pGheTpWlD/FBhcPbxSl3e4W9+Rf8p+n0BLKG1Q6UsZHy4xvbUk2SgCaVds8Me/vWnlIBQXgSmH+K3l32X9sp3idy+0fNugYMozbAmSMWPSjdKOM3Qvy0iRnvftOXYSrnLZRnM/g0ESDUelpXFipd4jb9Bc2K9jnopXhaft0FpLnwrFoQ=
