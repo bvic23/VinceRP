@@ -2,6 +2,13 @@ VinceRP
 ======================================
 An easy to use, easy to extend reactive framework for Swift.
 
+Getting Started
+-----------------
+1. `brew install carthage`
+2. `carthage update --platform ios`
+
+OS X, tvOS and watchOS not yet tested/supported.
+
 Easy to use
 -------------
 Let's see a basic example:
