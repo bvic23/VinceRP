@@ -6,6 +6,8 @@ An easy to use, easy to extend reactive framework for Swift.
 
 #Getting Started
 
+The framework supports iOS & Mac for now.
+
 ##Compatibility
 
 - Swift 2.x
@@ -25,7 +27,7 @@ An easy to use, easy to extend reactive framework for Swift.
 3. Set it up as a dependency to your project:
 `carthage update --platform iOS`
 
-# Easy to use
+#Easy to use
 
 Let's see a basic example:
 
@@ -60,6 +62,8 @@ let s3 = definedAs{ s2* + s* }
 ```
 However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot match values of the non-tuple type 'UIButton'` WTF????) it's about the missing `<string> + <int>` operator.
 
+##Side effects
+
 Of course you can have side effects:
 
 ```swift
@@ -93,6 +97,8 @@ s <- 2
 // 1 because of the update
 print(counter) // = 1
 ```
+
+##Errors
 
 If you're interested in errors:
 
@@ -159,12 +165,6 @@ extension UITextField {
 ```
 
 Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
-
-##Build the example
-
-1. `brew update && brew install carthage`
-2. `cd examples/BasicExample`
-3. `carthage update --platform [ios, mac]`
 
 ##Present
 
