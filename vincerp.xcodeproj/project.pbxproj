@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02C489681BE35488004FD281 /* vincerp_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* vincerp_Mac.framework */; };
+		02C489681BE35488004FD281 /* vincerpMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* vincerpMac.framework */; };
 		02C489751BE355BB004FD281 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1884E54452FE383C483 /* Reactor.swift */; };
 		02C489761BE355BB004FD281 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
 		02C489771BE355BB004FD281 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
@@ -35,7 +35,16 @@
 		02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */; };
 		02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */; };
 		02C4898F1BE35645004FD281 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036931BA71C7F00ED5D1A /* NSObject+vincerp.swift */; };
-		02C489911BE356A7004FD281 /* vincerp-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C489901BE356A3004FD281 /* vincerp-Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C489961BE357AD004FD281 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF0FA80C6C208A68B6D4E /* Api.swift */; };
+		02C489981BE357CF004FD281 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */; };
+		02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */; };
+		02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFAA1FF5A2D4567C0A868 /* ThreadLocal.swift */; };
+		02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF52E609B4AF2F8E8CD94 /* AtomicReference.swift */; };
+		02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF47BBD0CA8ED4854528F /* AtomicLong.swift */; };
+		02C4899E1BE357FD004FD281 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5571BB825FE00E19285 /* Dispatchable.swift */; };
+		02C4899F1BE35836004FD281 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5DC1BD3CBE2003C8036 /* Addable.swift */; };
+		02C489A01BE35836004FD281 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5E71BD3E5F7003C8036 /* Timer.swift */; };
+		02C489DE1BE3CBE6004FD281 /* UIResponder+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
@@ -66,10 +75,8 @@
 		79E1A5DD1BD3CBE2003C8036 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5DC1BD3CBE2003C8036 /* Addable.swift */; };
 		79E1A5E81BD3E5F7003C8036 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5E71BD3E5F7003C8036 /* Timer.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
-		79F256871ADE77250077730C /* vincerp.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* vincerp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79F2568D1ADE77250077730C /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* vincerp.framework */; };
 		79F9F9361BB3429300703EB7 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */; };
-		79F9F9381BB3432600703EB7 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79FEAF1D1AE9426100DC002F /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEAF1C1AE9426100DC002F /* Dynamic.swift */; };
 		79FEAF1E1AE9449500DC002F /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */; };
 		ADEAF14699985ECE5DB126DA /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
@@ -138,9 +145,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02C4895E1BE35487004FD281 /* vincerp_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vincerp_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C489671BE35488004FD281 /* vincerp_MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vincerp_MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C4895E1BE35487004FD281 /* vincerpMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vincerpMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C489671BE35488004FD281 /* vincerp-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vincerp-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489901BE356A3004FD281 /* vincerp-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vincerp-Mac.h"; sourceTree = "<group>"; };
+		02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+vincerp.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79273A431BAE05BC00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
@@ -231,7 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C489681BE35488004FD281 /* vincerp_Mac.framework in Frameworks */,
+				02C489681BE35488004FD281 /* vincerpMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,8 +378,8 @@
 			children = (
 				79F256811ADE77250077730C /* vincerp.framework */,
 				79F2568C1ADE77250077730C /* vincerpTests.xctest */,
-				02C4895E1BE35487004FD281 /* vincerp_Mac.framework */,
-				02C489671BE35488004FD281 /* vincerp_MacTests.xctest */,
+				02C4895E1BE35487004FD281 /* vincerpMac.framework */,
+				02C489671BE35488004FD281 /* vincerp-MacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -454,6 +462,7 @@
 				79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */,
 				ADEAFEC1441FCC8836E9E10D /* UITextField+vincerp.swift */,
 				795FF5551BB819EF00E19285 /* UIView+vincerp.swift */,
+				02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -558,7 +567,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C489911BE356A7004FD281 /* vincerp-Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,17 +574,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F256871ADE77250077730C /* vincerp.h in Headers */,
-				79F9F9381BB3432600703EB7 /* VRPNSObjectHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		02C4895D1BE35487004FD281 /* vincerp_Mac */ = {
+		02C4895D1BE35487004FD281 /* vincerp-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C489731BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp_Mac" */;
+			buildConfigurationList = 02C489731BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp-Mac" */;
 			buildPhases = (
 				02C489591BE35487004FD281 /* Sources */,
 				02C4895A1BE35487004FD281 /* Frameworks */,
@@ -587,14 +593,14 @@
 			);
 			dependencies = (
 			);
-			name = vincerp_Mac;
+			name = "vincerp-Mac";
 			productName = "vincerp-Mac";
-			productReference = 02C4895E1BE35487004FD281 /* vincerp_Mac.framework */;
+			productReference = 02C4895E1BE35487004FD281 /* vincerpMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		02C489661BE35488004FD281 /* vincerp_MacTests */ = {
+		02C489661BE35488004FD281 /* vincerp-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02C489741BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp_MacTests" */;
+			buildConfigurationList = 02C489741BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp-MacTests" */;
 			buildPhases = (
 				02C489631BE35488004FD281 /* Sources */,
 				02C489641BE35488004FD281 /* Frameworks */,
@@ -605,9 +611,9 @@
 			dependencies = (
 				02C4896A1BE35488004FD281 /* PBXTargetDependency */,
 			);
-			name = vincerp_MacTests;
+			name = "vincerp-MacTests";
 			productName = "vincerp-MacTests";
-			productReference = 02C489671BE35488004FD281 /* vincerp_MacTests.xctest */;
+			productReference = 02C489671BE35488004FD281 /* vincerp-MacTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		79F256801ADE77250077730C /* vincerp */ = {
@@ -719,8 +725,8 @@
 			targets = (
 				79F256801ADE77250077730C /* vincerp */,
 				79F2568B1ADE77250077730C /* vincerpTests */,
-				02C4895D1BE35487004FD281 /* vincerp_Mac */,
-				02C489661BE35488004FD281 /* vincerp_MacTests */,
+				02C4895D1BE35487004FD281 /* vincerp-Mac */,
+				02C489661BE35488004FD281 /* vincerp-MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -968,10 +974,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C4898F1BE35645004FD281 /* NSObject+vincerp.swift in Sources */,
+				02C4899F1BE35836004FD281 /* Addable.swift in Sources */,
+				02C489A01BE35836004FD281 /* Timer.swift in Sources */,
 				02C489751BE355BB004FD281 /* Reactor.swift in Sources */,
 				02C489761BE355BB004FD281 /* Node.swift in Sources */,
 				02C489771BE355BB004FD281 /* SpinSet.swift in Sources */,
 				02C489781BE355BB004FD281 /* Dynamic.swift in Sources */,
+				02C489961BE357AD004FD281 /* Api.swift in Sources */,
 				02C489791BE355BB004FD281 /* Propagator.swift in Sources */,
 				02C4897A1BE355BB004FD281 /* Rx+operators.swift in Sources */,
 				02C4897B1BE355BB004FD281 /* Rx.swift in Sources */,
@@ -983,7 +992,6 @@
 				02C489811BE355BB004FD281 /* Mapper.swift in Sources */,
 				02C489821BE355BB004FD281 /* Reducer.swift in Sources */,
 				02C489831BE355BB004FD281 /* Throttle.swift in Sources */,
-				02C489841BE355BB004FD281 /* String+vincerp.swift in Sources */,
 				02C489851BE355BB004FD281 /* Try.swift in Sources */,
 				02C489861BE355BB004FD281 /* Box.swift in Sources */,
 				02C489871BE355BB004FD281 /* WeakReference.swift in Sources */,
@@ -994,6 +1002,13 @@
 				02C4898C1BE355BB004FD281 /* FunctionalArray.swift in Sources */,
 				02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */,
 				02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */,
+				02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */,
+				02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */,
+				02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */,
+				02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */,
+				02C4899E1BE357FD004FD281 /* Dispatchable.swift in Sources */,
+				02C489841BE355BB004FD281 /* String+vincerp.swift in Sources */,
+				02C489981BE357CF004FD281 /* VRPNSObjectHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1045,7 @@
 				ADEAFFE88C75FF4BBA851937 /* Try.swift in Sources */,
 				79CB58391BD1258400070BEF /* Throttle.swift in Sources */,
 				795FF5681BB8293400E19285 /* ErrorObserver.swift in Sources */,
+				02C489DE1BE3CBE6004FD281 /* UIResponder+vincerp.swift in Sources */,
 				795FF5801BB82BD600E19285 /* Mapper.swift in Sources */,
 				ADEAF64C57338EF6B8CC8BB9 /* Box.swift in Sources */,
 				ADEAF2090FECDC625D480CAF /* WeakReference.swift in Sources */,
@@ -1083,7 +1099,7 @@
 /* Begin PBXTargetDependency section */
 		02C4896A1BE35488004FD281 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02C4895D1BE35487004FD281 /* vincerp_Mac */;
+			target = 02C4895D1BE35487004FD281 /* vincerp-Mac */;
 			targetProxy = 02C489691BE35488004FD281 /* PBXContainerItemProxy */;
 		};
 		79F2568F1ADE77250077730C /* PBXTargetDependency */ = {
@@ -1108,10 +1124,12 @@
 				INFOPLIST_FILE = vincerp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = vincerpMac;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
 			};
 			name = Debug;
 		};
@@ -1128,10 +1146,12 @@
 				INFOPLIST_FILE = vincerp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-Mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = vincerpMac;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
 			};
 			name = Release;
 		};
@@ -1272,6 +1292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1294,6 +1315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Release;
 		};
@@ -1332,21 +1354,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02C489731BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp_Mac" */ = {
+		02C489731BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C4896F1BE35488004FD281 /* Debug */,
 				02C489701BE35488004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		02C489741BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp_MacTests" */ = {
+		02C489741BE35488004FD281 /* Build configuration list for PBXNativeTarget "vincerp-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02C489711BE35488004FD281 /* Debug */,
 				02C489721BE35488004FD281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F2567B1ADE77250077730C /* Build configuration list for PBXProject "vincerp" */ = {
 			isa = XCConfigurationList;
