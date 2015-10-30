@@ -7,7 +7,13 @@ An easy to use, easy to extend reactive framework for Swift.
 Getting Started
 -----------------
 
-Install with [Carthage](https://github.com/Carthage/Carthage)
+**Compatibility**
+
+- Swift 2.x
+- iOS 8.3 and up
+- OS X 10.10 and up
+
+**Install with [Carthage](https://github.com/Carthage/Carthage)**
 
 1. Add VinceRP to your
 [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile): `github "bvic23/VinceRP"`
@@ -18,7 +24,7 @@ Install with [Carthage](https://github.com/Carthage/Carthage)
 3. Set it up as a dependency to your project:
 `carthage update --platform iOS`
 
-OS X, tvOS and watchOS not yet tested/supported.
+tvOS and watchOS not yet tested/supported.
 
 Easy to use
 -------------
