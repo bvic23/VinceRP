@@ -12,7 +12,7 @@ before_install:
 install:
   - carthage bootstrap --platform ios
 script:
-  - xcodebuild clean test -project vincerp.xcodeproj -scheme vincerp -sdk iphonesimulator
+- xcodebuild clean test -project vincerp.xcodeproj -scheme vincerp -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   | xcpretty -c -f `xcpretty-travis-formatter`
 after_success:
