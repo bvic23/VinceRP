@@ -25,7 +25,7 @@ The framework supports iOS & Mac for now.
 `brew update && brew install carthage`
 
 3. Set it up as a dependency to your project:
-`carthage update --platform iOS`
+`carthage update --platform iOS, Mac`
 
 #Easy to use
 
@@ -166,20 +166,13 @@ extension UITextField {
 
 Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
 
-##Present
+#About
 
 VinceRP is in alpha phase so please use it carefully in production and send me [mail](bvic23@gmail.com)/[tweet](@bvic23)/github issue to make me happy and proud! :-)
 
-##Future
-
-* Add more tests
-* Add more operators
-* Replace Obj-C based try/catch with the [Swift 2.0 version](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
-* [Travis](https://travis-ci.org/) integration
-
 ##Do you miss something?
 
-Add it, ask for it... Any suggestions, bug reports, pull-requests are welcome!
+Add it, ask for it... Any suggestions, bug reports, in the form of [issues](https://github.com/bvic23/VinceRP/issues) and of course [pull requests](https://github.com/bvic23/VinceRP/pulls) are welcome!
 
 ##Who is Vince?
 
