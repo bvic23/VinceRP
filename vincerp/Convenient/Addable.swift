@@ -7,7 +7,6 @@ public protocol Addable {
     func +(lhs: Self, rhs: Self) -> Self
 }
 
-extension CGFloat : Addable {}
 extension Double  : Addable {}
 extension Float   : Addable {}
 

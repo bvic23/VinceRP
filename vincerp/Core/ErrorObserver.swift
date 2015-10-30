@@ -3,6 +3,8 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import Foundation
+
 public class ErrorObserver: ChangeObserver {
     
     private static var errorObservers = Set<ErrorObserver>()

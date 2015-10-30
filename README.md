@@ -4,24 +4,30 @@ VinceRP
 ======================================
 An easy to use, easy to extend reactive framework for Swift.
 
-Getting Started
------------------
+#Getting Started
 
-Install with [Carthage](https://github.com/Carthage/Carthage)
+The framework supports iOS & Mac for now.
+
+##Compatibility
+
+- Swift 2.x
+- iOS 8.3 and up
+- OS X 10.10 and up
+
+> tvOS and watchOS not yet tested/supported.
+
+##Install with [Carthage](https://github.com/Carthage/Carthage)
 
 1. Add VinceRP to your
 [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile): `github "bvic23/VinceRP"`
 
-2. Update & install carthage:
-`brew update && brew install carthage`
+2. Download and install [the latest Carthage from binary](https://github.com/Carthage/Carthage/releases). (Homebrew is still on 0.8 which is outdated.)
 
-3. Set it up as a dependency to your project:
-`carthage update --platform iOS`
+3. Set VinceRP up as a dependency to your project:
+`carthage update --platform iOS, Mac`
 
-OS X, tvOS and watchOS not yet tested/supported.
+#Easy to use
 
-Easy to use
--------------
 Let's see a basic example:
 
 ```swift
@@ -54,6 +60,8 @@ let s2 = definedAs{ "s*2 = \(s.value() * 2)" }
 let s3 = definedAs{ s2* + s* }
 ```
 However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot match values of the non-tuple type 'UIButton'` WTF????) it's about the missing `<string> + <int>` operator.
+
+##Side effects
 
 Of course you can have side effects:
 
@@ -89,6 +97,8 @@ s <- 2
 print(counter) // = 1
 ```
 
+##Errors
+
 If you're interested in errors:
 
 ```swift
@@ -110,8 +120,7 @@ s <- NSError(domain: "test error", code: 1, userInfo: nil)
 // Error Domain=test error Code=1 "(null)"
 ```
 
-Easy to extend
--------------
+#Easy to extend
 
  It's pretty easy to add reactive properties to UIKit with extensions:
 
@@ -156,37 +165,20 @@ extension UITextField {
 
 Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
 
-Build the example
------------------
-1. `brew install carthage`
-2. `cd examples/BasicExample`
-3. `carthage update --platform ios`
-
-OS X, tvOS and watchOS not yet tested/supported.
-
-Present
----------
+#About
 
 VinceRP is in alpha phase so please use it carefully in production and send me [mail](bvic23@gmail.com)/[tweet](@bvic23)/github issue to make me happy and proud! :-)
 
-Future
-------
-* Add carthage support
-* Add more tests
-* Add more operators
-* Replace Obj-C based try/catch with the [Swift 2.0 version](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
-* [Travis](https://travis-ci.org/) integration
+##Do you miss something?
 
-Do you miss something?
-------
-Add it, ask for it... Any suggestions, bug reports, pull-requests are welcome!
+Add it, ask for it... Any suggestions, bug reports, in the form of [issues](https://github.com/bvic23/VinceRP/issues) and of course [pull requests](https://github.com/bvic23/VinceRP/pulls) are welcome!
 
-Who is Vince?
-------
+##Who is Vince?
+
 [![Vince](https://scontent-vie1-1.cdninstagram.com/hphotos-xaf1/t51.2885-15/e15/10919568_846220368758561_908103058_n.jpg)](http://instagram.com/the_sphynx_and_the_prince)
 
-References
-------
+#References
+
 * [Reactive Extensions](https://msdn.microsoft.com/en-us/data/gg577609.aspx)
 * [RxJava](https://github.com/ReactiveX/RxJava)
 * [RxScala](https://github.com/ReactiveX/RxScala)
@@ -212,6 +204,6 @@ References
 * [Controlling Complexity in Swift](https://realm.io/news/andy-matuschak-controlling-complexity/)
 * [ReactKit](https://github.com/ReactKit/ReactKit)
 
-License
--------
+#License
+
 [VinceRP is released under an MIT license.](https://github.com/bvic23/VinceRP/blob/master/LICENSE.md)
