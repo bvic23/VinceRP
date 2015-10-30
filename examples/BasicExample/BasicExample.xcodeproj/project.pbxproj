@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7970368D1BA70A5B00ED5D1A /* UIImage+FromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970368C1BA70A5B00ED5D1A /* UIImage+FromColor.swift */; settings = {ASSET_TAGS = (); }; };
+		7970368D1BA70A5B00ED5D1A /* UIImage+FromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970368C1BA70A5B00ED5D1A /* UIImage+FromColor.swift */; };
 		799E46B91B9B88B2005D5F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46B71B9B88B2005D5F6F /* Main.storyboard */; };
 		799E46BB1B9B88B2005D5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BA1B9B88B2005D5F6F /* Assets.xcassets */; };
 		799E46BE1B9B88B2005D5F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BC1B9B88B2005D5F6F /* LaunchScreen.storyboard */; };
-		79CB58041BCEAC2200070BEF /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58031BCEAC2200070BEF /* FlickrService.swift */; settings = {ASSET_TAGS = (); }; };
+		79CB58041BCEAC2200070BEF /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58031BCEAC2200070BEF /* FlickrService.swift */; };
+		79CC89511BE3463E0065F8ED /* vincerp.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D891801B9B8E1300320CBF /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* vincerp.framework */; };
-		79DAC5431B9B8BBC0054086D /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */; settings = {ASSET_TAGS = (); }; };
-		79DD8C841BCCFFFC00BAC168 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD8C831BCCFFFC00BAC168 /* LoginService.swift */; settings = {ASSET_TAGS = (); }; };
-		79E1A5B31BCEC909003C8036 /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5B21BCEC909003C8036 /* FlickrPhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		79EFAA681BA1C698008D976A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFAA671BA1C698008D976A /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		79F5A9C61BBA98C90062D4A3 /* FlickrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5A9C51BBA98C90062D4A3 /* FlickrViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		79DAC5431B9B8BBC0054086D /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */; };
+		79DD8C841BCCFFFC00BAC168 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD8C831BCCFFFC00BAC168 /* LoginService.swift */; };
+		79E1A5B31BCEC909003C8036 /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5B21BCEC909003C8036 /* FlickrPhotoCell.swift */; };
+		79EFAA681BA1C698008D976A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EFAA671BA1C698008D976A /* AppDelegate.swift */; };
+		79F5A9C61BBA98C90062D4A3 /* FlickrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5A9C51BBA98C90062D4A3 /* FlickrViewController.swift */; };
 		79F5A9C91BBB2B4D0062D4A3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F5A9C71BBB2AEF0062D4A3 /* Alamofire.framework */; };
 		79F5A9CB1BBB2D4B0062D4A3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79F5A9C71BBB2AEF0062D4A3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79F5A9D11BBB353A0062D4A3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F5A9D01BBB353A0062D4A3 /* SwiftyJSON.framework */; };
@@ -55,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				79CC89511BE3463E0065F8ED /* vincerp.framework in CopyFiles */,
 				79F5A9D21BBB35420062D4A3 /* SwiftyJSON.framework in CopyFiles */,
 				79F5A9CB1BBB2D4B0062D4A3 /* Alamofire.framework in CopyFiles */,
 			);
@@ -174,6 +176,7 @@
 				TargetAttributes = {
 					799E46AA1B9B88B1005D5F6F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = G3FPFFW4NC;
 					};
 				};
 			};
@@ -363,6 +366,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -371,6 +376,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp.BasicExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -380,6 +386,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -388,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp.BasicExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
