@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-import vincerp
+@testable import vincerp
 
 import Quick
 import Nimble
