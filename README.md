@@ -5,10 +5,19 @@ An easy to use, easy to extend reactive framework for Swift.
 Getting Started
 -----------------
 
-Install with [Carthage](https://github.com/Carthage/Carthage):
+Install with [Carthage](https://github.com/Carthage/Carthage)
 
-1. `brew update && brew install carthage`
-2. `carthage update --platform iOS`
+1. Add VinceRP to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
+
+`github "bvic23/VinceRP"`
+
+2. Update & install `carthage`:
+
+`brew update && brew install carthage`
+
+3. Set it up as a dependency to your project:
+
+`carthage update --platform iOS`
 
 OS X, tvOS and watchOS not yet tested/supported.
 
