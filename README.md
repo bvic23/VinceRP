@@ -1,11 +1,23 @@
-VinceRP
+VinceRP [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ======================================
 An easy to use, easy to extend reactive framework for Swift.
 
 Getting Started
 -----------------
-1. `brew install carthage`
-2. `carthage update --platform ios`
+
+Install with [Carthage](https://github.com/Carthage/Carthage)
+
+1. Add VinceRP to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
+
+`github "bvic23/VinceRP"`
+
+2. Update & install `carthage`:
+
+`brew update && brew install carthage`
+
+3. Set it up as a dependency to your project:
+
+`carthage update --platform iOS`
 
 OS X, tvOS and watchOS not yet tested/supported.
 
