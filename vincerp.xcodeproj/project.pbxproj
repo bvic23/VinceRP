@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02C489681BE35488004FD281 /* vincerpMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* vincerpMac.framework */; };
+		02C489681BE35488004FD281 /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* vincerp.framework */; };
 		02C489751BE355BB004FD281 /* Reactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1884E54452FE383C483 /* Reactor.swift */; };
 		02C489761BE355BB004FD281 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
 		02C489771BE355BB004FD281 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
@@ -45,6 +45,23 @@
 		02C4899F1BE35836004FD281 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5DC1BD3CBE2003C8036 /* Addable.swift */; };
 		02C489A01BE35836004FD281 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5E71BD3E5F7003C8036 /* Timer.swift */; };
 		02C489DE1BE3CBE6004FD281 /* UIResponder+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */; };
+		02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */; };
+		02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */; };
+		02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */; };
+		02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1BA446DB2312748F011 /* BasicSpec.swift */; };
+		02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */; };
+		02C8B3701BE3D3DB00203CF2 /* WebPageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF29B30971F40E1E73AD6 /* WebPageSpec.swift */; };
+		02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF990C35320EB1EF8D473 /* TrySpec.swift */; };
+		02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */; };
+		02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */; };
+		02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */; };
+		02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */; };
+		02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */; };
+		02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
+		02C8B37A1BE3F5AB00203CF2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
+		02C8B37B1BE3F5AD00203CF2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
+		02C8B3811BE3F62F00203CF2 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02C8B3821BE3F62F00203CF2 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
@@ -130,6 +147,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		02C8B37C1BE3F5DA00203CF2 /* Copy Carthage frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02C8B3811BE3F62F00203CF2 /* Quick.framework in Copy Carthage frameworks */,
+				02C8B3821BE3F62F00203CF2 /* Nimble.framework in Copy Carthage frameworks */,
+			);
+			name = "Copy Carthage frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		795FF52F1BB6DD6100E19285 /* Copy Carthage frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,8 +174,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02C4895E1BE35487004FD281 /* vincerpMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vincerpMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C489671BE35488004FD281 /* vincerp-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vincerp-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C4895E1BE35487004FD281 /* vincerp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vincerp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C489671BE35488004FD281 /* vincerpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vincerpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489901BE356A3004FD281 /* vincerp-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vincerp-Mac.h"; sourceTree = "<group>"; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+vincerp.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -239,7 +268,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C489681BE35488004FD281 /* vincerpMac.framework in Frameworks */,
+				02C489681BE35488004FD281 /* vincerp.framework in Frameworks */,
+				02C8B37A1BE3F5AB00203CF2 /* Quick.framework in Frameworks */,
+				02C8B37B1BE3F5AD00203CF2 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +409,8 @@
 			children = (
 				79F256811ADE77250077730C /* vincerp.framework */,
 				79F2568C1ADE77250077730C /* vincerpTests.xctest */,
-				02C4895E1BE35487004FD281 /* vincerpMac.framework */,
-				02C489671BE35488004FD281 /* vincerp-MacTests.xctest */,
+				02C4895E1BE35487004FD281 /* vincerp.framework */,
+				02C489671BE35488004FD281 /* vincerpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -595,7 +626,7 @@
 			);
 			name = "vincerp-Mac";
 			productName = "vincerp-Mac";
-			productReference = 02C4895E1BE35487004FD281 /* vincerpMac.framework */;
+			productReference = 02C4895E1BE35487004FD281 /* vincerp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		02C489661BE35488004FD281 /* vincerp-MacTests */ = {
@@ -605,6 +636,7 @@
 				02C489631BE35488004FD281 /* Sources */,
 				02C489641BE35488004FD281 /* Frameworks */,
 				02C489651BE35488004FD281 /* Resources */,
+				02C8B37C1BE3F5DA00203CF2 /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -613,7 +645,7 @@
 			);
 			name = "vincerp-MacTests";
 			productName = "vincerp-MacTests";
-			productReference = 02C489671BE35488004FD281 /* vincerp-MacTests.xctest */;
+			productReference = 02C489671BE35488004FD281 /* vincerpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		79F256801ADE77250077730C /* vincerp */ = {
@@ -1016,6 +1048,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */,
+				02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */,
+				02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */,
+				02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */,
+				02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */,
+				02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */,
+				02C8B3701BE3D3DB00203CF2 /* WebPageSpec.swift in Sources */,
+				02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */,
+				02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */,
+				02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */,
+				02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */,
+				02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */,
+				02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,13 +1165,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = vincerp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-Mac";
-				PRODUCT_NAME = vincerpMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp;
+				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
@@ -1142,13 +1191,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = vincerp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-Mac";
-				PRODUCT_NAME = vincerpMac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp;
+				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
@@ -1161,10 +1214,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = vincerpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = vincerpTests;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1174,10 +1231,14 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = vincerpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.vincerp-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = vincerpTests;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1199,8 +1260,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1250,8 +1309,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1280,6 +1337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1303,6 +1361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
