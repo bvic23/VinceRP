@@ -137,6 +137,14 @@ extension UITextField {
 
 Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
 
+Build the example
+-----------------
+1. `brew install carthage`
+2. `cd examples/BasicExample`
+3. `carthage update --platform ios`
+
+OS X, tvOS and watchOS not yet tested/supported.
+
 Present
 ---------
 
