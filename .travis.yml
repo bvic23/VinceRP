@@ -10,13 +10,17 @@ before_install:
   - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
   - gem install slather --no-rdoc --no-ri --no-document --quiet
 install:
-  - carthage bootstrap --platform ios
+  - carthage bootstrap  --use-ssh --no-use-binaries --platform ios
 script:
-- xcodebuild clean test -project vincerp.xcodeproj -scheme vincerp -sdk iphonesimulator
-  ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
-  | xcpretty -c -f `xcpretty-travis-formatter`
-after_success:
-  - slather
+  xcodebuild clean test
+    -project vincerp.xcodeproj
+    -scheme vincerp -sdk iphonesimulator
+    ONLY_ACTIVE_ARCH=NO
+    GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
+    GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    CODE_SIGN_IDENTITY=""
+    CODE_SIGNING_REQUIRED=NO
+    | xcpretty -c -f `xcpretty-travis-formatter`
 env:
   global:
     - LANG=en_US.UTF-8
