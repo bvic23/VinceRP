@@ -3,6 +3,8 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import UIKit
+
 private typealias EventHandler = (UITextField) -> ()
 private var eventHandlers = [UITextField: [EventHandler]]()
 

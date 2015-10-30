@@ -6,6 +6,8 @@
 //  Copyright © 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import UIKit
+
 public extension UIResponder {
     
     public func reactiveProperty<T:Equatable>(forProperty propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Rx<T> {

@@ -3,6 +3,8 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import UIKit
+
 private typealias EventHandler = (UISearchBar) -> ()
 private var eventHandlers = [UISearchBar: [EventHandler]]()
 

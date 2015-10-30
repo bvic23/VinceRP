@@ -177,7 +177,6 @@
 /* Begin PBXFileReference section */
 		02C4895E1BE35487004FD281 /* vincerp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vincerp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489671BE35488004FD281 /* vincerpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vincerpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C489901BE356A3004FD281 /* vincerp-Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vincerp-Mac.h"; sourceTree = "<group>"; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+vincerp.swift"; sourceTree = "<group>"; };
 		02C8B3831BE3F7FE00203CF2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		02C8B3841BE3F7FE00203CF2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
@@ -429,7 +428,6 @@
 				ADEAFD2CA2002DD4DD7483E4 /* Threading */,
 				ADEAF6894C280A87A51DADA2 /* Util */,
 				79F256861ADE77250077730C /* vincerp.h */,
-				02C489901BE356A3004FD281 /* vincerp-Mac.h */,
 			);
 			path = vincerp;
 			sourceTree = "<group>";
@@ -1181,7 +1179,7 @@
 				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
+				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Debug;
 		};
@@ -1204,7 +1202,7 @@
 				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "vincerp/vincerp-Mac.h";
+				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Release;
 		};
