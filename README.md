@@ -195,6 +195,8 @@ References
 * [AllTheFlow](https://blog.alltheflow.com/)
 * [ReactiveCocoa vs RxSwift](http://stackoverflow.com/questions/32542846/reactivecocoa-vs-rxswift-pros-and-cons/32581824#32581824)
 * [iOSFRP](https://leanpub.com/iosfrp)
+* [Protocol-Oriented Programming with UIKit](http://www.captechconsulting.com/blogs/ios-9-tutorial-series-protocol-oriented-programming-with-uikit)
+* [Mixins and Traits in Swift 2.0](http://matthijshollemans.com/2015/07/22/mixins-and-traits-in-swift-2/)
 * [Controlling Complexity in Swift](https://realm.io/news/andy-matuschak-controlling-complexity/)
 * [ReactKit](https://github.com/ReactKit/ReactKit)
 
