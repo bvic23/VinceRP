@@ -10,7 +10,6 @@ public protocol Addable {
 extension CGFloat : Addable {}
 extension Double  : Addable {}
 extension Float   : Addable {}
-extension Float80   : Addable {}
 
 public func +=<T:IntegerArithmeticType>(left: Source<T>, right: T) -> Source<T> {
     left <- (left* + right)
