@@ -1,4 +1,6 @@
-VinceRP [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/bvic23/VinceRP.svg?branch=master)](https://travis-ci.org/bvic23/VinceRP)
+
+VinceRP
 ======================================
 An easy to use, easy to extend reactive framework for Swift.
 
@@ -7,16 +9,13 @@ Getting Started
 
 Install with [Carthage](https://github.com/Carthage/Carthage)
 
-1. Add VinceRP to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
+1. Add VinceRP to your
+[Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile): `github "bvic23/VinceRP"`
 
-`github "bvic23/VinceRP"`
-
-2. Update & install `carthage`:
-
+2. Update & install carthage:
 `brew update && brew install carthage`
 
 3. Set it up as a dependency to your project:
-
 `carthage update --platform iOS`
 
 OS X, tvOS and watchOS not yet tested/supported.
@@ -29,16 +28,17 @@ Let's see a basic example:
 import vincerp
 
 // define reactive sources
-let source1 = reactive(1)
-let source2 = reactive(2)
+let s1 = reactive(1)
+let s2 = reactive(2)
 
 // define a calculated variable
-let sum = definedAs{ source1* + source2* }
+let sum = definedAs{ s1* + s2* }
 
 // sum* is just a syntactic sugar for sum.value()
 print(sum*) // = 3
 
-source2 <- 3
+// s.update(3)
+s2 <- 3
 
 print(sum*) // = 4
 ```
@@ -48,10 +48,10 @@ Note that - thanks to Swift's type inference - it figures out the type of the so
 ```swift
 import vincerp
 
-let source = reactive(1)
+let s = reactive(1)
 
-let doubleSource = definedAs{ "double source = \(source* * 2)" }
-let tripleSource = definedAs{ doubleSource* + source* }
+let s2 = definedAs{ "s*2 = \(s.value() * 2)" }
+let s3 = definedAs{ s2* + s* }
 ```
 However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot match values of the non-tuple type 'UIButton'` WTF????) it's about the missing `<string> + <int>` operator.
 
@@ -60,14 +60,14 @@ Of course you can have side effects:
 ```swift
 import vincerp
 
-let source = reactive(1)
+let s = reactive(1)
 var counter = 0
 
-let observer = onChangeDo(source) { _ in
-    counter++
+onChangeDo(s) { _ in
+   counter++
 }
 
-// 1 because of the initalization
+// 1 because of the initialization
 print(counter) // = 1
 ```
 
@@ -76,14 +76,14 @@ If you don't want to count the initialization:
 ```swift
 import vincerp
 
-let source = reactive(1)
+let s = reactive(1)
 var counter = 0
 
-let observer = onChangeDo(source, skipInitial:true) { _ in
+onChangeDo(s, skipInitial:true) { _ in
     counter++
 }
 
-source <- 2
+s <- 2
 
 // 1 because of the update
 print(counter) // = 1
@@ -94,16 +94,16 @@ If you're interested in errors:
 ```swift
 import vincerp
 
-let source = reactive(1)
+let s = reactive(1)
 
-source.onChange(true) { v in
-    print(v)
-}.onError { e in
-    print(e)
+s.onChange(true) {
+    print($0)
+}.onError {
+    print($0)
 }
 
-source <- 2
-source <- NSError(domain: "test error", code: 1, userInfo: nil)
+s <- 2
+s <- NSError(domain: "test error", code: 1, userInfo: nil)
 
 // output:
 // 2
@@ -113,7 +113,7 @@ source <- NSError(domain: "test error", code: 1, userInfo: nil)
 Easy to extend
 -------------
 
- It's pretty easy to add UKit extensions using the amazing [ReactivePropertyGenerator](https://github.com/bvic23/VinceRP/blob/master/vincerp/Util/ReactivePropertyGenerator.swift) :
+ It's pretty easy to add reactive properties to UIKit with extensions:
 
 ```swift
 public extension UILabel {
@@ -174,12 +174,12 @@ Future
 * Add carthage support
 * Add more tests
 * Add more operators
-* Replace Obj-C based try/catch with the [Switf 2.0 version](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
+* Replace Obj-C based try/catch with the [Swift 2.0 version](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
 * [Travis](https://travis-ci.org/) integration
 
 Do you miss something?
 ------
-Add it, ask for it... Any suggestions, bugreports, pull-requests are welcome!
+Add it, ask for it... Any suggestions, bug reports, pull-requests are welcome!
 
 Who is Vince?
 ------
