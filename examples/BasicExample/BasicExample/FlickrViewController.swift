@@ -66,7 +66,7 @@ class FlickrViewControler: UIViewController {
         self.noResultsLabel.hidden = true
         
         timer(0.1) {
-            throttleTimeout += 0.1
+            self.throttleTimeout += 0.1
         }
     }
     
