@@ -59,6 +59,8 @@ class LoginViewControler: UIViewController {
         }
         
         self.loginButton.clickHandler = definedAs { i in
+            self.emailField.resignFirstResponder()
+            self.passwordField.resignFirstResponder()
             let loginService = LoginService()
             loginService.login(self.emailField.text!, password: self.passwordField.text!).onChange { _ in
                 alert <- "Login was successfull!"
