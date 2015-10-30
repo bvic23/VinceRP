@@ -4,8 +4,11 @@ An easy to use, easy to extend reactive framework for Swift.
 
 Getting Started
 -----------------
-1. `brew install carthage`
-2. `carthage update --platform ios`
+
+Install with [Carthage](https://github.com/Carthage/Carthage):
+
+1. `brew update && brew install carthage`
+2. `carthage update --platform iOS`
 
 OS X, tvOS and watchOS not yet tested/supported.
 
