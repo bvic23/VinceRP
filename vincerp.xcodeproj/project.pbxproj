@@ -65,6 +65,8 @@
 		02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		02C8B3961BE3FD6C00203CF2 /* vincerp.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* vincerp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C8B3971BE3FD7200203CF2 /* vincerp.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* vincerp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C8B3981BE3FE2800203CF2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C8B3991BE3FE2E00203CF2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
@@ -604,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C8B3971BE3FD7200203CF2 /* vincerp.h in Headers */,
+				02C8B3981BE3FE2800203CF2 /* VRPNSObjectHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C8B3961BE3FD6C00203CF2 /* vincerp.h in Headers */,
+				02C8B3991BE3FE2E00203CF2 /* VRPNSObjectHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,7 +1187,6 @@
 				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Debug;
 		};
@@ -1206,7 +1209,6 @@
 				PRODUCT_NAME = vincerp;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Release;
 		};
@@ -1349,7 +1351,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1370,7 +1371,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = vincerp/vincerp.h;
 			};
 			name = Release;
 		};
