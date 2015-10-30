@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode7.0
+xcode_project: vincerp.xcodeproj
+xcode_scheme: vincerp
+xcode_sdk: iphonesimulator8.4
