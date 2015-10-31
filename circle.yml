@@ -1,0 +1,7 @@
+machine:
+  xcode:
+    version: "7.0"
+test:
+  override:
+    - rake test:ios
+    - rake test:osx
