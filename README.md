@@ -3,7 +3,7 @@
 
 VinceRP
 ======================================
-An easy to use, easy to extend reactive framework for Swift.
+Easy to use, easy to extend reactive framework for Swift.
 
 #Getting Started
 
