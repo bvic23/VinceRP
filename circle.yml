@@ -7,10 +7,11 @@ machine:
     LC_ALL: en_US.UTF-8
 dependencies:
   pre:
-    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+    - sudo gem install xcpretty -N -v 0.1.12 --no-rdoc --no-ri --no-document --quiet
     - ./scripts/unstash.sh
 test:
   override:
+      - set -o pipefail
       - ./scripts/test.sh |
         tee $CIRCLE_ARTIFACTS/xcode_raw.log |
         xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
