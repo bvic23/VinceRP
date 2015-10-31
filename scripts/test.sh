@@ -1,6 +1,5 @@
 #!/bin/sh
 
-set -o pipefail && \
 xcodebuild clean build test \
   -project vincerp.xcodeproj \
   -scheme vincerp \
