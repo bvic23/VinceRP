@@ -3,6 +3,7 @@ machine:
     version: "7.1"
 dependencies:
   pre:
+    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
     - ./scripts/unstash.sh
 test:
   override:
