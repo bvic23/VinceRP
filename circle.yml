@@ -15,4 +15,5 @@ test:
     - ./scripts/test.sh |
       tee $CIRCLE_ARTIFACTS/xcode_raw.log |
       xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
-  
+  post:
+    - bash <(curl -s https://codecov.io/bash)
