@@ -1,7 +1,11 @@
 machine:
   xcode:
-    version: "7.0"
+    version: "7.1"
+dependencies:
+  pre:
+    - ./scripts/unstash.sh
 test:
   override:
-    - rake test:ios
-    - rake test:osx
+      - ./scripts/test.sh |
+        tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+        xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
