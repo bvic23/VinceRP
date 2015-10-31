@@ -3,11 +3,15 @@ osx_image: xcode7.1
 before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
-  - gem install slather --no-rdoc --no-ri --no-document --quiet
   - ./scripts/unstash.sh
 script:
   - ./scripts/test.sh | xcpretty -c -f `xcpretty-travis-formatter`
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 env:
   global:
   - LANG=en_US.UTF-8
   - LC_ALL=en_US.UTF-8
+branches:
+  only:
+    - master
