@@ -7,7 +7,7 @@ machine:
     LC_ALL: en_US.UTF-8
 dependencies:
   pre:
-    - sudo gem install xcpretty -N -v 0.1.12 --no-rdoc --no-ri --no-document --quiet
+    - sudo gem install xcpretty -v 0.1.12 --no-rdoc --no-ri --no-document --quiet
     - ./scripts/unstash.sh
 test:
   override:
