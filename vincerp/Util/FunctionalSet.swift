@@ -7,38 +7,12 @@ public func toSet<T:Hashable>(e: T...) -> Set<T> {
     return Set(e)
 }
 
-public struct PartitionGenerator<T>: GeneratorType {
-    public typealias Element = [T]
-    private let onlyElement: Element
+extension SequenceType where Generator.Element : Hashable {
     
-    init(onlyElement: Element) {
-        self.onlyElement = onlyElement
-    }
-    
-    mutating public func next() -> Element? {
-        return self.onlyElement
-    }
-}
-
-public struct PartitionSequence<T>: SequenceType {
-    public typealias Generator = PartitionGenerator<T>
-    private let onlyElement: [T]
-    
-    init(onlyElement: [T]) {
-        self.onlyElement = onlyElement
-    }
-    
-    public func generate() -> Generator {
-        return PartitionGenerator(onlyElement: self.onlyElement)
-    }
-}
-
-extension SequenceType where Generator.Element: Hashable {
-    
-    public func partition(@noescape filterFunc: (Generator.Element) -> Bool) -> (PartitionSequence<Generator.Element>, PartitionSequence<Generator.Element>) {
+    public func partition(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> (Set<Self.Generator.Element>, Set<Self.Generator.Element>) {
         let result1 = self.filter(filterFunc)
         let result2 = self.filter{!filterFunc($0)}
-        return (PartitionSequence(onlyElement: result1), PartitionSequence(onlyElement: result2))
+        return (Set(result1), Set(result2))
     }
     
     public func hasElementPassingTest(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
@@ -46,7 +20,7 @@ extension SequenceType where Generator.Element: Hashable {
         return result.count > 0
     }
     
-    public func groupBy<U>(@noescape filterFunc: (Generator.Element) -> U) -> [U : PartitionSequence<Generator.Element>] {
+    public func groupBy<U>(@noescape filterFunc: (Self.Generator.Element) -> U) -> [U : Set<Self.Generator.Element>] {
         var result = [U: Set<Generator.Element>]()
         for i in self {
             let u = filterFunc(i)
@@ -61,7 +35,7 @@ extension SequenceType where Generator.Element: Hashable {
     
 }
 
-extension SequenceType where Generator.Element: Comparable {
+extension SequenceType where Generator.Element : Comparable {
 
     public func min(fallbackValue: Self.Generator.Element) -> Self.Generator.Element {
         guard let result = self.minElement() else {
@@ -87,7 +61,6 @@ extension Flattenable where Self: SequenceType {
     public func flatten() -> Self {
         return self
     }
-    
 }
 
 extension Set: Flattenable {
