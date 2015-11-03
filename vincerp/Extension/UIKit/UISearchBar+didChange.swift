@@ -12,7 +12,7 @@ extension UISearchBar {
     
     public func addChangeHandler(actionBlock: (UISearchBar) -> ()) {
         if let handlers = eventHandlers[self] {
-            eventHandlers[self] = handlers.appendAfter(actionBlock)
+            eventHandlers[self] = handlers.arrayByAppending(actionBlock)
         } else {
             eventHandlers[self] = [actionBlock]
         }

@@ -105,7 +105,7 @@ class BasicSpec: QuickSpec {
                     let a:Source<[Int]> = reactive([1, 2, 3])
                     let b = reactive(3)
                     let c = definedAs {
-                        a*.prepend(b*)
+                        a*.arrayByPrepending(b*)
                     }
                     let d = definedAs {
                         c*.map {
@@ -114,7 +114,7 @@ class BasicSpec: QuickSpec {
                     }
                     let e = reactive("wtf")
                     let f = definedAs {
-                        d*.appendAfter(e*).joinWithSeparator("")
+                        d*.arrayByAppending(e*).joinWithSeparator("")
                     }
 
                     // then

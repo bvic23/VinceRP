@@ -16,13 +16,13 @@ extension Dictionary {
         return Dictionary<Key, S>(zip(self.keys, self.values.map(transform)))
     }
 
-    public func map<S>(transform: (Key, Value) -> S) -> Set<S> {
-        var results: Set<S> = Set()
+    public func map<S>(transform: (Key, Value) -> S) -> [S] {
+        var results = [S]()
         for k in self.keys {
             guard let v = self[k] else {
                 continue
             }
-            results.insert(transform(k, v))
+            results.append(transform(k, v))
         }
         return results
     }

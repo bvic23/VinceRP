@@ -7,14 +7,6 @@ public class Reactor: Node {
     
     private var alive = true
     
-    override public var ancestors: Set<Node> {
-        get {
-            return parents ++ parents.flatMap {
-                $0.ancestors
-            }
-        }
-    }
-    
     override public func kill() {
         alive = false
         parents.forEach {

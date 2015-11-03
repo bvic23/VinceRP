@@ -30,7 +30,7 @@ public class Rx<T:Equatable>: Reactor {
     public func value() -> T {
         if let (e, d) = globalDynamic.value {
             linkChild(e)
-            globalDynamic.value = (e, d.prepend(self))
+            globalDynamic.value = (e, d.arrayByPrepending(self))
         } else {
             globalDynamic.value = nil
         }
@@ -83,7 +83,7 @@ public class Rx<T:Equatable>: Reactor {
 
 extension Rx: Dispatchable {
     
-    public func dispatchOnThread(dispatchQueue: dispatch_queue_t!) -> Rx<T> {
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Rx<T> {
         self.dispatchQueue = dispatchQueue
         return self
     }

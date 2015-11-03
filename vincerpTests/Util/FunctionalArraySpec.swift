@@ -17,7 +17,7 @@ class FunctionalArraySpec: QuickSpec {
                 let s = [1, 2]
 
                 // when
-                let r = s.prepend(0)
+                let r = s.arrayByPrepending(0)
 
                 // then
                 expect(r) == [0, 1, 2]
@@ -28,7 +28,7 @@ class FunctionalArraySpec: QuickSpec {
                 let s = [Int]()
 
                 // when
-                let r = s.prepend(0)
+                let r = s.arrayByPrepending(0)
 
                 // then
                 expect(r) == [0]

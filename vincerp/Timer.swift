@@ -14,7 +14,7 @@ public class Timer {
         self.tick!()
     }
     
-    func cancel() {
+    public func cancel() {
         guard let t = self.timer else {
             return
         }

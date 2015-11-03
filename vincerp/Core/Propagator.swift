@@ -23,12 +23,7 @@ func ==(lhs: EmitterReactorTuple, rhs: EmitterReactorTuple) -> Bool {
     return lhs.e.hashValue == rhs.e.hashValue && lhs.r.hashValue == rhs.e.hashValue
 }
 
-protocol Propagator {
-    func propagate(nodes: [EmitterReactorTuple])
-    func propagate(nodes: Set<EmitterReactorTuple>)
-}
-
-class ImmediatePropagator: Propagator {
+class ImmediatePropagator {
     func propagate(nodes: [EmitterReactorTuple]) {
         self.propagate(Set(nodes))
     }
@@ -43,7 +38,7 @@ class ImmediatePropagator: Propagator {
             $0.r.level == minLevel
         }
 
-        let next: Set<EmitterReactorTuple> = now.groupBy{
+        let next = now.groupBy{
                $0.r
         }.mapValues{
             $0.map{ $0.e }
@@ -53,6 +48,6 @@ class ImmediatePropagator: Propagator {
             }
         }.flatten()
            
-        propagate(next ++ later)
+        propagate(next + later)
     }
 }
