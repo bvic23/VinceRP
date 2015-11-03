@@ -7,7 +7,7 @@ import UIKit
 
 public extension UIControl {
     
-    public var reactiveEnabled: Rx<Bool> {
+    public var reactiveEnabled: Hub<Bool> {
         get {
             return reactiveEmitter(name: "enabled", initValue: self.enabled)
         }

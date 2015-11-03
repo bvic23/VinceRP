@@ -13,9 +13,7 @@ struct EmitterReactorTuple: Hashable, Equatable {
     }
 
     var hashValue: Int {
-        get {
-            return e.hashValue ^ r.hashValue
-        }
+        return e.hashValue ^ r.hashValue
     }
 }
 
@@ -23,7 +21,7 @@ func ==(lhs: EmitterReactorTuple, rhs: EmitterReactorTuple) -> Bool {
     return lhs.e.hashValue == rhs.e.hashValue && lhs.r.hashValue == rhs.e.hashValue
 }
 
-class ImmediatePropagator {
+class Propagator {
     func propagate(nodes: [EmitterReactorTuple]) {
         self.propagate(Set(nodes))
     }

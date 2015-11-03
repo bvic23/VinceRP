@@ -5,24 +5,20 @@
 
 class Wrapper<T:Equatable, A:Equatable> : Spinlock<A> {
     
-    let source : Rx<T>
+    let source : Hub<T>
     
-    init(_ source: Rx<T>) {
+    init(_ source: Hub<T>) {
         self.source = source
         super.init()
         source.linkChild(self)
     }
     
     override var level: long {
-        get {
-            return self.source.level + 1
-        }
+        return self.source.level + 1
     }
     
     override var parents: Set<Node> {
-        get {
-            return toSet(source)
-        }
+        return toSet(source)
     }
     
     override func toTry() -> Try<A> {

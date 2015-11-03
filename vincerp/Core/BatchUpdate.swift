@@ -23,7 +23,7 @@ public struct BatchUpdate<T:Equatable> {
     }
     
     func now() {
-        ImmediatePropagator().propagate(self.updates.flatMap {
+        Propagator().propagate(self.updates.flatMap {
             $0.ancestors()
         })
     }

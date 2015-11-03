@@ -26,15 +26,11 @@ public class ChangeObserver: Reactor {
     }
     
     override public var parents: Set<Node> {
-        get {
-            return toSet(source)
-        }
+        return toSet(source)
     }
     
     override var level: long {
-        get {
-            return long.max
-        }
+        return long.max
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {

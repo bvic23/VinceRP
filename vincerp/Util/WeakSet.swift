@@ -17,9 +17,7 @@ public class WeakSet<T:Hashable where T:AnyObject> {
     }
     
     public var set: Set<T> {
-        get {
-            return Set(self.array())
-        }
+        return Set(self.array())
     }
 
     public func insert(member: T) {

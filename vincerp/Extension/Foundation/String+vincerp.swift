@@ -6,9 +6,7 @@
 public extension String {
     
     public var length: Index.Distance {
-        get {
-            return self.characters.count
-        }
+        return self.characters.count
     }
     
     public func trim() -> String {

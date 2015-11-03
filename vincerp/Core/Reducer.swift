@@ -7,7 +7,7 @@ class Reducer<T:Equatable> : Wrapper<T, T> {
     
     private let transformer: (Try<T>, Try<T>) -> Try<T>
     
-    init(_ source: Rx<T>, _ transformer: (Try<T>, Try<T>) -> Try<T>) {
+    init(_ source: Hub<T>, _ transformer: (Try<T>, Try<T>) -> Try<T>) {
         self.transformer = transformer
         super.init(source)
         self.setState(SpinSet(SpinState(getStamp(), source.toTry())))

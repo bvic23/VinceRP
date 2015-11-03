@@ -7,7 +7,7 @@ import UIKit
 
 public extension UIStepper {
     
-    public var reactiveValue: Rx<Double> {
+    public var reactiveValue: Hub<Double> {
         get {
             return reactiveProperty(forProperty: "value", initValue: self.value)
         }

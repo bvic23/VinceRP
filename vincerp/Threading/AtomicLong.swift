@@ -70,9 +70,7 @@ public class AtomicLong: Hashable, Equatable {
     }
 
     public var hashValue: Int {
-        get {
-            return value.hashValue
-        }
+        return value.hashValue
     }
 }
 

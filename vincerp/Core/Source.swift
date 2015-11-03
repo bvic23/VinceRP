@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Source<T:Equatable>: Rx<T> {
+public class Source<T:Equatable>: Hub<T> {
     
     let state: AtomicReference<Box<Try<T>>>
 
@@ -34,9 +34,7 @@ public class Source<T:Equatable>: Rx<T> {
     }
     
     override var level: long {
-        get {
-            return 0
-        }
+        return 0
     }
     
     override func isSuccess() -> Bool {
@@ -48,9 +46,7 @@ public class Source<T:Equatable>: Rx<T> {
     }
     
     override public var parents: Set<Node> {
-        get {
-            return Set()
-        }
+        return Set()
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {

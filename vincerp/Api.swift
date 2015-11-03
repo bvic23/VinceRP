@@ -7,7 +7,7 @@
 
 postfix operator * {}
 
-public postfix func *<T>(arg: Rx<T>) -> T {
+public postfix func *<T>(arg: Hub<T>) -> T {
     return arg.value()
 }
 
@@ -33,17 +33,17 @@ public func reactive<T:Equatable>(initValue: T) -> Source<T> {
     return Source(initValue: initValue)
 }
 
-public func onChangeDo<T:Equatable>(source: Rx<T>, callback: (T) -> ()) -> ChangeObserver {
+public func onChangeDo<T:Equatable>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver {
     return onChangeDo(source, skipInitial: false, callback: callback)
 }
 
-public func onChangeDo<T:Equatable>(source: Rx<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver {
+public func onChangeDo<T:Equatable>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver {
     return ChangeObserver(source: source, callback: ({
         callback(source.value())
     }), skipInitial: skipInitial)
 }
 
-public func onErrorDo<T:Equatable>(source: Rx<T>, callback: (NSError) -> ()) -> ErrorObserver {
+public func onErrorDo<T:Equatable>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver {
     return ErrorObserver(source: source, callback: callback)
 }
 

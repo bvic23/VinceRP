@@ -12,7 +12,7 @@ class Throttle<T:Equatable> : Dynamic<T> {
     private var timer: NSTimer?
     private var incoming: Set<Node>?
     
-    init(source: Rx<T>, interval: NSTimeInterval) {
+    init(source: Hub<T>, interval: NSTimeInterval) {
         self.interval = interval
         self.debounceLevel = source.level + 1
         super.init {
@@ -46,8 +46,6 @@ class Throttle<T:Equatable> : Dynamic<T> {
     }
     
     override var level: long {
-        get {
-            return self.debounceLevel
-        }
+        return self.debounceLevel
     }
 }

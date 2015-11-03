@@ -12,12 +12,10 @@ public class WeakReference<T:AnyObject where T:Hashable>: Hashable, Equatable {
     }
 
     public var hashValue: Int {
-        get {
-            guard let v = self.value else {
-                return 0
-            }
-            return v.hashValue
+        guard let v = self.value else {
+            return 0
         }
+        return v.hashValue
     }
 }
 

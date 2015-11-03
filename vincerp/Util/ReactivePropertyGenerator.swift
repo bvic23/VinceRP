@@ -58,10 +58,10 @@ class ReactivePropertyGeneator {
         return emitter
     }
     
-    static func property<T:Equatable>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Rx<T> {
+    static func property<T:Equatable>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
         let result = emitter(targetObject, propertyName: propertyName, initValue: initValue, initializer: initializer)
         createObserver(targetObject, propertyName: propertyName, initValue: initValue)
-        return result as Rx<T>
+        return result as Hub<T>
     }
 }
 

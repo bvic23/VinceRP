@@ -478,7 +478,7 @@ class AdvancedSpec: QuickSpec {
             }
 
 
-            it("kills all Rx") {
+            it("kills all Hub") {
                 // given
                 let (a, _, c, d, e, f) = testGraph()
 
