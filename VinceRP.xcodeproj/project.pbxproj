@@ -92,6 +92,8 @@
 		797BD9121BE936AE00988548 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		797BD9141BE9396300988548 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
+		79C7E9CF1BE95CA800BA5E6C /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
+		79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79CB58391BD1258400070BEF /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58381BD1258400070BEF /* Throttle.swift */; };
@@ -1031,6 +1033,7 @@
 				02C4897C1BE355BB004FD281 /* ChangeObserver.swift in Sources */,
 				02C4897D1BE355BB004FD281 /* ErrorObserver.swift in Sources */,
 				02C4897E1BE355BB004FD281 /* BatchUpdate.swift in Sources */,
+				79C7E9CF1BE95CA800BA5E6C /* NodeTuple.swift in Sources */,
 				02C4897F1BE355BB004FD281 /* Source.swift in Sources */,
 				02C489801BE355BB004FD281 /* Wrapper.swift in Sources */,
 				02C489811BE355BB004FD281 /* Mapper.swift in Sources */,
@@ -1042,6 +1045,7 @@
 				02C489881BE355BB004FD281 /* FunctionalSet.swift in Sources */,
 				02C489891BE355BB004FD281 /* FunctionalDictionary.swift in Sources */,
 				02C4898A1BE355BB004FD281 /* WeakSet.swift in Sources */,
+				79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */,
 				02C4898B1BE355BB004FD281 /* CommonConstants.swift in Sources */,
 				02C4898C1BE355BB004FD281 /* FunctionalArray.swift in Sources */,
 				02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */,
