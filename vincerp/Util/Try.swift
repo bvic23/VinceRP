@@ -49,13 +49,11 @@ public enum Try<T:Equatable>: CustomStringConvertible, Equatable {
     }
 
     public var description : String {
-        get {
-            switch self {
-            case .Success(let box):
-                return "Success: \(box.value)"
-            case .Failure(let error):
-                return "Failure: \(error)"
-            }
+        switch self {
+        case .Success(let box):
+            return "Success: \(box.value)"
+        case .Failure(let error):
+            return "Failure: \(error)"
         }
     }
 

@@ -46,8 +46,6 @@ class Throttle<T:Equatable> : Dynamic<T> {
     }
     
     override var level: long {
-        get {
-            return self.debounceLevel
-        }
+        return self.debounceLevel
     }
 }

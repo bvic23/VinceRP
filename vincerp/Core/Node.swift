@@ -10,25 +10,19 @@ public class Node: Hashable, Equatable {
     public let hashValue = Int(Node.hashCounter.getAndIncrement())  // Hashable
 
     public var children: Set<Node> {
-        get {
-            return childrenHolder.value.filter {
-                $0.parents.contains(self)
-            }.set
-        }
+        return childrenHolder.value.filter {
+            $0.parents.contains(self)
+        }.set
     }
 
     public var descendants: Set<Node> {
-        get {
-            return children ++ children.flatMap {
-                $0.descendants
-            }
+        return children ++ children.flatMap {
+            $0.descendants
         }
     }
 
     public var parents: Set<Node> {
-        get {
-            fatalError(ABSTRACT_METHOD)
-        }
+        fatalError(ABSTRACT_METHOD)
     }
 
     public var ancestors: Set<Node> {
@@ -72,9 +66,7 @@ public class Node: Hashable, Equatable {
     }
 
     var level: long {
-        get {
-            fatalError(ABSTRACT_METHOD)
-        }
+        fatalError(ABSTRACT_METHOD)
     }
 
 }

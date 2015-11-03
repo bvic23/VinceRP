@@ -30,9 +30,7 @@ class WebPage:Equatable {
     }
 
     var html: Dynamic<String> {
-        get {
-            return self.makeHtml()
-        }
+        return self.makeHtml()
     }
 
 }

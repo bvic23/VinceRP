@@ -83,21 +83,17 @@ public class Dynamic<T:Equatable>: Spinlock<T> {
     }
 
     override public var parents: Set<Node> {
-        get {
-            guard let s = self.state().value as? State else {
-                fatalError(UNREACHABLE_CODE)
-            }
-            return s.parents
+        guard let s = self.state().value as? State else {
+            fatalError(UNREACHABLE_CODE)
         }
+        return s.parents
     }
 
     override var level: long {
-        get {
-            guard let state = self.state().value as? State  else {
-                fatalError(UNREACHABLE_CODE)
-            }
-            return state.level
+        guard let state = self.state().value as? State  else {
+            fatalError(UNREACHABLE_CODE)
         }
+        return state.level
     }
 
 }

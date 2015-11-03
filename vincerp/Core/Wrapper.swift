@@ -14,15 +14,11 @@ class Wrapper<T:Equatable, A:Equatable> : Spinlock<A> {
     }
     
     override var level: long {
-        get {
-            return self.source.level + 1
-        }
+        return self.source.level + 1
     }
     
     override var parents: Set<Node> {
-        get {
-            return toSet(source)
-        }
+        return toSet(source)
     }
     
     override func toTry() -> Try<A> {

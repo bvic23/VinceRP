@@ -13,9 +13,7 @@ struct EmitterReactorTuple: Hashable, Equatable {
     }
 
     var hashValue: Int {
-        get {
-            return e.hashValue ^ r.hashValue
-        }
+        return e.hashValue ^ r.hashValue
     }
 }
 
