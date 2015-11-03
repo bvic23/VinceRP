@@ -15,7 +15,7 @@ extension SequenceType where Generator.Element : Hashable {
         return (Set(result1), Set(result2))
     }
     
-    public func exists(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
+    public func hasElementPassingTest(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
         let result = self.filter(filterFunc)
         return result.count > 0
     }

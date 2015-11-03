@@ -36,8 +36,8 @@ public class WeakSet<T:Hashable where T:AnyObject>: AnyObject {
         return WeakSet(self.array().filter(includeElement))
     }
 
-    public func exists(@noescape filterFunc: (T) -> Bool) -> Bool {
-        return self.array().exists(filterFunc)
+    public func hasElementPassingTest(@noescape filterFunc: (T) -> Bool) -> Bool {
+        return self.array().hasElementPassingTest(filterFunc)
     }
 
     public func map<U>(@noescape transform: (T) -> U) -> WeakSet<U> {

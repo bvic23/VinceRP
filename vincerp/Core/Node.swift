@@ -47,7 +47,7 @@ public class Node: Hashable, Equatable {
 
     func linkChild(child: Node) {
         childrenHolder.spinSet { c in
-            guard (c.exists {$0 == child}) else {
+            guard (c.hasElementPassingTest {$0 == child}) else {
                 return c.insert(child)
             }
             return c
