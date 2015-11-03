@@ -1,8 +1,8 @@
 #!/bin/sh
 
 set -o pipefail && xcodebuild clean build test \
-  -project vincerp.xcodeproj \
-  -scheme vincerp_mac \
+  -project VinceRP.xcodeproj \
+  -scheme VinceRP_mac \
   -sdk macosx \
   -enableCodeCoverage YES
   ONLY_ACTIVE_ARCH=NO \

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02C4895D1BE35487004FD281"
-               BuildableName = "vincerp.framework"
-               BlueprintName = "vincerp-Mac"
-               ReferencedContainer = "container:vincerp.xcodeproj">
+               BuildableName = "VinceRP.framework"
+               BlueprintName = "VinceRP-Mac"
+               ReferencedContainer = "container:VinceRP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "02C489661BE35488004FD281"
-               BuildableName = "vincerpTests.xctest"
-               BlueprintName = "vincerp-MacTests"
-               ReferencedContainer = "container:vincerp.xcodeproj">
+               BuildableName = "VinceRPTests.xctest"
+               BlueprintName = "VinceRP-MacTests"
+               ReferencedContainer = "container:VinceRP.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C4895D1BE35487004FD281"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp-Mac"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP-Mac"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C4895D1BE35487004FD281"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp-Mac"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP-Mac"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,9 +84,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "02C4895D1BE35487004FD281"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp-Mac"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP-Mac"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

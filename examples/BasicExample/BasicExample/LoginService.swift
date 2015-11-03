@@ -5,13 +5,13 @@
 
 import Alamofire
 import SwiftyJSON
-import vincerp
+import VinceRP
 
 // http://todolist.parseapp.com/
 
 class LoginService {
 
-    func login(username: String, password: String) -> Rx<Bool> {
+    func login(username: String, password: String) -> Hub<Bool> {
         let returnValue = reactive(false)
         let params = [
             "_ApplicationId": "0Oq3tTp9JMvd72LOrGN25PiEq9XgVHCxo57MQbpT",
@@ -40,6 +40,6 @@ class LoginService {
     }
     
     private func error(errorString: String) -> NSError {
-        return NSError(domain: "vincerp", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: errorString])
+        return NSError(domain: "VinceRP", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: errorString])
     }
 }

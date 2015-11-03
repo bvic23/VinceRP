@@ -1,6 +1,6 @@
 //
 //  Flattenable.swift
-//  vincerp
+//  VinceRP
 //
 //  Created by Viktor Belényesi on 11/3/15.
 //  Copyright © 2015 Viktor Belenyesi. All rights reserved.
