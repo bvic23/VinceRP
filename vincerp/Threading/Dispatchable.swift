@@ -7,25 +7,25 @@
 public protocol Dispatchable {
     typealias D
     
-    func dispatchOnThread(dispatchQueue: dispatch_queue_t!) -> D
-    func dispatchOnMainThread() -> D
-    func dispatchOnCurrentThread() -> D
-    func dispatchOnBackgroundThread() -> D
+    func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> D
+    func dispatchOnMainQueue() -> D
+    func dispatchOnCurrentQueue() -> D
+    func dispatchOnBackgroundQueue() -> D
     
 }
 
 public extension Dispatchable {
     
-    public func dispatchOnMainThread() -> D {
-        return self.dispatchOnThread(dispatch_get_main_queue())
+    public func dispatchOnMainQueue() -> D {
+        return self.dispatchOnQueue(dispatch_get_main_queue()!)
     }
     
-    public func dispatchOnCurrentThread() -> D {
-        return self.dispatchOnThread(nil)
+    public func dispatchOnCurrentQueue() -> D {
+        return self.dispatchOnQueue(nil)
     }
     
-    public func dispatchOnBackgroundThread() -> D {
-        return self.dispatchOnThread(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+    public func dispatchOnBackgroundQueue() -> D {
+        return self.dispatchOnQueue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)!)
     }
     
 }

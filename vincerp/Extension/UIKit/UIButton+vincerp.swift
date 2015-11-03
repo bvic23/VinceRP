@@ -21,7 +21,7 @@ public class ClickHandlerAction: Dispatchable {
         self.handler(button)
     }
     
-    public func dispatchOnThread(dispatchQueue: dispatch_queue_t!) -> ClickHandlerAction {
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> ClickHandlerAction {
         self.dispatchQueue = dispatchQueue
         return self
     }

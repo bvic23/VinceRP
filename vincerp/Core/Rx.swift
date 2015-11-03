@@ -83,7 +83,7 @@ public class Rx<T:Equatable>: Reactor {
 
 extension Rx: Dispatchable {
     
-    public func dispatchOnThread(dispatchQueue: dispatch_queue_t!) -> Rx<T> {
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Rx<T> {
         self.dispatchQueue = dispatchQueue
         return self
     }
