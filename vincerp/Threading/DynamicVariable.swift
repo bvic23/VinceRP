@@ -24,10 +24,9 @@ public class DynamicVariable<T> {
 
     public init(_ value: T?) {
         self.threadLocal = ThreadLocal(value: value, key: "DynamicVariable")
-        self.value = value
     }
 
-    public func withValue<S>(newval: T, _ thunk: () -> S) -> S {
+    public func withValue<S>(newval: T, @noescape _ thunk: () -> S) -> S {
         let oldval = value
 
         // set the context
