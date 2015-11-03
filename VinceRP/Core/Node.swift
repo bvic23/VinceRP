@@ -3,32 +3,6 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-protocol NP: Hashable, Equatable {
-    var parents: Set<Self> { get }
-    var children: Set<Self> { get }
-    var descendants: Set<Self> { get }
-    var ancestors: Set<Self> { get }
-}
-
-protocol NP2: NP {
-}
-
-extension NP2 {
-    
-    var descendants: Set<Self> {
-        return self.children ++ children.flatMap {
-            $0.descendants
-        }
-    }
-    
-    var ancestors: Set<Self> {
-        return self.parents ++ parents.flatMap {
-            $0.ancestors
-        }
-    }
-    
-}
-
 public class Node: Hashable, Equatable {
 
     private static var hashCounter = AtomicLong(0)

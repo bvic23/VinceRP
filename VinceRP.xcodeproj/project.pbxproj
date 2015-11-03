@@ -94,6 +94,7 @@
 		79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
 		79C7E9CF1BE95CA800BA5E6C /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
 		79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
+		79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79CB58391BD1258400070BEF /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58381BD1258400070BEF /* Throttle.swift */; };
@@ -1052,6 +1053,7 @@
 				02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */,
 				02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */,
 				02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */,
+				79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */,
 				02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */,
 				02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */,
 				02C4899E1BE357FD004FD281 /* Dispatchable.swift in Sources */,
