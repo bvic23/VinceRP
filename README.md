@@ -34,7 +34,7 @@ The framework supports iOS & Mac for now.
 Let's see a basic example:
 
 ```swift
-import vincerp
+import VinceRP
 
 // define reactive sources
 let s1 = reactive(1)
@@ -55,7 +55,7 @@ print(sum*) // = 4
 Note that - thanks to Swift's type inference - it figures out the type of the sources and the `sum` as well. So the following won't compile:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 
@@ -69,7 +69,7 @@ However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot mat
 Of course you can have side effects:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 var counter = 0
@@ -85,7 +85,7 @@ print(counter) // = 1
 If you don't want to count the initialization:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 var counter = 0
@@ -105,7 +105,7 @@ print(counter) // = 1
 If you're interested in errors:
 
 ```swift
-import vincerp
+import VinceRP
 
 let s = reactive(1)
 

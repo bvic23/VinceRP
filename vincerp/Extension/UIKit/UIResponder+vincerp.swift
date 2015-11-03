@@ -1,6 +1,6 @@
 //
-//  UIResponder+vincerp.swift
-//  vincerp
+//  UIResponder+VinceRP.swift
+//  VinceRP
 //
 //  Created by Agnes Vasarhelyi on 30/10/15.
 //  Copyright © 2015 Viktor Belenyesi. All rights reserved.

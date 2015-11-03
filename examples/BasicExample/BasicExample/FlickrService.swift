@@ -6,11 +6,11 @@
 import Alamofire
 import SwiftyJSON
 import UIKit
-import vincerp
+import VinceRP
 
 class FlickrService {
     
-    func searchFlickrForTerm(searchTerm: String) -> Rx<[UIImage]> {
+    func searchFlickrForTerm(searchTerm: String) -> Hub<[UIImage]> {
         let result = reactive([UIImage]())
         
         Alamofire.request(.GET, searchTerm.flickrSearchURL(), parameters:nil, encoding: .JSON)

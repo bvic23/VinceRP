@@ -12,8 +12,8 @@
 		799E46BB1B9B88B2005D5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BA1B9B88B2005D5F6F /* Assets.xcassets */; };
 		799E46BE1B9B88B2005D5F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BC1B9B88B2005D5F6F /* LaunchScreen.storyboard */; };
 		79CB58041BCEAC2200070BEF /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58031BCEAC2200070BEF /* FlickrService.swift */; };
-		79CC89511BE3463E0065F8ED /* vincerp.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* vincerp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		79D891801B9B8E1300320CBF /* vincerp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* vincerp.framework */; };
+		79CC89511BE3463E0065F8ED /* VinceRP.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* VinceRP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79D891801B9B8E1300320CBF /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799E46CB1B9B8ADD005D5F6F /* VinceRP.framework */; };
 		79DAC5431B9B8BBC0054086D /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */; };
 		79DD8C841BCCFFFC00BAC168 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD8C831BCCFFFC00BAC168 /* LoginService.swift */; };
 		79E1A5B31BCEC909003C8036 /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5B21BCEC909003C8036 /* FlickrPhotoCell.swift */; };
@@ -28,24 +28,24 @@
 /* Begin PBXContainerItemProxy section */
 		799E46CA1B9B8ADD005D5F6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */;
+			containerPortal = 799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 79F256811ADE77250077730C;
-			remoteInfo = vincerp;
+			remoteInfo = VinceRP;
 		};
 		799E46CC1B9B8ADD005D5F6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */;
+			containerPortal = 799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 79F2568C1ADE77250077730C;
-			remoteInfo = vincerpTests;
+			remoteInfo = VinceRPTests;
 		};
 		79DAC53E1B9B8B7D0054086D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */;
+			containerPortal = 799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 79F256801ADE77250077730C;
-			remoteInfo = vincerp;
+			remoteInfo = VinceRP;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				79CC89511BE3463E0065F8ED /* vincerp.framework in CopyFiles */,
+				79CC89511BE3463E0065F8ED /* VinceRP.framework in CopyFiles */,
 				79F5A9D21BBB35420062D4A3 /* SwiftyJSON.framework in CopyFiles */,
 				79F5A9CB1BBB2D4B0062D4A3 /* Alamofire.framework in CopyFiles */,
 			);
@@ -71,7 +71,7 @@
 		799E46BA1B9B88B2005D5F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799E46BD1B9B88B2005D5F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799E46BF1B9B88B2005D5F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = vincerp.xcodeproj; path = ../../vincerp.xcodeproj; sourceTree = "<group>"; };
+		799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VinceRP.xcodeproj; path = ../../VinceRP.xcodeproj; sourceTree = "<group>"; };
 		79CB58031BCEAC2200070BEF /* FlickrService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControler.swift; sourceTree = "<group>"; };
 		79DD8C831BCCFFFC00BAC168 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			files = (
 				79F5A9D11BBB353A0062D4A3 /* SwiftyJSON.framework in Frameworks */,
 				79F5A9C91BBB2B4D0062D4A3 /* Alamofire.framework in Frameworks */,
-				79D891801B9B8E1300320CBF /* vincerp.framework in Frameworks */,
+				79D891801B9B8E1300320CBF /* VinceRP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 			children = (
 				79F5A9D01BBB353A0062D4A3 /* SwiftyJSON.framework */,
 				79F5A9C71BBB2AEF0062D4A3 /* Alamofire.framework */,
-				799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */,
+				799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */,
 				799E46AD1B9B88B1005D5F6F /* BasicExample */,
 				799E46AC1B9B88B1005D5F6F /* Products */,
 			);
@@ -136,8 +136,8 @@
 		799E46C61B9B8ADD005D5F6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				799E46CB1B9B8ADD005D5F6F /* vincerp.framework */,
-				799E46CD1B9B8ADD005D5F6F /* vincerpTests.xctest */,
+				799E46CB1B9B8ADD005D5F6F /* VinceRP.framework */,
+				799E46CD1B9B8ADD005D5F6F /* VinceRPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 			projectReferences = (
 				{
 					ProductGroup = 799E46C61B9B8ADD005D5F6F /* Products */;
-					ProjectRef = 799E46C51B9B8ADD005D5F6F /* vincerp.xcodeproj */;
+					ProjectRef = 799E46C51B9B8ADD005D5F6F /* VinceRP.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -205,17 +205,17 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		799E46CB1B9B8ADD005D5F6F /* vincerp.framework */ = {
+		799E46CB1B9B8ADD005D5F6F /* VinceRP.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = vincerp.framework;
+			path = VinceRP.framework;
 			remoteRef = 799E46CA1B9B8ADD005D5F6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		799E46CD1B9B8ADD005D5F6F /* vincerpTests.xctest */ = {
+		799E46CD1B9B8ADD005D5F6F /* VinceRPTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = vincerpTests.xctest;
+			path = VinceRPTests.xctest;
 			remoteRef = 799E46CC1B9B8ADD005D5F6F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -254,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		79DAC53F1B9B8B7D0054086D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = vincerp;
+			name = VinceRP;
 			targetProxy = 79DAC53E1B9B8B7D0054086D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -374,7 +374,7 @@
 				);
 				INFOPLIST_FILE = BasicExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp.BasicExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.VinceRP.BasicExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -394,7 +394,7 @@
 				);
 				INFOPLIST_FILE = BasicExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.vincerp.BasicExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.VinceRP.BasicExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

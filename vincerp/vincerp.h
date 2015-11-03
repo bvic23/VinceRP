@@ -5,12 +5,12 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for vincerp.
-FOUNDATION_EXPORT double vincerpVersionNumber;
+//! Project version number for VinceRP.
+FOUNDATION_EXPORT double VinceRPVersionNumber;
 
-//! Project version string for vincerp.
-FOUNDATION_EXPORT const unsigned char vincerpVersionString[];
+//! Project version string for VinceRP.
+FOUNDATION_EXPORT const unsigned char VinceRPVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <vincerp/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <VinceRP/PublicHeader.h>
 
 #import "VRPNSObjectHelper.h"

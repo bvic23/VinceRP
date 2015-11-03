@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79F256801ADE77250077730C"
-               BuildableName = "vincerp.framework"
-               BlueprintName = "vincerp"
-               ReferencedContainer = "container:vincerp.xcodeproj">
+               BuildableName = "VinceRP.framework"
+               BlueprintName = "VinceRP"
+               ReferencedContainer = "container:VinceRP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79F2568B1ADE77250077730C"
-               BuildableName = "vincerpTests.xctest"
-               BlueprintName = "vincerpTests"
-               ReferencedContainer = "container:vincerp.xcodeproj">
+               BuildableName = "VinceRPTests.xctest"
+               BlueprintName = "VinceRPTests"
+               ReferencedContainer = "container:VinceRP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79F2568B1ADE77250077730C"
-               BuildableName = "vincerpTests.xctest"
-               BlueprintName = "vincerpTests"
-               ReferencedContainer = "container:vincerp.xcodeproj">
+               BuildableName = "VinceRPTests.xctest"
+               BlueprintName = "VinceRPTests"
+               ReferencedContainer = "container:VinceRP.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F256801ADE77250077730C"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F256801ADE77250077730C"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -98,9 +98,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79F256801ADE77250077730C"
-            BuildableName = "vincerp.framework"
-            BlueprintName = "vincerp"
-            ReferencedContainer = "container:vincerp.xcodeproj">
+            BuildableName = "VinceRP.framework"
+            BlueprintName = "VinceRP"
+            ReferencedContainer = "container:VinceRP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

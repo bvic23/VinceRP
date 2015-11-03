@@ -4,7 +4,7 @@
 //
 
 import UIKit
-import vincerp
+import VinceRP
 
 class FlickrViewControler: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -49,7 +49,7 @@ class FlickrViewControler: UIViewController {
         
         searchTerm.throttle(1.0).ignore("").onChange { searchText in
             searchIsOngoing <- true
-            let searchResult = FlickrService().searchFlickrForTerm(searchText).dispatchOnMainThread()
+            let searchResult = FlickrService().searchFlickrForTerm(searchText).dispatchOnMainQueue()
             
             searchResult.onChange {
                 searchIsOngoing <- false
