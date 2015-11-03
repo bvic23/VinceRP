@@ -42,11 +42,11 @@ public class Hub<T:Equatable>: Reactor {
             EmitterReactorTuple(self, $0)
         }
         guard let q = dispatchQueue else {
-            ImmediatePropagator().propagate(mappedTargets)
+            Propagator().propagate(mappedTargets)
             return
         }
         dispatch_async(q) {
-            ImmediatePropagator().propagate(mappedTargets)
+            Propagator().propagate(mappedTargets)
         }
     }
     
@@ -62,7 +62,7 @@ public class Hub<T:Equatable>: Reactor {
     }
     
     public func recalc() {
-        ImmediatePropagator().propagate(toSet(EmitterReactorTuple(self, self)))
+        Propagator().propagate(toSet(EmitterReactorTuple(self, self)))
     }
     
     public func onChange(skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {
