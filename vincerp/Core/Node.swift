@@ -32,8 +32,8 @@ public class Node: Hashable, Equatable {
     }
 
     public var ancestors: Set<Node> {
-        get {
-            fatalError(ABSTRACT_METHOD)
+        return parents ++ parents.flatMap {
+            $0.ancestors
         }
     }
 
