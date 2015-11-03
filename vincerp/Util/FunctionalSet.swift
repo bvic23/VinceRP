@@ -15,16 +15,7 @@ extension Set {
         let result2 = self.filter{!filterFunc($0)}
         return (Set(result1), Set(result2))
     }
-    
-}
 
-extension SequenceType where Generator.Element: Hashable {
-        
-    public func hasElementPassingTest(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
-        let result = self.filter(filterFunc)
-        return result.count > 0
-    }
-    
     public func groupBy<U>(@noescape filterFunc: (Generator.Element) -> U) -> [U : Set<Generator.Element>] {
         var result = [U: Set<Generator.Element>]()
         for i in self {
@@ -36,6 +27,15 @@ extension SequenceType where Generator.Element: Hashable {
             result[u] = bag ++ toSet(i)
         }
         return result
+    }
+    
+}
+
+extension SequenceType where Generator.Element: Hashable {
+    
+    public func hasElementPassingTest(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
+        let result = self.filter(filterFunc)
+        return result.count > 0
     }
     
 }
