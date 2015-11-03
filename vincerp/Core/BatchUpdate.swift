@@ -15,7 +15,7 @@ public struct BatchUpdate<T:Equatable> {
     }
     
     init(updates: [UpdateProtocol], u: Update<T>) {
-        self.updates = updates.appendAfter(u)
+        self.updates = updates.arrayByAppending(u)
     }
     
     func and(v: Source<T>, withValue t: T) -> BatchUpdate {

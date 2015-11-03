@@ -5,14 +5,14 @@
 
 extension Array {
 
-    public func prepend(elem: Element) -> Array<Element> {
+    public func arrayByPrepending(elem: Element) -> Array<Element> {
         var mutableCopy = self
         mutableCopy.insert(elem, atIndex: 0)
         let result = mutableCopy
         return result
     }
 
-    public func appendAfter(elem: Element) -> Array<Element> {
+    public func arrayByAppending(elem: Element) -> Array<Element> {
         var mutableCopy = self
         mutableCopy.append(elem)
         let result = mutableCopy

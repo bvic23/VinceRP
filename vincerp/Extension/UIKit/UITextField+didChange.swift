@@ -12,7 +12,7 @@ extension UITextField {
     
     public func addChangeHandler(actionBlock: (UITextField) -> ()) {
         if let handlers = eventHandlers[self] {
-            eventHandlers[self] = handlers.appendAfter(actionBlock)
+            eventHandlers[self] = handlers.arrayByAppending(actionBlock)
         } else {
             eventHandlers[self] = [actionBlock]
         }

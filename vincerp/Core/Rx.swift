@@ -30,7 +30,7 @@ public class Rx<T:Equatable>: Reactor {
     public func value() -> T {
         if let (e, d) = globalDynamic.value {
             linkChild(e)
-            globalDynamic.value = (e, d.prepend(self))
+            globalDynamic.value = (e, d.arrayByPrepending(self))
         } else {
             globalDynamic.value = nil
         }
