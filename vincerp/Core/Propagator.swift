@@ -3,46 +3,32 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-struct EmitterReactorTuple: Hashable, Equatable {
-    let e: Node
-    let r: Node
-
-    init(_ e: Node, _ r: Node) {
-        self.e = e
-        self.r = r
-    }
-
-    var hashValue: Int {
-        return e.hashValue ^ r.hashValue
-    }
-}
-
-func ==(lhs: EmitterReactorTuple, rhs: EmitterReactorTuple) -> Bool {
-    return lhs.e.hashValue == rhs.e.hashValue && lhs.r.hashValue == rhs.e.hashValue
+func ==(lhs: NodeTuple, rhs: NodeTuple) -> Bool {
+    return lhs.source.hashValue == rhs.source.hashValue && lhs.reactor.hashValue == rhs.source.hashValue
 }
 
 class Propagator {
-    func propagate(nodes: [EmitterReactorTuple]) {
+    func propagate(nodes: [NodeTuple]) {
         self.propagate(Set(nodes))
     }
 
-    func propagate(nodes: Set<EmitterReactorTuple>) {
+    func propagate(nodes: Set<NodeTuple>) {
         guard nodes.count > 0 else {
             return
         }
         
-        let minLevel = nodes.map{ $0.r.level }.min(0)
+        let minLevel = nodes.map{ $0.reactor.level }.min(0)
         let (now, later) = nodes.partition {
-            $0.r.level == minLevel
+            $0.reactor.level == minLevel
         }
 
         let next = now.groupBy{
-               $0.r
+            $0.reactor
         }.mapValues{
-            $0.map{ $0.e }
+            $0.map{ $0.source }
         }.map{ (target, pingers) in
             return target.ping(pingers).map {
-                EmitterReactorTuple(target, $0)
+                NodeTuple(target, $0)
             }
         }.flatten()
            

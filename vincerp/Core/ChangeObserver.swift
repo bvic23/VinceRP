@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class ChangeObserver: Reactor {
+public class ChangeObserver: Node {
     
     private static var changeObservers = Set<ChangeObserver>()
     
