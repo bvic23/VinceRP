@@ -7,46 +7,25 @@ public func toSet<T:Hashable>(e: T...) -> Set<T> {
     return Set(e)
 }
 
-public struct PartitionGenerator<T>: GeneratorType {
-    public typealias Element = [T]
-    private let onlyElement: Element
-    
-    init(onlyElement: Element) {
-        self.onlyElement = onlyElement
-    }
-    
-    mutating public func next() -> Element? {
-        return self.onlyElement
-    }
-}
 
-public struct PartitionSequence<T>: SequenceType {
-    public typealias Generator = PartitionGenerator<T>
-    private let onlyElement: [T]
+extension Set {
     
-    init(onlyElement: [T]) {
-        self.onlyElement = onlyElement
+    public func partition(@noescape filterFunc: (Generator.Element) -> Bool) -> (Set<Generator.Element>, Set<Generator.Element>) {
+        let result1 = self.filter(filterFunc)
+        let result2 = self.filter{!filterFunc($0)}
+        return (Set(result1), Set(result2))
     }
     
-    public func generate() -> Generator {
-        return PartitionGenerator(onlyElement: self.onlyElement)
-    }
 }
 
 extension SequenceType where Generator.Element: Hashable {
-    
-    public func partition(@noescape filterFunc: (Generator.Element) -> Bool) -> (PartitionSequence<Generator.Element>, PartitionSequence<Generator.Element>) {
-        let result1 = self.filter(filterFunc)
-        let result2 = self.filter{!filterFunc($0)}
-        return (PartitionSequence(onlyElement: result1), PartitionSequence(onlyElement: result2))
-    }
-    
+        
     public func hasElementPassingTest(@noescape filterFunc: (Self.Generator.Element) -> Bool) -> Bool {
         let result = self.filter(filterFunc)
         return result.count > 0
     }
     
-    public func groupBy<U>(@noescape filterFunc: (Generator.Element) -> U) -> [U : PartitionSequence<Generator.Element>] {
+    public func groupBy<U>(@noescape filterFunc: (Generator.Element) -> U) -> [U : Set<Generator.Element>] {
         var result = [U: Set<Generator.Element>]()
         for i in self {
             let u = filterFunc(i)
