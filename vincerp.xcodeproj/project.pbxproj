@@ -91,6 +91,8 @@
 		797036961BA72B2C00ED5D1A /* UILabel+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+vincerp.swift */; };
 		79706B8D1B32F68F003B5000 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */; };
 		7978BD501BB58C8E0004AE70 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */; };
+		797BD9121BE936AE00988548 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
+		797BD9141BE9396300988548 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+vincerp.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79CB58391BD1258400070BEF /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58381BD1258400070BEF /* Throttle.swift */; };
@@ -214,6 +216,8 @@
 		797036951BA72B2C00ED5D1A /* UILabel+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+vincerp.swift"; sourceTree = "<group>"; };
 		79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionHandling.swift; sourceTree = "<group>"; };
 		7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactivePropertyGenerator.swift; sourceTree = "<group>"; };
+		797BD9111BE936AE00988548 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flattenable.swift; sourceTree = "<group>"; };
+		797BD9131BE9396300988548 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableArray.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+vincerp.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79CB58381BD1258400070BEF /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
@@ -533,6 +537,8 @@
 				79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */,
 				79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */,
 				7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */,
+				797BD9111BE936AE00988548 /* Flattenable.swift */,
+				797BD9131BE9396300988548 /* EquatableArray.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1098,6 +1104,7 @@
 				795FF5561BB819EF00E19285 /* UIView+vincerp.swift in Sources */,
 				79FEAF1E1AE9449500DC002F /* DynamicVariable.swift in Sources */,
 				7927FDA91AE8063700FA161A /* WeakSet.swift in Sources */,
+				797BD9141BE9396300988548 /* EquatableArray.swift in Sources */,
 				795FF57A1BB829D500E19285 /* BatchUpdate.swift in Sources */,
 				ADEAFFE88C75FF4BBA851937 /* Try.swift in Sources */,
 				79CB58391BD1258400070BEF /* Throttle.swift in Sources */,
@@ -1107,6 +1114,7 @@
 				ADEAF64C57338EF6B8CC8BB9 /* Box.swift in Sources */,
 				ADEAF2090FECDC625D480CAF /* WeakReference.swift in Sources */,
 				79F9F9361BB3429300703EB7 /* VRPNSObjectHelper.m in Sources */,
+				797BD9121BE936AE00988548 /* Flattenable.swift in Sources */,
 				ADEAFA058F2E062D8D0034C7 /* FunctionalSet.swift in Sources */,
 				ADEAF5555038A7BDE62482F7 /* FunctionalDictionary.swift in Sources */,
 				ADEAFD4AA39E6FEF3CC399E4 /* Propagator.swift in Sources */,

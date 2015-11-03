@@ -57,18 +57,6 @@ extension SequenceType where Generator.Element: Comparable {
     }
 }
 
-public protocol Flattenable {
-    func flatten() -> Self
-}
-
-extension Flattenable where Self: SequenceType {
-    
-    public func flatten() -> Self {
-        return self
-    }
-    
-}
-
 extension Set: Flattenable {
     
     public func filter(@noescape includeElement: (Element) -> Bool) -> Set<Element> {

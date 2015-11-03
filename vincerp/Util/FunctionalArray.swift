@@ -21,52 +21,11 @@ extension Array {
 
 }
 
-extension Array: Equatable {}
-
-func ==<C: CollectionType where C.Generator.Element: Equatable>
-    (lhs: C?, rhs: C?) -> Bool {
-        switch (lhs,rhs) {
-        case (.Some(let lhs), .Some(let rhs)):
-            return lhs == rhs
-        case (.None, .None):
-            return true
-        default:
-            return false
-        }
-}
-
-
-
-public func ==<T:Equatable>(lhs: [T], rhs: [T]) -> Bool {
-    if lhs.count != rhs.count {
-        return false
+extension Array where Element:SequenceType {
+    
+    public func flatten() -> [Element.Generator.Element] {
+        return self.flatMap{$0}
     }
     
-    for index in 0..<lhs.count {
-        if lhs[index] != rhs[index] {
-            return false
-        }
-    }
-    
-    return true
 }
-
-public func ==<T>(lhs: [T], rhs: [T]) -> Bool {
-    return false
-}
-
-public func ==<T:Equatable>(lhs: [T?], rhs: [T?]) -> Bool {
-    if lhs.count != rhs.count {
-        return false
-    }
-    
-    for index in 0..<lhs.count {
-        if lhs[index] != rhs[index] {
-            return false
-        }
-    }
-    
-    return true
-}
-
 
