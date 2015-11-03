@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class WeakSet<T:Hashable where T:AnyObject>: AnyObject {
+public class WeakSet<T:Hashable where T:AnyObject> {
     private var _array: [WeakReference<T>]
 
     public init() {
