@@ -22,14 +22,13 @@ public class WeakSet<T:Hashable where T:AnyObject> {
         }
     }
 
-    public func insert(member: T) -> WeakSet<T> {
+    public func insert(member: T) {
         for e in _array {
             if e.hashValue == member.hashValue {
-                return self
+                return
             }
         }
         _array.append(WeakReference(member))
-        return self
     }
 
     public func filter(@noescape includeElement: (T) -> Bool) -> WeakSet<T> {
