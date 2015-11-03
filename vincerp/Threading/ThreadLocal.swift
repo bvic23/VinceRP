@@ -4,20 +4,24 @@
 //
 
 public class ThreadLocal<T> {
-    private let threadLocalKey = "threadLocal" as NSString
+    private let key: NSString
 
-    public init(value: T?) {
+    public init(value: T?, key: NSString) {
+        self.key = key
         self.value = value
     }
 
     public var value: T? {
         set {
             if let v = newValue {
-                NSThread.currentThread().threadDictionary[threadLocalKey] = Box(v)
+                NSThread.currentThread().threadDictionary[key] = Box(v)
+            } else {
+                // TODO: add test
+                NSThread.currentThread().threadDictionary.removeObjectForKey(key)
             }
         }
         get {
-            guard let r: Box<T> = NSThread.currentThread().threadDictionary[threadLocalKey] as? Box<T> else {
+            guard let r: Box<T> = NSThread.currentThread().threadDictionary[key] as? Box<T> else {
                 return nil
             }
             return r.value
