@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Hub<T:Equatable>: Reactor {
+public class Hub<T:Equatable>: Node {
     
     var dispatchQueue: dispatch_queue_t!
     
@@ -39,7 +39,7 @@ public class Hub<T:Equatable>: Reactor {
     
     func propagate() {
         let mappedTargets = children.map {
-            EmitterReactorTuple(self, $0)
+            NodeTuple(self, $0)
         }
         guard let q = dispatchQueue else {
             Propagator().propagate(mappedTargets)
@@ -62,7 +62,7 @@ public class Hub<T:Equatable>: Reactor {
     }
     
     public func recalc() {
-        Propagator().propagate(toSet(EmitterReactorTuple(self, self)))
+        Propagator().propagate(toSet(NodeTuple(self, self)))
     }
     
     public func onChange(skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {

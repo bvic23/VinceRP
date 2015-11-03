@@ -4,7 +4,7 @@
 //
 
 protocol UpdateProtocol {
-    func ancestors() -> [EmitterReactorTuple]
+    func ancestors() -> [NodeTuple]
 }
 
 public struct BatchUpdate<T:Equatable> {
@@ -40,9 +40,9 @@ struct Update<T:Equatable> : UpdateProtocol {
         v.updateSilent(t)
     }
     
-    func ancestors() -> [EmitterReactorTuple] {
+    func ancestors() -> [NodeTuple] {
         return Array(self.v.children).map {
-            EmitterReactorTuple($0, $0)
+            NodeTuple($0, $0)
         }
     }
     
