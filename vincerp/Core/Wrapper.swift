@@ -5,9 +5,9 @@
 
 class Wrapper<T:Equatable, A:Equatable> : Spinlock<A> {
     
-    let source : Rx<T>
+    let source : Hub<T>
     
-    init(_ source: Rx<T>) {
+    init(_ source: Hub<T>) {
         self.source = source
         super.init()
         source.linkChild(self)

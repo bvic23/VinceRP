@@ -7,7 +7,7 @@ import UIKit
 
 public extension UIView {
     
-    public var reactiveHidden: Rx<Bool> {
+    public var reactiveHidden: Hub<Bool> {
         get {
             return reactiveProperty(forProperty: "hidden", initValue: true)
         }

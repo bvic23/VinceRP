@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Source<T:Equatable>: Rx<T> {
+public class Source<T:Equatable>: Hub<T> {
     
     let state: AtomicReference<Box<Try<T>>>
 

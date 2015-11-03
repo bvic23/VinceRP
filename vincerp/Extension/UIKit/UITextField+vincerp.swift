@@ -7,7 +7,7 @@ import UIKit
 
 extension UITextField {
 
-    public var reactiveText: Rx<String> {
+    public var reactiveText: Hub<String> {
         get {
             return reactiveProperty(forProperty: "text", initValue: self.text!) { emitter in
                 self.addChangeHandler() { textField in

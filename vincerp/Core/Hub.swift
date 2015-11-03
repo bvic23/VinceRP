@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Rx<T:Equatable>: Reactor {
+public class Hub<T:Equatable>: Reactor {
     
     var dispatchQueue: dispatch_queue_t!
     
@@ -65,14 +65,14 @@ public class Rx<T:Equatable>: Reactor {
         ImmediatePropagator().propagate(toSet(EmitterReactorTuple(self, self)))
     }
     
-    public func onChange(skipInitial: Bool = true, callback: (T) -> ()) -> Rx<T> {
+    public func onChange(skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {
         onChangeDo(self, skipInitial: skipInitial) {
             callback($0)
         }
         return self
     }
     
-    public func onError(callback: (NSError) -> ()) -> Rx<T> {
+    public func onError(callback: (NSError) -> ()) -> Hub<T> {
         onErrorDo(self) {
             callback($0)
         }
@@ -81,22 +81,22 @@ public class Rx<T:Equatable>: Reactor {
     
 }
 
-extension Rx: Dispatchable {
+extension Hub: Dispatchable {
     
-    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Rx<T> {
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Hub<T> {
         self.dispatchQueue = dispatchQueue
         return self
     }
     
 }
 
-extension Rx {
+extension Hub {
     
-    public func throttle(interval: NSTimeInterval) -> Rx<T> {
+    public func throttle(interval: NSTimeInterval) -> Hub<T> {
         return Throttle(source: self, interval: interval)
     }
     
-    public func ignore(ignorabeValues: T) -> Rx<T> {
+    public func ignore(ignorabeValues: T) -> Hub<T> {
         return self.filter { $0 != ignorabeValues }
     }
     

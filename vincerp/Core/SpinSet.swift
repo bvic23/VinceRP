@@ -45,7 +45,7 @@ public class SpinSet<T:AnyObject>: AtomicReference<T> {
 }
 
 
-public class Incrementing<T:Equatable>: Rx<T> {
+public class Incrementing<T:Equatable>: Hub<T> {
 
     private let updateCount = AtomicLong(0)
     public var oldValue: SpinSet<SpinState<T>>?

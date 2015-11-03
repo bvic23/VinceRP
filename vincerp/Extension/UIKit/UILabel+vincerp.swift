@@ -7,7 +7,7 @@ import UIKit
 
 public extension UILabel {
     
-    public var reactiveText: Rx<String> {
+    public var reactiveText: Hub<String> {
         get {
             return reactiveProperty(forProperty: "text", initValue: self.text!)
         }

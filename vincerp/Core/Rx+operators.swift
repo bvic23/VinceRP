@@ -4,26 +4,26 @@
 //
 
 // TODO: add tests
-public extension Rx where T:BooleanType {
+public extension Hub where T:BooleanType {
     
-    public func not() -> Rx<Bool> {
+    public func not() -> Hub<Bool> {
         return self.map(!)
     }
     
 }
 
-public extension Rx {
+public extension Hub {
     
     public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver {
         let obs = ChangeObserver(source:self, callback:{callback(self.value())}, skipInitial:skipInitial)
         return obs
     }
     
-    public func skipErrors() -> Rx<T> {
+    public func skipErrors() -> Hub<T> {
         return filterAll { $0.isSuccess() }
     }
     
-    public func filter(successPred: T -> Bool) -> Rx<T>  {
+    public func filter(successPred: T -> Bool) -> Hub<T>  {
         return Reducer(self) { (x, y) in
             switch (x, y) {
             case (_, .Success(let box)) where successPred(box.value): return .Success(box)
@@ -33,7 +33,7 @@ public extension Rx {
         }
     }
     
-    public func filterAll(predicate: Try<T> -> Bool) -> Rx<T> {
+    public func filterAll(predicate: Try<T> -> Bool) -> Hub<T> {
         return Reducer(self) { (x, y) in
             guard predicate(y) else {
                 return x
@@ -42,17 +42,17 @@ public extension Rx {
         }
     }
     
-    public func map<A>(f: T -> A) -> Rx<A> {
+    public func map<A>(f: T -> A) -> Hub<A> {
         return Mapper<T, A>(self) { x in
             return x.map(f)
         }
     }
     
-    public func mapAll<A>(f: Try<T> -> Try<A>) -> Rx<A> {
+    public func mapAll<A>(f: Try<T> -> Try<A>) -> Hub<A> {
         return Mapper<T, A>(self, f)
     }
     
-    public func reduce(combiner: (T, T) -> T) -> Rx<T> {
+    public func reduce(combiner: (T, T) -> T) -> Hub<T> {
         return Reducer(self) { (x, y) in
             switch (x, y) {
             case (.Success(let a), .Success(let b)): return Try(combiner(a.value, b.value))
@@ -63,7 +63,7 @@ public extension Rx {
         }
     }
     
-    public func reduceAll(combiner: (Try<T>, Try<T>) -> Try<T>) -> Rx<T> {
+    public func reduceAll(combiner: (Try<T>, Try<T>) -> Try<T>) -> Hub<T> {
         return Reducer(self, combiner)
     }
     

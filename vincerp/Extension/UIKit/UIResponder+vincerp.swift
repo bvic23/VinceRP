@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIResponder {
     
-    public func reactiveProperty<T:Equatable>(forProperty propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Rx<T> {
+    public func reactiveProperty<T:Equatable>(forProperty propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
         return ReactivePropertyGeneator.property(self, propertyName: propertyName, initValue: initValue, initializer: initializer)
     }
     

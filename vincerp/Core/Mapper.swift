@@ -7,7 +7,7 @@ class Mapper<T:Equatable, A:Equatable> : Wrapper<T, A> {
     
     private let transformer: Try<T> -> Try<A>
     
-    init(_ source: Rx<T>, _ transformer: Try<T> -> Try<A>) {
+    init(_ source: Hub<T>, _ transformer: Try<T> -> Try<A>) {
         self.transformer = transformer
         super.init(source)
     }
