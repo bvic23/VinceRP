@@ -92,7 +92,6 @@
 		797BD9121BE936AE00988548 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		797BD9141BE9396300988548 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
-		79C7E9CF1BE95CA800BA5E6C /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
 		79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
@@ -723,7 +722,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79F2567B1ADE77250077730C /* Build configuration list for PBXProject "VinceRP" */;
+			buildConfigurationList = 79F2567B1ADE77250077730C /* Build configuration list for PBXProject "vincerp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1034,7 +1033,6 @@
 				02C4897C1BE355BB004FD281 /* ChangeObserver.swift in Sources */,
 				02C4897D1BE355BB004FD281 /* ErrorObserver.swift in Sources */,
 				02C4897E1BE355BB004FD281 /* BatchUpdate.swift in Sources */,
-				79C7E9CF1BE95CA800BA5E6C /* NodeTuple.swift in Sources */,
 				02C4897F1BE355BB004FD281 /* Source.swift in Sources */,
 				02C489801BE355BB004FD281 /* Wrapper.swift in Sources */,
 				02C489811BE355BB004FD281 /* Mapper.swift in Sources */,
@@ -1431,7 +1429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79F2567B1ADE77250077730C /* Build configuration list for PBXProject "VinceRP" */ = {
+		79F2567B1ADE77250077730C /* Build configuration list for PBXProject "vincerp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F256951ADE77250077730C /* Debug */,
