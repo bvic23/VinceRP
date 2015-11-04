@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class ReactivePropertyGeneator {
+class ReactivePropertyGenerator {
     
     // TODO: unittest -> check for memory leaks
     private static var propertyMap = [String:Node]()
