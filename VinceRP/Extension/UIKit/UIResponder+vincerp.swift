@@ -11,11 +11,11 @@ import UIKit
 public extension UIResponder {
     
     public func reactiveProperty<T:Equatable>(forProperty propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
-        return ReactivePropertyGeneator.property(self, propertyName: propertyName, initValue: initValue, initializer: initializer)
+        return ReactivePropertyGenerator.property(self, propertyName: propertyName, initValue: initValue, initializer: initializer)
     }
     
     public func reactiveEmitter<T:Equatable>(name propertyName: String, initValue: T) -> Source<T> {
-        return ReactivePropertyGeneator.emitter(self, propertyName: propertyName, initValue: initValue)
+        return ReactivePropertyGenerator.emitter(self, propertyName: propertyName, initValue: initValue)
     }
     
 }
