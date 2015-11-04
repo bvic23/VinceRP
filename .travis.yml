@@ -4,7 +4,7 @@ before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
   - ./scripts/unstash.sh
-install:
+script:
   - set -o pipefail && xcodebuild clean build test \
       -project VinceRP.xcodeproj \
       -scheme VinceRP_mac \
