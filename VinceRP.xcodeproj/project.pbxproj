@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		024BC36A1BEA4C01009FCBC2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */; };
+		024BC36C1BEA4CCF009FCBC2 /* NSPasteboard+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BC36B1BEA4CCF009FCBC2 /* NSPasteboard+VinceRP.swift */; };
 		02C489761BE355BB004FD281 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
 		02C489771BE355BB004FD281 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
 		02C489781BE355BB004FD281 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEAF1C1AE9426100DC002F /* Dynamic.swift */; };
@@ -183,6 +184,7 @@
 
 /* Begin PBXFileReference section */
 		024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
+		024BC36B1BEA4CCF009FCBC2 /* NSPasteboard+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+VinceRP.swift"; sourceTree = "<group>"; };
 		02C4895E1BE35487004FD281 /* VinceRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinceRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489671BE35488004FD281 /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */,
+				024BC36B1BEA4CCF009FCBC2 /* NSPasteboard+VinceRP.swift */,
 			);
 			name = AppKit;
 			sourceTree = "<group>";
@@ -1037,6 +1040,7 @@
 				02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */,
 				02C489A01BE35836004FD281 /* Timer.swift in Sources */,
 				02C489761BE355BB004FD281 /* Node.swift in Sources */,
+				024BC36C1BEA4CCF009FCBC2 /* NSPasteboard+VinceRP.swift in Sources */,
 				02C489771BE355BB004FD281 /* SpinSet.swift in Sources */,
 				02C489781BE355BB004FD281 /* Dynamic.swift in Sources */,
 				02C489961BE357AD004FD281 /* Api.swift in Sources */,
