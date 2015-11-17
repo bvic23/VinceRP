@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		024BC36A1BEA4C01009FCBC2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */; };
+		02BA6E6A1BFB58520077B5BB /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */; };
+		02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */; };
 		02C489761BE355BB004FD281 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
 		02C489771BE355BB004FD281 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
 		02C489781BE355BB004FD281 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEAF1C1AE9426100DC002F /* Dynamic.swift */; };
@@ -182,7 +183,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
+		02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSResponder+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSResponder+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
+		02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSView+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSView+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
 		02C4895E1BE35487004FD281 /* VinceRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinceRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489671BE35488004FD281 /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
@@ -308,7 +310,8 @@
 		024BC3681BEA4BED009FCBC2 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
-				024BC3691BEA4C01009FCBC2 /* NSResponder+VinceRP.swift */,
+				02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */,
+				02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */,
 			);
 			name = AppKit;
 			sourceTree = "<group>";
@@ -1060,11 +1063,12 @@
 				79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */,
 				02C4898B1BE355BB004FD281 /* CommonConstants.swift in Sources */,
 				02C4898C1BE355BB004FD281 /* FunctionalArray.swift in Sources */,
+				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
 				02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */,
 				02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */,
 				02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */,
 				02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */,
-				024BC36A1BEA4C01009FCBC2 /* NSResponder+VinceRP.swift in Sources */,
+				02BA6E6A1BFB58520077B5BB /* NSResponder+VinceRP.swift in Sources */,
 				79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */,
 				02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */,
 				02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */,
