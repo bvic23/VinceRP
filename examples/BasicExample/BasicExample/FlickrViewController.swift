@@ -7,24 +7,43 @@ import UIKit
 import VinceRP
 
 class FlickrViewControler: UIViewController {
+    
+    // Renders the thumbnail images
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // Show it till the response arrives
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    // If there is no result show this
     @IBOutlet weak var noResultsLabel: UILabel!
+    
+    // Shows how much time we have left before throttle "timeouts"
     @IBOutlet weak var progressView: UIProgressView!
     
+    // Counts how much time we have left before throttle "timeouts"
     private var throttleTimeout:Source<Float> = reactive(0.0)
+    
+    // Emits the search results
     private let searchResults = reactive([UIImage]())
 
     override func viewDidLoad() {
+        
+        // If the results variable changes let's refresh the tableview
         self.searchResults.onChange { _ in
             self.collectionView.reloadData()
         }
         
+        // True if there is an ongoing search
         let searchIsOngoing = reactive(false)
+        
+        // True if there is any search results
         let hasResult = self.searchResults.map{ $0 != [] }
+        
         let searchTerm = self.searchBar.reactiveText
         
+        // Hide activity indicator if we are not in a search
         self.activityIndicator.reactiveHidden = searchIsOngoing.not()
         self.collectionView.reactiveHidden = searchIsOngoing
         self.noResultsLabel.reactiveText = searchTerm.map {
