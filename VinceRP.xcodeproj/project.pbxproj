@@ -94,6 +94,7 @@
 		797BD9121BE936AE00988548 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		797BD9141BE9396300988548 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
+		79BB0F131BFDFD0500916B58 /* AllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB0F121BFDFD0500916B58 /* AllOf.swift */; };
 		79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
 		79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
@@ -221,6 +222,7 @@
 		797BD9111BE936AE00988548 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flattenable.swift; sourceTree = "<group>"; };
 		797BD9131BE9396300988548 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableArray.swift; sourceTree = "<group>"; };
 		79AF9E311BE958E800178E33 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTuple.swift; sourceTree = "<group>"; };
+		79BB0F121BFDFD0500916B58 /* AllOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOf.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79CB58381BD1258400070BEF /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
@@ -609,6 +611,7 @@
 				795FF5811BB82BF500E19285 /* Reducer.swift */,
 				79CB58381BD1258400070BEF /* Throttle.swift */,
 				79AF9E311BE958E800178E33 /* NodeTuple.swift */,
+				79BB0F121BFDFD0500916B58 /* AllOf.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -734,7 +737,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 79F2567B1ADE77250077730C /* Build configuration list for PBXProject "vincerp" */;
+			buildConfigurationList = 79F2567B1ADE77250077730C /* Build configuration list for PBXProject "VinceRP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1140,6 +1143,7 @@
 				ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */,
 				79E1A5DD1BD3CBE2003C8036 /* Addable.swift in Sources */,
 				ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */,
+				79BB0F131BFDFD0500916B58 /* AllOf.swift in Sources */,
 				795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */,
 				ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */,
 				79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */,
@@ -1443,7 +1447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79F2567B1ADE77250077730C /* Build configuration list for PBXProject "vincerp" */ = {
+		79F2567B1ADE77250077730C /* Build configuration list for PBXProject "VinceRP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				79F256951ADE77250077730C /* Debug */,

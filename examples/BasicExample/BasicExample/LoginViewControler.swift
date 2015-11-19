@@ -9,23 +9,6 @@ import VinceRP
 
 private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-extension UITextField {
-   
-    var isValidEmail: Bool {
-        return definedAs {
-            let range = self.reactiveText.value().rangeOfString(emailRegEx, options:.RegularExpressionSearch)
-            return range != nil
-        }*
-    }
-
-    var isValidPassword: Bool {
-        return definedAs {
-            self.reactiveText*.trim().length > 0
-        }*
-    }
-    
-}
-
 class LoginViewControler: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
@@ -33,13 +16,36 @@ class LoginViewControler: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    func nonEmpty(text: String) -> Bool {
+        return text.trim().length > 0
+    }
+    
+    func even(num: Int) -> Bool {
+        return num % 2 == 0
+    }
+    
+    func printValues<T:Equatable>(hubs: [Hub<T>]) -> String {
+        return hubs.map(*).map { "\($0)" }.joinWithSeparator(", ")
+    }
+    
     override func viewDidAppear(animated: Bool) {
+        
+        let a = reactive(1)
+        let b = reactive(2)
+        
+        let c = `if`(a, b).areAll(even)
+            .then { "all numbers are even: \(self.printValues($0)) " }
+            .`else` { "some numbers are odd: \(self.printValues($0)) " }
+        
+        c.onChange(false) {
+            print("--->"+$0)
+        }
+        
+        a <- 4
+        
         setupLoginButtonUI()
         
-        self.loginButton.reactiveEnabled = definedAs {
-            self.emailField.isValidEmail &&
-            self.passwordField.isValidPassword
-        }
+        self.loginButton.reactiveEnabled = `if`(emailField.reactiveText, passwordField.reactiveText).areAll(nonEmpty).then(true).`else`(false)
 
         self.emailField.text = "bvic23@gmail.com"
         self.passwordField.text = "123456"

@@ -50,3 +50,7 @@ public func onErrorDo<T:Equatable>(source: Hub<T>, callback: (NSError) -> ()) ->
 public func timer(interval: NSTimeInterval, tick: () -> ()) -> Timer {
     return Timer.timer(interval, tick: tick)
 }
+
+public func `if`<T:Equatable>(hubs: Hub<T>...) -> AllOf<T> {
+    return AllOf(hubs: hubs)
+}
