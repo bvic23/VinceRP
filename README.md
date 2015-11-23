@@ -2,9 +2,10 @@ VinceRP
 ======================================
 Easy to use, easy to extend reactive framework for Swift.
 
-![iOS 8, OS X 10](https://img.shields.io/badge/platform-_iOS_8>_OS X 10.10>-lightgrey.svg)
 ![Swift 2](https://img.shields.io/badge/language-Swift_2-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/VinceRP.svg?style=flat)](http://cocoadocs.org/docsets/VinceRP)
+[![Platform](https://img.shields.io/cocoapods/p/VinceRP.svg?style=flat)](http://cocoadocs.org/docsets/VinceRP)
 [![Build Status](https://travis-ci.org/bvic23/VinceRP.svg?branch=master)](https://travis-ci.org/bvic23/VinceRP) [![Bitrise](https://www.bitrise.io/app/8eecd50149a499e2.svg?token=NF4ksh3VcIWYouCZPukE1w&branch=master)](https://www.bitrise.io/)
 [![codecov.io](http://codecov.io/github/bvic23/VinceRP/coverage.svg?branch=master)](http://codecov.io/github/bvic23/VinceRP?branch=master)
 [![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
