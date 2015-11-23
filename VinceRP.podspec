@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'VinceRP'
-  s.version      = '0.2.1'
+  s.version      = '0.2.2'
   s.summary      = 'Easy to use, easy to extend reactive framework for Swift.'
 
   s.description  = <<-DESC
@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
 
   s.osx.deployment_target = '10.10'
   s.osx.source_files = 'VinceRP/Extension/AppKit/*.{swift}'
-  
+
 end
