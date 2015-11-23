@@ -1,9 +1,6 @@
 //
-//  NSResponder+VinceRP.swift
-//  vincerp
-//
-//  Created by Agnes Vasarhelyi on 04/11/15.
-//  Copyright © 2015 Viktor Belenyesi. All rights reserved.
+// Created by Agnes Vasarhelyi on 04/11/15.
+// Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
 import AppKit
