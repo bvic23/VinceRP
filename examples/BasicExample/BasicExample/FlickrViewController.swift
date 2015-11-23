@@ -67,7 +67,7 @@ class FlickrViewControler: UIViewController {
             self.throttleTimeout <- 0.0
         }
         
-        // If there is search result or search is happening let's hide the no result label
+        // If there is search result or search is happening let's hide this label
         self.noResultsLabel.reactiveHidden = definedAs {
             hasResult* || searchIsOngoing*
         }
@@ -134,7 +134,7 @@ class FlickrViewControler: UIViewController {
     }
 }
 
-// Make this controller as a datasource for the CollectionView
+// Make this controller as a datasource of the CollectionView
 extension FlickrViewControler: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

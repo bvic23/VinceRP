@@ -12,7 +12,7 @@ class FlickrService {
     
     func searchFlickrForTerm(searchTerm: String) -> Hub<[UIImage]> {
         
-        // Create a UIImage-array stream which represents the result of this method
+        // Create a UIImage-array stream which represents the result of this search
         let result = reactive([UIImage]())
         
         // Send the search term using the amazing Alamofire framework
@@ -34,7 +34,7 @@ class FlickrService {
                 }
             }
         
-        // Return with the stream variable as a future
+        // Return with this stream variable as a future
         return result
     }
     
@@ -67,7 +67,6 @@ extension UIImage {
         let flickrPhotoURL = NSURL(string: "https://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_m.jpg")!
         
         // In a real world application this would be an asnyc call. 
-        // But for now we process the JSON response in a background queue to not block the UI
         let imageData = NSData(contentsOfURL: flickrPhotoURL)
         return UIImage(data: imageData!)!
     }

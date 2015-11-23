@@ -45,7 +45,7 @@ class LoginService {
                         returnValue <- false
                     } else {
                         
-                        // ... we send a true
+                        // ... we send a true otherwise
                         returnValue <- true
                     }
                 
