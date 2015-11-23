@@ -55,7 +55,7 @@ extension UIImage {
     
     static func jsonToImageMap(photoDictionary: JSON) -> UIImage {
         
-        // Parse the metadat for an image
+        // Parse the metadata for an image
         let photoID = photoDictionary["id"].string ?? ""
         let farm = photoDictionary["farm"].int ?? 0
         let server = photoDictionary["server"].string ?? ""
@@ -101,6 +101,7 @@ extension String {
         // URL escape the search term
         let escapedTerm = self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         
+        // This is the full search URL with api key and paging
         let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74c678b0fd9ff0887a104875925021bf&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
         
         return NSURL(string: URLString)!

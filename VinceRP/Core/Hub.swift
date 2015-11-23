@@ -65,7 +65,7 @@ public class Hub<T:Equatable>: Node {
         Propagator().propagate(toSet(NodeTuple(self, self)))
     }
     
-    public func onChange(skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {
+    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {
         onChangeDo(self, skipInitial: skipInitial) {
             callback($0)
         }
