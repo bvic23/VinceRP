@@ -4,10 +4,8 @@ before_install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
   - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
   - ./scripts/unstash.sh
-script:
-  - ./scripts/test.sh | xcpretty -c -f `xcpretty-travis-formatter`
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+install:
+  - set -o pipefail && xcodebuild clean build test -project VinceRP.xcodeproj -scheme VinceRP_mac -sdk macosx -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c -f `xcpretty-travis-formatter`
 env:
   global:
   - LANG=en_US.UTF-8
