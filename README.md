@@ -78,7 +78,7 @@ let s = reactive(1)
 let s2 = definedAs{ "s*2 = \(s.value() * 2)" }
 let s3 = definedAs{ s2* + s* }
 ```
-However XCode 7.0 (7A218) gives a weird error message (`tuple pattern cannot match values of the non-tuple type 'UIButton'` WTF????) it's about the missing `<string> + <int>` operator.
+However XCode gives a weird error message it's about the missing `<string> + <int>` operator.
 
 ##Side effects
 
