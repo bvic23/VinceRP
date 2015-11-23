@@ -1,30 +1,28 @@
 Pod::Spec.new do |s|
 
-  s.name         = "VinceRP"
-  s.version      = "0.1.2"
-  s.summary      = "Easy to use, easy to extend reactive framework for Swift."
+  s.name         = 'VinceRP'
+  s.version      = '0.2.1'
+  s.summary      = 'Easy to use, easy to extend reactive framework for Swift.'
 
   s.description  = <<-DESC
-  Easy to use, easy to extend reactive framework for Swift.
+  Easy to use, easy to extend reactive framework for Swift. If you are bored of doing MVC over and over give VinceRP a try.
                    DESC
 
-  s.homepage     = "https://github.com/bvic23/VinceRP"
-  s.license      = { :type => "MIT", :file => "LICENSE.md" }
+  s.homepage     = 'https://github.com/bvic23/VinceRP'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
 
-  s.author             = { "bvic23" => "bvic23@gmail.com" }
-  s.social_media_url   = "http://twitter.com/bvic23"
+  s.author             = { 'bvic23' => 'bvic23@gmail.com' }
+  s.social_media_url   = 'http://twitter.com/bvic23'
   s.platform     = :ios, :osx
 
-  s.source       = { :git => "https://github.com/bvic23/VinceRP.git", :tag => "0.1.2" }
+  s.source       = { :git => 'https://github.com/bvic23/VinceRP.git', :tag => s.version.to_s }
 
-  s.source_files  = "vincerp/**/*.{swift,h,m}"
-  s.frameworks    = "Foundation"
+  s.source_files  = 'VinceRP/Common/**/*.{swift,h,m}', 'VinceRP/Extension/Common/**/*.{swift}'
 
-  s.ios.deployment_target = "8.0"
-  s.ios.source_files = "vincerp/Extension/UIKit/*.{swift}"
-  s.ios.frameworks   = "UIKit"
+  s.ios.deployment_target = '8.0'
+  s.ios.source_files = 'VinceRP/Extension/UIKit/*.{swift}',
 
-  s.osx.deployment_target = "10.10"
-  s.osx.frameworks   = "AppKit"
-
+  s.osx.deployment_target = '10.10'
+  s.osx.source_files = 'VinceRP/Extension/AppKit/*.{swift}'
+  
 end
