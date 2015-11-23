@@ -12,7 +12,7 @@ class FlickrService {
     
     func searchFlickrForTerm(searchTerm: String) -> Hub<[UIImage]> {
         
-        // Create a Future which will emit a UIImage array
+        // Create a UIImage-array stream which represents the result of this method
         let result = reactive([UIImage]())
         
         // Send the search term using the amazing Alamofire framework
@@ -27,12 +27,14 @@ class FlickrService {
                         let json = JSON(data: jsonData)
                         self.processResult(json, result: result)
                     case .Failure(let error):
+                        
                         // Send an error using the extension below
                         result <- JSON.error(error.localizedDescription)
                     }
                 }
             }
         
+        // Return with the stream variable as a future
         return result
     }
     
