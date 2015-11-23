@@ -49,3 +49,11 @@ class Throttle<T:Equatable> : Dynamic<T> {
         return self.debounceLevel
     }
 }
+
+public extension Hub {
+    
+    public func throttle(interval: NSTimeInterval) -> Hub<T> {
+        return Throttle(source: self, interval: interval)
+    }
+    
+}

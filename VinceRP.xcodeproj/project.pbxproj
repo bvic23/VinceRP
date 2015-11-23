@@ -42,7 +42,7 @@
 		791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BD1C039273004AA9E2 /* NodeTuple.swift */; };
 		791F30CD1C039273004AA9E2 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BE1C039273004AA9E2 /* Propagator.swift */; };
 		791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
-		791F30CF1C039273004AA9E2 /* Rx+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Rx+operators.swift */; };
+		791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
 		791F30D01C039273004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
 		791F30D11C039273004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
 		791F30D21C039273004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
@@ -59,7 +59,7 @@
 		791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BD1C039273004AA9E2 /* NodeTuple.swift */; };
 		791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BE1C039273004AA9E2 /* Propagator.swift */; };
 		791F30DF1C039286004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
-		791F30E01C039286004AA9E2 /* Rx+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Rx+operators.swift */; };
+		791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
 		791F30E11C039286004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
 		791F30E21C039286004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
 		791F30E31C039286004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
@@ -204,7 +204,7 @@
 		791F30BD1C039273004AA9E2 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeTuple.swift; path = ../vincerp/Common/Core/NodeTuple.swift; sourceTree = "<group>"; };
 		791F30BE1C039273004AA9E2 /* Propagator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Propagator.swift; path = ../vincerp/Common/Core/Propagator.swift; sourceTree = "<group>"; };
 		791F30BF1C039273004AA9E2 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ../vincerp/Common/Core/Reducer.swift; sourceTree = "<group>"; };
-		791F30C01C039273004AA9E2 /* Rx+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Rx+operators.swift"; path = "../vincerp/Common/Core/Rx+operators.swift"; sourceTree = "<group>"; };
+		791F30C01C039273004AA9E2 /* Hub+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operators.swift"; path = "../vincerp/Common/Core/Hub+operators.swift"; sourceTree = "<group>"; };
 		791F30C11C039273004AA9E2 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Source.swift; path = ../vincerp/Common/Core/Source.swift; sourceTree = "<group>"; };
 		791F30C21C039273004AA9E2 /* SpinSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinSet.swift; path = ../vincerp/Common/Core/SpinSet.swift; sourceTree = "<group>"; };
 		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = ../vincerp/Common/Core/Throttle.swift; sourceTree = "<group>"; };
@@ -352,12 +352,12 @@
 				791F30B81C039273004AA9E2 /* Dynamic.swift */,
 				791F30B91C039273004AA9E2 /* ErrorObserver.swift */,
 				791F30BA1C039273004AA9E2 /* Hub.swift */,
+				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
 				791F30BB1C039273004AA9E2 /* Mapper.swift */,
 				791F30BC1C039273004AA9E2 /* Node.swift */,
 				791F30BD1C039273004AA9E2 /* NodeTuple.swift */,
 				791F30BE1C039273004AA9E2 /* Propagator.swift */,
 				791F30BF1C039273004AA9E2 /* Reducer.swift */,
-				791F30C01C039273004AA9E2 /* Rx+operators.swift */,
 				791F30C11C039273004AA9E2 /* Source.swift */,
 				791F30C21C039273004AA9E2 /* SpinSet.swift */,
 				791F30C31C039273004AA9E2 /* Throttle.swift */,
@@ -1093,7 +1093,7 @@
 				791F30F21C0392AC004AA9E2 /* Dispatchable.swift in Sources */,
 				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
-				791F30E01C039286004AA9E2 /* Rx+operators.swift in Sources */,
+				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
 				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */,
@@ -1168,7 +1168,7 @@
 				791F30C91C039273004AA9E2 /* Hub.swift in Sources */,
 				795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */,
 				791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */,
-				791F30CF1C039273004AA9E2 /* Rx+operators.swift in Sources */,
+				791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */,
 				791F30CA1C039273004AA9E2 /* Mapper.swift in Sources */,
 				791F30C61C039273004AA9E2 /* ChangeObserver.swift in Sources */,
 				791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */,

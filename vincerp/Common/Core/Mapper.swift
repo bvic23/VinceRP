@@ -21,3 +21,17 @@ class Mapper<T:Equatable, A:Equatable> : Wrapper<T, A> {
     }
     
 }
+
+public extension Hub {
+    
+    public func map<A>(f: T -> A) -> Hub<A> {
+        return Mapper<T, A>(self) { x in
+            return x.map(f)
+        }
+    }
+    
+    public func mapAll<A>(f: Try<T> -> Try<A>) -> Hub<A> {
+        return Mapper<T, A>(self, f)
+    }
+    
+}

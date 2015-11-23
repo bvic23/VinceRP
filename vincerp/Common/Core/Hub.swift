@@ -89,15 +89,3 @@ extension Hub: Dispatchable {
     }
     
 }
-
-extension Hub {
-    
-    public func throttle(interval: NSTimeInterval) -> Hub<T> {
-        return Throttle(source: self, interval: interval)
-    }
-    
-    public func ignore(ignorabeValues: T) -> Hub<T> {
-        return self.filter { $0 != ignorabeValues }
-    }
-    
-}
