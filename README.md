@@ -36,19 +36,32 @@ Let's see a basic example:
 ```swift
 import VinceRP
 
-// define reactive sources
+// Define reactive sources
+// -----------------------
+// integer-stream object with a starting value of 1
 let s1 = reactive(1)
+
+// integer-stream object with a starting value of 2
 let s2 = reactive(2)
 
-// define a calculated variable
+// Define a calculated variable
+// ----------------------------
+// whenever s1 or s2 receives a new value (via the <- operator)
+// the value of this variable gets recalculated automagically
+// using the the block after 'definedAs'
 let sum = definedAs{ s1* + s2* }
 
-// sum* is just a syntactic sugar for sum.value()
+// Remember sum* is just a syntactic sugar for sum.value()
+// -------------------------------------------------------
+// * reads the last / current value of sum
 print(sum*) // = 3
 
+// Push a new value into the stream
+// --------------------------------
 // s.update(3)
 s2 <- 3
 
+// it recalculates using the block and push a new value into the stream
 print(sum*) // = 4
 ```
 
@@ -71,9 +84,11 @@ Of course you can have side effects:
 ```swift
 import VinceRP
 
+// Define a reactive stream variable
 let s = reactive(1)
 var counter = 0
 
+// Whenever 's' changes the block gets called
 onChangeDo(s) { _ in
    counter++
 }
@@ -87,13 +102,16 @@ If you don't want to count the initialization:
 ```swift
 import VinceRP
 
+// Define a reactive stream variable
 let s = reactive(1)
 var counter = 0
 
+// Whenever 's' changes the block gets called
 onChangeDo(s, skipInitial:true) { _ in
     counter++
 }
 
+// Push a new value into the stream
 s <- 2
 
 // 1 because of the update
@@ -107,15 +125,19 @@ If you're interested in errors:
 ```swift
 import VinceRP
 
+// Define a reactive stream variable
 let s = reactive(1)
 
-s.onChange(true) {
+s.onChange(skipInitial: true) {
     print($0)
 }.onError {
     print($0)
 }
 
+// Push a new value triggers the 'onChange' block
 s <- 2
+
+// Push an error triggers the 'onError' block
 s <- NSError(domain: "test error", code: 1, userInfo: nil)
 
 // output:
@@ -125,16 +147,18 @@ s <- NSError(domain: "test error", code: 1, userInfo: nil)
 
 #Easy to extend
 
- It's pretty easy to add reactive properties to UIKit with extensions:
+It's pretty easy to add reactive properties to UIKit with extensions:
 
 ```swift
 public extension UILabel {
 
     public var reactiveText: Rx<String> {
-        get {
+        // When you read the property it returns a stream variable
+          get {
             return reactiveProperty(forProperty: "text", initValue: self.text!)
         }
 
+        // It's tricky: we just observers the event stream and if it changes just update the original property
         set {
             newValue.onChange {
                 self.text = $0

@@ -13,6 +13,7 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+Build
 *.hmap
 *.xccheckout
 !default.pbxuser
