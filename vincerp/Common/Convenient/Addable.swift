@@ -7,8 +7,8 @@ public protocol Addable {
     func +(lhs: Self, rhs: Self) -> Self
 }
 
-extension Double  : Addable {}
-extension Float   : Addable {}
+extension Double: Addable {}
+extension Float: Addable {}
 
 public func +=<T:IntegerArithmeticType>(left: Source<T>, right: T) -> Source<T> {
     left <- (left* + right)

@@ -4,7 +4,7 @@
 //
 // https://github.com/scala/scala/blob/2.11.x/src/library/scala/util/Try.scala
 
-public enum Try<T:Equatable>: CustomStringConvertible, Equatable {
+public enum Try<T: Equatable>: CustomStringConvertible, Equatable {
 
     case Success(Box<T>)
     case Failure(NSError)

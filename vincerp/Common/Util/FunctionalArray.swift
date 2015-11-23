@@ -21,7 +21,7 @@ extension Array {
 
 }
 
-extension Array where Element:SequenceType {
+extension Array where Element: SequenceType {
     
     public func flatten() -> [Element.Generator.Element] {
         return self.flatMap{$0}

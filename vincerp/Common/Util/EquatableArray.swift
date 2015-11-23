@@ -20,7 +20,7 @@ func ==<C: CollectionType where C.Generator.Element: Equatable>
         }
 }
 
-public func ==<T:Equatable>(lhs: [T], rhs: [T]) -> Bool {
+public func ==<T: Equatable>(lhs: [T], rhs: [T]) -> Bool {
     if lhs.count != rhs.count {
         return false
     }

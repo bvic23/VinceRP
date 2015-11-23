@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class SpinSet<T:AnyObject>: AtomicReference<T> {
+public class SpinSet<T: AnyObject>: AtomicReference<T> {
 
     override init(_ t: T) {
         super.init(t)

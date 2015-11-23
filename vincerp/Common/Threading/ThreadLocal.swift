@@ -4,6 +4,7 @@
 //
 
 public class ThreadLocal<T> {
+    
     private let key: NSString
 
     public init(value: T?, key: NSString) {

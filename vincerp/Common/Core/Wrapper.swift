@@ -3,9 +3,9 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Wrapper<T:Equatable, A:Equatable> : Spinlock<A> {
+class Wrapper<T: Equatable, A: Equatable>: Spinlock<A> {
     
-    let source : Hub<T>
+    let source: Hub<T>
     
     init(_ source: Hub<T>) {
         self.source = source

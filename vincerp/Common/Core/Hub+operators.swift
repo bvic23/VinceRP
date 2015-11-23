@@ -4,7 +4,7 @@
 //
 
 // TODO: add tests
-public extension Hub where T:BooleanType {
+public extension Hub where T: BooleanType {
     
     public func not() -> Hub<Bool> {
         return self.map(!)

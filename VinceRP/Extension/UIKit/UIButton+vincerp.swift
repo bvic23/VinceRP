@@ -33,6 +33,7 @@ public func definedAs(handler: ClickHandler) -> ClickHandlerAction {
 }
 
 private var eventHandlers: [UIButton: ClickHandlerAction]  = [UIButton: ClickHandlerAction]()
+private let clickHandlerMethodName = "onClick:"
 
 public extension UIButton {
     
@@ -49,10 +50,10 @@ public extension UIButton {
             if let v = newValue {
                 eventHandlers[self] = v
                 self.executing <- false
-                self.addTarget(self, action: Selector("onClick:"), forControlEvents: .TouchUpInside)
+                self.addTarget(self, action: Selector(clickHandlerMethodName), forControlEvents: .TouchUpInside)
             } else {
                 eventHandlers.removeValueForKey(self)
-                self.removeTarget(self, action: Selector("onClick:"), forControlEvents: .TouchUpInside)
+                self.removeTarget(self, action: Selector(clickHandlerMethodName), forControlEvents: .TouchUpInside)
             }
         }
     }

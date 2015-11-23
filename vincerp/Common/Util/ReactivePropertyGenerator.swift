@@ -6,8 +6,8 @@
 class ReactivePropertyGenerator {
     
     // TODO: unittest -> check for memory leaks
-    private static var propertyMap = [String:Node]()
-    private static var observerMap = [String:PropertyObserver]()
+    private static var propertyMap = [String: Node]()
+    private static var observerMap = [String: PropertyObserver]()
     
     init() {}
     

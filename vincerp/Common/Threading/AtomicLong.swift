@@ -6,6 +6,7 @@
 public typealias long = Int32
 
 public class AtomicLong: Hashable, Equatable {
+    
     private let pointer: UnsafeMutablePointer<long> = UnsafeMutablePointer < long>.alloc(1)
 
     public var value: long {
@@ -72,6 +73,7 @@ public class AtomicLong: Hashable, Equatable {
     public var hashValue: Int {
         return value.hashValue
     }
+    
 }
 
 public func ==(lhs: AtomicLong, rhs: AtomicLong) -> Bool {

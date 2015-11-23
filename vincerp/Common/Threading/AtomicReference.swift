@@ -3,7 +3,8 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class AtomicReference<T:AnyObject> {
+public class AtomicReference<T: AnyObject> {
+    
     private var _value: T
     private let pointer: UnsafeMutablePointer<UnsafeMutablePointer<Void>> = UnsafeMutablePointer.alloc(1)
 

@@ -7,7 +7,6 @@ public func toSet<T:Hashable>(e: T...) -> Set<T> {
     return Set(e)
 }
 
-
 extension Set {
     
     public func partition(@noescape filterFunc: (Generator.Element) -> Bool) -> (Set<Generator.Element>, Set<Generator.Element>) {
@@ -85,7 +84,7 @@ extension Set: Flattenable {
     
 }
 
-extension Set where Element:SequenceType, Element.Generator.Element:Hashable {
+extension Set where Element:SequenceType, Element.Generator.Element: Hashable {
     
     public func flatten() -> Set<Element.Generator.Element> {
         return self.flatMap{$0}

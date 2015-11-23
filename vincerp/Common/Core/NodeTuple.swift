@@ -7,9 +7,9 @@ struct NodeTuple: Hashable, Equatable {
     let source: Node
     let reactor: Node
 
-    init(_ e: Node, _ r: Node) {
-        self.source = e
-        self.reactor = r
+    init(_ source: Node, _ reactor: Node) {
+        self.source = source
+        self.reactor = reactor
     }
 
     var hashValue: Int {

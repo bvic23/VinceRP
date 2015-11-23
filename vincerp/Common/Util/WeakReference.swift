@@ -4,7 +4,7 @@
 //
 // https://github.com/scala/scala/blob/2.11.x/src/library/scala/ref/WeakReference.scala
 
-public class WeakReference<T:AnyObject where T:Hashable>: Hashable, Equatable {
+public class WeakReference<T: AnyObject where T: Hashable>: Hashable, Equatable {
     public weak var value: T?
 
     public init(_ value: T) {

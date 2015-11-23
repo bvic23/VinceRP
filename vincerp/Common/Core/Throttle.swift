@@ -3,9 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-import Foundation
-
-class Throttle<T:Equatable> : Dynamic<T> {
+class Throttle<T: Equatable>: Dynamic<T> {
     
     private let interval: NSTimeInterval
     private let debounceLevel: long
