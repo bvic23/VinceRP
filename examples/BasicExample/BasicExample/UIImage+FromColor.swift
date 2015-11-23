@@ -6,6 +6,8 @@
 import UIKit
 
 public extension UIImage {
+
+    // Create an image from a given color
     public class func imageWithColor(color: UIColor) -> UIImage {
         let rect = CGRectMake(0.0, 0.0, 1.0, 1.0)
         UIGraphicsBeginImageContext(rect.size)
@@ -19,4 +21,5 @@ public extension UIImage {
         
         return image
     }
+    
 }

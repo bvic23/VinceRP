@@ -7,8 +7,6 @@ import Alamofire
 import UIKit
 import VinceRP
 
-private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
 class LoginViewControler: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
@@ -29,7 +27,6 @@ class LoginViewControler: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
         let a = reactive(1)
         let b = reactive(2)
         
@@ -37,7 +34,7 @@ class LoginViewControler: UIViewController {
             .then { "all numbers are even: \(self.printValues($0)) " }
             .`else` { "some numbers are odd: \(self.printValues($0)) " }
         
-        c.onChange(false) {
+        c.onChange(skipInitial: false) {
             print("--->"+$0)
         }
         
@@ -47,33 +44,65 @@ class LoginViewControler: UIViewController {
         
         self.loginButton.reactiveEnabled = `if`(emailField.reactiveText, passwordField.reactiveText).areAll(nonEmpty).then(true).`else`(false)
 
+        // Default values for username and password
         self.emailField.text = "bvic23@gmail.com"
         self.passwordField.text = "123456"
 
+        // Hide the spinner login command is not executing
         self.activityIndicator.reactiveHidden = self.loginButton.executing.not()
+        
+        // Hide the button if login is in progress
         self.loginButton.reactiveHidden = self.loginButton.executing
         
+        // Create a stream of string value start with an empty string
         let alert = reactive("")
-        alert.onChange(true) {
+        
+        // Watch the changes of alert variable and skip the first value
+        alert.onChange(skipInitial: true) {
+            
+            // Get the current value from the stream which is the message we should show in the alert dialog
             let message = $0
+            
+            // Create an alert controller
             let alertController = UIAlertController(title: "Login Result",
                 message: message,
                 preferredStyle: UIAlertControllerStyle.Alert)
             
+            // Add a close button
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // Show it
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         
-        self.loginButton.clickHandler = definedAs { i in
+        // Add a clickhandler
+        self.loginButton.clickHandler = definedAs { handler in // Because this block can contain any kind of threading
+            // this handler is for marking this clickhandler "done".
+            // Why this is necessary? Because I like the "executing" property of RACCommand and 
+            // the calling of "done" sets "executing" to false.
+            // If you have any better idea how to do this please send a PR or create an issue
+            
+            
+            // Close the keyboard
             self.emailField.resignFirstResponder()
             self.passwordField.resignFirstResponder()
+            
+            // Create a loginservice
             let loginService = LoginService()
+            
+            // Initiate the login process
             loginService.login(self.emailField.text!, password: self.passwordField.text!).onChange { _ in
-                alert <- "Login was successfull!"
-                i.done()
+                
+                // Send a greeting
+                alert <- "Welcome!"
+                
+                // Mark this handler done
+                handler.done()
             }.onError { error in
+                
+                // Send an error
                 alert <- "Login failed with error: \(error)"
-                i.done()
+                handler.done()
             }
         }
         

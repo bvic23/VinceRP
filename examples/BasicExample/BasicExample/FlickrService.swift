@@ -12,7 +12,7 @@ class FlickrService {
     
     func searchFlickrForTerm(searchTerm: String) -> Hub<[UIImage]> {
         
-        // Create a Future which will emit a UIImage array
+        // Create a UIImage-array stream which represents the result of this search
         let result = reactive([UIImage]())
         
         // Send the search term using the amazing Alamofire framework
@@ -27,12 +27,14 @@ class FlickrService {
                         let json = JSON(data: jsonData)
                         self.processResult(json, result: result)
                     case .Failure(let error):
+                        
                         // Send an error using the extension below
                         result <- JSON.error(error.localizedDescription)
                     }
                 }
             }
         
+        // Return with this stream variable as a future
         return result
     }
     
@@ -55,7 +57,7 @@ extension UIImage {
     
     static func jsonToImageMap(photoDictionary: JSON) -> UIImage {
         
-        // Parse the metadat for an image
+        // Parse the metadata for an image
         let photoID = photoDictionary["id"].string ?? ""
         let farm = photoDictionary["farm"].int ?? 0
         let server = photoDictionary["server"].string ?? ""
@@ -65,7 +67,6 @@ extension UIImage {
         let flickrPhotoURL = NSURL(string: "https://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_m.jpg")!
         
         // In a real world application this would be an asnyc call. 
-        // But for now we process the JSON response in a background queue to not block the UI
         let imageData = NSData(contentsOfURL: flickrPhotoURL)
         return UIImage(data: imageData!)!
     }
@@ -101,6 +102,7 @@ extension String {
         // URL escape the search term
         let escapedTerm = self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         
+        // This is the full search URL with api key and paging
         let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74c678b0fd9ff0887a104875925021bf&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
         
         return NSURL(string: URLString)!

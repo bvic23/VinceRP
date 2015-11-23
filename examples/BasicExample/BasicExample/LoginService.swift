@@ -7,12 +7,18 @@ import Alamofire
 import SwiftyJSON
 import VinceRP
 
+// This example service uses a simple login/password service:
 // http://todolist.parseapp.com/
 
 class LoginService {
 
     func login(username: String, password: String) -> Hub<Bool> {
+        
+        // Let's define a stream of bool values which represents the result of the login
+        // We'll return this variable as a promise at the end of this method
         let returnValue = reactive(false)
+        
+        // The necessary parameters for the login, username / password are the dynamic ones
         let params = [
             "_ApplicationId": "0Oq3tTp9JMvd72LOrGN25PiEq9XgVHCxo57MQbpT",
             "_ClientVersion": "js1.1.15",
@@ -22,24 +28,42 @@ class LoginService {
             "username": username,
             "password": password,
         ]
+        
+        // Send the request
         Alamofire.request(.POST, "https://api.parse.com/1/login", parameters:params, encoding: .JSON)
             .responseData { response in
+                
+                // Parse the response
                 switch response.result {
                 case .Success(let jsonData):
                     let json = JSON(data: jsonData)
-                    if let error = json["error"].string {
-                        returnValue <- self.error(error)
+                    
+                    // If there is an error field...
+                    if let _ = json["error"].string {
+                        
+                        // ... we send a false here
+                        returnValue <- false
                     } else {
+                        
+                        // ... we send a true otherwise
                         returnValue <- true
                     }
+                
+                // If it fails...
                 case .Failure(let error):
+                    // ... we send an error
                     returnValue <- self.error("\(error)")
                 }
             }
+        
+        // We return with our "future like" reactive variable
         return returnValue
     }
     
     private func error(errorString: String) -> NSError {
+        
         return NSError(domain: "VinceRP", code: -1, userInfo: [NSLocalizedFailureReasonErrorKey: errorString])
+        
     }
+    
 }
