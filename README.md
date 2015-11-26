@@ -22,7 +22,9 @@ The framework supports iOS & Mac for now.
 
 > tvOS and watchOS not yet tested/supported.
 
-##Install with [Carthage](https://github.com/Carthage/Carthage)
+##Install
+
+###[Carthage](https://github.com/Carthage/Carthage)
 
 1. Add VinceRP to your
 [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile): `github "bvic23/VinceRP"`
@@ -31,6 +33,15 @@ The framework supports iOS & Mac for now.
 
 3. Set VinceRP up as a dependency to your project:
 `carthage update --platform iOS, Mac`
+
+###[CocoaPods](https://cocoapods.org/)
+
+1. Add VinceRP to your
+[Podfile](https://guides.cocoapods.org/syntax/podfile.html): `pod 'VinceRP'`
+
+2. Download and install [CocoaPods](https://guides.cocoapods.org/using/getting-started.html#installation).
+
+3. Run: `pod install`
 
 #Easy to use
 
