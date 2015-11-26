@@ -107,9 +107,6 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
-		798A2D281C0789D2000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D251C0789D2000277AA /* AdvancedSpec.swift */; };
-		798A2D291C0789D2000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D261C0789D2000277AA /* BasicSpec.swift */; };
-		798A2D2A1C0789D2000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D271C0789D2000277AA /* SmokeSpec.swift */; };
 		798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
 		798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
 		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
@@ -119,9 +116,6 @@
 		798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
 		798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
 		798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
-		798A2D3E1C078A7C000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D251C0789D2000277AA /* AdvancedSpec.swift */; };
-		798A2D3F1C078A7C000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D261C0789D2000277AA /* BasicSpec.swift */; };
-		798A2D401C078A7C000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D271C0789D2000277AA /* SmokeSpec.swift */; };
 		798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
 		798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
 		798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
@@ -131,6 +125,12 @@
 		798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
 		798A2D481C078A86000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
 		798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
+		798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4A1C078B39000277AA /* AdvancedSpec.swift */; };
+		798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4B1C078B39000277AA /* BasicSpec.swift */; };
+		798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4C1C078B39000277AA /* SmokeSpec.swift */; };
+		798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4A1C078B39000277AA /* AdvancedSpec.swift */; };
+		798A2D511C078B43000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4B1C078B39000277AA /* BasicSpec.swift */; };
+		798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4C1C078B39000277AA /* SmokeSpec.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
@@ -249,9 +249,6 @@
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
-		798A2D251C0789D2000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = ../vincerpTests/Common/Core/AdvancedSpec.swift; sourceTree = "<group>"; };
-		798A2D261C0789D2000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = ../vincerpTests/Common/Core/BasicSpec.swift; sourceTree = "<group>"; };
-		798A2D271C0789D2000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = ../vincerpTests/Common/Core/SmokeSpec.swift; sourceTree = "<group>"; };
 		798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLongSpec.swift; path = ../vincerpTests/Common/Threading/AtomicLongSpec.swift; sourceTree = "<group>"; };
 		798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReferenceSpec.swift; path = ../vincerpTests/Common/Threading/AtomicReferenceSpec.swift; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
@@ -261,6 +258,9 @@
 		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSetSpec.swift; path = vincerpTests/Common/Util/FunctionalSetSpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D361C0789F5000277AA /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrySpec.swift; path = vincerpTests/Common/Util/TrySpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D371C0789F5000277AA /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReferenceTests.swift; path = vincerpTests/Common/Util/WeakReferenceTests.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = vincerpTests/Common/AdvancedSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = vincerpTests/Common/BasicSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
@@ -510,6 +510,9 @@
 		798A2D1F1C078996000277AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				798A2D4A1C078B39000277AA /* AdvancedSpec.swift */,
+				798A2D4B1C078B39000277AA /* BasicSpec.swift */,
+				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
 				798A2D231C0789BF000277AA /* Convenient */,
 				798A2D201C07899E000277AA /* Core */,
 				798A2D221C0789B5000277AA /* Threading */,
@@ -521,9 +524,6 @@
 		798A2D201C07899E000277AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				798A2D251C0789D2000277AA /* AdvancedSpec.swift */,
-				798A2D261C0789D2000277AA /* BasicSpec.swift */,
-				798A2D271C0789D2000277AA /* SmokeSpec.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1124,14 +1124,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798A2D3E1C078A7C000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
-				798A2D401C078A7C000277AA /* SmokeSpec.swift in Sources */,
 				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
 				798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
+				798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
 				798A2D441C078A86000277AA /* BoxTests.swift in Sources */,
-				798A2D3F1C078A7C000277AA /* BasicSpec.swift in Sources */,
 				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
@@ -1200,14 +1200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798A2D281C0789D2000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
-				798A2D2A1C0789D2000277AA /* SmokeSpec.swift in Sources */,
 				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
 				798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
+				798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
 				798A2D381C0789F5000277AA /* BoxTests.swift in Sources */,
-				798A2D291C0789D2000277AA /* BasicSpec.swift in Sources */,
 				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
