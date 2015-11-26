@@ -9,18 +9,6 @@
 /* Begin PBXBuildFile section */
 		02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */; };
 		02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */; };
-		02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */; };
-		02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */; };
-		02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */; };
-		02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1BA446DB2312748F011 /* BasicSpec.swift */; };
-		02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */; };
-		02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF990C35320EB1EF8D473 /* TrySpec.swift */; };
-		02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */; };
-		02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */; };
-		02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */; };
-		02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */; };
-		02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */; };
-		02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
 		02C8B3871BE3F80C00203CF2 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3831BE3F7FE00203CF2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3881BE3F80C00203CF2 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3841BE3F7FE00203CF2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3891BE3F81600203CF2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3831BE3F7FE00203CF2 /* Nimble.framework */; };
@@ -112,7 +100,6 @@
 		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
-		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
 		795FF5301BB6DD7B00E19285 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5311BB6DD7B00E19285 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */; };
@@ -120,24 +107,37 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
+		798A2D281C0789D2000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D251C0789D2000277AA /* AdvancedSpec.swift */; };
+		798A2D291C0789D2000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D261C0789D2000277AA /* BasicSpec.swift */; };
+		798A2D2A1C0789D2000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D271C0789D2000277AA /* SmokeSpec.swift */; };
+		798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
+		798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
+		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
+		798A2D381C0789F5000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
+		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
+		798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
+		798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
+		798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
+		798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
+		798A2D3E1C078A7C000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D251C0789D2000277AA /* AdvancedSpec.swift */; };
+		798A2D3F1C078A7C000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D261C0789D2000277AA /* BasicSpec.swift */; };
+		798A2D401C078A7C000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D271C0789D2000277AA /* SmokeSpec.swift */; };
+		798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
+		798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
+		798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
+		798A2D441C078A86000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
+		798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
+		798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
+		798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
+		798A2D481C078A86000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
+		798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
-		ADEAF34469B9A09E88E6A63B /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */; };
-		ADEAF62591CC6262A208698D /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */; };
-		ADEAF66288F741A68A448BAF /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
-		ADEAF904EA30AB4FEF870546 /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */; };
-		ADEAF97D27176C50EDCEBF41 /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */; };
-		ADEAF9B07B41F5936D0D153A /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */; };
-		ADEAFA7D244CBCCA1EE053B2 /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF990C35320EB1EF8D473 /* TrySpec.swift */; };
-		ADEAFA91C9618670DA17E631 /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */; };
-		ADEAFB0BCD79209B0841C48C /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1BA446DB2312748F011 /* BasicSpec.swift */; };
 		ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
-		ADEAFC367D496A8D45DEED0B /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */; };
-		ADEAFEE9799E190B3B56D30C /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,12 +244,23 @@
 		79273CC91BAE05BD00CEF85C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		79273D421BAE05BD00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
 		79273D531BAE05BD00CEF85C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
-		7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicLongSpec.swift; sourceTree = "<group>"; };
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
+		798A2D251C0789D2000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = ../vincerpTests/Common/Core/AdvancedSpec.swift; sourceTree = "<group>"; };
+		798A2D261C0789D2000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = ../vincerpTests/Common/Core/BasicSpec.swift; sourceTree = "<group>"; };
+		798A2D271C0789D2000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = ../vincerpTests/Common/Core/SmokeSpec.swift; sourceTree = "<group>"; };
+		798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLongSpec.swift; path = ../vincerpTests/Common/Threading/AtomicLongSpec.swift; sourceTree = "<group>"; };
+		798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReferenceSpec.swift; path = ../vincerpTests/Common/Threading/AtomicReferenceSpec.swift; sourceTree = "<group>"; };
+		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
+		798A2D321C0789F5000277AA /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxTests.swift; path = vincerpTests/Common/Util/BoxTests.swift; sourceTree = SOURCE_ROOT; };
+		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSetSpec.swift; path = vincerpTests/Common/Util/FunctionalSetSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D361C0789F5000277AA /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrySpec.swift; path = vincerpTests/Common/Util/TrySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D371C0789F5000277AA /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReferenceTests.swift; path = vincerpTests/Common/Util/WeakReferenceTests.swift; sourceTree = SOURCE_ROOT; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
@@ -258,20 +269,9 @@
 		79F256861ADE77250077730C /* VinceRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinceRP.h; sourceTree = "<group>"; };
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArraySpec.swift; sourceTree = "<group>"; };
-		ADEAF1BA446DB2312748F011 /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicSpec.swift; sourceTree = "<group>"; };
-		ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicReferenceSpec.swift; sourceTree = "<group>"; };
-		ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSpec.swift; sourceTree = "<group>"; };
-		ADEAF990C35320EB1EF8D473 /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrySpec.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
-		ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTests.swift; sourceTree = "<group>"; };
-		ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReferenceTests.swift; sourceTree = "<group>"; };
-		ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalSetSpec.swift; sourceTree = "<group>"; };
-		ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeSpec.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
-		ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalDictionarySpec.swift; sourceTree = "<group>"; };
-		ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicVariableSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +507,57 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		798A2D1F1C078996000277AA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D231C0789BF000277AA /* Convenient */,
+				798A2D201C07899E000277AA /* Core */,
+				798A2D221C0789B5000277AA /* Threading */,
+				798A2D211C0789A4000277AA /* Util */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		798A2D201C07899E000277AA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D251C0789D2000277AA /* AdvancedSpec.swift */,
+				798A2D261C0789D2000277AA /* BasicSpec.swift */,
+				798A2D271C0789D2000277AA /* SmokeSpec.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		798A2D211C0789A4000277AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D321C0789F5000277AA /* BoxTests.swift */,
+				798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */,
+				798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */,
+				798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */,
+				798A2D361C0789F5000277AA /* TrySpec.swift */,
+				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		798A2D221C0789B5000277AA /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */,
+				798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */,
+				798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */,
+			);
+			name = Threading;
+			sourceTree = "<group>";
+		};
+		798A2D231C0789BF000277AA /* Convenient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Convenient;
+			sourceTree = "<group>";
+		};
 		79F256771ADE77250077730C = {
 			isa = PBXGroup;
 			children = (
@@ -550,10 +601,8 @@
 		79F256901ADE77250077730C /* VinceRPTests */ = {
 			isa = PBXGroup;
 			children = (
+				798A2D1F1C078996000277AA /* Common */,
 				79F256911ADE77250077730C /* Supporting Files */,
-				ADEAFB0AFF5193FD18D9C020 /* Threading */,
-				ADEAF0DBF6C852BF10BCCA6E /* Core */,
-				ADEAF4DD413E937DD9B28A8C /* Util */,
 				ADEAFB18FDE6268B224542C9 /* TestUtil.swift */,
 			);
 			path = VinceRPTests;
@@ -579,16 +628,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ADEAF0DBF6C852BF10BCCA6E /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */,
-				ADEAF1BA446DB2312748F011 /* BasicSpec.swift */,
-				ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		ADEAF166AA1D8EC3BCD62741 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,19 +646,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		ADEAF4DD413E937DD9B28A8C /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAF990C35320EB1EF8D473 /* TrySpec.swift */,
-				ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */,
-				ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */,
-				ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */,
-				ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */,
-				ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		ADEAF73F3574E00F07BEF656 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,16 +654,6 @@
 				ADEAF166AA1D8EC3BCD62741 /* UIKit */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		ADEAFB0AFF5193FD18D9C020 /* Threading */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */,
-				ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */,
-				7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */,
-			);
-			path = Threading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1108,18 +1124,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */,
-				02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */,
-				02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */,
-				02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */,
-				02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */,
-				02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */,
-				02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */,
-				02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */,
-				02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */,
-				02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */,
-				02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */,
-				02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */,
+				798A2D3E1C078A7C000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */,
+				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
+				798A2D401C078A7C000277AA /* SmokeSpec.swift in Sources */,
+				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
+				798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D441C078A86000277AA /* BoxTests.swift in Sources */,
+				798A2D3F1C078A7C000277AA /* BasicSpec.swift in Sources */,
+				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
+				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
+				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
+				798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,18 +1200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEAF9B07B41F5936D0D153A /* DynamicVariableSpec.swift in Sources */,
-				ADEAF904EA30AB4FEF870546 /* SmokeSpec.swift in Sources */,
-				ADEAFA7D244CBCCA1EE053B2 /* TrySpec.swift in Sources */,
-				ADEAF66288F741A68A448BAF /* BoxTests.swift in Sources */,
-				7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */,
-				ADEAF62591CC6262A208698D /* FunctionalSetSpec.swift in Sources */,
-				ADEAF97D27176C50EDCEBF41 /* FunctionalDictionarySpec.swift in Sources */,
-				ADEAFA91C9618670DA17E631 /* WeakReferenceTests.swift in Sources */,
-				ADEAFEE9799E190B3B56D30C /* AtomicReferenceSpec.swift in Sources */,
-				ADEAF34469B9A09E88E6A63B /* FunctionalArraySpec.swift in Sources */,
-				ADEAFB0BCD79209B0841C48C /* BasicSpec.swift in Sources */,
-				ADEAFC367D496A8D45DEED0B /* AdvancedSpec.swift in Sources */,
+				798A2D281C0789D2000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */,
+				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
+				798A2D2A1C0789D2000277AA /* SmokeSpec.swift in Sources */,
+				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
+				798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D381C0789F5000277AA /* BoxTests.swift in Sources */,
+				798A2D291C0789D2000277AA /* BasicSpec.swift in Sources */,
+				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
+				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
+				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
+				798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

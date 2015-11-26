@@ -12,7 +12,7 @@ public extension NSResponder {
     }
 
     public func reactiveEmitter<T: Equatable>(name propertyName: String, initValue: T) -> Source<T> {
-        return ReactivePropertyGenerator.emitter(self, propertyName: propertyName, initValue: initValue)
+        return ReactivePropertyGenerator.source(self, propertyName: propertyName, initValue: initValue)
     }
 
 }
