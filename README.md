@@ -195,6 +195,36 @@ extension UITextField {
 
 Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
 
+#Operators
+
+##Filter
+
+###not
+
+It is applicable for `Bool` streams and negates the values.
+
+```swift
+// Define a reactive stream variable with 'true' as initial value
+let a = reactive(true)
+
+// It's value is true
+print(a.value()) // true
+
+// If you apply the 'not()' operator it negates all the values of the stream
+print(a.not().value()) // false
+```
+
+###skipErrors
+###foreach
+###map
+###mapAll
+###filter
+###filterAll
+###ignore
+###reduce
+###reduceAll
+###throttle
+
 #About
 
 VinceRP is in alpha phase so please use it carefully in production and send me [mail](bvic23@gmail.com)/[tweet](@bvic23)/github issue to make me happy and proud! :-)
