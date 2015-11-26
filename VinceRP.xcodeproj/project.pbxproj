@@ -100,6 +100,8 @@
 		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
+		79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
+		79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
 		795FF5301BB6DD7B00E19285 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5311BB6DD7B00E19285 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */; };
@@ -244,6 +246,7 @@
 		79273CC91BAE05BD00CEF85C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		79273D421BAE05BD00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
 		79273D531BAE05BD00CEF85C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
+		79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operatorsSpec.swift"; path = "Common/Core/Hub+operatorsSpec.swift"; sourceTree = "<group>"; };
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
@@ -524,6 +527,7 @@
 		798A2D201C07899E000277AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1131,6 +1135,7 @@
 				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
 				798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
+				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
 				798A2D441C078A86000277AA /* BoxTests.swift in Sources */,
 				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
@@ -1207,6 +1212,7 @@
 				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
 				798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
+				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
 				798A2D381C0789F5000277AA /* BoxTests.swift in Sources */,
 				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
