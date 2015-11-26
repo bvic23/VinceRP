@@ -91,7 +91,7 @@ public extension UIButton {
     
     public var executing: Source<Bool> {
         get {
-            return reactiveEmitter(name: "executing", initValue: false)
+            return reactiveSource(name: "executing", initValue: false)
         }
         
         set {

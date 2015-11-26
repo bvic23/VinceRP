@@ -9,7 +9,7 @@ public extension UIControl {
     
     public var reactiveEnabled: Hub<Bool> {
         get {
-            return reactiveEmitter(name: "enabled", initValue: self.enabled)
+            return reactiveSource(name: "enabled", initValue: self.enabled)
         }
         
         set {

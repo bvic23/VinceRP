@@ -46,7 +46,7 @@ public class ReactivePropertyGenerator {
         return result
     }
 
-    public static func emitter<T:Equatable>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Source<T> {
+    public static func source<T:Equatable>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Source<T> {
         if let emitter:Source<T> = getEmitter(targetObject, propertyName: propertyName) {
             return emitter
         }
@@ -59,7 +59,7 @@ public class ReactivePropertyGenerator {
     }
 
     public static func property<T:Equatable>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
-        let result = emitter(targetObject, propertyName: propertyName, initValue: initValue, initializer: initializer)
+        let result = source(targetObject, propertyName: propertyName, initValue: initValue, initializer: initializer)
         createObserver(targetObject, propertyName: propertyName, initValue: initValue)
         return result as Hub<T>
     }

@@ -11,8 +11,8 @@ public extension UIResponder {
         return ReactivePropertyGenerator.property(self, propertyName: propertyName, initValue: initValue, initializer: initializer)
     }
 
-    public func reactiveEmitter<T:Equatable>(name propertyName: String, initValue: T) -> Source<T> {
-        return ReactivePropertyGenerator.emitter(self, propertyName: propertyName, initValue: initValue)
+    public func reactiveSource<T:Equatable>(name propertyName: String, initValue: T) -> Source<T> {
+        return ReactivePropertyGenerator.source(self, propertyName: propertyName, initValue: initValue)
     }
 
 }
