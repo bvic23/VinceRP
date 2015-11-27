@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'VinceRP'
-  s.version      = '0.2.2'
+  s.version      = '0.2.3'
   s.summary      = 'Easy to use, easy to extend reactive framework for Swift.'
 
   s.description  = <<-DESC
