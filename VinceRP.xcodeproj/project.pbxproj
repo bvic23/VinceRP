@@ -7,58 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02BA6E6A1BFB58520077B5BB /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */; };
 		02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */; };
-		02BA6E6D1BFB58920077B5BB /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E6C1BFB58920077B5BB /* NSTextField+VinceRP.swift */; };
-		02BA6E6F1BFB58D20077B5BB /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BA6E6E1BFB58D20077B5BB /* NSTextField+didChange.swift */; };
-		02C489761BE355BB004FD281 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
-		02C489771BE355BB004FD281 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
-		02C489781BE355BB004FD281 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEAF1C1AE9426100DC002F /* Dynamic.swift */; };
-		02C489791BE355BB004FD281 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF663FC5805425C4B1E26 /* Propagator.swift */; };
-		02C4897A1BE355BB004FD281 /* Rx+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5591BB8264400E19285 /* Rx+operators.swift */; };
-		02C4897B1BE355BB004FD281 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF55B1BB8267100E19285 /* Hub.swift */; };
-		02C4897C1BE355BB004FD281 /* ChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5651BB8283D00E19285 /* ChangeObserver.swift */; };
-		02C4897D1BE355BB004FD281 /* ErrorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5671BB8293400E19285 /* ErrorObserver.swift */; };
-		02C4897E1BE355BB004FD281 /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5791BB829D500E19285 /* BatchUpdate.swift */; };
-		02C4897F1BE355BB004FD281 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57B1BB82B6F00E19285 /* Source.swift */; };
-		02C489801BE355BB004FD281 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57D1BB82BBB00E19285 /* Wrapper.swift */; };
-		02C489811BE355BB004FD281 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57F1BB82BD600E19285 /* Mapper.swift */; };
-		02C489821BE355BB004FD281 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5811BB82BF500E19285 /* Reducer.swift */; };
-		02C489831BE355BB004FD281 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58381BD1258400070BEF /* Throttle.swift */; };
-		02C489841BE355BB004FD281 /* String+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6B48C787C3FDB7C7A /* String+VinceRP.swift */; };
-		02C489851BE355BB004FD281 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFC9C73554F30C39AFD34 /* Try.swift */; };
-		02C489861BE355BB004FD281 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1CEF8543F8B9AEB7DE3 /* Box.swift */; };
-		02C489871BE355BB004FD281 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF902A9CDFCB7B0027EFC /* WeakReference.swift */; };
-		02C489881BE355BB004FD281 /* FunctionalSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF029DFC80D8B5658F0A1 /* FunctionalSet.swift */; };
-		02C489891BE355BB004FD281 /* FunctionalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF8A56AC1C4D11354A463 /* FunctionalDictionary.swift */; };
-		02C4898A1BE355BB004FD281 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA81AE8063700FA161A /* WeakSet.swift */; };
-		02C4898B1BE355BB004FD281 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA67ED5ED50D2045F648 /* CommonConstants.swift */; };
-		02C4898C1BE355BB004FD281 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF571997E9BD6E61AF00C /* FunctionalArray.swift */; };
-		02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */; };
-		02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */; };
-		02C4898F1BE35645004FD281 /* NSObject+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036931BA71C7F00ED5D1A /* NSObject+VinceRP.swift */; };
-		02C489961BE357AD004FD281 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF0FA80C6C208A68B6D4E /* Api.swift */; };
-		02C489981BE357CF004FD281 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */; };
-		02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */; };
-		02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFAA1FF5A2D4567C0A868 /* ThreadLocal.swift */; };
-		02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF52E609B4AF2F8E8CD94 /* AtomicReference.swift */; };
-		02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF47BBD0CA8ED4854528F /* AtomicLong.swift */; };
-		02C4899E1BE357FD004FD281 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5571BB825FE00E19285 /* Dispatchable.swift */; };
-		02C4899F1BE35836004FD281 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5DC1BD3CBE2003C8036 /* Addable.swift */; };
-		02C489A01BE35836004FD281 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5E71BD3E5F7003C8036 /* Timer.swift */; };
 		02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */; };
-		02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */; };
-		02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */; };
-		02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */; };
-		02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1BA446DB2312748F011 /* BasicSpec.swift */; };
-		02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */; };
-		02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF990C35320EB1EF8D473 /* TrySpec.swift */; };
-		02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */; };
-		02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */; };
-		02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */; };
-		02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */; };
-		02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */; };
-		02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
 		02C8B3871BE3F80C00203CF2 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3831BE3F7FE00203CF2 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3881BE3F80C00203CF2 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3841BE3F7FE00203CF2 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02C8B3891BE3F81600203CF2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3831BE3F7FE00203CF2 /* Nimble.framework */; };
@@ -67,78 +17,138 @@
 		02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		02C8B3961BE3FD6C00203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C8B3971BE3FD7200203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02C8B3981BE3FE2800203CF2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02C8B3991BE3FE2E00203CF2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7912D87B1BEA043400D70981 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
+		791F30AC1C03924C004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
+		791F30B01C03924C004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
+		791F30B41C039260004AA9E2 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B31C039260004AA9E2 /* Addable.swift */; };
+		791F30C51C039273004AA9E2 /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B61C039273004AA9E2 /* BatchUpdate.swift */; };
+		791F30C61C039273004AA9E2 /* ChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B71C039273004AA9E2 /* ChangeObserver.swift */; };
+		791F30C71C039273004AA9E2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B81C039273004AA9E2 /* Dynamic.swift */; };
+		791F30C81C039273004AA9E2 /* ErrorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B91C039273004AA9E2 /* ErrorObserver.swift */; };
+		791F30C91C039273004AA9E2 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BA1C039273004AA9E2 /* Hub.swift */; };
+		791F30CA1C039273004AA9E2 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BB1C039273004AA9E2 /* Mapper.swift */; };
+		791F30CB1C039273004AA9E2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BC1C039273004AA9E2 /* Node.swift */; };
+		791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BD1C039273004AA9E2 /* NodeTuple.swift */; };
+		791F30CD1C039273004AA9E2 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BE1C039273004AA9E2 /* Propagator.swift */; };
+		791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
+		791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
+		791F30D01C039273004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
+		791F30D11C039273004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
+		791F30D21C039273004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
+		791F30D31C039273004AA9E2 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C41C039273004AA9E2 /* Wrapper.swift */; };
+		791F30D41C03927E004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
+		791F30D51C039281004AA9E2 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B31C039260004AA9E2 /* Addable.swift */; };
+		791F30D61C039286004AA9E2 /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B61C039273004AA9E2 /* BatchUpdate.swift */; };
+		791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B71C039273004AA9E2 /* ChangeObserver.swift */; };
+		791F30D81C039286004AA9E2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B81C039273004AA9E2 /* Dynamic.swift */; };
+		791F30D91C039286004AA9E2 /* ErrorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B91C039273004AA9E2 /* ErrorObserver.swift */; };
+		791F30DA1C039286004AA9E2 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BA1C039273004AA9E2 /* Hub.swift */; };
+		791F30DB1C039286004AA9E2 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BB1C039273004AA9E2 /* Mapper.swift */; };
+		791F30DC1C039286004AA9E2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BC1C039273004AA9E2 /* Node.swift */; };
+		791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BD1C039273004AA9E2 /* NodeTuple.swift */; };
+		791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BE1C039273004AA9E2 /* Propagator.swift */; };
+		791F30DF1C039286004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
+		791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
+		791F30E11C039286004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
+		791F30E21C039286004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
+		791F30E31C039286004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
+		791F30E41C039286004AA9E2 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C41C039273004AA9E2 /* Wrapper.swift */; };
+		791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E61C0392A7004AA9E2 /* AtomicLong.swift */; };
+		791F30EC1C0392A7004AA9E2 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E71C0392A7004AA9E2 /* AtomicReference.swift */; };
+		791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E81C0392A7004AA9E2 /* Dispatchable.swift */; };
+		791F30EE1C0392A7004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
+		791F30EF1C0392A7004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
+		791F30F01C0392AC004AA9E2 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E61C0392A7004AA9E2 /* AtomicLong.swift */; };
+		791F30F11C0392AC004AA9E2 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E71C0392A7004AA9E2 /* AtomicReference.swift */; };
+		791F30F21C0392AC004AA9E2 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E81C0392A7004AA9E2 /* Dispatchable.swift */; };
+		791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
+		791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
+		791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
+		791F31051C0392C0004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
+		791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
+		791F31071C0392C0004AA9E2 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F91C0392C0004AA9E2 /* EquatableArray.swift */; };
+		791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
+		791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
+		791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
+		791F310B1C0392C0004AA9E2 /* FunctionalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */; };
+		791F310C1C0392C0004AA9E2 /* FunctionalSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */; };
+		791F310D1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */; };
+		791F310E1C0392C0004AA9E2 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31001C0392C0004AA9E2 /* Try.swift */; };
+		791F310F1C0392C0004AA9E2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
+		791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31031C0392C0004AA9E2 /* WeakReference.swift */; };
+		791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
+		791F31131C0392CB004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
+		791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
+		791F31151C0392CB004AA9E2 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F91C0392C0004AA9E2 /* EquatableArray.swift */; };
+		791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
+		791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
+		791F31181C0392CB004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
+		791F31191C0392CB004AA9E2 /* FunctionalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */; };
+		791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */; };
+		791F311B1C0392CB004AA9E2 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */; };
+		791F311C1C0392CB004AA9E2 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31001C0392C0004AA9E2 /* Try.swift */; };
+		791F311D1C0392CB004AA9E2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
+		791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31031C0392C0004AA9E2 /* WeakReference.swift */; };
+		791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
+		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
+		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
+		791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */; };
+		791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
+		791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
+		791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
+		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
-		7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */; };
-		7927FDA91AE8063700FA161A /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927FDA81AE8063700FA161A /* WeakSet.swift */; };
+		79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
+		79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
+		79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBD1C08411B00EC284B /* MapperSpec.swift */; };
+		79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBD1C08411B00EC284B /* MapperSpec.swift */; };
+		79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EC01C086CF400EC284B /* ReducerSpec.swift */; };
+		79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EC01C086CF400EC284B /* ReducerSpec.swift */; };
+		79552EC41C08827A00EC284B /* ThrottleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EC31C08827A00EC284B /* ThrottleSpec.swift */; };
+		79552EC51C08827A00EC284B /* ThrottleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EC31C08827A00EC284B /* ThrottleSpec.swift */; };
+		79552ED71C088B2000EC284B /* AllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552ED61C088B2000EC284B /* AllOf.swift */; };
+		79552ED81C088B3100EC284B /* AllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552ED61C088B2000EC284B /* AllOf.swift */; };
 		795FF5301BB6DD7B00E19285 /* Quick.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5311BB6DD7B00E19285 /* Nimble.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */; };
 		795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */; };
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
-		795FF5581BB825FE00E19285 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5571BB825FE00E19285 /* Dispatchable.swift */; };
-		795FF55A1BB8264400E19285 /* Rx+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5591BB8264400E19285 /* Rx+operators.swift */; };
-		795FF55C1BB8267100E19285 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF55B1BB8267100E19285 /* Hub.swift */; };
-		795FF5661BB8283D00E19285 /* ChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5651BB8283D00E19285 /* ChangeObserver.swift */; };
-		795FF5681BB8293400E19285 /* ErrorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5671BB8293400E19285 /* ErrorObserver.swift */; };
-		795FF57A1BB829D500E19285 /* BatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5791BB829D500E19285 /* BatchUpdate.swift */; };
-		795FF57C1BB82B6F00E19285 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57B1BB82B6F00E19285 /* Source.swift */; };
-		795FF57E1BB82BBB00E19285 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57D1BB82BBB00E19285 /* Wrapper.swift */; };
-		795FF5801BB82BD600E19285 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF57F1BB82BD600E19285 /* Mapper.swift */; };
-		795FF5821BB82BF500E19285 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5811BB82BF500E19285 /* Reducer.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
-		797036941BA71C7F00ED5D1A /* NSObject+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036931BA71C7F00ED5D1A /* NSObject+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
-		79706B8D1B32F68F003B5000 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */; };
-		7978BD501BB58C8E0004AE70 /* ReactivePropertyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */; };
-		797BD9121BE936AE00988548 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
-		797BD9141BE9396300988548 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
-		79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9E311BE958E800178E33 /* NodeTuple.swift */; };
+		798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
+		798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
+		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
+		798A2D381C0789F5000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
+		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
+		798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
+		798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
+		798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
+		798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
+		798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
+		798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */; };
+		798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
+		798A2D441C078A86000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
+		798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
+		798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
+		798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
+		798A2D481C078A86000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
+		798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
+		798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4A1C078B39000277AA /* AdvancedSpec.swift */; };
+		798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4B1C078B39000277AA /* BasicSpec.swift */; };
+		798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4C1C078B39000277AA /* SmokeSpec.swift */; };
+		798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4A1C078B39000277AA /* AdvancedSpec.swift */; };
+		798A2D511C078B43000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4B1C078B39000277AA /* BasicSpec.swift */; };
+		798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4C1C078B39000277AA /* SmokeSpec.swift */; };
 		79BB0F131BFDFD0500916B58 /* AllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BB0F121BFDFD0500916B58 /* AllOf.swift */; };
-		79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9111BE936AE00988548 /* Flattenable.swift */; };
-		79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BD9131BE9396300988548 /* EquatableArray.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
-		79CB58391BD1258400070BEF /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58381BD1258400070BEF /* Throttle.swift */; };
-		79E1A5DD1BD3CBE2003C8036 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5DC1BD3CBE2003C8036 /* Addable.swift */; };
-		79E1A5E81BD3E5F7003C8036 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E1A5E71BD3E5F7003C8036 /* Timer.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
-		79F9F9361BB3429300703EB7 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */; };
-		79FEAF1D1AE9426100DC002F /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEAF1C1AE9426100DC002F /* Dynamic.swift */; };
-		79FEAF1E1AE9449500DC002F /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */; };
-		ADEAF14699985ECE5DB126DA /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */; };
-		ADEAF192670A37A25307B357 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF571997E9BD6E61AF00C /* FunctionalArray.swift */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
-		ADEAF2090FECDC625D480CAF /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF902A9CDFCB7B0027EFC /* WeakReference.swift */; };
-		ADEAF34469B9A09E88E6A63B /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */; };
-		ADEAF5555038A7BDE62482F7 /* FunctionalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF8A56AC1C4D11354A463 /* FunctionalDictionary.swift */; };
-		ADEAF62591CC6262A208698D /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */; };
-		ADEAF64C57338EF6B8CC8BB9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1CEF8543F8B9AEB7DE3 /* Box.swift */; };
-		ADEAF66288F741A68A448BAF /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */; };
-		ADEAF66EA09FD2B90CAE84C1 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF52E609B4AF2F8E8CD94 /* AtomicReference.swift */; };
-		ADEAF689D0BB621B835820E9 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFAA1FF5A2D4567C0A868 /* ThreadLocal.swift */; };
-		ADEAF75292C3BB1F37BB7C63 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA67ED5ED50D2045F648 /* CommonConstants.swift */; };
-		ADEAF850A68E1F1B31BCBD18 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2412CEF01F3C75637A0 /* Node.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
-		ADEAF904EA30AB4FEF870546 /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */; };
-		ADEAF97D27176C50EDCEBF41 /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */; };
-		ADEAF9B07B41F5936D0D153A /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */; };
-		ADEAFA058F2E062D8D0034C7 /* FunctionalSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF029DFC80D8B5658F0A1 /* FunctionalSet.swift */; };
-		ADEAFA3B02D6387FDF43AB9E /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF47BBD0CA8ED4854528F /* AtomicLong.swift */; };
-		ADEAFA7D244CBCCA1EE053B2 /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF990C35320EB1EF8D473 /* TrySpec.swift */; };
-		ADEAFA91C9618670DA17E631 /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */; };
-		ADEAFB0BCD79209B0841C48C /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF1BA446DB2312748F011 /* BasicSpec.swift */; };
 		ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
-		ADEAFBCB0F889D697CF7344C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF0FA80C6C208A68B6D4E /* Api.swift */; };
-		ADEAFC367D496A8D45DEED0B /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */; };
-		ADEAFD4AA39E6FEF3CC399E4 /* Propagator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF663FC5805425C4B1E26 /* Propagator.swift */; };
-		ADEAFEC7F14AB1976ADEEA20 /* String+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFBE6B48C787C3FDB7C7A /* String+VinceRP.swift */; };
-		ADEAFEE9799E190B3B56D30C /* AtomicReferenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */; };
-		ADEAFFE88C75FF4BBA851937 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFC9C73554F30C39AFD34 /* Try.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,15 +196,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSResponder+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSResponder+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
 		02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSView+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSView+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
-		02BA6E6C1BFB58920077B5BB /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+VinceRP.swift"; path = "vincerp/Extension/NSTextField+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
-		02BA6E6E1BFB58D20077B5BB /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+didChange.swift"; path = "vincerp/Extension/NSTextField+didChange.swift"; sourceTree = SOURCE_ROOT; };
 		02C4895E1BE35487004FD281 /* VinceRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinceRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489671BE35488004FD281 /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		02C8B3831BE3F7FE00203CF2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		02C8B3841BE3F7FE00203CF2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		791F30A61C03924C004AA9E2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../vincerp/Common/Api.swift; sourceTree = "<group>"; };
+		791F30AA1C03924C004AA9E2 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../vincerp/Common/Timer.swift; sourceTree = "<group>"; };
+		791F30B31C039260004AA9E2 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addable.swift; path = ../vincerp/Common/Convenient/Addable.swift; sourceTree = "<group>"; };
+		791F30B61C039273004AA9E2 /* BatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BatchUpdate.swift; path = ../vincerp/Common/Core/BatchUpdate.swift; sourceTree = "<group>"; };
+		791F30B71C039273004AA9E2 /* ChangeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeObserver.swift; path = ../vincerp/Common/Core/ChangeObserver.swift; sourceTree = "<group>"; };
+		791F30B81C039273004AA9E2 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = ../vincerp/Common/Core/Dynamic.swift; sourceTree = "<group>"; };
+		791F30B91C039273004AA9E2 /* ErrorObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorObserver.swift; path = ../vincerp/Common/Core/ErrorObserver.swift; sourceTree = "<group>"; };
+		791F30BA1C039273004AA9E2 /* Hub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hub.swift; path = ../vincerp/Common/Core/Hub.swift; sourceTree = "<group>"; };
+		791F30BB1C039273004AA9E2 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ../vincerp/Common/Core/Mapper.swift; sourceTree = "<group>"; };
+		791F30BC1C039273004AA9E2 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../vincerp/Common/Core/Node.swift; sourceTree = "<group>"; };
+		791F30BD1C039273004AA9E2 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeTuple.swift; path = ../vincerp/Common/Core/NodeTuple.swift; sourceTree = "<group>"; };
+		791F30BE1C039273004AA9E2 /* Propagator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Propagator.swift; path = ../vincerp/Common/Core/Propagator.swift; sourceTree = "<group>"; };
+		791F30BF1C039273004AA9E2 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ../vincerp/Common/Core/Reducer.swift; sourceTree = "<group>"; };
+		791F30C01C039273004AA9E2 /* Hub+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operators.swift"; path = "../vincerp/Common/Core/Hub+operators.swift"; sourceTree = "<group>"; };
+		791F30C11C039273004AA9E2 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Source.swift; path = ../vincerp/Common/Core/Source.swift; sourceTree = "<group>"; };
+		791F30C21C039273004AA9E2 /* SpinSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinSet.swift; path = ../vincerp/Common/Core/SpinSet.swift; sourceTree = "<group>"; };
+		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = ../vincerp/Common/Core/Throttle.swift; sourceTree = "<group>"; };
+		791F30C41C039273004AA9E2 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapper.swift; path = ../vincerp/Common/Core/Wrapper.swift; sourceTree = "<group>"; };
+		791F30E61C0392A7004AA9E2 /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLong.swift; path = ../vincerp/Common/Threading/AtomicLong.swift; sourceTree = "<group>"; };
+		791F30E71C0392A7004AA9E2 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = ../vincerp/Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
+		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dispatchable.swift; path = ../vincerp/Common/Threading/Dispatchable.swift; sourceTree = "<group>"; };
+		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = ../vincerp/Common/Threading/DynamicVariable.swift; sourceTree = "<group>"; };
+		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
+		791F30F71C0392C0004AA9E2 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = ../vincerp/Common/Util/Box.swift; sourceTree = "<group>"; };
+		791F30F81C0392C0004AA9E2 /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonConstants.swift; path = ../vincerp/Common/Util/CommonConstants.swift; sourceTree = "<group>"; };
+		791F30F91C0392C0004AA9E2 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquatableArray.swift; path = ../vincerp/Common/Util/EquatableArray.swift; sourceTree = "<group>"; };
+		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionHandling.swift; path = ../vincerp/Common/Util/ExceptionHandling.swift; sourceTree = "<group>"; };
+		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattenable.swift; path = ../vincerp/Common/Util/Flattenable.swift; sourceTree = "<group>"; };
+		791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArray.swift; path = ../vincerp/Common/Util/FunctionalArray.swift; sourceTree = "<group>"; };
+		791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionary.swift; path = ../vincerp/Common/Util/FunctionalDictionary.swift; sourceTree = "<group>"; };
+		791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSet.swift; path = ../vincerp/Common/Util/FunctionalSet.swift; sourceTree = "<group>"; };
+		791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactivePropertyGenerator.swift; path = ../vincerp/Common/Util/ReactivePropertyGenerator.swift; sourceTree = "<group>"; };
+		791F31001C0392C0004AA9E2 /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Try.swift; path = ../vincerp/Common/Util/Try.swift; sourceTree = "<group>"; };
+		791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRPNSObjectHelper.h; path = ../vincerp/Common/Util/VRPNSObjectHelper.h; sourceTree = "<group>"; };
+		791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRPNSObjectHelper.m; path = ../vincerp/Common/Util/VRPNSObjectHelper.m; sourceTree = "<group>"; };
+		791F31031C0392C0004AA9E2 /* WeakReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReference.swift; path = ../vincerp/Common/Util/WeakReference.swift; sourceTree = "<group>"; };
+		791F31041C0392C0004AA9E2 /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakSet.swift; path = ../vincerp/Common/Util/WeakSet.swift; sourceTree = "<group>"; };
+		791F31211C03947D004AA9E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+didChange.swift"; path = "vincerp/Extension/AppKit/NSTextField+didChange.swift"; sourceTree = SOURCE_ROOT; };
+		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSTextField+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
+		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSResponder+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSResponder+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
+		791F31321C039876004AA9E2 /* NSObject+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+vincerp.swift"; path = "vincerp/Extension/Common/NSObject+vincerp.swift"; sourceTree = SOURCE_ROOT; };
+		791F31351C039885004AA9E2 /* String+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+vincerp.swift"; path = "vincerp/Extension/Common/Foundation/String+vincerp.swift"; sourceTree = SOURCE_ROOT; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79273A431BAE05BC00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
@@ -205,74 +255,40 @@
 		79273CC91BAE05BD00CEF85C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		79273D421BAE05BD00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
 		79273D531BAE05BD00CEF85C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
-		7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicLongSpec.swift; sourceTree = "<group>"; };
-		7927FDA81AE8063700FA161A /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
+		79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operatorsSpec.swift"; path = "Common/Core/Hub+operatorsSpec.swift"; sourceTree = "<group>"; };
+		79552EBD1C08411B00EC284B /* MapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapperSpec.swift; path = Common/Core/MapperSpec.swift; sourceTree = "<group>"; };
+		79552EC01C086CF400EC284B /* ReducerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReducerSpec.swift; path = Common/Core/ReducerSpec.swift; sourceTree = "<group>"; };
+		79552EC31C08827A00EC284B /* ThrottleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThrottleSpec.swift; path = Common/Core/ThrottleSpec.swift; sourceTree = "<group>"; };
+		79552ED61C088B2000EC284B /* AllOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllOf.swift; path = Common/Core/AllOf.swift; sourceTree = "<group>"; };
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
-		795FF5571BB825FE00E19285 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatchable.swift; sourceTree = "<group>"; };
-		795FF5591BB8264400E19285 /* Rx+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+operators.swift"; sourceTree = "<group>"; };
-		795FF55B1BB8267100E19285 /* Hub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
-		795FF5651BB8283D00E19285 /* ChangeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeObserver.swift; sourceTree = "<group>"; };
-		795FF5671BB8293400E19285 /* ErrorObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorObserver.swift; sourceTree = "<group>"; };
-		795FF5791BB829D500E19285 /* BatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchUpdate.swift; sourceTree = "<group>"; };
-		795FF57B1BB82B6F00E19285 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		795FF57D1BB82BBB00E19285 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
-		795FF57F1BB82BD600E19285 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		795FF5811BB82BF500E19285 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
-		797036931BA71C7F00ED5D1A /* NSObject+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
-		79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionHandling.swift; sourceTree = "<group>"; };
-		7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactivePropertyGenerator.swift; sourceTree = "<group>"; };
-		797BD9111BE936AE00988548 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flattenable.swift; sourceTree = "<group>"; };
-		797BD9131BE9396300988548 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableArray.swift; sourceTree = "<group>"; };
-		79AF9E311BE958E800178E33 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTuple.swift; sourceTree = "<group>"; };
+		798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLongSpec.swift; path = ../vincerpTests/Common/Threading/AtomicLongSpec.swift; sourceTree = "<group>"; };
+		798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReferenceSpec.swift; path = ../vincerpTests/Common/Threading/AtomicReferenceSpec.swift; sourceTree = "<group>"; };
+		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
+		798A2D321C0789F5000277AA /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxTests.swift; path = vincerpTests/Common/Util/BoxTests.swift; sourceTree = SOURCE_ROOT; };
+		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSetSpec.swift; path = vincerpTests/Common/Util/FunctionalSetSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D361C0789F5000277AA /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrySpec.swift; path = vincerpTests/Common/Util/TrySpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D371C0789F5000277AA /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReferenceTests.swift; path = vincerpTests/Common/Util/WeakReferenceTests.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = vincerpTests/Common/AdvancedSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = vincerpTests/Common/BasicSpec.swift; sourceTree = SOURCE_ROOT; };
+		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
 		79BB0F121BFDFD0500916B58 /* AllOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllOf.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
-		79CB58381BD1258400070BEF /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
-		79E1A5DC1BD3CBE2003C8036 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addable.swift; path = Convenient/Addable.swift; sourceTree = "<group>"; };
-		79E1A5E71BD3E5F7003C8036 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
 		79F256811ADE77250077730C /* VinceRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinceRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256851ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F256861ADE77250077730C /* VinceRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinceRP.h; sourceTree = "<group>"; };
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPNSObjectHelper.m; sourceTree = "<group>"; };
-		79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VRPNSObjectHelper.h; sourceTree = "<group>"; };
-		79FEAF1C1AE9426100DC002F /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
-		ADEAF029DFC80D8B5658F0A1 /* FunctionalSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalSet.swift; sourceTree = "<group>"; };
-		ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArraySpec.swift; sourceTree = "<group>"; };
-		ADEAF0FA80C6C208A68B6D4E /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		ADEAF1BA446DB2312748F011 /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicSpec.swift; sourceTree = "<group>"; };
-		ADEAF1CEF8543F8B9AEB7DE3 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		ADEAF2412CEF01F3C75637A0 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicReferenceSpec.swift; sourceTree = "<group>"; };
-		ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSpec.swift; sourceTree = "<group>"; };
-		ADEAF47BBD0CA8ED4854528F /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicLong.swift; sourceTree = "<group>"; };
-		ADEAF52E609B4AF2F8E8CD94 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicReference.swift; sourceTree = "<group>"; };
-		ADEAF571997E9BD6E61AF00C /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArray.swift; sourceTree = "<group>"; };
-		ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicVariable.swift; sourceTree = "<group>"; };
-		ADEAF663FC5805425C4B1E26 /* Propagator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propagator.swift; sourceTree = "<group>"; };
-		ADEAF8A56AC1C4D11354A463 /* FunctionalDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalDictionary.swift; sourceTree = "<group>"; };
-		ADEAF902A9CDFCB7B0027EFC /* WeakReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReference.swift; sourceTree = "<group>"; };
-		ADEAF990C35320EB1EF8D473 /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrySpec.swift; sourceTree = "<group>"; };
-		ADEAFA67ED5ED50D2045F648 /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
-		ADEAFAA1FF5A2D4567C0A868 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
-		ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTests.swift; sourceTree = "<group>"; };
-		ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReferenceTests.swift; sourceTree = "<group>"; };
-		ADEAFBE6B48C787C3FDB7C7A /* String+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+VinceRP.swift"; sourceTree = "<group>"; };
-		ADEAFC9C73554F30C39AFD34 /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
-		ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalSetSpec.swift; sourceTree = "<group>"; };
-		ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinSet.swift; sourceTree = "<group>"; };
-		ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeSpec.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
-		ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalDictionarySpec.swift; sourceTree = "<group>"; };
-		ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicVariableSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,12 +332,106 @@
 		024BC3681BEA4BED009FCBC2 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
-				02BA6E681BFB58520077B5BB /* NSResponder+VinceRP.swift */,
+				791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */,
+				791F31231C039580004AA9E2 /* NSTextField+didChange.swift */,
+				791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */,
 				02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */,
-				02BA6E6C1BFB58920077B5BB /* NSTextField+VinceRP.swift */,
-				02BA6E6E1BFB58D20077B5BB /* NSTextField+didChange.swift */,
 			);
 			name = AppKit;
+			sourceTree = "<group>";
+		};
+		791F30A51C039237004AA9E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				791F30A61C03924C004AA9E2 /* Api.swift */,
+				791F30B21C039257004AA9E2 /* Convenient */,
+				791F30B51C03926B004AA9E2 /* Core */,
+				791F30E51C03929F004AA9E2 /* Threading */,
+				791F30AA1C03924C004AA9E2 /* Timer.swift */,
+				791F30F61C0392B7004AA9E2 /* Util */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		791F30B21C039257004AA9E2 /* Convenient */ = {
+			isa = PBXGroup;
+			children = (
+				791F30B31C039260004AA9E2 /* Addable.swift */,
+			);
+			name = Convenient;
+			sourceTree = "<group>";
+		};
+		791F30B51C03926B004AA9E2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				79552ED61C088B2000EC284B /* AllOf.swift */,
+				791F30B61C039273004AA9E2 /* BatchUpdate.swift */,
+				791F30B71C039273004AA9E2 /* ChangeObserver.swift */,
+				791F30B81C039273004AA9E2 /* Dynamic.swift */,
+				791F30B91C039273004AA9E2 /* ErrorObserver.swift */,
+				791F30BA1C039273004AA9E2 /* Hub.swift */,
+				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
+				791F30BB1C039273004AA9E2 /* Mapper.swift */,
+				791F30BC1C039273004AA9E2 /* Node.swift */,
+				791F30BD1C039273004AA9E2 /* NodeTuple.swift */,
+				791F30BE1C039273004AA9E2 /* Propagator.swift */,
+				791F30BF1C039273004AA9E2 /* Reducer.swift */,
+				791F30C11C039273004AA9E2 /* Source.swift */,
+				791F30C21C039273004AA9E2 /* SpinSet.swift */,
+				791F30C31C039273004AA9E2 /* Throttle.swift */,
+				791F30C41C039273004AA9E2 /* Wrapper.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		791F30E51C03929F004AA9E2 /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				791F30E61C0392A7004AA9E2 /* AtomicLong.swift */,
+				791F30E71C0392A7004AA9E2 /* AtomicReference.swift */,
+				791F30E81C0392A7004AA9E2 /* Dispatchable.swift */,
+				791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */,
+				791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */,
+			);
+			name = Threading;
+			sourceTree = "<group>";
+		};
+		791F30F61C0392B7004AA9E2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				791F30F71C0392C0004AA9E2 /* Box.swift */,
+				791F30F81C0392C0004AA9E2 /* CommonConstants.swift */,
+				791F30F91C0392C0004AA9E2 /* EquatableArray.swift */,
+				791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */,
+				791F30FB1C0392C0004AA9E2 /* Flattenable.swift */,
+				791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */,
+				791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */,
+				791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */,
+				791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */,
+				791F31001C0392C0004AA9E2 /* Try.swift */,
+				791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */,
+				791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */,
+				791F31031C0392C0004AA9E2 /* WeakReference.swift */,
+				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		791F31311C039863004AA9E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				791F31341C039879004AA9E2 /* Foundation */,
+				791F31321C039876004AA9E2 /* NSObject+vincerp.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		791F31341C039879004AA9E2 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				791F31351C039885004AA9E2 /* String+vincerp.swift */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 		79273A441BAE05BC00CEF85C /* Products */ = {
@@ -415,11 +525,57 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79E1A5DB1BD3CBD7003C8036 /* Convenient */ = {
+		798A2D1F1C078996000277AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				79E1A5DC1BD3CBE2003C8036 /* Addable.swift */,
-				79E1A5E71BD3E5F7003C8036 /* Timer.swift */,
+				798A2D4A1C078B39000277AA /* AdvancedSpec.swift */,
+				798A2D4B1C078B39000277AA /* BasicSpec.swift */,
+				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
+				798A2D231C0789BF000277AA /* Convenient */,
+				798A2D201C07899E000277AA /* Core */,
+				798A2D221C0789B5000277AA /* Threading */,
+				798A2D211C0789A4000277AA /* Util */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		798A2D201C07899E000277AA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */,
+				79552EBD1C08411B00EC284B /* MapperSpec.swift */,
+				79552EC01C086CF400EC284B /* ReducerSpec.swift */,
+				79552EC31C08827A00EC284B /* ThrottleSpec.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		798A2D211C0789A4000277AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D321C0789F5000277AA /* BoxTests.swift */,
+				798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */,
+				798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */,
+				798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */,
+				798A2D361C0789F5000277AA /* TrySpec.swift */,
+				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		798A2D221C0789B5000277AA /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */,
+				798A2D2D1C0789E4000277AA /* AtomicReferenceSpec.swift */,
+				798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */,
+			);
+			name = Threading;
+			sourceTree = "<group>";
+		};
+		798A2D231C0789BF000277AA /* Convenient */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Convenient;
 			sourceTree = "<group>";
@@ -448,13 +604,9 @@
 		79F256831ADE77250077730C /* VinceRP */ = {
 			isa = PBXGroup;
 			children = (
-				ADEAF0FA80C6C208A68B6D4E /* Api.swift */,
-				79E1A5DB1BD3CBD7003C8036 /* Convenient */,
-				ADEAFE74FC80B902434267A3 /* Core */,
+				791F30A51C039237004AA9E2 /* Common */,
 				ADEAF73F3574E00F07BEF656 /* Extension */,
 				79F256841ADE77250077730C /* Supporting Files */,
-				ADEAFD2CA2002DD4DD7483E4 /* Threading */,
-				ADEAF6894C280A87A51DADA2 /* Util */,
 				79F256861ADE77250077730C /* VinceRP.h */,
 			);
 			path = VinceRP;
@@ -471,10 +623,8 @@
 		79F256901ADE77250077730C /* VinceRPTests */ = {
 			isa = PBXGroup;
 			children = (
+				798A2D1F1C078996000277AA /* Common */,
 				79F256911ADE77250077730C /* Supporting Files */,
-				ADEAFB0AFF5193FD18D9C020 /* Threading */,
-				ADEAF0DBF6C852BF10BCCA6E /* Core */,
-				ADEAF4DD413E937DD9B28A8C /* Util */,
 				ADEAFB18FDE6268B224542C9 /* TestUtil.swift */,
 			);
 			path = VinceRPTests;
@@ -491,6 +641,7 @@
 		8EA5DB600A65270836171DE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				791F31211C03947D004AA9E2 /* AppKit.framework */,
 				02C8B3831BE3F7FE00203CF2 /* Nimble.framework */,
 				02C8B3841BE3F7FE00203CF2 /* Quick.framework */,
 				792178421BB6DB890039F457 /* Quick.framework */,
@@ -499,20 +650,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ADEAF0DBF6C852BF10BCCA6E /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFEBBB68B598B6FB555E1 /* SmokeSpec.swift */,
-				ADEAF1BA446DB2312748F011 /* BasicSpec.swift */,
-				ADEAF3C6C579379E55F695DC /* AdvancedSpec.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		ADEAF166AA1D8EC3BCD62741 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				797036931BA71C7F00ED5D1A /* NSObject+VinceRP.swift */,
 				795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */,
 				ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */,
 				795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */,
@@ -528,101 +668,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		ADEAF4DD413E937DD9B28A8C /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAF990C35320EB1EF8D473 /* TrySpec.swift */,
-				ADEAFB95FAC66A6CB2D78622 /* BoxTests.swift */,
-				ADEAFDA69398805C3F74EC22 /* FunctionalSetSpec.swift */,
-				ADEAFED6183FDC595BB2EE89 /* FunctionalDictionarySpec.swift */,
-				ADEAFBE6937BAAFD4ECCF94C /* WeakReferenceTests.swift */,
-				ADEAF02FC5D12A9F342ABA59 /* FunctionalArraySpec.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		ADEAF6894C280A87A51DADA2 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFC9C73554F30C39AFD34 /* Try.swift */,
-				ADEAF1CEF8543F8B9AEB7DE3 /* Box.swift */,
-				ADEAF902A9CDFCB7B0027EFC /* WeakReference.swift */,
-				ADEAF029DFC80D8B5658F0A1 /* FunctionalSet.swift */,
-				ADEAF8A56AC1C4D11354A463 /* FunctionalDictionary.swift */,
-				7927FDA81AE8063700FA161A /* WeakSet.swift */,
-				ADEAFA67ED5ED50D2045F648 /* CommonConstants.swift */,
-				ADEAF571997E9BD6E61AF00C /* FunctionalArray.swift */,
-				79706B8C1B32F68F003B5000 /* ExceptionHandling.swift */,
-				79F9F9371BB3429D00703EB7 /* VRPNSObjectHelper.h */,
-				79F9F9351BB3429300703EB7 /* VRPNSObjectHelper.m */,
-				7978BD4F1BB58C8E0004AE70 /* ReactivePropertyGenerator.swift */,
-				797BD9111BE936AE00988548 /* Flattenable.swift */,
-				797BD9131BE9396300988548 /* EquatableArray.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		ADEAF7136DB4B1389DD6A555 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFBE6B48C787C3FDB7C7A /* String+VinceRP.swift */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		ADEAF73F3574E00F07BEF656 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				791F31311C039863004AA9E2 /* Common */,
 				024BC3681BEA4BED009FCBC2 /* AppKit */,
 				ADEAF166AA1D8EC3BCD62741 /* UIKit */,
-				ADEAF7136DB4B1389DD6A555 /* Foundation */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		ADEAFB0AFF5193FD18D9C020 /* Threading */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAFFE7442178C3AAA218C4 /* DynamicVariableSpec.swift */,
-				ADEAF2FAF0581128A139C88C /* AtomicReferenceSpec.swift */,
-				7927FDA61AE7ECCD00FA161A /* AtomicLongSpec.swift */,
-			);
-			path = Threading;
-			sourceTree = "<group>";
-		};
-		ADEAFD2CA2002DD4DD7483E4 /* Threading */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAF5C596E1B74F1B4F062D /* DynamicVariable.swift */,
-				ADEAFAA1FF5A2D4567C0A868 /* ThreadLocal.swift */,
-				ADEAF52E609B4AF2F8E8CD94 /* AtomicReference.swift */,
-				ADEAF47BBD0CA8ED4854528F /* AtomicLong.swift */,
-				795FF5571BB825FE00E19285 /* Dispatchable.swift */,
-			);
-			path = Threading;
-			sourceTree = "<group>";
-		};
-		ADEAFE74FC80B902434267A3 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				ADEAF2412CEF01F3C75637A0 /* Node.swift */,
-				ADEAFEB49A78CC5196A1FE2A /* SpinSet.swift */,
-				79FEAF1C1AE9426100DC002F /* Dynamic.swift */,
-				ADEAF663FC5805425C4B1E26 /* Propagator.swift */,
-				795FF5591BB8264400E19285 /* Rx+operators.swift */,
-				795FF55B1BB8267100E19285 /* Hub.swift */,
-				795FF5651BB8283D00E19285 /* ChangeObserver.swift */,
-				795FF5671BB8293400E19285 /* ErrorObserver.swift */,
-				795FF5791BB829D500E19285 /* BatchUpdate.swift */,
-				795FF57B1BB82B6F00E19285 /* Source.swift */,
-				795FF57D1BB82BBB00E19285 /* Wrapper.swift */,
-				795FF57F1BB82BD600E19285 /* Mapper.swift */,
-				795FF5811BB82BF500E19285 /* Reducer.swift */,
-				79CB58381BD1258400070BEF /* Throttle.swift */,
-				79AF9E311BE958E800178E33 /* NodeTuple.swift */,
-				79BB0F121BFDFD0500916B58 /* AllOf.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,7 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C8B3971BE3FD7200203CF2 /* VinceRP.h in Headers */,
-				02C8B3981BE3FE2800203CF2 /* VRPNSObjectHelper.h in Headers */,
+				791F311D1C0392CB004AA9E2 /* VRPNSObjectHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C8B3961BE3FD6C00203CF2 /* VinceRP.h in Headers */,
-				02C8B3991BE3FE2E00203CF2 /* VRPNSObjectHelper.h in Headers */,
+				791F310F1C0392C0004AA9E2 /* VRPNSObjectHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,49 +1096,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C4898F1BE35645004FD281 /* NSObject+VinceRP.swift in Sources */,
-				02C4899F1BE35836004FD281 /* Addable.swift in Sources */,
-				7912D87B1BEA043400D70981 /* NodeTuple.swift in Sources */,
+				791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */,
+				791F30D51C039281004AA9E2 /* Addable.swift in Sources */,
 				02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */,
-				02C489A01BE35836004FD281 /* Timer.swift in Sources */,
-				02C489761BE355BB004FD281 /* Node.swift in Sources */,
-				02C489771BE355BB004FD281 /* SpinSet.swift in Sources */,
-				02C489781BE355BB004FD281 /* Dynamic.swift in Sources */,
-				02C489961BE357AD004FD281 /* Api.swift in Sources */,
-				02C489791BE355BB004FD281 /* Propagator.swift in Sources */,
-				02C4897A1BE355BB004FD281 /* Rx+operators.swift in Sources */,
-				02C4897B1BE355BB004FD281 /* Hub.swift in Sources */,
-				02C4897C1BE355BB004FD281 /* ChangeObserver.swift in Sources */,
-				02C4897D1BE355BB004FD281 /* ErrorObserver.swift in Sources */,
-				02C4897E1BE355BB004FD281 /* BatchUpdate.swift in Sources */,
-				02C4897F1BE355BB004FD281 /* Source.swift in Sources */,
-				02C489801BE355BB004FD281 /* Wrapper.swift in Sources */,
-				02C489811BE355BB004FD281 /* Mapper.swift in Sources */,
-				02C489821BE355BB004FD281 /* Reducer.swift in Sources */,
-				02C489831BE355BB004FD281 /* Throttle.swift in Sources */,
-				02BA6E6D1BFB58920077B5BB /* NSTextField+VinceRP.swift in Sources */,
-				02BA6E6F1BFB58D20077B5BB /* NSTextField+didChange.swift in Sources */,
-				02C489851BE355BB004FD281 /* Try.swift in Sources */,
-				02C489861BE355BB004FD281 /* Box.swift in Sources */,
-				02C489871BE355BB004FD281 /* WeakReference.swift in Sources */,
-				02C489881BE355BB004FD281 /* FunctionalSet.swift in Sources */,
-				02C489891BE355BB004FD281 /* FunctionalDictionary.swift in Sources */,
-				02C4898A1BE355BB004FD281 /* WeakSet.swift in Sources */,
-				79C7E9D01BE95CB000BA5E6C /* Flattenable.swift in Sources */,
-				02C4898B1BE355BB004FD281 /* CommonConstants.swift in Sources */,
-				02C4898C1BE355BB004FD281 /* FunctionalArray.swift in Sources */,
+				791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */,
+				791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */,
+				791F30D61C039286004AA9E2 /* BatchUpdate.swift in Sources */,
+				791F30DF1C039286004AA9E2 /* Reducer.swift in Sources */,
+				791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */,
+				791F30DB1C039286004AA9E2 /* Mapper.swift in Sources */,
+				791F30E21C039286004AA9E2 /* SpinSet.swift in Sources */,
+				791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */,
+				791F31181C0392CB004AA9E2 /* FunctionalArray.swift in Sources */,
+				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
+				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
-				02C4898D1BE355BB004FD281 /* ExceptionHandling.swift in Sources */,
-				02C4898E1BE355BB004FD281 /* ReactivePropertyGenerator.swift in Sources */,
-				02C4899A1BE357FD004FD281 /* DynamicVariable.swift in Sources */,
-				02C4899B1BE357FD004FD281 /* ThreadLocal.swift in Sources */,
-				02BA6E6A1BFB58520077B5BB /* NSResponder+VinceRP.swift in Sources */,
-				79C7E9D11BE9610600BA5E6C /* EquatableArray.swift in Sources */,
-				02C4899C1BE357FD004FD281 /* AtomicReference.swift in Sources */,
-				02C4899D1BE357FD004FD281 /* AtomicLong.swift in Sources */,
-				02C4899E1BE357FD004FD281 /* Dispatchable.swift in Sources */,
-				02C489841BE355BB004FD281 /* String+VinceRP.swift in Sources */,
-				02C489981BE357CF004FD281 /* VRPNSObjectHelper.m in Sources */,
+				791F31131C0392CB004AA9E2 /* Box.swift in Sources */,
+				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
+				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
+				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
+				791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */,
+				79552ED81C088B3100EC284B /* AllOf.swift in Sources */,
+				791F311B1C0392CB004AA9E2 /* ReactivePropertyGenerator.swift in Sources */,
+				791F31191C0392CB004AA9E2 /* FunctionalDictionary.swift in Sources */,
+				791F30F11C0392AC004AA9E2 /* AtomicReference.swift in Sources */,
+				791F30F01C0392AC004AA9E2 /* AtomicLong.swift in Sources */,
+				791F30D41C03927E004AA9E2 /* Api.swift in Sources */,
+				791F30DC1C039286004AA9E2 /* Node.swift in Sources */,
+				791F30D81C039286004AA9E2 /* Dynamic.swift in Sources */,
+				791F30D91C039286004AA9E2 /* ErrorObserver.swift in Sources */,
+				791F311C1C0392CB004AA9E2 /* Try.swift in Sources */,
+				791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */,
+				791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */,
+				791F30E41C039286004AA9E2 /* Wrapper.swift in Sources */,
+				791F30F21C0392AC004AA9E2 /* Dispatchable.swift in Sources */,
+				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
+				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
+				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
+				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
+				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
+				791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */,
+				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
+				791F31151C0392CB004AA9E2 /* EquatableArray.swift in Sources */,
+				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
+				791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,18 +1147,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02C8B3721BE3D3DF00203CF2 /* BoxTests.swift in Sources */,
-				02C8B36A1BE3D3D100203CF2 /* DynamicVariableSpec.swift in Sources */,
-				02C8B3771BE3D40700203CF2 /* AtomicLongSpec.swift in Sources */,
-				02C8B36B1BE3D3D300203CF2 /* AtomicReferenceSpec.swift in Sources */,
-				02C8B36D1BE3D3D600203CF2 /* SmokeSpec.swift in Sources */,
-				02C8B36F1BE3D3D900203CF2 /* AdvancedSpec.swift in Sources */,
-				02C8B3731BE3D3E100203CF2 /* FunctionalSetSpec.swift in Sources */,
-				02C8B3761BE3D3E500203CF2 /* FunctionalArraySpec.swift in Sources */,
-				02C8B3741BE3D3E200203CF2 /* FunctionalDictionarySpec.swift in Sources */,
-				02C8B3751BE3D3E300203CF2 /* WeakReferenceTests.swift in Sources */,
-				02C8B3711BE3D3DE00203CF2 /* TrySpec.swift in Sources */,
-				02C8B36E1BE3D3D800203CF2 /* BasicSpec.swift in Sources */,
+				798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */,
+				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
+				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
+				798A2D421C078A81000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
+				79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */,
+				798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
+				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
+				798A2D441C078A86000277AA /* BoxTests.swift in Sources */,
+				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
+				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
+				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
+				79552EC51C08827A00EC284B /* ThrottleSpec.swift in Sources */,
+				798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,57 +1170,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				795FF57E1BB82BBB00E19285 /* Wrapper.swift in Sources */,
-				79E1A5E81BD3E5F7003C8036 /* Timer.swift in Sources */,
-				ADEAF689D0BB621B835820E9 /* ThreadLocal.swift in Sources */,
+				791F30CD1C039273004AA9E2 /* Propagator.swift in Sources */,
 				797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */,
-				79706B8D1B32F68F003B5000 /* ExceptionHandling.swift in Sources */,
-				79FEAF1D1AE9426100DC002F /* Dynamic.swift in Sources */,
-				ADEAF66EA09FD2B90CAE84C1 /* AtomicReference.swift in Sources */,
-				795FF5661BB8283D00E19285 /* ChangeObserver.swift in Sources */,
-				ADEAF850A68E1F1B31BCBD18 /* Node.swift in Sources */,
+				791F310B1C0392C0004AA9E2 /* FunctionalDictionary.swift in Sources */,
+				791F30C81C039273004AA9E2 /* ErrorObserver.swift in Sources */,
+				79552ED71C088B2000EC284B /* AllOf.swift in Sources */,
+				791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */,
+				791F30C71C039273004AA9E2 /* Dynamic.swift in Sources */,
+				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
+				791F30CB1C039273004AA9E2 /* Node.swift in Sources */,
+				791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */,
 				79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */,
-				ADEAF14699985ECE5DB126DA /* SpinSet.swift in Sources */,
-				795FF5581BB825FE00E19285 /* Dispatchable.swift in Sources */,
-				ADEAFA3B02D6387FDF43AB9E /* AtomicLong.swift in Sources */,
+				791F30AC1C03924C004AA9E2 /* Api.swift in Sources */,
+				791F30D31C039273004AA9E2 /* Wrapper.swift in Sources */,
 				795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */,
-				79FEAF1E1AE9449500DC002F /* DynamicVariable.swift in Sources */,
-				7927FDA91AE8063700FA161A /* WeakSet.swift in Sources */,
-				797BD9141BE9396300988548 /* EquatableArray.swift in Sources */,
-				795FF57A1BB829D500E19285 /* BatchUpdate.swift in Sources */,
-				ADEAFFE88C75FF4BBA851937 /* Try.swift in Sources */,
-				79CB58391BD1258400070BEF /* Throttle.swift in Sources */,
-				795FF5681BB8293400E19285 /* ErrorObserver.swift in Sources */,
+				791F30C51C039273004AA9E2 /* BatchUpdate.swift in Sources */,
+				791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */,
+				791F30EF1C0392A7004AA9E2 /* ThreadLocal.swift in Sources */,
+				791F30B41C039260004AA9E2 /* Addable.swift in Sources */,
+				791F30D21C039273004AA9E2 /* Throttle.swift in Sources */,
 				02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */,
-				795FF5801BB82BD600E19285 /* Mapper.swift in Sources */,
-				ADEAF64C57338EF6B8CC8BB9 /* Box.swift in Sources */,
-				ADEAF2090FECDC625D480CAF /* WeakReference.swift in Sources */,
-				79F9F9361BB3429300703EB7 /* VRPNSObjectHelper.m in Sources */,
-				797BD9121BE936AE00988548 /* Flattenable.swift in Sources */,
-				79AF9E321BE958E800178E33 /* NodeTuple.swift in Sources */,
-				ADEAFA058F2E062D8D0034C7 /* FunctionalSet.swift in Sources */,
-				ADEAF5555038A7BDE62482F7 /* FunctionalDictionary.swift in Sources */,
-				ADEAFD4AA39E6FEF3CC399E4 /* Propagator.swift in Sources */,
+				791F31071C0392C0004AA9E2 /* EquatableArray.swift in Sources */,
 				795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */,
-				ADEAFBCB0F889D697CF7344C /* Api.swift in Sources */,
-				795FF55C1BB8267100E19285 /* Hub.swift in Sources */,
-				795FF55A1BB8264400E19285 /* Rx+operators.swift in Sources */,
+				791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */,
+				791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */,
+				791F310D1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift in Sources */,
+				791F310E1C0392C0004AA9E2 /* Try.swift in Sources */,
+				791F30B01C03924C004AA9E2 /* Timer.swift in Sources */,
+				791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */,
+				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
+				791F31051C0392C0004AA9E2 /* Box.swift in Sources */,
+				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
-				ADEAF75292C3BB1F37BB7C63 /* CommonConstants.swift in Sources */,
-				795FF5821BB82BF500E19285 /* Reducer.swift in Sources */,
-				ADEAF192670A37A25307B357 /* FunctionalArray.swift in Sources */,
 				ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */,
-				79E1A5DD1BD3CBE2003C8036 /* Addable.swift in Sources */,
+				791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */,
+				791F310C1C0392C0004AA9E2 /* FunctionalSet.swift in Sources */,
+				791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */,
 				ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */,
 				79BB0F131BFDFD0500916B58 /* AllOf.swift in Sources */,
+				791F30EE1C0392A7004AA9E2 /* DynamicVariable.swift in Sources */,
+				791F30C91C039273004AA9E2 /* Hub.swift in Sources */,
 				795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */,
+				791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */,
+				791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */,
+				791F30CA1C039273004AA9E2 /* Mapper.swift in Sources */,
+				791F30C61C039273004AA9E2 /* ChangeObserver.swift in Sources */,
+				791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */,
+				791F30EC1C0392A7004AA9E2 /* AtomicReference.swift in Sources */,
 				ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */,
+				791F30D11C039273004AA9E2 /* SpinSet.swift in Sources */,
 				79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */,
-				7978BD501BB58C8E0004AE70 /* ReactivePropertyGenerator.swift in Sources */,
-				ADEAFEC7F14AB1976ADEEA20 /* String+VinceRP.swift in Sources */,
-				797036941BA71C7F00ED5D1A /* NSObject+VinceRP.swift in Sources */,
-				795FF57C1BB82B6F00E19285 /* Source.swift in Sources */,
+				791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1170,18 +1229,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEAF9B07B41F5936D0D153A /* DynamicVariableSpec.swift in Sources */,
-				ADEAF904EA30AB4FEF870546 /* SmokeSpec.swift in Sources */,
-				ADEAFA7D244CBCCA1EE053B2 /* TrySpec.swift in Sources */,
-				ADEAF66288F741A68A448BAF /* BoxTests.swift in Sources */,
-				7927FDA71AE7ECCD00FA161A /* AtomicLongSpec.swift in Sources */,
-				ADEAF62591CC6262A208698D /* FunctionalSetSpec.swift in Sources */,
-				ADEAF97D27176C50EDCEBF41 /* FunctionalDictionarySpec.swift in Sources */,
-				ADEAFA91C9618670DA17E631 /* WeakReferenceTests.swift in Sources */,
-				ADEAFEE9799E190B3B56D30C /* AtomicReferenceSpec.swift in Sources */,
-				ADEAF34469B9A09E88E6A63B /* FunctionalArraySpec.swift in Sources */,
-				ADEAFB0BCD79209B0841C48C /* BasicSpec.swift in Sources */,
-				ADEAFC367D496A8D45DEED0B /* AdvancedSpec.swift in Sources */,
+				798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */,
+				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
+				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
+				798A2D301C0789E4000277AA /* AtomicReferenceSpec.swift in Sources */,
+				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
+				79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */,
+				798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */,
+				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
+				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
+				798A2D381C0789F5000277AA /* BoxTests.swift in Sources */,
+				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
+				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
+				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
+				79552EC41C08827A00EC284B /* ThrottleSpec.swift in Sources */,
+				798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
