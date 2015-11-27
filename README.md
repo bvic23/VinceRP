@@ -1,6 +1,6 @@
 <div style="text-align:center" markdown="1">
 
-![Logo](logo.png)
+<img src="logo.png"/>
 
 </div>
 
