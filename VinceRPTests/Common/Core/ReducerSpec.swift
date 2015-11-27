@@ -45,7 +45,7 @@ class ReducerSpec: QuickSpec {
         it("filters all") {
             // given
             let x = reactive(10)
-            let y = definedAs { 100 * x* }
+            let y = definedAs { 100 / x* }
             let z = y.filterAll { $0.isSuccess() }
             
             // then
@@ -68,6 +68,71 @@ class ReducerSpec: QuickSpec {
             
             // then
             expect(z*) == 100
+        }
+        
+        it("reduces") {
+            // given
+            let x = reactive(1)
+            let y = x.reduce { $0 * $1 }
+            
+            // when
+            x <- 2
+            expect(y*) == 2
+            
+            // when
+            x <- 3
+            expect(y*) == 6
+            
+            // when
+            x <- 4
+            expect(y*) == 24
+        }
+        
+        it("reduces all") {
+            // given
+            let x = reactive(1)
+            let y = definedAs { 100 / x* }
+            let z = y.reduceAll { (x, y) in
+                switch (x, y) {
+                case (.Success(let a), .Success(let b)): return Try(a.value + b.value)
+                case (.Failure(_), .Failure(_)): return Try(1337)
+                case (.Failure(let a), .Success(_)): return .Failure(a)
+                case (.Success(_), .Failure(let b)): return .Failure(b)
+                }
+            }
+            
+            // then
+            expect(z*) == 100
+            
+            // when
+            x <- fakeError
+            
+            // then
+            expect(z.toTry().isFailure()) == true
+            
+            // when
+            x <- 10
+            
+            // then
+            expect(z.toTry().isFailure()) == true
+            
+            // when
+            x <- 100
+            
+            // then
+            expect(z.toTry().isFailure()) == true
+            
+            // when
+            x <- fakeError
+            
+            // then
+            expect(z*) == 1337
+            
+            // when
+            x <- 10
+            
+            // then
+            expect(z*) == 1347
         }
         
     }

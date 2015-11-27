@@ -366,7 +366,7 @@ print(y*) // 6
 ###filterAll
 `filterAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
 
-Let's implement `skipErrors`:
+Let's implement `skipErrors` in terms of `filterAll`:
 
 ```swift
 public func skipErrors() -> Hub<T> {
@@ -375,6 +375,27 @@ public func skipErrors() -> Hub<T> {
 ```
 
 ###reduce
+
+```swift
+// Define a reactive stream variable with a starting value of 1
+let x = reactive(1)
+
+// Define a calculated variable which sums the values of 'x'
+let sum = x.reduce { $0 + $1 }
+
+// When we send 2
+x <- 2
+
+// The sum will be 3
+print(sum*) // 3
+
+// When we send 3
+x <- 3
+
+// The sum will be 6
+print(sum*) // 6
+```
+
 ###reduceAll
 ###ignore
 ###throttle
