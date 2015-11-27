@@ -31,33 +31,38 @@ class MapperSpec: QuickSpec {
             expect(d*) == 6
         }
         
-        it("can map all values") {
+        it("handles division by zero") {
             // given
-            let a = reactive(10)
-            let b = definedAs { 100 / a* }
-            let c = b.mapAll { (p:Try<Int>) -> Try<Int> in
-                switch p {
-                case .Success(let box): return Try(box.value * 2)
-                default: return Try(1337)
-                }
-            }
-            let d = b.mapAll { (p:Try<Int>) -> Try<String> in
-                switch p {
-                case .Success( _): return Try(fakeError)
-                case .Failure(let w): return Try(w.description)
-                }
-            }
+            let numerator = reactive(4)
+            let denominator = reactive(1)
             
-            // then
-            expect(c*) == 20
-            expect(d.toTry().isFailure()) == true
+            let frac = definedAs {
+                [numerator*, denominator*]
+            }.mapAll { (p:Try<[Int]>) -> Try<Int> in
+                switch p {
+                    case .Success(let tuple):
+                        let n = tuple.value[0]
+                        let d = tuple.value[1]
+                        if d == 0 {
+                            return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
+                        }
+                        return Try(n/d)
+                    case .Failure(let error): return Try(error)
+                }
+            }
             
             // when
-            a <- fakeError
+            denominator <- 0
             
             // then
-            expect(c*) == 1337
-            expect(d.toTry().isSuccess()) == true
+            expect(frac.toTry().isFailure()) == true
+
+            // when
+            denominator <- 2
+            
+            // then
+            expect(frac*) == 2
+
         }
         
     }

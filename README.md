@@ -264,14 +264,83 @@ x.foreach {
 print(history) // [1]
 
 // Send a new value
-a <- 2
+x <- 2
 
 // then
 print(accu) // [1, 2]
 ```
 
 ###map
+```swift
+// Define a reactive stream variable with a starting value of 1
+let x = reactive(1)
+
+// Define a calculated variable which doubles the values of 'x'
+let y = x.map { $0 * 2 }
+
+// then
+print(y) // 2
+
+// Send a new value
+x <- 2
+
+// then
+print(y) // 4
+```
+
 ###mapAll
+The `mapAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
+
+Let's say we would like to have an error if division by zero is happening:
+
+```swift
+let numerator = reactive(4)
+let denominator = reactive(1)
+
+// Let's create an array \*
+let frac = definedAs {
+    [numerator*, denominator*]
+}.mapAll{ (p:Try<[Int]>) -> Try<Int> in
+    switch p {
+        case .Success(let tuple):
+            let n = tuple.value[0]
+            let d = tuple.value[1]
+            // If the denominator is 0 return with an error
+            if d == 0 {
+                return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
+            }
+
+            // Otherwise do the division
+            return Try(n/d)
+        // If it already failed earlier just pass it through
+        case .Failure(let error): return Try(error)
+    }
+}
+
+// Let's print the errors
+frac.onError {
+    print($0.domain)
+}
+
+// And the changes
+frac.onChange {
+    print($0.domain)
+}
+
+// If we send a 0 to the denominator
+denominator <- 0
+
+// Then a non-zero
+denominator <- 2
+
+// The output is the following:
+// ----------------------------
+// divison by zero
+// 2
+```
+
+\* A tuple would be a better choice, but tuples are not Equatable (which is a restriction of VinceRP) and [you cannot add Extensions to compound types](http://stackoverflow.com/questions/28317625/can-i-extend-tuples-in-swift).
+
 ###filter
 ###filterAll
 ###ignore
