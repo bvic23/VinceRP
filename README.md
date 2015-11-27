@@ -1,4 +1,4 @@
-![Logo](logo.png)
+![Logo](logoTrimmed.png)
 
 VinceRP
 ======================================
