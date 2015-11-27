@@ -68,7 +68,7 @@ let sum = definedAs{ s1* + s2* }
 // Remember sum* is just a syntactic sugar for sum.value()
 // -------------------------------------------------------
 // * reads the last / current value of sum
-print(sum*) // = 3
+print(sum*) //  3
 
 // Push a new value into the stream
 // --------------------------------
@@ -76,7 +76,7 @@ print(sum*) // = 3
 s2 <- 3
 
 // it recalculates using the block and push a new value into the stream
-print(sum*) // = 4
+print(sum*) //  4
 ```
 
 Note that - thanks to Swift's type inference - it figures out the type of the sources and the `sum` as well. So the following won't compile:
@@ -108,7 +108,7 @@ onChangeDo(s) { _ in
 }
 
 // 1 because of the initialization
-print(counter) // = 1
+print(counter) //  1
 ```
 
 If you don't want to count the initialization:
@@ -129,7 +129,7 @@ onChangeDo(s, skipInitial:true) { _ in
 s <- 2
 
 // 1 because of the update
-print(counter) // = 1
+print(counter) //  1
 ```
 
 ##Errors
@@ -219,10 +219,10 @@ It is applicable for `Bool` streams and negates the values.
 let a = reactive(true)
 
 // It's value is true
-print(a.value()) // true
+print(a.value()) //  true
 
 // If you apply the 'not()' operator it negates all the values of the stream
-print(a.not().value()) // false
+print(a.not().value()) //  false
 ```
 
 ###skipErrors
@@ -397,6 +397,49 @@ print(sum*) // 6
 ```
 
 ###reduceAll
+`reduceAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
+
+```swift
+// Define a reactive stream variable with a starting value of 0
+let x = reactive(0)
+
+// Let's summarize the values of 'x' and reset the sum to zero if an error arrives
+let sum = x.reduceAll { (x, y) in
+    switch (x, y) {
+    case (.Success(let a), .Success(let b)): return Try(a.value + b.value)
+    default: return Try(0)
+    }
+}
+
+// Initially sum is zero
+print(sum*) // 0
+
+// When we send 1
+x <- 1
+
+// Then it will be 1
+print(sum*) // 1
+
+// When we send 2
+x <- 2
+
+// Then the sum will be
+print(sum*) // 3
+
+// When we send an error
+x <- fakeError
+
+// Then it will reset the sum to zero
+print(sum*) == 0
+
+// When we send a non-error
+x <- 5
+
+// Then it starts again
+expect(sum*) == 5
+
+```
+
 ###ignore
 ###throttle
 

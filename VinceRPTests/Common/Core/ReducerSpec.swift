@@ -90,49 +90,40 @@ class ReducerSpec: QuickSpec {
         
         it("reduces all") {
             // given
-            let x = reactive(1)
-            let y = definedAs { 100 / x* }
-            let z = y.reduceAll { (x, y) in
+            let x = reactive(0)
+            let sum = x.reduceAll { (x, y) in
                 switch (x, y) {
                 case (.Success(let a), .Success(let b)): return Try(a.value + b.value)
-                case (.Failure(_), .Failure(_)): return Try(1337)
-                case (.Failure(let a), .Success(_)): return .Failure(a)
-                case (.Success(_), .Failure(let b)): return .Failure(b)
+                default: return Try(0)
                 }
             }
             
             // then
-            expect(z*) == 100
+            expect(sum*) == 0
+            
+            // when
+            x <- 1
+            
+            // then
+            expect(sum*) == 1
+            
+            // when
+            x <- 2
+            
+            // then
+            expect(sum*) == 3
             
             // when
             x <- fakeError
             
             // then
-            expect(z.toTry().isFailure()) == true
+            expect(sum*) == 0
             
             // when
-            x <- 10
+            x <- 5
             
             // then
-            expect(z.toTry().isFailure()) == true
-            
-            // when
-            x <- 100
-            
-            // then
-            expect(z.toTry().isFailure()) == true
-            
-            // when
-            x <- fakeError
-            
-            // then
-            expect(z*) == 1337
-            
-            // when
-            x <- 10
-            
-            // then
-            expect(z*) == 1347
+            expect(sum*) == 5
         }
         
     }
