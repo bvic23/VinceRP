@@ -392,7 +392,7 @@ expect(sum*) == 5
 ```
 
 ###ignore
-`ignore` is simply a filter against a constant function:
+`ignore` is simply a filter against a constant value:
 
 ```swift
 public func ignore(ignorabeValues: T) -> Hub<T> {
