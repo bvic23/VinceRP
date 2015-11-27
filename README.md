@@ -226,7 +226,50 @@ print(a.not().value()) // false
 ```
 
 ###skipErrors
+
+```swift
+// Define a reactive stream variable
+let x = reactive(1)
+
+// Define a calculated variable and apply 'skipErrors'
+let y = definedAs { x* + 1 }.skipErrors()
+
+// Let's count the number of errors
+var count = 0
+onErrorDo(y) {  _ in
+    count++
+}
+
+// When we send an error into x
+x <- NSError(domain: "domain.com", code: 1, userInfo: nil)
+
+// Because 'y' ignores errors
+print(count) // 0
+```
+
 ###foreach
+```swift
+// Define a reactive stream variable with a starting value of 1
+let x = reactive(1)
+
+// This array will represent the history of 'x'
+var history = [Int]()
+
+// If 'x' receives a new value...
+x.foreach {
+   history.append($0)
+}
+
+// then
+print(history) // [1]
+
+// Send a new value
+a <- 2
+
+// then
+print(accu) // [1, 2]
+```
+
 ###map
 ###mapAll
 ###filter

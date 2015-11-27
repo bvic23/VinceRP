@@ -12,20 +12,53 @@ class HubOperatorsSpec: QuickSpec {
     
     override func spec() {
         
-        describe("not") {
+        it("should negate") {
+            // given
+            let x = reactive(true)
             
-            it("should negate") {
-                // given
-                let a = reactive(true)
-                
-                // when
-                expect(a.value()) == true
-                
-                // then
-                expect(a.not()*) == false
+            // when
+            expect(x.value()) == true
+            
+            // then
+            expect(x.not()*) == false
+        }
+        
+        it("can skip errors") {
+            // given
+            let x = reactive(1)
+            let y = definedAs { x* + 1 }.skipErrors()
+            var count = 0
+            onErrorDo(y) {  _ in
+                count++
             }
             
+            // when
+            x <- fakeError
+            
+            // then
+            expect(count) == 0
         }
+        
+        it("works with foreach") {
+            // given
+            let x = reactive(1)
+            var history = [Int]()
+            
+            // when
+            x.foreach {
+                history.append(2 * $0)
+            }
+            
+            // then
+            expect(history) == [2]
+
+            // when
+            x <- 2
+            
+            // then
+            expect(history) == [2, 4]
+        }
+
         
     }
     
