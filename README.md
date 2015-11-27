@@ -183,7 +183,7 @@ public extension UILabel {
 }
 ```
 
-As you can see in the more complex [example](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample)  - called BasicExample :-) - you can add your own convenience extensions as well:
+As you can see in the more complex [example](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample) - called BasicExample :-) - you can add your own convenience extensions as well:
 
 ```swift
 extension UITextField {
@@ -468,6 +468,29 @@ print(y*) // 5
 ```
 
 ###throttle
+`throttle` operator buffers an item from the stream and wait for the time span specified by the timeout parameter to expire. If another item is produced from the sequence before the time span expires, then that item replaces the old item in the buffer and the wait starts over. If the due time does expire before another item is produced in the stream, them that item is observed through any subscriptions to the sequence.
+
+```swift
+// Define a reactive stream variable with a starting value of 0
+let x = reactive(0)
+
+// Define a calculated variable which passes through values after 1 seconds
+let y = x.throttle(1.0)
+
+// When we send 1 to the source
+x <- 1
+
+// Then it won't change immediately
+print(y*) // 0
+
+// If we wait more than one second
+// sleep(2)
+
+// Then it's value will be 1
+print(y*) // 1
+```
+
+For a better example, check out the [FlickrExample](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample)
 
 #About
 
