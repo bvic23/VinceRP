@@ -441,6 +441,32 @@ expect(sum*) == 5
 ```
 
 ###ignore
+`ignore` is simply a filter against a constant function:
+
+```swift
+public func ignore(ignorabeValues: T) -> Hub<T> {
+    return self.filter { $0 != ignorabeValues }
+}
+
+// Define a reactive stream variable with a starting value of 1
+let x = reactive(1)
+
+// Define a calculated variable which ignores 0
+let y = y.ignore(0)
+
+// When we send a 0
+x <- 0
+
+// Then nothing changes
+print(y*) // 1
+
+// When we send a non-zero
+x <- 5
+
+// Then value of y will be 5
+print(y*) // 5
+```
+
 ###throttle
 
 #About
