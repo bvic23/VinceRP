@@ -20,6 +20,27 @@ class SmokeSpec: QuickSpec {
 
             context("reactive variable") {
 
+                it("is happy without default value") {
+                    // given
+                    let a: Source<Int> = reactive()
+                    
+                    // then
+                    expect(a.hasValue()) == false
+                    
+                    // when
+                    a <- 1
+                    
+                    // then
+                    expect(a*) == 1
+                    expect(a.hasValue()) == true
+                    
+                    // when
+                    a <- fakeError
+                    
+                    // then
+                    expect(a.hasValue()) == true
+                }
+                
                 it("holds the initial value") {
                     // given
                     let a = reactive(1)

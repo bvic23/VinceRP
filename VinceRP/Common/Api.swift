@@ -33,6 +33,10 @@ public func reactive<T:Equatable>(initValue: T) -> Source<T> {
     return Source(initValue: initValue)
 }
 
+public func reactive<T:Equatable>() -> Source<T> {
+    return Source()
+}
+
 public func onChangeDo<T:Equatable>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver {
     return onChangeDo(source, skipInitial: false, callback: callback)
 }
