@@ -1,8 +1,4 @@
-<div style="text-align:center" markdown="1">
-
-<img src="logo.png"/>
-
-</div>
+![Logo](logo.png)
 
 VinceRP
 ======================================
