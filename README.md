@@ -1,3 +1,5 @@
+![Logo](logo.png)
+
 VinceRP
 ======================================
 Easy to use, easy to extend reactive framework for Swift.
