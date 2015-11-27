@@ -1,4 +1,5 @@
 ![VinceRP](logoTrimmed.png)
+
 Easy to use, easy to extend reactive framework for Swift.
 
 ![Swift 2](https://img.shields.io/badge/language-Swift_2-orange.svg)
