@@ -42,6 +42,33 @@ class ReducerSpec: QuickSpec {
             expect(y*) == 19
         }
         
+        it("filters all") {
+            // given
+            let x = reactive(10)
+            let y = definedAs { 100 * x* }
+            let z = y.filterAll { $0.isSuccess() }
+            
+            // then
+            expect(z*) == 10
+            
+            // when
+            x <- 9
+            
+            // then
+            expect(z*) == 11
+            
+            // when
+            x <- fakeError
+            
+            // then
+            expect(z*) == 11
+            
+            // when
+            x <- 1
+            
+            // then
+            expect(z*) == 100
+        }
         
     }
     

@@ -174,34 +174,6 @@ class AdvancedSpec: QuickSpec {
                 expect(b*) == 6
                 expect(sideeffect) == 2
             }
-            
-            it("filters all") {
-                // given
-                let a = reactive(10)
-                let b = definedAs { 100 / a* }
-                let c = b.filterAll { $0.isSuccess() }
-
-                // then
-                expect(c*) == 10
-
-                // when
-                a <- 9
-
-                // then
-                expect(c*) == 11
-
-                // when
-                a <- fakeError
-
-                // then
-                expect(c*) == 11
-
-                // when
-                a <- 1
-
-                // then
-                expect(c*) == 100
-            }
 
             it("reduces") {
                 // given

@@ -289,7 +289,7 @@ print(y) // 4
 ```
 
 ###mapAll
-The `mapAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
+`mapAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
 
 Let's say we would like to have an error if division by zero is happening:
 
@@ -364,6 +364,16 @@ print(y*) // 6
 ```
 
 ###filterAll
+`filterAll` is a special version of map which operates on [Try<T>](https://github.com/bvic23/VinceRP/blob/master/vincerp/Common/Util/Try.swift), the underlying monad if you want to handle Failures in some special way.
+
+Let's implement `skipErrors`:
+
+```swift
+public func skipErrors() -> Hub<T> {
+    return filterAll { $0.isSuccess() }
+}
+```
+
 ###reduce
 ###reduceAll
 ###ignore
