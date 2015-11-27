@@ -339,13 +339,34 @@ denominator <- 2
 // 2
 ```
 
-\* A tuple would be a better choice, but tuples are not Equatable (which is a restriction of VinceRP) and [you cannot add Extensions to compound types](http://stackoverflow.com/questions/28317625/can-i-extend-tuples-in-swift).
+\* A tuple would be a better choice, but tuples are not Equatable (which is a restriction of VinceRP as of today) and [you cannot add Extensions to compound types](http://stackoverflow.com/questions/28317625/can-i-extend-tuples-in-swift).
 
 ###filter
+
+```swift
+// Define a reactive stream variable with a starting value of 10
+let x = reactive(10)
+
+// Let's pass through values higher than 5
+let y = x.filter { $0 > 5 }
+
+// When we send 1
+x <- 1
+
+// Value of y will remain the same
+print(y*) // 10
+
+// When we send 6
+x <- 6
+
+// Value of y will be 6
+print(y*) // 6
+```
+
 ###filterAll
-###ignore
 ###reduce
 ###reduceAll
+###ignore
 ###throttle
 
 #About

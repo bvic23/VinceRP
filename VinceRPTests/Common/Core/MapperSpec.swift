@@ -1,6 +1,6 @@
 //
-//  Created by Viktor Belenyesi on 11/27/15.
-//  Copyright © 2015 Viktor Belenyesi. All rights reserved.
+// Created by Viktor Belenyesi on 11/27/15.
+// Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
 @testable import VinceRP
@@ -14,21 +14,21 @@ class MapperSpec: QuickSpec {
         
         it("can map values") {
             // given
-            let a = reactive(10)
-            let b = definedAs { a* + 2 }
-            let c = a.map { $0 * 2 }
-            let d = b.map { $0 + 3 }
+            let x = reactive(10)
+            let y = definedAs { x* + 2 }
+            let z = x.map { $0 * 2 }
+            let s = y.map { $0 + 3 }
             
             // then
-            expect(c*) == 20
-            expect(d*) == 15
+            expect(z*) == 20
+            expect(s*) == 15
             
             // when
-            a <- 1
+            x <- 1
             
             // then
-            expect(c*) == 2
-            expect(d*) == 6
+            expect(z*) == 2
+            expect(s*) == 6
         }
         
         it("handles division by zero") {

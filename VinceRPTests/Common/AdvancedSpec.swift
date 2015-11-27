@@ -144,36 +144,6 @@ class AdvancedSpec: QuickSpec {
 
         describe("combinators") {
 
-            it("filters") {
-                // given
-                let a = reactive(10)
-                let b = a.filter { $0 > 5 }
-
-                // when
-                a <- 1
-
-                // then
-                expect(b*) == 10
-
-                // when
-                a <- 6
-
-                // then
-                expect(b*) == 6
-
-                // when
-                a <- 2
-
-                // then
-                expect(b*) == 6
-
-                // when
-                a <- 19
-
-                // then
-                expect(b*) == 19
-            }
-            
             it("blocks observers") {
                 // given
                 let a = reactive(10)
