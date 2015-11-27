@@ -159,56 +159,7 @@ s <- NSError(domain: "test error", code: 1, userInfo: nil)
 // Error Domain=test error Code=1 "(null)"
 ```
 
-#Easy to extend
-
-It's pretty easy to add reactive properties to UIKit with extensions:
-
-```swift
-public extension UILabel {
-
-    public var reactiveText: Rx<String> {
-        // When you read the property it returns a stream variable
-          get {
-            return reactiveProperty(forProperty: "text", initValue: self.text!)
-        }
-
-        // It's tricky: we just observers the event stream and if it changes just update the original property
-        set {
-            newValue.onChange {
-                self.text = $0
-            }
-        }
-    }
-
-}
-```
-
-As you can see in the more complex [example](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample) - called BasicExample :-) - you can add your own convenience extensions as well:
-
-```swift
-extension UITextField {
-
-    var isValidEmail: Bool {
-        return definedAs {
-            let range = self.reactiveText.value().rangeOfString(emailRegEx, options:.RegularExpressionSearch)
-            return range != nil
-        }*
-    }
-
-    var isValidPassword: Bool {
-        return definedAs {
-            self.reactiveText*.trim().length > 0
-        }*
-    }
-
-}
-```
-
-Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
-
 #Operators
-
-##Filter
 
 ###not
 
@@ -491,6 +442,53 @@ print(y*) // 1
 ```
 
 For a better example, check out the [FlickrExample](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample)
+
+#Easy to extend
+
+It's pretty easy to add reactive properties to UIKit with extensions:
+
+```swift
+public extension UILabel {
+
+    public var reactiveText: Rx<String> {
+        // When you read the property it returns a stream variable
+          get {
+            return reactiveProperty(forProperty: "text", initValue: self.text!)
+        }
+
+        // It's tricky: we just observers the event stream and if it changes just update the original property
+        set {
+            newValue.onChange {
+                self.text = $0
+            }
+        }
+    }
+
+}
+```
+
+As you can see in the more complex [example](https://github.com/bvic23/VinceRP/tree/master/examples/BasicExample) - called BasicExample :-) - you can add your own convenience extensions as well:
+
+```swift
+extension UITextField {
+
+    var isValidEmail: Bool {
+        return definedAs {
+            let range = self.reactiveText.value().rangeOfString(emailRegEx, options:.RegularExpressionSearch)
+            return range != nil
+        }*
+    }
+
+    var isValidPassword: Bool {
+        return definedAs {
+            self.reactiveText*.trim().length > 0
+        }*
+    }
+
+}
+```
+
+Whenever the value of the `reactiveText` property changes it recalculates the value of `isValidEmail` property automagically.
 
 #About
 
