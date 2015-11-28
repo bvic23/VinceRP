@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Hub<T: Equatable>: Node {
+public class Hub<T>: Node {
     
     var dispatchQueue: dispatch_queue_t!
     

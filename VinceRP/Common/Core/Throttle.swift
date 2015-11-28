@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Throttle<T: Equatable>: Dynamic<T> {
+class Throttle<T>: Dynamic<T> {
     
     private let interval: NSTimeInterval
     private let debounceLevel: long

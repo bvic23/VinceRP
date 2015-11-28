@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Mapper<T: Equatable, A: Equatable>: Wrapper<T, A> {
+class Mapper<T, A>: Wrapper<T, A> {
     
     private let transformer: Try<T> -> Try<A>
     

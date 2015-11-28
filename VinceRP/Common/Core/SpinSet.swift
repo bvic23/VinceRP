@@ -44,8 +44,7 @@ public class SpinSet<T: AnyObject>: AtomicReference<T> {
 
 }
 
-
-public class Incrementing<T:Equatable>: Hub<T> {
+public class Incrementing<T>: Hub<T> {
 
     private let updateCount = AtomicLong(0)
     public var oldValue: SpinSet<SpinState<T>>?
@@ -76,8 +75,7 @@ public class Incrementing<T:Equatable>: Hub<T> {
 
 }
 
-
-public class Spinlock<T:Equatable>: Incrementing<T> {
+public class Spinlock<T>: Incrementing<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         var oldValue: SpinState<T>? = nil
@@ -95,7 +93,7 @@ public class Spinlock<T:Equatable>: Incrementing<T> {
             return newState
         }
         
-        if let ov = oldValue where s.value == ov {
+        if let ov = oldValue where s.value.checkEquality(ov) {
             return Set()
         }
         return children
@@ -103,7 +101,7 @@ public class Spinlock<T:Equatable>: Incrementing<T> {
 
 }
 
-public class SpinState<T:Equatable> {
+public class SpinState<T> {
 
     let timestamp: long
     let value: Try<T>
@@ -112,9 +110,17 @@ public class SpinState<T:Equatable> {
         self.timestamp = timestamp
         self.value = value
     }
+    
+    func checkEquality(other: SpinState<T>) -> Bool {
+        let lhs = self.value
+        let rhs = other.value
+        
+        switch (lhs, rhs) {
+        case (.Success(let l), .Success(let r)): return l === r
+        case (.Failure(let l), .Failure(let r)): return l == r
+        default: return false
+        }
+    }
 
 }
 
-func ==<T>(lhs: SpinState<T>, rhs: SpinState<T>) -> Bool {
-    return lhs.value == rhs.value
-}

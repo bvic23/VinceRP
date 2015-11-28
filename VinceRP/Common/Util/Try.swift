@@ -4,7 +4,7 @@
 //
 // https://github.com/scala/scala/blob/2.11.x/src/library/scala/util/Try.scala
 
-public enum Try<T: Equatable>: CustomStringConvertible, Equatable {
+public enum Try<T>: CustomStringConvertible {
 
     case Success(Box<T>)
     case Failure(NSError)
@@ -57,13 +57,5 @@ public enum Try<T: Equatable>: CustomStringConvertible, Equatable {
         }
     }
 
-}
-
-public func ==<T>(lhs: Try<T>, rhs: Try<T>) -> Bool {
-    switch (lhs, rhs) {
-        case (.Success(let l), .Success(let r)): return l.value == r.value
-        case (.Failure(let l), .Failure(let r)): return l == r
-        default: return false
-    }
 }
 

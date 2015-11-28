@@ -5,7 +5,7 @@
 
 let globalDynamic: DynamicVariable<(Node, Array<Node>)> = DynamicVariable(nil)
 
-class State<T: Equatable>: SpinState<T> {
+class State<T>: SpinState<T> {
 
     let parents: Set<Node>
     let level: long
@@ -18,7 +18,7 @@ class State<T: Equatable>: SpinState<T> {
 
 }
 
-public class Dynamic<T: Equatable>: Spinlock<T> {
+public class Dynamic<T>: Spinlock<T> {
     private let calc: () -> T
     
     public init(calc: () -> T) {

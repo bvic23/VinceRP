@@ -11,6 +11,15 @@ public extension Hub where T: BooleanType {
     
 }
 
+public extension Hub where T: Equatable {
+    
+    public func ignore(ignorabeValues: T) -> Hub<T> {
+        return self.filter { $0 != ignorabeValues }
+    }
+    
+}
+
+
 public extension Hub {
     
     public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver {
@@ -20,10 +29,6 @@ public extension Hub {
     
     public func skipErrors() -> Hub<T> {
         return filterAll { $0.isSuccess() }
-    }
-
-    public func ignore(ignorabeValues: T) -> Hub<T> {
-        return self.filter { $0 != ignorabeValues }
     }
     
 }

@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Wrapper<T: Equatable, A: Equatable>: Spinlock<A> {
+class Wrapper<T, A>: Spinlock<A> {
     
     let source: Hub<T>
     

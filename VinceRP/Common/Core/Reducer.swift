@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Reducer<T: Equatable>: Wrapper<T, T> {
+class Reducer<T>: Wrapper<T, T> {
     
     private let transformer: (Try<T>, Try<T>) -> Try<T>
     

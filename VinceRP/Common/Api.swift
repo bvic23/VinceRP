@@ -13,37 +13,37 @@ public postfix func *<T>(arg: Hub<T>) -> T {
 
 infix operator <- { associativity left precedence 160 }
 
-public func <-<T:Equatable>(left: Source<T>, right: NSError) -> Source<T> {
+public func <-<T>(left: Source<T>, right: NSError) -> Source<T> {
     left.error(right)
     return left
 }
 
-public func <-<T:Equatable>(left: Source<T>, right: T) -> Source<T> {
+public func <-<T>(left: Source<T>, right: T) -> Source<T> {
     left.update(right)
     return left
 }
 
 /* API functions */
 
-public func definedAs<T:Equatable>(calc: () -> T) -> Dynamic<T> {
+public func definedAs<T>(calc: () -> T) -> Dynamic<T> {
     return Dynamic(calc: calc)
 }
 
-public func reactive<T:Equatable>(initValue: T) -> Source<T> {
+public func reactive<T>(initValue: T) -> Source<T> {
     return Source(initValue: initValue)
 }
 
-public func onChangeDo<T:Equatable>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver {
+public func onChangeDo<T>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver {
     return onChangeDo(source, skipInitial: false, callback: callback)
 }
 
-public func onChangeDo<T:Equatable>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver {
+public func onChangeDo<T>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver {
     return ChangeObserver(source: source, callback: ({
         callback(source.value())
     }), skipInitial: skipInitial)
 }
 
-public func onErrorDo<T:Equatable>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver {
+public func onErrorDo<T>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver {
     return ErrorObserver(source: source, callback: callback)
 }
 
