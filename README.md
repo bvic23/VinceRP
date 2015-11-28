@@ -248,24 +248,19 @@ Let's say we would like to have an error if division by zero is happening:
 let numerator = reactive(4)
 let denominator = reactive(1)
 
-// Let's create an array \*
+// Let's create a tuple
 let frac = definedAs {
-    [numerator*, denominator*]
-}.mapAll{ (p:Try<[Int]>) -> Try<Int> in
-    switch p {
-        case .Success(let tuple):
-            let n = tuple.value[0]
-            let d = tuple.value[1]
-            // If the denominator is 0 return with an error
-            if d == 0 {
-                return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
-            }
-
-            // Otherwise do the division
-            return Try(n/d)
-        // If it already failed earlier just pass it through
-        case .Failure(let error): return Try(error)
-    }
+   (numerator*, denominator*)
+}.mapAll { (p:Try<(Int, Int)>) -> Try<Int> in
+   switch p {
+       case .Success(let box):
+           let (n, d) = box.value
+           if d == 0 {
+               return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
+           }
+           return Try(n/d)
+       case .Failure(let error): return Try(error)
+   }
 }
 
 // Let's print the errors
@@ -289,9 +284,6 @@ denominator <- 2
 // divison by zero
 // 2
 ```
-
-\* A tuple would be a better choice, but tuples are not Equatable (which is a restriction of VinceRP as of today) and [you cannot add Extensions to compound types](http://stackoverflow.com/questions/28317625/can-i-extend-tuples-in-swift).
-
 ###filter
 
 ```swift

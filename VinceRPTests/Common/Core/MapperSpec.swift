@@ -37,12 +37,11 @@ class MapperSpec: QuickSpec {
             let denominator = reactive(1)
             
             let frac = definedAs {
-                [numerator*, denominator*]
-            }.mapAll { (p:Try<[Int]>) -> Try<Int> in
+                (numerator*, denominator*)
+            }.mapAll { (p:Try<(Int, Int)>) -> Try<Int> in
                 switch p {
-                    case .Success(let tuple):
-                        let n = tuple.value[0]
-                        let d = tuple.value[1]
+                    case .Success(let box):
+                        let (n, d) = box.value
                         if d == 0 {
                             return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
                         }
