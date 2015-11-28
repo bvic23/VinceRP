@@ -31,12 +31,7 @@ public enum Try<T>: CustomStringConvertible {
     }
 
     public func isFailure() -> Bool {
-        switch self {
-        case .Success:
-            return false
-        case .Failure:
-            return true
-        }
+        return !isSuccess()
     }
 
     public func map<U>(transformFunc: T -> U) -> Try<U> {
