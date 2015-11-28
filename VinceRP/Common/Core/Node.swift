@@ -22,7 +22,7 @@ public class Node: Hashable {
     }
 
     public var parents: Set<Node> {
-        fatalError(ABSTRACT_METHOD)
+        return Set()
     }
 
     public var ancestors: Set<Node> {
@@ -70,9 +70,8 @@ public class Node: Hashable {
         }
     }
 
-
     var level: long {
-        fatalError(ABSTRACT_METHOD)
+        return 0
     }
 
 }

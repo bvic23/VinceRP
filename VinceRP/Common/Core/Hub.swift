@@ -23,10 +23,6 @@ public class Hub<T>: Node {
         fatalError(UNREACHABLE_CODE)
     }
     
-    func now() -> T {
-        return currentValue()
-    }
-    
     public func value() -> T {
         if let (e, d) = globalDynamic.value {
             linkChild(e)
