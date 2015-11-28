@@ -57,12 +57,11 @@ class AdvancedSpec: QuickSpec {
             */
 
             context("nesting") {
-                // TODO: enable this test
-                /*
+
                 it("works with nested reactives") {
                     // given
                     let a = reactive(1)
-                    let b: Dynamic<(Dynamic<Int>, Dynamic<Int>)> = definedAs { () -> (Dynamic<Int>, Dynamic<Int>) in
+                    let b = definedAs {
                         (definedAs{ a* },  definedAs{ myRandom() })
                     }
                     let r = b*.1*
@@ -72,8 +71,7 @@ class AdvancedSpec: QuickSpec {
 
                     // then
                     expect(b*.1*) == r
-                }
-                */
+                }                
                 
                 it("works with recalcs") {
                     // given
