@@ -3,12 +3,19 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+private let noValueError = NSError(domain: "no value", code: -1, userInfo: nil)
+
 public class Source<T: Equatable>: Hub<T> {
     
     let state: AtomicReference<Box<Try<T>>>
 
     public init(initValue: T) {
         self.state = AtomicReference(Box(Try(initValue)))
+        super.init()
+    }
+    
+    public override init() {
+        self.state = AtomicReference(Box(Try(noValueError)))
         super.init()
     }
     
@@ -51,6 +58,16 @@ public class Source<T: Equatable>: Hub<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         return children
+    }
+    
+    public func hasValue() -> Bool {
+        if !self.isSuccess()  {
+            switch self.toTry() {
+            case .Success(_): return true
+            case .Failure(let e): return e !== noValueError
+            }
+        }
+        return true
     }
     
 }
