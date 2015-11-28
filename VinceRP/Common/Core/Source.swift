@@ -10,19 +10,19 @@ public class Source<T>: Hub<T> {
     let state: AtomicReference<Box<Try<T>>>
 
     public init(initValue: T) {
-        self.state = AtomicReference(Box(Try(initValue)))
+        state = AtomicReference(Box(Try(initValue)))
         super.init()
     }
     
     public override init() {
-        self.state = AtomicReference(Box(Try(noValueError)))
+        state = AtomicReference(Box(Try(noValueError)))
         super.init()
     }
     
     public func update(newValue: T) {
         guard let q = dispatchQueue else {
-            self.updateSilent(newValue)
-            self.propagate()
+            updateSilent(newValue)
+            propagate()
             return
         }
         dispatch_async(q) {
@@ -40,20 +40,12 @@ public class Source<T>: Hub<T> {
         self.state.value = Box(Try(newValue))
     }
     
-    override var level: long {
-        return 0
-    }
-    
     override func isSuccess() -> Bool {
-        return self.state.value.value.isSuccess()
+        return toTry().isSuccess()
     }
     
     override public func toTry() -> Try<T> {
-        return self.state.value.value
-    }
-    
-    override public var parents: Set<Node> {
-        return Set()
+        return state.value.value
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
@@ -61,8 +53,8 @@ public class Source<T>: Hub<T> {
     }
     
     public func hasValue() -> Bool {
-        if !self.isSuccess()  {
-            switch self.toTry() {
+        if !isSuccess()  {
+            switch toTry() {
             case .Success(_): return true
             case .Failure(let e): return e !== noValueError
             }
@@ -71,6 +63,3 @@ public class Source<T>: Hub<T> {
     }
     
 }
-
-
-
