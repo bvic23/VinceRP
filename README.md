@@ -191,7 +191,7 @@ onErrorDo(y) {  _ in
     count++
 }
 
-// When we send an error into x
+// When we push an error into x
 x <- NSError(domain: "domain.com", code: 1, userInfo: nil)
 
 // Because 'y' ignores errors
@@ -211,13 +211,13 @@ x.foreach {
    history.append($0)
 }
 
-// then
+// Then
 print(history) // [1]
 
-// Send a new value
+// Push a new value
 x <- 2
 
-// then
+// Then
 print(accu) // [1, 2]
 ```
 
@@ -229,13 +229,13 @@ let x = reactive(1)
 // Define a calculated variable which doubles the values of 'x'
 let y = x.map { $0 * 2 }
 
-// then
+// Then
 print(y) // 2
 
-// Send a new value
+// Push a new value
 x <- 2
 
-// then
+// Then
 print(y) // 4
 ```
 
@@ -278,7 +278,7 @@ frac.onChange {
     print($0.domain)
 }
 
-// If we send a 0 to the denominator
+// If we push a 0 to the denominator
 denominator <- 0
 
 // Then a non-zero
@@ -301,13 +301,13 @@ let x = reactive(10)
 // Let's pass through values higher than 5
 let y = x.filter { $0 > 5 }
 
-// When we send 1
+// When we push 1
 x <- 1
 
 // Value of y will remain the same
 print(y*) // 10
 
-// When we send 6
+// When we push 6
 x <- 6
 
 // Value of y will be 6
@@ -334,13 +334,13 @@ let x = reactive(1)
 // Define a calculated variable which sums the values of 'x'
 let sum = x.reduce { $0 + $1 }
 
-// When we send 2
+// When we push 2
 x <- 2
 
 // The sum will be 3
 print(sum*) // 3
 
-// When we send 3
+// When we push 3
 x <- 3
 
 // The sum will be 6
@@ -365,25 +365,25 @@ let sum = x.reduceAll { (x, y) in
 // Initially sum is zero
 print(sum*) // 0
 
-// When we send 1
+// When we push 1
 x <- 1
 
 // Then it will be 1
 print(sum*) // 1
 
-// When we send 2
+// When we push 2
 x <- 2
 
 // Then the sum will be
 print(sum*) // 3
 
-// When we send an error
+// When we push an error
 x <- fakeError
 
 // Then it will reset the sum to zero
 print(sum*) == 0
 
-// When we send a non-error
+// When we push a non-error
 x <- 5
 
 // Then it starts again
@@ -405,13 +405,13 @@ let x = reactive(1)
 // Define a calculated variable which ignores 0
 let y = y.ignore(0)
 
-// When we send a 0
+// When we push a 0
 x <- 0
 
 // Then nothing changes
 print(y*) // 1
 
-// When we send a non-zero
+// When we push a non-zero
 x <- 5
 
 // Then value of y will be 5
@@ -419,7 +419,7 @@ print(y*) // 5
 ```
 
 ###throttle
-`throttle` operator buffers an item from the stream and wait for the time span specified by the timeout parameter to expire. If another item is produced from the sequence before the time span expires, then that item replaces the old item in the buffer and the wait starts over. If the due time does expire before another item is produced in the stream, them that item is observed through any subscriptions to the sequence.
+`throttle` operator buffers an item from the stream and wait for the time span specified by the timeout parameter to expire. If another item is produced from the sequence before the time span expires, Then that item replaces the old item in the buffer and the wait starts over. If the due time does expire before another item is produced in the stream, them that item is observed through any subscriptions to the sequence.
 
 ```swift
 // Define a reactive stream variable with a starting value of 0
@@ -428,7 +428,7 @@ let x = reactive(0)
 // Define a calculated variable which passes through values after 1 seconds
 let y = x.throttle(1.0)
 
-// When we send 1 to the source
+// When we push 1 to the source
 x <- 1
 
 // Then it won't change immediately
@@ -492,7 +492,7 @@ Whenever the value of the `reactiveText` property changes it recalculates the va
 
 #About
 
-VinceRP is in alpha phase so please use it carefully in production and send me [mail](bvic23@gmail.com)/[tweet](@bvic23)/github issue to make me happy and proud! :-)
+VinceRP is in alpha phase so please use it carefully in production and push me [mail](bvic23@gmail.com)/[tweet](@bvic23)/github issue to make me happy and proud! :-)
 
 ##Do you miss something?
 
