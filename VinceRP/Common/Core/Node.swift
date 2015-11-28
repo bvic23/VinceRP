@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class Node: Hashable, Equatable {
+public class Node: Hashable {
 
     private static var hashCounter = AtomicLong(0)
     private let childrenHolder = SpinSet<WeakSet<Node>>(WeakSet())

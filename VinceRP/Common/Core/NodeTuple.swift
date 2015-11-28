@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-struct NodeTuple: Hashable, Equatable {
+struct NodeTuple: Hashable {
     let source: Node
     let reactor: Node
 

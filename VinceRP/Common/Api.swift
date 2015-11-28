@@ -33,7 +33,7 @@ public func reactive<T>(initValue: T) -> Source<T> {
     return Source(initValue: initValue)
 }
 
-public func reactive<T:Equatable>() -> Source<T> {
+public func reactive<T>() -> Source<T> {
     return Source()
 }
 

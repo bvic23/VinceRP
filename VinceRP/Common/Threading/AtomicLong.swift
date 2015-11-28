@@ -5,7 +5,7 @@
 
 public typealias long = Int32
 
-public class AtomicLong: Hashable, Equatable {
+public class AtomicLong: Hashable {
     
     private let pointer: UnsafeMutablePointer<long> = UnsafeMutablePointer < long>.alloc(1)
 

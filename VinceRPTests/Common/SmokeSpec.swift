@@ -19,27 +19,6 @@ class SmokeSpec: QuickSpec {
         describe("basic") {
 
             context("reactive variable") {
-
-                it("is happy without default value") {
-                    // given
-                    let a: Source<Int> = reactive()
-                    
-                    // then
-                    expect(a.hasValue()) == false
-                    
-                    // when
-                    a <- 1
-                    
-                    // then
-                    expect(a*) == 1
-                    expect(a.hasValue()) == true
-                    
-                    // when
-                    a <- fakeError
-                    
-                    // then
-                    expect(a.hasValue()) == true
-                }
                 
                 it("holds the initial value") {
                     // given
@@ -212,6 +191,48 @@ class SmokeSpec: QuickSpec {
                     expect(c*) == "pest=8+6"
                     expect(f*) == "budapest=8+6"
                     expect(counter) == 3
+                }
+                
+                it("is happy without default value") {
+                    // given
+                    let a: Source<Int> = reactive()
+                    
+                    // then
+                    expect(a.hasValue()) == false
+                    
+                    // when
+                    a <- 1
+                    
+                    // then
+                    expect(a*) == 1
+                    expect(a.hasValue()) == true
+                    
+                    // when
+                    a <- fakeError
+                    
+                    // then
+                    expect(a.hasValue()) == true
+                }
+                
+                
+                it("is works with optionals") {
+                    // given
+                    let a: Source<Int?> = reactive(1)
+                    
+                    // then
+                    expect(a*) == 1
+                    
+                    // when
+                    a <- nil
+                    
+                    // then
+                    expect(a*).to(beNil())
+                    
+                    // when
+                    a <- fakeError
+                    
+                    // then
+                    expect(a.toTry().isFailure()) == true
                 }
 
             }

@@ -65,7 +65,6 @@
 		791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
 		791F31051C0392C0004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
 		791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
-		791F31071C0392C0004AA9E2 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F91C0392C0004AA9E2 /* EquatableArray.swift */; };
 		791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
 		791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
@@ -79,7 +78,6 @@
 		791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
 		791F31131C0392CB004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
 		791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
-		791F31151C0392CB004AA9E2 /* EquatableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F91C0392C0004AA9E2 /* EquatableArray.swift */; };
 		791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
 		791F31181C0392CB004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
@@ -224,7 +222,6 @@
 		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
 		791F30F71C0392C0004AA9E2 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = ../vincerp/Common/Util/Box.swift; sourceTree = "<group>"; };
 		791F30F81C0392C0004AA9E2 /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonConstants.swift; path = ../vincerp/Common/Util/CommonConstants.swift; sourceTree = "<group>"; };
-		791F30F91C0392C0004AA9E2 /* EquatableArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquatableArray.swift; path = ../vincerp/Common/Util/EquatableArray.swift; sourceTree = "<group>"; };
 		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionHandling.swift; path = ../vincerp/Common/Util/ExceptionHandling.swift; sourceTree = "<group>"; };
 		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattenable.swift; path = ../vincerp/Common/Util/Flattenable.swift; sourceTree = "<group>"; };
 		791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArray.swift; path = ../vincerp/Common/Util/FunctionalArray.swift; sourceTree = "<group>"; };
@@ -395,7 +392,6 @@
 			children = (
 				791F30F71C0392C0004AA9E2 /* Box.swift */,
 				791F30F81C0392C0004AA9E2 /* CommonConstants.swift */,
-				791F30F91C0392C0004AA9E2 /* EquatableArray.swift */,
 				791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */,
 				791F30FB1C0392C0004AA9E2 /* Flattenable.swift */,
 				791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */,
@@ -1130,7 +1126,6 @@
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
-				791F31151C0392CB004AA9E2 /* EquatableArray.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
 				791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */,
 			);
@@ -1183,7 +1178,6 @@
 				791F30B41C039260004AA9E2 /* Addable.swift in Sources */,
 				791F30D21C039273004AA9E2 /* Throttle.swift in Sources */,
 				02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */,
-				791F31071C0392C0004AA9E2 /* EquatableArray.swift in Sources */,
 				795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */,
 				791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */,
 				791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */,

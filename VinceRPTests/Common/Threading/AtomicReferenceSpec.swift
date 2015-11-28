@@ -8,7 +8,7 @@
 import Quick
 import Nimble
 
-class Foo : Equatable {
+class Foo: Equatable {
     let i: Int
     init(_ i: Int) {
         self.i = i

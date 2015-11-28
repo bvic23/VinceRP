@@ -5,7 +5,7 @@
 
 private let noValueError = NSError(domain: "no value", code: -1, userInfo: nil)
 
-public class Source<T: Equatable>: Hub<T> {
+public class Source<T>: Hub<T> {
     
     let state: AtomicReference<Box<Try<T>>>
 

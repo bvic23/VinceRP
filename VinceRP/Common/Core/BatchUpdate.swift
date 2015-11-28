@@ -7,7 +7,7 @@ protocol UpdateProtocol {
     func ancestors() -> [NodeTuple]
 }
 
-public struct BatchUpdate<T: Equatable> {
+public struct BatchUpdate<T> {
     var updates: [UpdateProtocol]
     
     init(_ v: Source<T>, withValue t: T) {
@@ -30,7 +30,7 @@ public struct BatchUpdate<T: Equatable> {
     
 }
 
-struct Update<T:Equatable>: UpdateProtocol {
+struct Update<T>: UpdateProtocol {
     let v: Source<T>
     let t: T
     
