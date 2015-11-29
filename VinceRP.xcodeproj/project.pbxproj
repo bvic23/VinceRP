@@ -137,6 +137,8 @@
 		798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4A1C078B39000277AA /* AdvancedSpec.swift */; };
 		798A2D511C078B43000277AA /* BasicSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4B1C078B39000277AA /* BasicSpec.swift */; };
 		798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D4C1C078B39000277AA /* SmokeSpec.swift */; };
+		79952B121C0B2F8A00BD7E76 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B111C0B2F8A00BD7E76 /* Performance.swift */; };
+		79952B131C0B316C00BD7E76 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B111C0B2F8A00BD7E76 /* Performance.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
@@ -270,6 +272,7 @@
 		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = vincerpTests/Common/AdvancedSpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = vincerpTests/Common/BasicSpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
+		79952B111C0B2F8A00BD7E76 /* Performance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Performance.swift; path = Common/Performance.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
@@ -525,6 +528,7 @@
 				798A2D201C07899E000277AA /* Core */,
 				798A2D221C0789B5000277AA /* Threading */,
 				798A2D211C0789A4000277AA /* Util */,
+				79952B111C0B2F8A00BD7E76 /* Performance.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1149,6 +1153,7 @@
 				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
+				79952B131C0B316C00BD7E76 /* Performance.swift in Sources */,
 				79552EC51C08827A00EC284B /* ThrottleSpec.swift in Sources */,
 				798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */,
 			);
@@ -1228,6 +1233,7 @@
 				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
+				79952B121C0B2F8A00BD7E76 /* Performance.swift in Sources */,
 				79552EC41C08827A00EC284B /* ThrottleSpec.swift in Sources */,
 				798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */,
 			);
