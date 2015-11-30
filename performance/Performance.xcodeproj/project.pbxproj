@@ -11,6 +11,22 @@
 		79F5AB9C1C0CAB7800CA9600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F5AB9B1C0CAB7800CA9600 /* Assets.xcassets */; };
 		79F5AB9F1C0CAB7800CA9600 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F5AB9D1C0CAB7800CA9600 /* MainMenu.xib */; };
 		79F5ABAA1C0CAB7800CA9600 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F5ABA91C0CAB7800CA9600 /* PerformanceTests.swift */; };
+		79FE92641C0CB5670095B79B /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92601C0CB5670095B79B /* Bond.framework */; };
+		79FE92651C0CB5670095B79B /* Interstellar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92611C0CB5670095B79B /* Interstellar.framework */; };
+		79FE92661C0CB5670095B79B /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92621C0CB5670095B79B /* ReactiveCocoa.framework */; };
+		79FE92671C0CB5670095B79B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92631C0CB5670095B79B /* RxSwift.framework */; };
+		79FE92691C0CB5CA0095B79B /* Bond.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92601C0CB5670095B79B /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE926A1C0CB5CA0095B79B /* Interstellar.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92611C0CB5670095B79B /* Interstellar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE926B1C0CB5CA0095B79B /* ReactiveCocoa.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92621C0CB5670095B79B /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE926C1C0CB5CA0095B79B /* RxSwift.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92631C0CB5670095B79B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE92711C0CB79A0095B79B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926D1C0CB79A0095B79B /* Box.framework */; };
+		79FE92721C0CB79A0095B79B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926E1C0CB79A0095B79B /* Result.framework */; };
+		79FE92731C0CB79A0095B79B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926F1C0CB79A0095B79B /* RxBlocking.framework */; };
+		79FE92741C0CB79A0095B79B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92701C0CB79A0095B79B /* RxCocoa.framework */; };
+		79FE92751C0CB7A60095B79B /* Box.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926D1C0CB79A0095B79B /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE92761C0CB7A60095B79B /* Result.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926E1C0CB79A0095B79B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE92771C0CB7A60095B79B /* RxBlocking.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE926F1C0CB79A0095B79B /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79FE92781C0CB7A60095B79B /* RxCocoa.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79FE92701C0CB79A0095B79B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +74,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79FE92681C0CB5B90095B79B /* Copy Carthage frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79FE92751C0CB7A60095B79B /* Box.framework in Copy Carthage frameworks */,
+				79FE92761C0CB7A60095B79B /* Result.framework in Copy Carthage frameworks */,
+				79FE92771C0CB7A60095B79B /* RxBlocking.framework in Copy Carthage frameworks */,
+				79FE92781C0CB7A60095B79B /* RxCocoa.framework in Copy Carthage frameworks */,
+				79FE92691C0CB5CA0095B79B /* Bond.framework in Copy Carthage frameworks */,
+				79FE926A1C0CB5CA0095B79B /* Interstellar.framework in Copy Carthage frameworks */,
+				79FE926B1C0CB5CA0095B79B /* ReactiveCocoa.framework in Copy Carthage frameworks */,
+				79FE926C1C0CB5CA0095B79B /* RxSwift.framework in Copy Carthage frameworks */,
+			);
+			name = "Copy Carthage frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		79F5AB961C0CAB7800CA9600 /* Performance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Performance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F5AB991C0CAB7800CA9600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +105,14 @@
 		79F5ABA91C0CAB7800CA9600 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		79F5ABAB1C0CAB7800CA9600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79FE92471C0CADF90095B79B /* VinceRP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VinceRP.xcodeproj; path = ../VinceRP.xcodeproj; sourceTree = "<group>"; };
+		79FE92601C0CB5670095B79B /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/Mac/Bond.framework; sourceTree = "<group>"; };
+		79FE92611C0CB5670095B79B /* Interstellar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Interstellar.framework; path = Carthage/Build/Mac/Interstellar.framework; sourceTree = "<group>"; };
+		79FE92621C0CB5670095B79B /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		79FE92631C0CB5670095B79B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		79FE926D1C0CB79A0095B79B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/Mac/Box.framework; sourceTree = "<group>"; };
+		79FE926E1C0CB79A0095B79B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		79FE926F1C0CB79A0095B79B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		79FE92701C0CB79A0095B79B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +120,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FE92711C0CB79A0095B79B /* Box.framework in Frameworks */,
+				79FE92721C0CB79A0095B79B /* Result.framework in Frameworks */,
+				79FE92731C0CB79A0095B79B /* RxBlocking.framework in Frameworks */,
+				79FE92741C0CB79A0095B79B /* RxCocoa.framework in Frameworks */,
+				79FE92641C0CB5670095B79B /* Bond.framework in Frameworks */,
+				79FE92651C0CB5670095B79B /* Interstellar.framework in Frameworks */,
+				79FE92661C0CB5670095B79B /* ReactiveCocoa.framework in Frameworks */,
+				79FE92671C0CB5670095B79B /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +144,14 @@
 		79F5AB8D1C0CAB7800CA9600 = {
 			isa = PBXGroup;
 			children = (
+				79FE926D1C0CB79A0095B79B /* Box.framework */,
+				79FE926E1C0CB79A0095B79B /* Result.framework */,
+				79FE926F1C0CB79A0095B79B /* RxBlocking.framework */,
+				79FE92701C0CB79A0095B79B /* RxCocoa.framework */,
+				79FE92601C0CB5670095B79B /* Bond.framework */,
+				79FE92611C0CB5670095B79B /* Interstellar.framework */,
+				79FE92621C0CB5670095B79B /* ReactiveCocoa.framework */,
+				79FE92631C0CB5670095B79B /* RxSwift.framework */,
 				79FE92471C0CADF90095B79B /* VinceRP.xcodeproj */,
 				79F5AB981C0CAB7800CA9600 /* Performance */,
 				79F5ABA81C0CAB7800CA9600 /* PerformanceTests */,
@@ -148,6 +209,7 @@
 				79F5AB921C0CAB7800CA9600 /* Sources */,
 				79F5AB931C0CAB7800CA9600 /* Frameworks */,
 				79F5AB941C0CAB7800CA9600 /* Resources */,
+				79FE92681C0CB5B90095B79B /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,6 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Performance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.Performance;
@@ -412,6 +478,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Performance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.Performance;
@@ -424,6 +494,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = PerformanceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.PerformanceTests;
@@ -437,6 +508,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = PerformanceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bvic23.PerformanceTests;
