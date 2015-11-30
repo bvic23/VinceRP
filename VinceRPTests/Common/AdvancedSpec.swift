@@ -118,7 +118,7 @@ class AdvancedSpec: QuickSpec {
                     // then
                     expect(i) == 1
                     a <- 2
-                    expect(i) == 2
+                    expect(i).toEventually(equal(2))
                     b <- 2
                     expect(i) == 3
                     c <- 2

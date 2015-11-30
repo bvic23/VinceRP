@@ -111,7 +111,6 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
-		798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
 		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
 		798A2D381C0789F5000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
 		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
@@ -119,7 +118,6 @@
 		798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
 		798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
 		798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
-		798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */; };
 		798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
 		798A2D441C078A86000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
 		798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
@@ -255,7 +253,6 @@
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
-		798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLongSpec.swift; path = ../vincerpTests/Common/Threading/AtomicLongSpec.swift; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
 		798A2D321C0789F5000277AA /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxTests.swift; path = vincerpTests/Common/Util/BoxTests.swift; sourceTree = SOURCE_ROOT; };
 		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
@@ -553,7 +550,6 @@
 		798A2D221C0789B5000277AA /* Threading */ = {
 			isa = PBXGroup;
 			children = (
-				798A2D2C1C0789E4000277AA /* AtomicLongSpec.swift */,
 				798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */,
 			);
 			name = Threading;
@@ -1145,7 +1141,6 @@
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
 				79552EC51C08827A00EC284B /* ThrottleSpec.swift in Sources */,
-				798A2D411C078A81000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,7 +1218,6 @@
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
 				79552EC41C08827A00EC284B /* ThrottleSpec.swift in Sources */,
-				798A2D2F1C0789E4000277AA /* AtomicLongSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

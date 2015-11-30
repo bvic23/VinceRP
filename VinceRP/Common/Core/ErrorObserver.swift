@@ -14,11 +14,18 @@ public class ErrorObserver: ChangeObserver {
         self.errorCallback = callback
         super.init(source:source, callback:({}), skipInitial:true)
         ErrorObserver.errorObservers.insert(self)
+        self.dispatchOnMainQueue()
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && !source.isSuccess()) {
-            self.errorCallback(source.error())
+            if let q = dispatchQueue {
+                dispatch_async(q) {
+                    self.errorCallback(self.source.error())
+                }
+            } else {
+                self.errorCallback(source.error())
+            }
         }
         return Set()
     }

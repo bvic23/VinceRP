@@ -5,6 +5,8 @@
 
 private let noValueError = NSError(domain: "no value", code: -1, userInfo: nil)
 
+let q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+
 public class Source<T>: Hub<T> {
     
     let state: AtomicReference<Box<Try<T>>>
@@ -20,13 +22,8 @@ public class Source<T>: Hub<T> {
     }
     
     public func update(newValue: T) {
-        guard let q = dispatchQueue else {
-            updateSilent(newValue)
-            propagate()
-            return
-        }
+        self.updateSilent(newValue)
         dispatch_async(q) {
-            self.updateSilent(newValue)
             self.propagate()
         }
     }

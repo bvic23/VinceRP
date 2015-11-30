@@ -6,7 +6,8 @@
 public class ChangeObserver: Node {
     
     private static var changeObservers = Set<ChangeObserver>()
-    
+    var dispatchQueue: dispatch_queue_t!
+
     let source: Node
     let callback: () -> ()
     
@@ -23,6 +24,7 @@ public class ChangeObserver: Node {
         }
         
         ChangeObserver.changeObservers.insert(self)
+        self.dispatchOnMainQueue()
     }
     
     override public var parents: Set<Node> {
@@ -35,7 +37,13 @@ public class ChangeObserver: Node {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && source.isSuccess()) {
-            callback()
+            if let q = dispatchQueue {
+                dispatch_async(q) {
+                    self.callback()
+                }
+            } else {
+                callback()
+            }
         }
         return Set()
     }
@@ -47,6 +55,15 @@ public class ChangeObserver: Node {
     override public func kill() {
         super.kill()
         ChangeObserver.changeObservers.remove(self)
+    }
+    
+}
+
+extension ChangeObserver: Dispatchable {
+    
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> ChangeObserver {
+        self.dispatchQueue = dispatchQueue
+        return self
     }
     
 }

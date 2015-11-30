@@ -7,68 +7,35 @@ public typealias long = Int32
 
 public class AtomicLong: Hashable {
     
-    private let pointer: UnsafeMutablePointer<long> = UnsafeMutablePointer < long>.alloc(1)
-
-    public var value: long {
+    private let lock = Spinlock()
+    
+    private var _value: long
+    
+    var value: long {
+        
         get {
-            OSMemoryBarrier()
-            return pointer.memory
+            return self.lock.around {
+                self._value
+            }
         }
-        set {
-            getAndSet(newValue)
+        
+        set(value) {
+            self.lock.around {
+                self._value = value
+            }
         }
     }
-
+    
     public init(_ value: long) {
-        pointer.memory = value
-    }
-
-    deinit {
-        pointer.destroy()
-    }
-
-    public func getAndSet(newValue: long) -> long {
-        while (true) {
-            let current = value
-            if compareAndSet(current, newValue) {
-                return current
-            }
-        }
-    }
-
-    public func compareAndSet(expected: long, _ newValue: long) -> Bool {
-        return OSAtomicCompareAndSwap32Barrier(expected, newValue, pointer)
-    }
-
-    public func getAndAdd(newValue: long) -> long {
-        while (true) {
-            let current = value
-            let next = current + newValue
-            if compareAndSet(current, next) {
-                return current
-            }
-        }
-    }
-
-    public func addAndGet(value: long) -> long {
-        return OSAtomicAdd32Barrier(value, pointer)
+        _value = value
     }
 
     public func getAndIncrement() -> long {
-        return getAndAdd(1)
+        let current = value
+        self.value = current + 1
+        return current
     }
 
-    public func getAndDecrement() -> long {
-        return getAndAdd(-1)
-    }
-
-    public func incrementAndGet() -> long {
-        return addAndGet(1)
-    }
-
-    public func decrementAndGet() -> long {
-        return addAndGet(-1)
-    }
 
     public var hashValue: Int {
         return value.hashValue
