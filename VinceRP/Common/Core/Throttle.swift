@@ -22,8 +22,6 @@ class Throttle<T>: Dynamic<T> {
         return NSTimer.scheduledTimerWithTimeInterval(delay, target: self, selector: selector, userInfo: object, repeats: false)
     }
     
-    var nextPingTime: AtomicReference<NSDate> = AtomicReference(NSDate())
-    
     @objc func pingAsync() {
         if let i = self.incoming {
             if super.ping(i).count > 0 {
