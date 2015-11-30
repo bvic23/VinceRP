@@ -18,7 +18,7 @@ class State<T>: SpinState<T> {
 
 }
 
-public class Dynamic<T>: Spinlock<T> {
+public class Dynamic<T>: Incrementing<T> {
     private let calc: () -> T
     
     public init(calc: () -> T) {

@@ -72,10 +72,6 @@ public class Incrementing<T>: Hub<T> {
     func makeState() -> SpinState<T> {
         fatalError(ABSTRACT_METHOD)
     }
-
-}
-
-public class Spinlock<T>: Incrementing<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         var oldValue: SpinState<T>? = nil
