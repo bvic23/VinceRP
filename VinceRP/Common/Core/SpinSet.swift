@@ -23,24 +23,14 @@ public class SpinSet<T: AnyObject>: AtomicReference<T> {
     }
 
     final func spinSet(transform: T -> T) {
-        let oldV = super.value
-        let newV = transform(oldV)
-        guard compareAndSet(oldV, newV) else {
-            return spinSet(transform)
-        }
+        self.value = transform(self.value)
     }
 
-    final func spinSetOpt(transform: T -> T?) -> Bool {
-        let oldV = super.value
-        let newVOpt = transform(oldV)
-        guard let newV = newVOpt else {
-            return false
-        }        
-        if compareAndSet(oldV, newV) {
-            return true
-        }
-        return spinSetOpt(transform)
-    }
+//    final func spinSetOpt(transform: T -> T?) -> Bool {
+//        self.value = transform(self.value)
+//        return true
+//        return spinSetOpt(transform)
+//    }
 
 }
 
@@ -82,12 +72,9 @@ public class Incrementing<T>: Hub<T> {
         
         let newState = makeState()
         let s = self.state()
-        s.spinSetOpt {
-            guard (newState.timestamp >= $0.timestamp) else {
-                return nil
+            if (newState.timestamp >= s.value.timestamp) {
+                s.value = newState
             }
-            return newState
-        }
         
         if let ov = oldValue where s.value.checkEquality(ov) {
             return Set()

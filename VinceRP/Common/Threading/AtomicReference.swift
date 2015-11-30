@@ -27,16 +27,5 @@ public class AtomicReference<T: AnyObject> {
     public init(_ value: T) {
         _value = value
     }
-
-    public func getAndSet(newValue: T) -> T {
-        let result = self.value
-        self.value = newValue
-        return result
-    }
     
-    public func compareAndSet(oldValue: T, _ newValue: T) -> Bool {
-        self.value = newValue
-        return true
-    }
-
 }
