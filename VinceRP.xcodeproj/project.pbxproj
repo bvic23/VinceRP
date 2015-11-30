@@ -32,7 +32,6 @@
 		791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
 		791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
 		791F30D01C039273004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
-		791F30D11C039273004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
 		791F30D21C039273004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
 		791F30D31C039273004AA9E2 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C41C039273004AA9E2 /* Wrapper.swift */; };
 		791F30D41C03927E004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
@@ -49,7 +48,6 @@
 		791F30DF1C039286004AA9E2 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30BF1C039273004AA9E2 /* Reducer.swift */; };
 		791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C01C039273004AA9E2 /* Hub+operators.swift */; };
 		791F30E11C039286004AA9E2 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C11C039273004AA9E2 /* Source.swift */; };
-		791F30E21C039286004AA9E2 /* SpinSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C21C039273004AA9E2 /* SpinSet.swift */; };
 		791F30E31C039286004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
 		791F30E41C039286004AA9E2 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C41C039273004AA9E2 /* Wrapper.swift */; };
 		791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E61C0392A7004AA9E2 /* AtomicLong.swift */; };
@@ -212,7 +210,6 @@
 		791F30BF1C039273004AA9E2 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ../vincerp/Common/Core/Reducer.swift; sourceTree = "<group>"; };
 		791F30C01C039273004AA9E2 /* Hub+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operators.swift"; path = "../vincerp/Common/Core/Hub+operators.swift"; sourceTree = "<group>"; };
 		791F30C11C039273004AA9E2 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Source.swift; path = ../vincerp/Common/Core/Source.swift; sourceTree = "<group>"; };
-		791F30C21C039273004AA9E2 /* SpinSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinSet.swift; path = ../vincerp/Common/Core/SpinSet.swift; sourceTree = "<group>"; };
 		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = ../vincerp/Common/Core/Throttle.swift; sourceTree = "<group>"; };
 		791F30C41C039273004AA9E2 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapper.swift; path = ../vincerp/Common/Core/Wrapper.swift; sourceTree = "<group>"; };
 		791F30E61C0392A7004AA9E2 /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLong.swift; path = ../vincerp/Common/Threading/AtomicLong.swift; sourceTree = "<group>"; };
@@ -368,7 +365,6 @@
 				791F30BE1C039273004AA9E2 /* Propagator.swift */,
 				791F30BF1C039273004AA9E2 /* Reducer.swift */,
 				791F30C11C039273004AA9E2 /* Source.swift */,
-				791F30C21C039273004AA9E2 /* SpinSet.swift */,
 				791F30C31C039273004AA9E2 /* Throttle.swift */,
 				791F30C41C039273004AA9E2 /* Wrapper.swift */,
 			);
@@ -1096,7 +1092,6 @@
 				791F30DF1C039286004AA9E2 /* Reducer.swift in Sources */,
 				791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */,
 				791F30DB1C039286004AA9E2 /* Mapper.swift in Sources */,
-				791F30E21C039286004AA9E2 /* SpinSet.swift in Sources */,
 				791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */,
 				791F31181C0392CB004AA9E2 /* FunctionalArray.swift in Sources */,
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
@@ -1205,7 +1200,6 @@
 				791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */,
 				791F30EC1C0392A7004AA9E2 /* AtomicReference.swift in Sources */,
 				ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */,
-				791F30D11C039273004AA9E2 /* SpinSet.swift in Sources */,
 				79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */,
 				791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */,
 			);

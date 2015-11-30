@@ -10,7 +10,7 @@ class Reducer<T>: Wrapper<T, T> {
     init(_ source: Hub<T>, _ transformer: (Try<T>, Try<T>) -> Try<T>) {
         self.transformer = transformer
         super.init(source)
-        self.setState(SpinSet(SpinState(getStamp(), source.toTry())))
+        self.setState(AtomicReference(SpinState(getStamp(), source.toTry())))
     }
     
     override func makeState() -> SpinState<T> {

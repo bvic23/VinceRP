@@ -12,8 +12,8 @@ class Mapper<T, A>: Wrapper<T, A> {
         super.init(source)
     }
     
-    override func state() -> SpinSet<SpinState<A>> {
-        return SpinSet(makeState())
+    override func state() -> AtomicReference<SpinState<A>> {
+        return AtomicReference(makeState())
     }
     
     override func makeState() -> SpinState<A> {
