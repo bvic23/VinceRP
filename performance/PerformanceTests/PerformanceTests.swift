@@ -15,6 +15,8 @@ import VinceRP
 
 class Performance: XCTestCase {
     
+    let testIteration1 = 10000
+    
     /// 0.143s (5% stdev)
     func test_measure_ReactiveCocoa_1() {
         
@@ -28,7 +30,7 @@ class Performance: XCTestCase {
             
             signal.observeNext { counter += $0 }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration1 {
                 observer.sendNext(i)
             }
         }
@@ -46,7 +48,7 @@ class Performance: XCTestCase {
             
             observable.observe { counter += $0 }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration1 {
                 observable.next(i)
             }
         }
@@ -64,7 +66,7 @@ class Performance: XCTestCase {
             
             signal.next { counter += $0 }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration1 {
                 signal.update(i)
             }
         }
@@ -82,7 +84,7 @@ class Performance: XCTestCase {
             
             let _ = observable.subscribeNext { counter += $0 }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration1 {
                 observable.value = i
             }
         }
@@ -100,12 +102,13 @@ class Performance: XCTestCase {
             
             let _ = observable.onChange { counter += $0 }
             
-            for i in 1..<10000 {
+            for i in 1..<self.testIteration1 {
                 observable <- i
             }
         }
     }
-    
+
+    /*
     
     ////////////////////////////////////////////
     
@@ -267,5 +270,5 @@ class Performance: XCTestCase {
             }
         }
     }
-    
+    */
 }
