@@ -48,8 +48,10 @@ public extension Hub {
         }
     }
     
-    public func reduceAll(combiner: (UpdateState<T>, Try<T>) -> UpdateState<T>) -> Hub<T> {
-        return Reducer(self, combiner)
+    public func reduceAll(combiner: (UpdateState<T>, Try<T>) -> Try<T>) -> Hub<T> {
+        return Reducer(self) { (x, y) in
+            UpdateState(combiner(x, y))
+        }
     }
 
 }
