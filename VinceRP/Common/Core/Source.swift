@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-private let noValueError = NSError(domain: "no value", code: -1, userInfo: nil)
+let noValueError = NSError(domain: "no value", code: -1, userInfo: nil)
 
 let q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
 
