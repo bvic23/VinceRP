@@ -51,12 +51,10 @@
 		791F30E31C039286004AA9E2 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C31C039273004AA9E2 /* Throttle.swift */; };
 		791F30E41C039286004AA9E2 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30C41C039273004AA9E2 /* Wrapper.swift */; };
 		791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E61C0392A7004AA9E2 /* AtomicLong.swift */; };
-		791F30EC1C0392A7004AA9E2 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E71C0392A7004AA9E2 /* AtomicReference.swift */; };
 		791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E81C0392A7004AA9E2 /* Dispatchable.swift */; };
 		791F30EE1C0392A7004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
 		791F30EF1C0392A7004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
 		791F30F01C0392AC004AA9E2 /* AtomicLong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E61C0392A7004AA9E2 /* AtomicLong.swift */; };
-		791F30F11C0392AC004AA9E2 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E71C0392A7004AA9E2 /* AtomicReference.swift */; };
 		791F30F21C0392AC004AA9E2 /* Dispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E81C0392A7004AA9E2 /* Dispatchable.swift */; };
 		791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
 		791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
@@ -133,6 +131,8 @@
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
+		79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
+		79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
 		ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
@@ -207,7 +207,6 @@
 		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = ../vincerp/Common/Core/Throttle.swift; sourceTree = "<group>"; };
 		791F30C41C039273004AA9E2 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapper.swift; path = ../vincerp/Common/Core/Wrapper.swift; sourceTree = "<group>"; };
 		791F30E61C0392A7004AA9E2 /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLong.swift; path = ../vincerp/Common/Threading/AtomicLong.swift; sourceTree = "<group>"; };
-		791F30E71C0392A7004AA9E2 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = ../vincerp/Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
 		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dispatchable.swift; path = ../vincerp/Common/Threading/Dispatchable.swift; sourceTree = "<group>"; };
 		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = ../vincerp/Common/Threading/DynamicVariable.swift; sourceTree = "<group>"; };
 		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
@@ -266,6 +265,7 @@
 		79F256861ADE77250077730C /* VinceRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinceRP.h; sourceTree = "<group>"; };
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
@@ -365,8 +365,8 @@
 		791F30E51C03929F004AA9E2 /* Threading */ = {
 			isa = PBXGroup;
 			children = (
+				79FF03E61C0DE1F10096B050 /* AtomicReference.swift */,
 				791F30E61C0392A7004AA9E2 /* AtomicLong.swift */,
-				791F30E71C0392A7004AA9E2 /* AtomicReference.swift */,
 				791F30E81C0392A7004AA9E2 /* Dispatchable.swift */,
 				791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */,
 				791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */,
@@ -1086,12 +1086,12 @@
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
 				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
+				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
 				791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */,
 				791F311B1C0392CB004AA9E2 /* ReactivePropertyGenerator.swift in Sources */,
 				791F31191C0392CB004AA9E2 /* FunctionalDictionary.swift in Sources */,
-				791F30F11C0392AC004AA9E2 /* AtomicReference.swift in Sources */,
 				791F30F01C0392AC004AA9E2 /* AtomicLong.swift in Sources */,
 				791F30D41C03927E004AA9E2 /* Api.swift in Sources */,
 				791F30DC1C039286004AA9E2 /* Node.swift in Sources */,
@@ -1166,6 +1166,7 @@
 				791F310E1C0392C0004AA9E2 /* Try.swift in Sources */,
 				791F30B01C03924C004AA9E2 /* Timer.swift in Sources */,
 				791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */,
+				79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */,
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
 				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
@@ -1182,7 +1183,6 @@
 				791F30CA1C039273004AA9E2 /* Mapper.swift in Sources */,
 				791F30C61C039273004AA9E2 /* ChangeObserver.swift in Sources */,
 				791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */,
-				791F30EC1C0392A7004AA9E2 /* AtomicReference.swift in Sources */,
 				ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */,
 				79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */,
 				791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */,

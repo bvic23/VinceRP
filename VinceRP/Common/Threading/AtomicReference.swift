@@ -32,30 +32,30 @@ class AtomicReference<T> {
 
 public class Incrementing<T>: Hub<T> {
     
-    private var _state: AtomicReference<SpinState<T>>
+    private var _state: AtomicReference<UpdateState<T>>
     
     override init() {
-        _state = AtomicReference(SpinState(Try(noValueError)))
+        _state = AtomicReference(UpdateState(Try(noValueError)))
         super.init()
         _state = AtomicReference(self.makeState())
     }
     
-    var state: SpinState<T> {
+    var state: UpdateState<T> {
         return _state.value
     }
 
-    func toTry() -> SpinState<T> {
+    func toTry() -> UpdateState<T> {
         return self.state
     }
     
-    func makeState() -> SpinState<T> {
+    func makeState() -> UpdateState<T> {
         fatalError(ABSTRACT_METHOD)
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         let newState = makeState()
         
-        if newState.timestamp <= _state.value.timestamp {
+        if newState.id <= _state.value.id {
             return Set()
         }
         
@@ -65,15 +65,15 @@ public class Incrementing<T>: Hub<T> {
     
 }
 
-public let updateCount = AtomicLong(0)
+let globalID = AtomicLong(0)
 
-public func getStamp() -> long {
-    return updateCount.getAndIncrement()
+public func nextID() -> long {
+    return globalID.getAndIncrement()
 }
 
-public struct SpinState<T> {
+public struct UpdateState<T> {
     
-    let timestamp: long
+    let id: long
     let value: Try<T>
     let parents: Set<Node>
     let level: long
@@ -81,16 +81,16 @@ public struct SpinState<T> {
     init(_ parents: Set<Node>, _ level: long, _ timestamp: long, _ value: Try<T>) {
         self.parents = parents
         self.level = level
-        self.timestamp = timestamp
+        self.id = timestamp
         self.value = value
     }
     
     init(_ value: Try<T>) {
-        self.init(getStamp(), value)
+        self.init(nextID(), value)
     }
     
     init(_ timestamp: long, _ value: Try<T>) {
-        self.init(Set<Node>(), 0, getStamp(), value)
+        self.init(Set<Node>(), 0, nextID(), value)
     }
 }
 

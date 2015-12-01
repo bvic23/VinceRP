@@ -93,8 +93,8 @@ class ReducerSpec: QuickSpec {
             let x = reactive(0)
             let sum = x.reduceAll { (x, y) in
                 switch (x.value, y) {
-                case (.Success(let a), .Success(let b)): return SpinState(Try(a + b))
-                default: return SpinState(Try(0))
+                case (.Success(let a), .Success(let b)): return UpdateState(Try(a + b))
+                default: return UpdateState(Try(0))
                 }
             }
             

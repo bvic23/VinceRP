@@ -12,12 +12,12 @@ class Mapper<T, A>: Wrapper<T, A> {
         super.init(source)
     }
     
-    override var state: SpinState<A> {
+    override var state: UpdateState<A> {
         return makeState()
     }
     
-    override func makeState() -> SpinState<A> {
-        return SpinState(getStamp(), transformer(source.toTry()))
+    override func makeState() -> UpdateState<A> {
+        return UpdateState(nextID(), transformer(source.toTry()))
     }
     
 }

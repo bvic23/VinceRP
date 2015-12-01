@@ -13,8 +13,8 @@ public class Dynamic<T>: Incrementing<T> {
         super.init()
     }
     
-    override func makeState() -> SpinState<T> {
-        let startCalc = getStamp()
+    override func makeState() -> UpdateState<T> {
+        let startID = nextID()
 
         let (newValue, deps): (Try<T>, Array<Node>) = globalDynamic.withValue((self, [])) {
             let calcResult = self.probe(self.calc)
@@ -30,7 +30,7 @@ public class Dynamic<T>: Incrementing<T> {
 
         let level = levels.max(0)
         
-        return SpinState(Set(deps), level, startCalc, newValue)
+        return UpdateState(Set(deps), level, startID, newValue)
     }
     
     func probe(calc: () -> T) ->Try<T> {
