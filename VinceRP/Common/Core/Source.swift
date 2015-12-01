@@ -23,9 +23,9 @@ public class Source<T>: Hub<T> {
     
     public func update(newValue: T) {
         self.updateSilent(newValue)
-        dispatch_async(q) {
+  //      dispatch_async(q) {
             self.propagate()
-        }
+    //    }
     }
     
     public func error(error: NSError) {

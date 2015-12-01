@@ -5,19 +5,6 @@
 
 let globalDynamic: DynamicVariable<(Node, Array<Node>)> = DynamicVariable(nil)
 
-class State<T>: SpinState<T> {
-
-    let parents: Set<Node>
-    let level: long
-
-    init(_ parents: Set<Node>, _ level: long, _ timestamp: long, _ value: Try<T>) {
-        self.parents = parents
-        self.level = level
-        super.init(timestamp, value)
-    }
-
-}
-
 public class Dynamic<T>: Incrementing<T> {
     private let calc: () -> T
     
@@ -43,7 +30,7 @@ public class Dynamic<T>: Incrementing<T> {
 
         let level = levels.max(0)
         
-        return State(Set(deps), level, startCalc, newValue)
+        return SpinState(Set(deps), level, startCalc, newValue)
     }
     
     func probe(calc: () -> T) ->Try<T> {
@@ -82,16 +69,10 @@ public class Dynamic<T>: Incrementing<T> {
     }
 
     override public var parents: Set<Node> {
-        guard let s = self.state as? State else {
-            fatalError(UNREACHABLE_CODE)
-        }
-        return s.parents
+        return state.parents
     }
 
     override var level: long {
-        guard let state = self.state as? State  else {
-            fatalError(UNREACHABLE_CODE)
-        }
         return state.level
     }
 

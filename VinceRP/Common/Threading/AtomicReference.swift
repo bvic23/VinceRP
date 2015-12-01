@@ -71,19 +71,26 @@ public func getStamp() -> long {
     return updateCount.getAndIncrement()
 }
 
-public class SpinState<T> {
+public struct SpinState<T> {
     
     let timestamp: long
     let value: Try<T>
+    let parents: Set<Node>
+    let level: long
     
-    init(_ value: Try<T>) {
-        self.timestamp = getStamp()
+    init(_ parents: Set<Node>, _ level: long, _ timestamp: long, _ value: Try<T>) {
+        self.parents = parents
+        self.level = level
+        self.timestamp = timestamp
         self.value = value
     }
     
+    init(_ value: Try<T>) {
+        self.init(getStamp(), value)
+    }
+    
     init(_ timestamp: long, _ value: Try<T>) {
-        self.timestamp = timestamp
-        self.value = value
+        self.init(Set<Node>(), 0, getStamp(), value)
     }
 }
 
