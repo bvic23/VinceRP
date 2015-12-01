@@ -9,7 +9,7 @@ public class Hub<T>: Node {
     
     func currentValue() -> T {
         switch (toTry()) {
-        case .Success(let box): return box.value
+        case .Success(let value): return value
         case .Failure(let error): NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
         }
         fatalError(UNREACHABLE_CODE)

@@ -61,7 +61,6 @@
 		791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
 		791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
 		791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
-		791F31051C0392C0004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
 		791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
 		791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
@@ -74,7 +73,6 @@
 		791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
 		791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31031C0392C0004AA9E2 /* WeakReference.swift */; };
 		791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
-		791F31131C0392CB004AA9E2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F71C0392C0004AA9E2 /* Box.swift */; };
 		791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
 		791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
@@ -112,14 +110,12 @@
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
 		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
-		798A2D381C0789F5000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
 		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
 		798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
 		798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
 		798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D361C0789F5000277AA /* TrySpec.swift */; };
 		798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D371C0789F5000277AA /* WeakReferenceTests.swift */; };
 		798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
-		798A2D441C078A86000277AA /* BoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D321C0789F5000277AA /* BoxTests.swift */; };
 		798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
 		798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
 		798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */; };
@@ -215,7 +211,6 @@
 		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dispatchable.swift; path = ../vincerp/Common/Threading/Dispatchable.swift; sourceTree = "<group>"; };
 		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = ../vincerp/Common/Threading/DynamicVariable.swift; sourceTree = "<group>"; };
 		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
-		791F30F71C0392C0004AA9E2 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Box.swift; path = ../vincerp/Common/Util/Box.swift; sourceTree = "<group>"; };
 		791F30F81C0392C0004AA9E2 /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonConstants.swift; path = ../vincerp/Common/Util/CommonConstants.swift; sourceTree = "<group>"; };
 		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionHandling.swift; path = ../vincerp/Common/Util/ExceptionHandling.swift; sourceTree = "<group>"; };
 		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattenable.swift; path = ../vincerp/Common/Util/Flattenable.swift; sourceTree = "<group>"; };
@@ -254,7 +249,6 @@
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
-		798A2D321C0789F5000277AA /* BoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxTests.swift; path = vincerpTests/Common/Util/BoxTests.swift; sourceTree = SOURCE_ROOT; };
 		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSetSpec.swift; path = vincerpTests/Common/Util/FunctionalSetSpec.swift; sourceTree = SOURCE_ROOT; };
@@ -384,7 +378,6 @@
 		791F30F61C0392B7004AA9E2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				791F30F71C0392C0004AA9E2 /* Box.swift */,
 				791F30F81C0392C0004AA9E2 /* CommonConstants.swift */,
 				791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */,
 				791F30FB1C0392C0004AA9E2 /* Flattenable.swift */,
@@ -537,7 +530,6 @@
 		798A2D211C0789A4000277AA /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				798A2D321C0789F5000277AA /* BoxTests.swift */,
 				798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */,
 				798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */,
 				798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */,
@@ -1093,7 +1085,6 @@
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
-				791F31131C0392CB004AA9E2 /* Box.swift in Sources */,
 				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
@@ -1135,7 +1126,6 @@
 				798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
 				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
-				798A2D441C078A86000277AA /* BoxTests.swift in Sources */,
 				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
 				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
@@ -1177,7 +1167,6 @@
 				791F30B01C03924C004AA9E2 /* Timer.swift in Sources */,
 				791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */,
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
-				791F31051C0392C0004AA9E2 /* Box.swift in Sources */,
 				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
 				ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */,
@@ -1212,7 +1201,6 @@
 				798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */,
 				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
 				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
-				798A2D381C0789F5000277AA /* BoxTests.swift in Sources */,
 				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
 				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,

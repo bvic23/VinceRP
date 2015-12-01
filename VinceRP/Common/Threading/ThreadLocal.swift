@@ -3,6 +3,16 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+final class Box<T> {
+    
+    var value: T
+    
+    init(_ value: T) {
+        self.value = value
+    }
+    
+}
+
 public class ThreadLocal<T> {
     
     private let key: NSString

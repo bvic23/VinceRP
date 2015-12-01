@@ -24,7 +24,7 @@ public class Dynamic<T>: Incrementing<T> {
     public init(calc: () -> T) {
         self.calc = calc
         super.init()
-        self.setState(AtomicReference(self.makeState()))
+        super.setState(self.makeState())
     }
     
     override func makeState() -> SpinState<T> {
@@ -75,22 +75,22 @@ public class Dynamic<T>: Incrementing<T> {
     }
 
     override public func toTry() -> Try<T> {
-        return self.state().value.value
+        return self.state().value
     }
     
     override func isSuccess() -> Bool {
-        return self.state().value.value.isSuccess()
+        return self.state().value.isSuccess()
     }
 
     override public var parents: Set<Node> {
-        guard let s = self.state().value as? State else {
+        guard let s = self.state() as? State else {
             fatalError(UNREACHABLE_CODE)
         }
         return s.parents
     }
 
     override var level: long {
-        guard let state = self.state().value as? State  else {
+        guard let state = self.state() as? State  else {
             fatalError(UNREACHABLE_CODE)
         }
         return state.level

@@ -40,8 +40,8 @@ class MapperSpec: QuickSpec {
                 (numerator*, denominator*)
             }.mapAll { (p:Try<(Int, Int)>) -> Try<Int> in
                 switch p {
-                    case .Success(let box):
-                        let (n, d) = box.value
+                    case .Success(let value):
+                        let (n, d) = value
                         if d == 0 {
                             return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
                         }

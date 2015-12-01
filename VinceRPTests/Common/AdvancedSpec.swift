@@ -145,7 +145,9 @@ class AdvancedSpec: QuickSpec {
             it("blocks observers") {
                 // given
                 let a = reactive(10)
-                let b = a.filter { $0 > 5 }
+                let b = a.filter {
+                    $0 > 5
+                }
                 var sideeffect = 0
                 onChangeDo(b) {  _ in
                     sideeffect = sideeffect + 1
