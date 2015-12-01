@@ -30,7 +30,9 @@ public class Source<T>: Hub<T> {
     
     public func error(error: NSError) {
         self.state.value = Try(error)
-        propagate()
+        dispatch_async(q) {
+            self.propagate()
+        }
     }
     
     public func updateSilent(newValue:T) {
