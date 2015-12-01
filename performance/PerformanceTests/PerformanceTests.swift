@@ -15,7 +15,7 @@ import VinceRP
 
 class Performance: XCTestCase {
     
-    let testIteration1 = 100000
+    let testIteration1 = 10000
     
     /// 0.143s (5% stdev)
     func test_measure_ReactiveCocoa_1() {
@@ -92,7 +92,7 @@ class Performance: XCTestCase {
     
     
     func test_measure_VinceRP_1() {
-        
+        Propagator.async = true
         
         measureBlock {
 

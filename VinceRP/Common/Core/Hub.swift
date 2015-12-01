@@ -34,10 +34,12 @@ public class Hub<T>: Node {
     }
     
     func propagate() {
-        let mappedTargets = children.map {
-            NodeTuple(self, $0)
+        Propagator.dispatch {
+            let mappedTargets = self.children.map {
+                NodeTuple(self, $0)
+            }
+            Propagator.propagate(mappedTargets)
         }
-        Propagator().propagate(mappedTargets)
     }
     
     public func toTry() -> Try<T> {
@@ -52,7 +54,7 @@ public class Hub<T>: Node {
     }
     
     public func recalc() {
-        Propagator().propagate(toSet(NodeTuple(self, self)))
+        Propagator.propagate(toSet(NodeTuple(self, self)))
     }
     
     public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver {

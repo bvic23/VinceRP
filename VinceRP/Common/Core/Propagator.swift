@@ -7,12 +7,27 @@ func ==(lhs: NodeTuple, rhs: NodeTuple) -> Bool {
     return lhs.source.hashValue == rhs.source.hashValue && lhs.reactor.hashValue == rhs.source.hashValue
 }
 
-class Propagator {
-    func propagate(nodes: [NodeTuple]) {
-        self.propagate(Set(nodes))
+
+public class Propagator {
+    
+    public static var async: Bool = false
+    public static let propagationQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+    
+    static func dispatch(block: () -> ()) {
+        if async {
+            dispatch_async(propagationQueue) {
+                block()
+            }
+        } else {
+            block()
+        }
     }
 
-    func propagate(nodes: Set<NodeTuple>) {
+    static func propagate(nodes: [NodeTuple]) {
+        self.propagate(Set(nodes))
+    }
+    
+    static func propagate(nodes: Set<NodeTuple>) {
         guard nodes.count > 0 else {
             return
         }
@@ -21,17 +36,18 @@ class Propagator {
         let (now, later) = nodes.partition {
             $0.reactor.level == minLevel
         }
-
+        
         let next = now.groupBy{
             $0.reactor
-        }.mapValues{
-            $0.map{ $0.source }
-        }.map{ (target, pingers) in
-            return target.ping(pingers).map {
-                NodeTuple(target, $0)
-            }
-        }.flatten()
-           
+            }.mapValues{
+                $0.map{ $0.source }
+            }.map{ (target, pingers) in
+                return target.ping(pingers).map {
+                    NodeTuple(target, $0)
+                }
+            }.flatten()
+        
         propagate(next + later)
     }
+
 }
