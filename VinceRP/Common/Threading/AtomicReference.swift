@@ -32,22 +32,20 @@ class AtomicReference<T> {
 
 public class Incrementing<T>: Hub<T> {
     
-    private var value: AtomicReference<SpinState<T>>?
-
+    private var _state: AtomicReference<SpinState<T>>
     
-    func state() -> SpinState<T> {
-        if let s = value {
-            return s.value
-        }
-        value = AtomicReference(self.makeState())
-        return value!.value
+    override init() {
+        _state = AtomicReference(SpinState(Try(noValueError)))
+        super.init()
+        _state = AtomicReference(self.makeState())
     }
     
-    func setState(newValue: SpinState<T>) {
-        if let s = value {
-            s.value = newValue
-        }
-        value = AtomicReference(newValue)
+    func state() -> SpinState<T> {
+            return _state.value
+    }
+
+    func setState(state: SpinState<T>) {
+        _state.value = state
     }
 
     func toTry() -> SpinState<T> {
@@ -60,9 +58,11 @@ public class Incrementing<T>: Hub<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         let newState = makeState()
-        if let s = value?.value where newState.timestamp <= s.timestamp {
+        
+        if newState.timestamp <= _state.value.timestamp {
             return Set()
         }
+        
         self.setState(newState)
         return children
     }
