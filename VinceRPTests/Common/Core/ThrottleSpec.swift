@@ -27,9 +27,7 @@ class ThrottleSpec: QuickSpec {
             expect(y*) =~ 0
             
             // then
-            dispatch_async(dispatch_get_main_queue()) {
-                expect(y*) =~ 1                
-            }
+            expect(y*) =~ 1
         }
         
     }
