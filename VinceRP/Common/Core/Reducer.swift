@@ -13,7 +13,7 @@ class Reducer<T>: Wrapper<T, T> {
     }
     
     override func makeState() -> SpinState<T> {
-        return transformer(self.state(), source.toTry())
+        return transformer(self.state, source.toTry())
     }
     
 }

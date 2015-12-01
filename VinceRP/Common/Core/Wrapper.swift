@@ -22,7 +22,7 @@ class Wrapper<T, A>: Incrementing<A> {
     }
     
     override func toTry() -> Try<A> {
-        return self.state().value
+        return self.state.value
     }
     
 }

@@ -40,12 +40,12 @@ public class Incrementing<T>: Hub<T> {
         _state = AtomicReference(self.makeState())
     }
     
-    func state() -> SpinState<T> {
+    var state: SpinState<T> {
         return _state.value
     }
 
     func toTry() -> SpinState<T> {
-        return self.state()
+        return self.state
     }
     
     func makeState() -> SpinState<T> {

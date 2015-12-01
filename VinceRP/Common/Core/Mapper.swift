@@ -12,7 +12,7 @@ class Mapper<T, A>: Wrapper<T, A> {
         super.init(source)
     }
     
-    override func state() -> SpinState<A> {
+    override var state: SpinState<A> {
         return makeState()
     }
     
