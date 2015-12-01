@@ -70,7 +70,7 @@ class AdvancedSpec: QuickSpec {
                     a <- 2
 
                     // then
-                    expect(b*.1*) == r
+                    expect(b*.1*) =~ r
                 }                
                 
                 it("works with recalcs") {
@@ -83,21 +83,21 @@ class AdvancedSpec: QuickSpec {
                     }
 
                     // then
-                    expect(i) == 1
-                    expect(a*) == 0
+                    expect(i) =~ 1
+                    expect(a*) =~ 0
 
                     // when
                     source = 1
 
                     // then
-                    expect(a*) == 0
+                    expect(a*) =~ 0
 
                     // when
                     a.recalc()
 
                     // then
-                    expect(a*) == 1
-                    expect(i) == 2
+                    expect(a*) =~ 1
+                    expect(i) =~ 2
                 }
 
                 it("can update multiple variables in a batch") {
@@ -116,24 +116,24 @@ class AdvancedSpec: QuickSpec {
                     }
 
                     // then
-                    expect(i) == 1
+                    expect(i) =~ 1
                     a <- 2
-                    expect(i) == 2
+                    expect(i) =~ 2
                     b <- 2
-                    expect(i) == 3
+                    expect(i) =~ 3
                     c <- 2
-                    expect(i) == 4
+                    expect(i) =~ 4
 
                     BatchUpdate(a, withValue:3).and(b, withValue:3).and(c, withValue:3).now()
 
-                    expect(i) == 5
+                    expect(i) =~ 5
 
                     BatchUpdate(a, withValue:4).and(b, withValue:5).and(c, withValue:6).now()
 
-                    expect(i) == 6
-                    expect(a*) == 4
-                    expect(b*) == 5
-                    expect(c*) == 6
+                    expect(i) =~ 6
+                    expect(a*) =~ 4
+                    expect(b*) =~ 5
+                    expect(c*) =~ 6
                 }
 
             }
@@ -157,22 +157,22 @@ class AdvancedSpec: QuickSpec {
                 a <- 1
                 
                 // then
-                expect(b*) == 10
-                expect(sideeffect) == 1
+                expect(b*) =~ 10
+                expect(sideeffect) =~ 1
                 
                 // when
                 a <- 2
                 
                 // then
-                expect(b*) == 10
-                expect(sideeffect) == 1
+                expect(b*) =~ 10
+                expect(sideeffect) =~ 1
                 
                 // when
                 a <- 6
                 
                 // then
-                expect(b*) == 6
-                expect(sideeffect) == 2
+                expect(b*) =~ 6
+                expect(sideeffect) =~ 2
             }
 
         }
@@ -189,28 +189,28 @@ class AdvancedSpec: QuickSpec {
                 }
 
                 // then
-                expect(a.children) == toSet(b)
-                expect(b.children) == toSet(o)
-                expect(target == 2)
+                expect(a.children) =~ toSet(b)
+                expect(b.children) =~ toSet(o)
+                expect(target) =~ 2
 
                 // when
                 a <- 2
 
                 // then
-                expect(target == 4)
+                expect(target) =~ 4
 
                 // when
                 o.kill()
 
                 // then
-                expect(a.children) == toSet(b)
-                expect(b.children) == Set()
+                expect(a.children) =~ toSet(b)
+                expect(b.children) =~ Set()
 
                 // when
                 a <- 3
 
                 // then
-                expect(target) == 4
+                expect(target) =~ 4
             }
 
             it("kills reactive") {
@@ -218,56 +218,56 @@ class AdvancedSpec: QuickSpec {
                 let (a, b, c, d, e, f) = testGraph()
 
                 // then
-                expect(c*) == 2
-                expect(e*) == 1
-                expect(f*) == 10
+                expect(c*) =~ 2
+                expect(e*) =~ 1
+                expect(f*) =~ 10
 
                 // when
                 a <- 3
 
                 // then
-                expect(c*) == 6
-                expect(e*) == 3
-                expect(f*) == 12
+                expect(c*) =~ 6
+                expect(e*) =~ 3
+                expect(f*) =~ 12
 
                 // when
                 d.kill()
                 a <- 1
 
                 // then
-                expect(f*) == 14
-                expect(e.children) == toSet(f)
+                expect(f*) =~ 14
+                expect(e.children) =~ toSet(f)
 
                 // when
                 f.kill()
 
                 // then
-                expect(e.children) == Set()
+                expect(e.children) =~ Set()
 
                 // when
                 a <- 3
 
                 // then
-                expect(c*) == 6
-                expect(e*) == 3
-                expect(f*) == 14
-                expect(a.children) == toSet(c)
-                expect(b.children) == toSet(c)
+                expect(c*) =~ 6
+                expect(e*) =~ 3
+                expect(f*) =~ 14
+                expect(a.children) =~ toSet(c)
+                expect(b.children) =~ toSet(c)
 
                 // when
                 c.kill()
 
                 // then
-                expect(a.children) == Set()
-                expect(b.children) == Set()
+                expect(a.children) =~ Set()
+                expect(b.children) =~ Set()
 
                 // when
                 a <- 1
 
                 // then
-                expect(c*) == 6
-                expect(e*) == 3
-                expect(f*) == 14
+                expect(c*) =~ 6
+                expect(e*) =~ 3
+                expect(f*) =~ 14
             }
 
 
@@ -281,9 +281,9 @@ class AdvancedSpec: QuickSpec {
 
                 // then
                 a <- 3
-                expect(c*) == 6
-                expect(e*) == 3
-                expect(f*) == 10
+                expect(c*) =~ 6
+                expect(e*) =~ 3
+                expect(f*) =~ 10
             }
         }
 

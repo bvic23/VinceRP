@@ -32,6 +32,10 @@ public class Incrementing<T>: Hub<T> {
             return Set()
         }
         
+        if newState.value.description == _state.value.value.description {
+            return Set()
+        }
+        
         _state.value = newState
         return children
     }

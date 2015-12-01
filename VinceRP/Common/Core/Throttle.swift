@@ -38,7 +38,6 @@ class Throttle<T>: Dynamic<T> {
         }
         self.timer = callSelectorAsync(Selector("pingAsync"), object:nil, delay: self.interval)
         return Set()
-
     }
     
     override var level: long {

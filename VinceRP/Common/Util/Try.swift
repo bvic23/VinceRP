@@ -47,5 +47,5 @@ public enum Try<T>: CustomStringConvertible {
             return "Failure: \(error)"
         }
     }
-
 }
+

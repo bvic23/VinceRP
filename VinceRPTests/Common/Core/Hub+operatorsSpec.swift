@@ -50,13 +50,13 @@ class HubOperatorsSpec: QuickSpec {
             }
             
             // then
-            expect(history) == [2]
+            expect(history).toEventually(equal([2]))
 
             // when
             x <- 2
             
             // then
-            expect(history) == [2, 4]
+            expect(history).toEventually(equal([2, 4]))
         }
 
         

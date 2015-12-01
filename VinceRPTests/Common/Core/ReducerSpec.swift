@@ -27,7 +27,7 @@ class ReducerSpec: QuickSpec {
             x <- 6
             
             // then
-            expect(y*) == 6
+            expect(y*) =~ 6
             
             // when
             x <- 2
@@ -39,7 +39,7 @@ class ReducerSpec: QuickSpec {
             x <- 19
             
             // then
-            expect(y*) == 19
+            expect(y*) =~ 19
         }
         
         it("filters all") {
@@ -55,7 +55,7 @@ class ReducerSpec: QuickSpec {
             x <- 9
             
             // then
-            expect(z*) == 11
+            expect(z*) =~ 11
             
             // when
             x <- fakeError
@@ -67,7 +67,7 @@ class ReducerSpec: QuickSpec {
             x <- 1
             
             // then
-            expect(z*) == 100
+            expect(z*) =~ 100
         }
         
         it("reduces") {
@@ -77,15 +77,15 @@ class ReducerSpec: QuickSpec {
             
             // when
             x <- 2
-            expect(y*) == 2
+            expect(y*) =~ 2
             
             // when
             x <- 3
-            expect(y*) == 6
+            expect(y*) =~ 6
             
             // when
             x <- 4
-            expect(y*) == 24
+            expect(y*) =~ 24
         }
         
         it("reduces all") {
@@ -105,25 +105,25 @@ class ReducerSpec: QuickSpec {
             x <- 1
             
             // then
-            expect(sum*) == 1
+            expect(sum*) =~ 1
             
             // when
             x <- 2
             
             // then
-            expect(sum*) == 3
+            expect(sum*) =~ 3
             
             // when
             x <- fakeError
             
             // then
-            expect(sum*) == 0
+            expect(sum*) =~ 0
             
             // when
             x <- 5
             
             // then
-            expect(sum*) == 5
+            expect(sum*) =~ 5
         }
         
     }

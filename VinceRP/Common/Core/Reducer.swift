@@ -23,7 +23,9 @@ public extension Hub {
     public func filter(successPred: T -> Bool) -> Hub<T>  {
         return Reducer(self) { (x, y) in
             switch (x, y) {
-            case (_, .Success(let value)) where successPred(value): return UpdateState(y)
+            case (_, .Success(let value)) where successPred(value):
+                print("---->\(value)")
+                return UpdateState(y)
             case (_, .Failure(_)): return UpdateState(y)
             default: return x
             }

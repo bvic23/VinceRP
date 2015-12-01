@@ -37,13 +37,7 @@ public class Hub<T>: Node {
         let mappedTargets = children.map {
             NodeTuple(self, $0)
         }
-        guard let q = dispatchQueue else {
-            Propagator().propagate(mappedTargets)
-            return
-        }
-        dispatch_async(q) {
-            Propagator().propagate(mappedTargets)
-        }
+        Propagator().propagate(mappedTargets)
     }
     
     public func toTry() -> Try<T> {
