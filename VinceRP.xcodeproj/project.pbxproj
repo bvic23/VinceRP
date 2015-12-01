@@ -133,6 +133,10 @@
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
 		79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
+		79FF03EA1C0DE26B0096B050 /* Incrementing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E91C0DE26B0096B050 /* Incrementing.swift */; };
+		79FF03EB1C0DE26B0096B050 /* Incrementing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E91C0DE26B0096B050 /* Incrementing.swift */; };
+		79FF03ED1C0DE28E0096B050 /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03EC1C0DE28E0096B050 /* UpdateState.swift */; };
+		79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03EC1C0DE28E0096B050 /* UpdateState.swift */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
 		ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
@@ -266,6 +270,8 @@
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
+		79FF03E91C0DE26B0096B050 /* Incrementing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Incrementing.swift; path = Common/Core/Incrementing.swift; sourceTree = "<group>"; };
+		79FF03EC1C0DE28E0096B050 /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateState.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
@@ -358,6 +364,8 @@
 				791F30C11C039273004AA9E2 /* Source.swift */,
 				791F30C31C039273004AA9E2 /* Throttle.swift */,
 				791F30C41C039273004AA9E2 /* Wrapper.swift */,
+				79FF03E91C0DE26B0096B050 /* Incrementing.swift */,
+				79FF03EC1C0DE28E0096B050 /* UpdateState.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1096,6 +1104,7 @@
 				791F30D41C03927E004AA9E2 /* Api.swift in Sources */,
 				791F30DC1C039286004AA9E2 /* Node.swift in Sources */,
 				791F30D81C039286004AA9E2 /* Dynamic.swift in Sources */,
+				79FF03EB1C0DE26B0096B050 /* Incrementing.swift in Sources */,
 				791F30D91C039286004AA9E2 /* ErrorObserver.swift in Sources */,
 				791F311C1C0392CB004AA9E2 /* Try.swift in Sources */,
 				791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */,
@@ -1106,6 +1115,7 @@
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
 				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
 				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
+				79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
@@ -1142,6 +1152,7 @@
 				797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */,
 				791F310B1C0392C0004AA9E2 /* FunctionalDictionary.swift in Sources */,
 				791F30C81C039273004AA9E2 /* ErrorObserver.swift in Sources */,
+				79FF03ED1C0DE28E0096B050 /* UpdateState.swift in Sources */,
 				791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */,
 				791F30C71C039273004AA9E2 /* Dynamic.swift in Sources */,
 				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
@@ -1185,6 +1196,7 @@
 				791F30EB1C0392A7004AA9E2 /* AtomicLong.swift in Sources */,
 				ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */,
 				79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */,
+				79FF03EA1C0DE26B0096B050 /* Incrementing.swift in Sources */,
 				791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
