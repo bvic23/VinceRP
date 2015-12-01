@@ -14,7 +14,6 @@
 		02C8B3891BE3F81600203CF2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3831BE3F7FE00203CF2 /* Nimble.framework */; };
 		02C8B38A1BE3F81600203CF2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8B3841BE3F7FE00203CF2 /* Quick.framework */; };
 		02C8B38B1BE3F89C00203CF2 /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* VinceRP.framework */; };
-		02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		02C8B3961BE3FD6C00203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C8B3971BE3FD7200203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		791F30AC1C03924C004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
@@ -92,6 +91,8 @@
 		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
+		794B96DC1C0DF63A006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
+		794B96DD1C0DF63B006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
 		79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
 		79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBD1C08411B00EC284B /* MapperSpec.swift */; };
@@ -139,7 +140,6 @@
 		79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03EC1C0DE28E0096B050 /* UpdateState.swift */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
-		ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1080,7 +1080,6 @@
 			files = (
 				791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */,
 				791F30D51C039281004AA9E2 /* Addable.swift in Sources */,
-				02C8B38E1BE3F9A600203CF2 /* TestUtil.swift in Sources */,
 				79952B271C0CCCEF00BD7E76 /* Spinlock.swift in Sources */,
 				791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */,
 				791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */,
@@ -1141,6 +1140,7 @@
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D471C078A86000277AA /* FunctionalSetSpec.swift in Sources */,
 				79552EC51C08827A00EC284B /* ThrottleSpec.swift in Sources */,
+				794B96DD1C0DF63B006B06EE /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,7 +1181,6 @@
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
 				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
-				ADEAFB62FB15F2199D9E89C1 /* TestUtil.swift in Sources */,
 				791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */,
 				791F310C1C0392C0004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */,
@@ -1218,6 +1217,7 @@
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
 				798A2D3B1C0789F5000277AA /* FunctionalSetSpec.swift in Sources */,
 				79552EC41C08827A00EC284B /* ThrottleSpec.swift in Sources */,
+				794B96DC1C0DF63A006B06EE /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,6 +3,16 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+@testable import VinceRP
+
+import Quick
+import Nimble
+
+infix operator =~ { associativity left precedence 130 }
+func =~<T: Equatable> (left: Expectation<T>, right: T?) -> Void {
+    return left.toEventually(equal(right))
+}
+
 public func testGraph() -> (Source<Int>, Source<Int>, Dynamic<Int>, Dynamic<Int>, Dynamic<Int>, Dynamic<Int>) {
     let n1 = reactive(1)
     let n2 = reactive(2)
