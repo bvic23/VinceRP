@@ -15,7 +15,7 @@ import VinceRP
 
 class Performance: XCTestCase {
     
-    let testIteration1 = 10000
+    let testIteration1 = 100000
     
     /// 0.143s (5% stdev)
     func test_measure_ReactiveCocoa_1() {

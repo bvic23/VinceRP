@@ -5,13 +5,14 @@
 
 public class WeakSet<T: Hashable where T: AnyObject> {
     private var _array: [WeakReference<T>]
-
+    private let lock = Spinlock()
+    
     public init() {
         _array = Array()
     }
 
     public init(_ array: [T]) {
-        _array = array.map {
+        self._array = array.map {
             WeakReference($0)
         }
     }
@@ -21,12 +22,18 @@ public class WeakSet<T: Hashable where T: AnyObject> {
     }
 
     public func insert(member: T) {
-        for e in _array {
-            if e.hashValue == member.hashValue {
-                return
+        lock.around {
+            var found = false
+            for e in self._array {
+                if e.hashValue == member.hashValue {
+                    found = true
+                    break
+                }
+            }
+            if !found {
+                self._array.append(WeakReference(member))
             }
         }
-        _array.append(WeakReference(member))
     }
 
     public func filter(@noescape includeElement: (T) -> Bool) -> WeakSet<T> {
@@ -46,11 +53,14 @@ public class WeakSet<T: Hashable where T: AnyObject> {
     }
     
     private func array() -> Array<T> {
-        return _array.filter {
-            $0.value != nil
-        }.map {
-            $0.value!
+        return lock.around {
+            return self._array.filter {
+                $0.value != nil
+            }.map {
+                $0.value!
+            }
         }
+
     }
 
 }
