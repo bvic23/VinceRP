@@ -41,11 +41,7 @@ public class Incrementing<T>: Hub<T> {
     }
     
     func state() -> SpinState<T> {
-            return _state.value
-    }
-
-    func setState(state: SpinState<T>) {
-        _state.value = state
+        return _state.value
     }
 
     func toTry() -> SpinState<T> {
@@ -63,7 +59,7 @@ public class Incrementing<T>: Hub<T> {
             return Set()
         }
         
-        self.setState(newState)
+        _state.value = newState
         return children
     }
     

@@ -24,7 +24,6 @@ public class Dynamic<T>: Incrementing<T> {
     public init(calc: () -> T) {
         self.calc = calc
         super.init()
-        super.setState(self.makeState())
     }
     
     override func makeState() -> SpinState<T> {
