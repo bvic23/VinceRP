@@ -61,18 +61,16 @@ public class Hub<T>: Node {
         Propagator().propagate(toSet(NodeTuple(self, self)))
     }
     
-    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> Hub<T> {
-        onChangeDo(self, skipInitial: skipInitial) {
+    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver {
+        return onChangeDo(self, skipInitial: skipInitial) {
             callback($0)
         }
-        return self
     }
     
-    public func onError(callback: (NSError) -> ()) -> Hub<T> {
-        onErrorDo(self) {
+    public func onError(callback: (NSError) -> ()) -> ErrorObserver {
+        return onErrorDo(self) {
             callback($0)
         }
-        return self
     }
     
 }
