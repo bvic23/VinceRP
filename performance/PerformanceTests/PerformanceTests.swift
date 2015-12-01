@@ -95,7 +95,7 @@ class Performance: XCTestCase {
         Propagator.async = true
         
         measureBlock {
-
+            
             var counter = 0
             
             let observable = reactive(0)
@@ -107,11 +107,11 @@ class Performance: XCTestCase {
             }
         }
     }
-
-    /*
+    
     
     ////////////////////////////////////////////
     
+    let testIteration2 = 10000
     
     // 1.279s (2% stdev)
     func test_measure_ReactiveCocoa_2() {
@@ -128,7 +128,7 @@ class Performance: XCTestCase {
                 signal.observeNext { counter += $0 }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration2 {
                 observer.sendNext(i)
             }
         }
@@ -148,7 +148,7 @@ class Performance: XCTestCase {
                 observable.observe { counter += $0 }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration2 {
                 observable.next(i)
             }
         }
@@ -168,7 +168,7 @@ class Performance: XCTestCase {
                 signal.next { counter += $0 }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration2 {
                 signal.update(i)
             }
         }
@@ -188,14 +188,34 @@ class Performance: XCTestCase {
                 let _ = observable.subscribeNext { counter += $0 }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration2 {
                 observable.value = i
+            }
+        }
+    }
+    
+    func test_measure_VinceRP_2() {
+        Propagator.async = true
+        
+        measureBlock {
+            
+            var counter : Int = 0
+            
+            let observable = reactive(0)
+            
+            for _ in 1..<30 {
+                let _ = observable.onChange { counter += $0 }
+            }
+            
+            for i in 1..<self.testIteration2 {
+                observable <- i
             }
         }
     }
     
     ////////////////////////////////////////////
     
+    let testIteration3 = 10000
     
     // 7.045s (1% stdev)
     func test_measure_ReactiveCocoa_3() {
@@ -210,7 +230,7 @@ class Performance: XCTestCase {
                 signal.filter{ $0%2 == 0}.map(String.init).observeNext {_ in }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration3 {
                 observer.sendNext(i)
             }
         }
@@ -228,7 +248,7 @@ class Performance: XCTestCase {
                 observable.filter{ $0%2 == 0}.map(String.init).observe { _ in }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration3 {
                 observable.next(i)
             }
         }
@@ -246,7 +266,7 @@ class Performance: XCTestCase {
                 signal.filter{ $0%2 == 0}.map(String.init).next {_ in }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration3 {
                 signal.update(i)
             }
         }
@@ -265,10 +285,29 @@ class Performance: XCTestCase {
                 let _ = observable.filter{ $0%2 == 0}.map(String.init).subscribeNext {_ in  }
             }
             
-            for i in 1..<100000 {
+            for i in 1..<self.testIteration3 {
                 observable.value = i
             }
         }
     }
-    */
+    
+    func test_measure_VinceRP_3() {
+        Propagator.async = true
+        
+        
+        measureBlock {
+            
+            
+            let observable = reactive(0)
+            
+            for _ in 1..<30 {
+                let _ = observable.filter{ $0%2 == 0}.map(String.init).onChange {_ in  }
+            }
+            
+            for i in 1..<self.testIteration3 {
+                observable <- i
+            }
+        }
+    }
+    
 }
