@@ -24,7 +24,6 @@ public class ChangeObserver: Node {
         }
         
         ChangeObserver.changeObservers.insert(self)
-        self.dispatchOnMainQueue()
     }
     
     override public var parents: Set<Node> {
