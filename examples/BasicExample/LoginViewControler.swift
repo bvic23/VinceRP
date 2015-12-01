@@ -79,7 +79,7 @@ class LoginViewControler: UIViewController {
             
             // Show it
             self.presentViewController(alertController, animated: true, completion: nil)
-        }
+        }.dispatchOnMainQueue()
         
         // Add a clickhandler
         self.loginButton.clickHandler = definedAs { handler in // Because this block can contain any kind of threading
@@ -97,14 +97,21 @@ class LoginViewControler: UIViewController {
             let loginService = LoginService()
             
             // Initiate the login process
-            loginService.login(self.emailField.text!, password: self.passwordField.text!).onChange { _ in
+            let login = loginService.login(self.emailField.text!, password: self.passwordField.text!)
+            login.onChange {
                 
-                // Send a greeting
-                alert <- "Welcome!"
+                if $0 {
+                    // Send a greeting
+                    alert <- "Welcome!"
+                } else {
+                    // Send a greeting
+                    alert <- "Login failed, username or password is invalid!"
+                }
                 
                 // Mark this handler done
                 handler.done()
-            }.onError { error in
+            }
+            login.onError { error in
                 
                 // Send an error
                 alert <- "Login failed with error: \(error)"

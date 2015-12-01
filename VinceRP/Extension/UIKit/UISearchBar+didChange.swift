@@ -23,6 +23,7 @@ extension UISearchBar {
 
 // TODO: add removeChangeHandler
 extension UISearchBar : UISearchBarDelegate {
+    
     public func searchBar(sender: UISearchBar, textDidChange searchText: String) {
         if let handlers = eventHandlers[sender] {
             for handler in handlers {
@@ -30,4 +31,5 @@ extension UISearchBar : UISearchBarDelegate {
             }
         }
     }
+    
 }

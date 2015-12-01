@@ -16,7 +16,7 @@ public extension UIView {
             newValue.onChange {
                 self.hidden = self.mapReactiveHidden($0)
                 self.reactiveHiddenDidChange()
-            }
+            }.dispatchOnMainQueue()
         }
     }
     

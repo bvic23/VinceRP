@@ -15,7 +15,7 @@ public extension UIStepper {
         set {
             newValue.onChange {
                 self.value = $0
-            }
+            }.dispatchOnMainQueue()
         }
     }
     

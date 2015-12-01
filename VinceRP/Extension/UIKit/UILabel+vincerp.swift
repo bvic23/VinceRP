@@ -15,7 +15,7 @@ public extension UILabel {
         set {
             newValue.onChange {
                 self.text = $0
-            }
+            }.dispatchOnMainQueue()
         }
     }
     

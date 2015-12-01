@@ -36,7 +36,7 @@ class FlickrViewControler: UIViewController {
         // It acts like a future here
         self.searchResults.onChange { _ in
             self.collectionView.reloadData()
-        }
+        }.dispatchOnMainQueue()
         
         // True if there is an ongoing search
         let searchIsOngoing = reactive(false)
@@ -44,7 +44,7 @@ class FlickrViewControler: UIViewController {
         // True if there is any search results
         let hasResult = self.searchResults.map{ $0 != [] }
         
-        let searchTerm = self.searchBar.reactiveText
+        let searchTerm = self.searchBar.reactiveText.dispatchOnMainQueue()
         
         // Hide activity indicator if we are not in a search
         self.activityIndicator.reactiveHidden = searchIsOngoing.not()
@@ -60,7 +60,7 @@ class FlickrViewControler: UIViewController {
         // Update the progress on every tick of the timer
         throttleTimeout.onChange {
             self.progressView.setProgress(fminf($0, 1.0), animated: ($0 != 0.0))
-        }
+        }.dispatchOnMainQueue()
         
         // If we type let's reset the timeout variable and thus the progress
         searchTerm.onChange { _ in
@@ -75,7 +75,7 @@ class FlickrViewControler: UIViewController {
         // If there is no result update the noResultLabel
         hasResult.not().onChange { _ in
             self.noResultsLabel.text = "No results for '\(self.searchBar.reactiveText*)'"
-        }
+        }.dispatchOnMainQueue()
         
         // If no update (new keyboard press) within a 1 second time frame 
         // and there is anything in the searchbar let's propagate the change
