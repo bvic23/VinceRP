@@ -41,10 +41,8 @@ public enum Try<T>: CustomStringConvertible {
 
     public var description : String {
         switch self {
-        case .Success(let value):
-            return "Success: \(value)"
-        case .Failure(let error):
-            return "Failure: \(error)"
+        case .Success(let value): return "\(value)"
+        case .Failure(let error): return "\(error)"
         }
     }
 }
