@@ -5,7 +5,7 @@
 
 public class WeakSet<T: Hashable where T: AnyObject> {
     private var _array: [WeakReference<T>]
-
+    
     public init() {
         _array = Array()
     }
@@ -46,11 +46,13 @@ public class WeakSet<T: Hashable where T: AnyObject> {
     }
     
     private func array() -> Array<T> {
-        return _array.filter {
-            $0.value != nil
-        }.map {
-            $0.value!
+        var result = Array<T>()
+        for item in _array {
+            if let v = item.value {
+                result.append(v)
+            }
         }
+        return result
     }
 
 }

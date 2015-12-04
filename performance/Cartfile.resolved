@@ -1,0 +1,5 @@
+github "SwiftBond/Bond" "41e557292ee940257216a8b862f0b2da5fd44cb0"
+github "JensRavens/Interstellar" "5133f2914830cef456d0cfff832a402d04d61ae3"
+github "antitypical/Result" "0.6.0-beta.3"
+github "ReactiveX/RxSwift" "c909f0f572d84f7b7578c55b7b16d853ebad5f8a"
+github "ReactiveCocoa/ReactiveCocoa" "v4.0.0-alpha.2"

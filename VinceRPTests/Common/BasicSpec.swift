@@ -37,11 +37,11 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(c*) == 3
+                    expect(c*) =~ 3
 
                     // when
                     a <- 4
-                    expect(c*) == 6
+                    expect(c*) =~ 6
                 }
 
 //                it("works with options") {
@@ -63,7 +63,7 @@ class BasicSpec: QuickSpec {
 //                    b <- 2
 //
 //                    // then
-//                    expect(c*) == 3
+//                    expect(c*) =~ 3
 //                }
 
                 it("works with a real graph") {
@@ -71,33 +71,33 @@ class BasicSpec: QuickSpec {
                     let (n1, n2, n3, n4, n5, n6) = testGraph()
 
                     // then
-                    expect(n6*) == 10
+                    expect(n6*) =~ 10
 
                     // when
                     n1 <- 3
 
                     // parents
-                    expect(n6*) == 12
-                    expect(n1.parents.count) == 0
-                    expect(n2.parents.count) == 0
-                    expect(n3.parents) == toSet(n1, n2)
-                    expect(n6.parents) == toSet(n4, n5)
+                    expect(n6*) =~ 12
+                    expect(n1.parents.count) =~ 0
+                    expect(n2.parents.count) =~ 0
+                    expect(n3.parents) =~ toSet(n1, n2)
+                    expect(n6.parents) =~ toSet(n4, n5)
 
                     // children
-                    expect(n1.children) == toSet(n3)
-                    expect(n6.children.count) == 0
+                    expect(n1.children) =~ toSet(n3)
+                    expect(n6.children.count) =~ 0
 
                     // descendants
-                    expect(n4.descendants) == toSet(n6)
-                    expect(n4.descendants.count) == 1
-                    expect(n3.descendants) == toSet(n4, n5, n6)
-                    expect(n3.descendants.count) == 3
+                    expect(n4.descendants) =~ toSet(n6)
+                    expect(n4.descendants.count) =~ 1
+                    expect(n3.descendants) =~ toSet(n4, n5, n6)
+                    expect(n3.descendants.count) =~ 3
 
                     // descendants
-                    expect(n4.ancestors) == toSet(n1, n2, n3)
-                    expect(n4.ancestors.count) == 3
-                    expect(n3.ancestors) == toSet(n1, n2)
-                    expect(n3.ancestors.count) == 2
+                    expect(n4.ancestors) =~ toSet(n1, n2, n3)
+                    expect(n4.ancestors.count) =~ 3
+                    expect(n3.ancestors) =~ toSet(n1, n2)
+                    expect(n3.ancestors.count) =~ 2
                 }
 
                 it("works with complex values") {
@@ -118,21 +118,21 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(f*) == "omgomgomgomgomgomgomgomgomgwtf"
+                    expect(f*) =~ "omgomgomgomgomgomgomgomgomgwtf"
 
                     // when
                     a <- [Int]()
 
                     // then
-                    expect(f*) == "omgomgomgwtf"
+                    expect(f*) =~ "omgomgomgwtf"
 
                     // when
                     e <- "wtfbbq"
 
                     // then
-                    expect(f*) == "omgomgomgwtfbbq"
-                    expect(e.descendants) == toSet(f)
-                    expect(c.ancestors) == toSet(a, b)
+                    expect(f*) =~ "omgomgomgwtfbbq"
+                    expect(e.descendants) =~ toSet(f)
+                    expect(c.ancestors) =~ toSet(a, b)
                 }
 
             }
@@ -153,13 +153,13 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(c*) == 1
+                    expect(c*) =~ 1
 
                     // when
                     a <- 0
 
                     // then
-                    expect(c*) == 2
+                    expect(c*) =~ 2
                 }
 
                 it("useInByNameParameters") {
@@ -172,7 +172,7 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(b*) == 1
+                    expect(b*) =~ 1
                 }
 
             }
@@ -190,13 +190,13 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(count) == 2
+                    expect(count) =~ 2
 
                     // when
                     a <- 4
 
                     // then
-                    expect(count) == 5
+                    expect(count) =~ 5
                 }
 
                 it("works without storing the observer") {
@@ -210,13 +210,13 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(count) == 2
+                    expect(count) =~ 2
 
                     // when
                     a <- 4
 
                     // then
-                    expect(count) == 5
+                    expect(count) =~ 5
                 }
 
                 it("can skip initial value") {
@@ -230,13 +230,13 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(count) == 0
+                    expect(count) =~ 0
 
                     // when
                     a <- 2
 
                     // thne
-                    expect(count) == 1
+                    expect(count) =~ 1
                 }
 
                 it("works with a complex graph") {
@@ -269,25 +269,25 @@ class BasicSpec: QuickSpec {
                     }
 
                     // then
-                    expect(bS) == 1
-                    expect(cS) == 1
-                    expect(dS) == 1
+                    expect(bS) =~ 1
+                    expect(cS) =~ 1
+                    expect(dS) =~ 1
 
                     // when
                     a <- 2
 
                     // then
-                    expect(bS) == 2
-                    expect(cS) == 2
-                    expect(dS) == 2
+                    expect(bS) =~ 2
+                    expect(cS) =~ 2
+                    expect(dS) =~ 2
 
                     // when
                     a <- 1
 
                     // then
-                    expect(bS) == 3
-                    expect(cS) == 3
-                    expect(dS) == 3
+                    expect(bS) =~ 3
+                    expect(cS) =~ 3
+                    expect(dS) =~ 3
                 }
             }
 
@@ -309,9 +309,9 @@ class BasicSpec: QuickSpec {
                     a <- NSError(domain: "VinceRP", code: 1, userInfo: nil)
 
                     // then
-                    expect(errors) == 1
-                    expect(sideeffects) == 0
-                    expect(a.error().domain) == "VinceRP"
+                    expect(errors) =~ 1
+                    expect(sideeffects) =~ 0
+                    expect(a.error().domain) =~ "VinceRP"
                 }
 
                 it("works without storing the error handler") {
@@ -327,7 +327,7 @@ class BasicSpec: QuickSpec {
                     a <- e
 
                     // then
-                    expect(error).to(equal(e))
+                    expect(error).toEventually(equal(e))
                 }
 
 
@@ -344,7 +344,7 @@ class BasicSpec: QuickSpec {
                     a <- e
 
                     // then
-                    expect(error).to(equal(e))
+                    expect(error).toEventually(equal(e))
                 }
 
                 it("works with multiple error handlers") {
@@ -363,8 +363,8 @@ class BasicSpec: QuickSpec {
                     a <- NSError(domain: "domain.com", code: 1, userInfo: nil)
 
                     // then
-                    expect(e1) == 1
-                    expect(e2) == 1
+                    expect(e1) =~ 1
+                    expect(e2) =~ 1
                 }
 
             }

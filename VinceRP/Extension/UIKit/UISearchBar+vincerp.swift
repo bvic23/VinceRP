@@ -20,7 +20,7 @@ extension UISearchBar {
         set {
             newValue.onChange {
                 self.text = $0
-            }
+            }.dispatchOnMainQueue()
         }
     }
     

@@ -6,7 +6,7 @@
 public class Node: Hashable {
 
     private static var hashCounter = AtomicLong(0)
-    private let childrenHolder = SpinSet<WeakSet<Node>>(WeakSet())
+    private let childrenHolder = AtomicReference<WeakSet<Node>>(WeakSet())
     public let hashValue = Int(Node.hashCounter.getAndIncrement())  // Hashable
 
     public var children: Set<Node> {
@@ -40,21 +40,13 @@ public class Node: Hashable {
     }
 
     func linkChild(child: Node) {
-        childrenHolder.spinSet { c in
-            guard (c.hasElementPassingTest {$0 == child}) else {
-                c.insert(child)
-                return c
-            }
-            return c
+        if (!childrenHolder.value.hasElementPassingTest {$0 == child}) {
+            childrenHolder.value.insert(child)
         }
     }
 
     func unlinkChild(child: Node) {
-        childrenHolder.spinSet {
-            $0.filter {
-                $0 != child
-            }
-        }
+        childrenHolder.value =  childrenHolder.value.filter {$0 != child}
     }
 
     func ping(incoming: Set<Node>) -> Set<Node> {

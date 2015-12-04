@@ -16,7 +16,7 @@ public extension UIControl {
             newValue.onChange {
                 self.enabled = self.mapReactiveEnabled($0)
                 self.reactiveEnabledDidChange()
-            }
+            }.dispatchOnMainQueue()
         }
     }
     

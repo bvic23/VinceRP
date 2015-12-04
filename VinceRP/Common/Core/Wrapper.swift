@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-class Wrapper<T, A>: Spinlock<A> {
+class Wrapper<T, A>: Incrementing<A> {
     
     let source: Hub<T>
     
@@ -22,7 +22,7 @@ class Wrapper<T, A>: Spinlock<A> {
     }
     
     override func toTry() -> Try<A> {
-        return self.state().value.value
+        return self.state.value
     }
     
 }

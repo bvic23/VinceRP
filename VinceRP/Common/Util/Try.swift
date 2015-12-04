@@ -6,18 +6,14 @@
 
 public enum Try<T>: CustomStringConvertible {
 
-    case Success(Box<T>)
+    case Success(T)
     case Failure(NSError)
-
+    
     public init(_ error: NSError) {
         self = .Failure(error)
     }
 
     public init(_ value: T) {
-        self = .Success(Box(value))
-    }
-
-    public init(_ value: Box<T>) {
         self = .Success(value)
     }
 
@@ -36,8 +32,8 @@ public enum Try<T>: CustomStringConvertible {
 
     public func map<U>(transformFunc: T -> U) -> Try<U> {
         switch self {
-        case .Success(let box):
-            return .Success(Box(transformFunc(box.value)))
+        case .Success(let value):
+            return .Success(transformFunc(value))
         case .Failure(let error):
             return .Failure(error)
         }
@@ -45,12 +41,9 @@ public enum Try<T>: CustomStringConvertible {
 
     public var description : String {
         switch self {
-        case .Success(let box):
-            return "Success: \(box.value)"
-        case .Failure(let error):
-            return "Failure: \(error)"
+        case .Success(let value): return "\(value)"
+        case .Failure(let error): return "\(error)"
         }
     }
-
 }
 

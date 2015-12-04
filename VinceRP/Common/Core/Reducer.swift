@@ -5,16 +5,15 @@
 
 class Reducer<T>: Wrapper<T, T> {
     
-    private let transformer: (Try<T>, Try<T>) -> Try<T>
+    private let transformer: (UpdateState<T>, Try<T>) -> UpdateState<T>
     
-    init(_ source: Hub<T>, _ transformer: (Try<T>, Try<T>) -> Try<T>) {
+    init(_ source: Hub<T>, _ transformer: (UpdateState<T>, Try<T>) -> UpdateState<T>) {
         self.transformer = transformer
         super.init(source)
-        self.setState(SpinSet(SpinState(getStamp(), source.toTry())))
     }
     
-    override func makeState() -> SpinState<T> {
-        return SpinState(getStamp(), transformer(self.state().value.value, source.toTry()))
+    override func makeState() -> UpdateState<T> {
+        return transformer(self.state, source.toTry())
     }
     
 }
@@ -24,9 +23,9 @@ public extension Hub {
     public func filter(successPred: T -> Bool) -> Hub<T>  {
         return Reducer(self) { (x, y) in
             switch (x, y) {
-            case (_, .Success(let box)) where successPred(box.value): return .Success(box)
-            case (_, .Failure(let error)): return .Failure(error)
-            case(let old, _): return old
+            case (_, .Success(let value)) where successPred(value): return UpdateState(y)
+            case (_, .Failure(_)): return UpdateState(y)
+            default: return x
             }
         }
     }
@@ -36,23 +35,23 @@ public extension Hub {
             guard predicate(y) else {
                 return x
             }
-            return y
+            return UpdateState(y)
         }
     }
     
     public func reduce(combiner: (T, T) -> T) -> Hub<T> {
         return Reducer(self) { (x, y) in
-            switch (x, y) {
-            case (.Success(let a), .Success(let b)): return Try(combiner(a.value, b.value))
-            case (.Failure(_), .Success(let b)): return .Success(b)
-            case (.Success(_), .Failure(let b)): return .Failure(b)
-            case (.Failure(_), .Failure(let b)): return .Failure(b)
+            switch (x.value, y) {
+            case (.Success(let a), .Success(let b)): return UpdateState(Try(combiner(a, b)))
+            default: return UpdateState(y)
             }
         }
     }
     
-    public func reduceAll(combiner: (Try<T>, Try<T>) -> Try<T>) -> Hub<T> {
-        return Reducer(self, combiner)
+    public func reduceAll(combiner: (UpdateState<T>, Try<T>) -> Try<T>) -> Hub<T> {
+        return Reducer(self) { (x, y) in
+            UpdateState(combiner(x, y))
+        }
     }
 
 }

@@ -19,7 +19,7 @@ extension NSTextField {
         set {
             newValue.onChange {
                 self.stringValue = $0
-            }
+            }.dispatchOnMainQueue()
         }
     }
 

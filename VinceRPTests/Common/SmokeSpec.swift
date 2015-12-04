@@ -25,7 +25,7 @@ class SmokeSpec: QuickSpec {
                     let a = reactive(1)
 
                     // then
-                    expect(a*) == 1
+                    expect(a*) =~ 1
                 }
 
                 it("updates it's value") {
@@ -36,7 +36,7 @@ class SmokeSpec: QuickSpec {
                     a <- 6
 
                     // then
-                    expect(a*) == 6
+                    expect(a*) =~ 6
                 }
 
                 it("updates it's value using double arrow") {
@@ -47,7 +47,7 @@ class SmokeSpec: QuickSpec {
                     a <- 6 <- 3
 
                     // then
-                    expect(a*) == 3
+                    expect(a*) =~ 3
                 }
 
                 it("updates it's value from a function") {
@@ -58,7 +58,7 @@ class SmokeSpec: QuickSpec {
                     a <- function(1)
 
                     // then
-                    expect(a*) == 4
+                    expect(a*) =~ 4
                 }
 
             }
@@ -76,7 +76,7 @@ class SmokeSpec: QuickSpec {
                     }
 
                     // then
-                    expect(c*) == 3
+                    expect(c*) =~ 3
                 }
 
                 it("updates it's value on parent gets update") {
@@ -92,7 +92,7 @@ class SmokeSpec: QuickSpec {
                     a <- 2
 
                     // then
-                    expect(c*) == 4
+                    expect(c*) =~ 4
                     
                 }
 
@@ -109,7 +109,7 @@ class SmokeSpec: QuickSpec {
                     b <- 3
 
                     // then
-                    expect(c*) == 5
+                    expect(c*) =~ 5
                 }
 
             }
@@ -127,7 +127,7 @@ class SmokeSpec: QuickSpec {
                     }
 
                     // then
-                    expect(counter) == 1
+                    expect(counter) =~ 1
                 }
 
                 it("runs sideeffect when parent gets update") {
@@ -143,7 +143,7 @@ class SmokeSpec: QuickSpec {
                     a <- 2
 
                     // then
-                    expect(counter) == 2
+                    expect(counter) =~ 2
                 }
 
                 it("runs sideeffect on hub gets update") {
@@ -160,11 +160,12 @@ class SmokeSpec: QuickSpec {
 
                     // when
                     a <- 8
+                    expect(c*) =~ "test8+2"
                     b <- 6
 
                     // then
-                    expect(c*) == "test8+6"
-                    expect(counter) == 3
+                    expect(c*) =~ "test8+6"
+                    expect(counter) =~ 3
                 }
                 
                 it("runs sideeffect on complex") {
@@ -185,12 +186,15 @@ class SmokeSpec: QuickSpec {
                     
                     // when
                     a <- 8
+                    
+                    expect(c*) =~ "pest=8+2"
+                    
                     b <- 6
                     
                     // then
-                    expect(c*) == "pest=8+6"
-                    expect(f*) == "budapest=8+6"
-                    expect(counter) == 3
+                    expect(c*) =~ "pest=8+6"
+                    expect(f*) =~ "budapest=8+6"
+                    expect(counter) =~ 3
                 }
                 
                 it("is happy without default value") {
@@ -198,20 +202,20 @@ class SmokeSpec: QuickSpec {
                     let a: Source<Int> = reactive()
                     
                     // then
-                    expect(a.hasValue()) == false
+                    expect(a.hasValue()) =~ false
                     
                     // when
                     a <- 1
                     
                     // then
-                    expect(a*) == 1
-                    expect(a.hasValue()) == true
+                    expect(a*) =~ 1
+                    expect(a.hasValue()) =~ true
                     
                     // when
                     a <- fakeError
                     
                     // then
-                    expect(a.hasValue()) == true
+                    expect(a.hasValue()) =~ true
                 }
                 
                 
@@ -220,7 +224,7 @@ class SmokeSpec: QuickSpec {
                     let a: Source<Int?> = reactive(1)
                     
                     // then
-                    expect(a*) == 1
+                    expect(a*) =~ 1
                     
                     // when
                     a <- nil
@@ -232,7 +236,7 @@ class SmokeSpec: QuickSpec {
                     a <- fakeError
                     
                     // then
-                    expect(a.toTry().isFailure()) == true
+                    expect(a.toTry().isFailure()) =~ true
                 }
 
             }

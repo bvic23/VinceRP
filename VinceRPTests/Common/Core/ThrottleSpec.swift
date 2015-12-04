@@ -16,15 +16,18 @@ class ThrottleSpec: QuickSpec {
             // given
             let x = reactive(0)
             let y = x.throttle(0.1)
-            
+
+            // then
+            expect(y*) =~ 0
+
             // when
             x <- 1
             
             // then
-            expect(y*) == 0
+            expect(y*) =~ 0
             
             // then
-            expect(y*).toEventually(equal(1))
+            expect(y*) =~ 1
         }
         
     }

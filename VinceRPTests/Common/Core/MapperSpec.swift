@@ -20,15 +20,15 @@ class MapperSpec: QuickSpec {
             let s = y.map { $0 + 3 }
             
             // then
-            expect(z*) == 20
-            expect(s*) == 15
+            expect(z*) =~ 20
+            expect(s*) =~ 15
             
             // when
             x <- 1
             
             // then
-            expect(z*) == 2
-            expect(s*) == 6
+            expect(z*) =~ 2
+            expect(s*) =~ 6
         }
         
         it("handles division by zero") {
@@ -40,8 +40,8 @@ class MapperSpec: QuickSpec {
                 (numerator*, denominator*)
             }.mapAll { (p:Try<(Int, Int)>) -> Try<Int> in
                 switch p {
-                    case .Success(let box):
-                        let (n, d) = box.value
+                    case .Success(let value):
+                        let (n, d) = value
                         if d == 0 {
                             return Try(NSError(domain: "division by zero", code: -0, userInfo: nil))
                         }
@@ -50,18 +50,20 @@ class MapperSpec: QuickSpec {
                 }
             }
             
+            expect(frac*) =~ 4
+            
             // when
             denominator <- 0
             
             // then
-            expect(frac.toTry().isFailure()) == true
+            expect(frac.toTry().isFailure()).toEventually(beTrue())
 
             // when
             denominator <- 2
             
             // then
-            expect(frac*) == 2
-
+            expect(frac.toTry().isSuccess()).toEventually(beTrue())
+            expect(frac*) =~ 2
         }
         
     }
