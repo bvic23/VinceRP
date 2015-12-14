@@ -2,6 +2,26 @@
 // Created by Viktor Belenyesi on 18/04/15.
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
+// https://github.com/scala/scala/blob/2.11.x/src/library/scala/ref/WeakReference.scala
+
+class WeakReference<T: AnyObject where T: Hashable>: Hashable {
+    weak var value: T?
+    
+    init(_ value: T) {
+        self.value = value
+    }
+    
+    var hashValue: Int {
+        guard let v = self.value else {
+            return 0
+        }
+        return v.hashValue
+    }
+}
+
+func ==<T>(lhs: WeakReference<T>, rhs: WeakReference<T>) -> Bool {
+    return lhs.hashValue == rhs.hashValue
+}
 
 public class WeakSet<T: Hashable where T: AnyObject> {
     private var _array: [WeakReference<T>]

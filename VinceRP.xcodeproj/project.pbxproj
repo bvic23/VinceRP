@@ -68,7 +68,6 @@
 		791F310E1C0392C0004AA9E2 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31001C0392C0004AA9E2 /* Try.swift */; };
 		791F310F1C0392C0004AA9E2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
-		791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31031C0392C0004AA9E2 /* WeakReference.swift */; };
 		791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
 		791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
 		791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
@@ -80,7 +79,6 @@
 		791F311C1C0392CB004AA9E2 /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31001C0392C0004AA9E2 /* Try.swift */; };
 		791F311D1C0392CB004AA9E2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
-		791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31031C0392C0004AA9E2 /* WeakReference.swift */; };
 		791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
 		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
 		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
@@ -224,7 +222,6 @@
 		791F31001C0392C0004AA9E2 /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Try.swift; path = ../vincerp/Common/Util/Try.swift; sourceTree = "<group>"; };
 		791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRPNSObjectHelper.h; path = ../vincerp/Common/Util/VRPNSObjectHelper.h; sourceTree = "<group>"; };
 		791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRPNSObjectHelper.m; path = ../vincerp/Common/Util/VRPNSObjectHelper.m; sourceTree = "<group>"; };
-		791F31031C0392C0004AA9E2 /* WeakReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReference.swift; path = ../vincerp/Common/Util/WeakReference.swift; sourceTree = "<group>"; };
 		791F31041C0392C0004AA9E2 /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakSet.swift; path = ../vincerp/Common/Util/WeakSet.swift; sourceTree = "<group>"; };
 		791F31211C03947D004AA9E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+didChange.swift"; path = "vincerp/Extension/AppKit/NSTextField+didChange.swift"; sourceTree = SOURCE_ROOT; };
@@ -396,7 +393,6 @@
 				791F31001C0392C0004AA9E2 /* Try.swift */,
 				791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */,
 				791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */,
-				791F31031C0392C0004AA9E2 /* WeakReference.swift */,
 				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
 			);
 			name = Util;
@@ -1116,7 +1112,6 @@
 				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
-				791F311F1C0392CB004AA9E2 /* WeakReference.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
 				791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */,
@@ -1188,7 +1183,6 @@
 				791F30EE1C0392A7004AA9E2 /* DynamicVariable.swift in Sources */,
 				791F30C91C039273004AA9E2 /* Hub.swift in Sources */,
 				795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */,
-				791F31111C0392C0004AA9E2 /* WeakReference.swift in Sources */,
 				791F30CF1C039273004AA9E2 /* Hub+operators.swift in Sources */,
 				791F30CA1C039273004AA9E2 /* Mapper.swift in Sources */,
 				791F30C61C039273004AA9E2 /* ChangeObserver.swift in Sources */,
