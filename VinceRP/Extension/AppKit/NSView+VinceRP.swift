@@ -9,7 +9,7 @@ public extension NSView {
 
     public var reactiveHidden: Hub<Bool> {
         get {
-            return reactiveProperty(forProperty: "hidden", initValue: true)
+            return reactiveProperty(forProperty: "hidden", initValue: self.hidden)
         }
 
         set {

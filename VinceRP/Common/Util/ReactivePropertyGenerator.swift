@@ -20,11 +20,14 @@ public class ReactivePropertyGenerator {
         return propertyMap[key] as! Source<T>?
     }
 
-    static func synthesizeEmitter<T>(initValue: T) -> Source<T> {
-        return Source<T>(initValue: initValue)
+    static func synthesizeEmitter<T>(initValue: T?) -> Source<T> {
+        guard let i = initValue else {
+            return Source<T>()
+        }
+        return Source<T>(initValue: i)
     }
 
-    static func synthesizeObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T) -> PropertyObserver {
+    static func synthesizeObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> PropertyObserver {
         return PropertyObserver(targetObject: targetObject as! NSObject, propertyName: propertyName) { (currentTargetObject: NSObject, currentPropertyName:String, currentValue:AnyObject)  in
             if let existingEmitter:Source<T> = getEmitter(currentTargetObject, propertyName: propertyName) {
                 existingEmitter.update(currentValue as! T)
@@ -32,21 +35,21 @@ public class ReactivePropertyGenerator {
         }
     }
 
-    static func createEmitter<T>(targetObject: AnyObject, propertyName: String, initValue: T) -> Source<T> {
+    static func createEmitter<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> Source<T> {
         let result = synthesizeEmitter(initValue)
         let key = getKey(targetObject, propertyName: propertyName)
         propertyMap[key] = result
         return result
     }
 
-    static func createObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T) -> PropertyObserver {
+    static func createObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> PropertyObserver {
         let result = synthesizeObserver(targetObject, propertyName: propertyName, initValue: initValue)
         let key = getKey(targetObject, propertyName: propertyName)
         observerMap[key] = result
         return result
     }
 
-    public static func source<T>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Source<T> {
+    public static func source<T>(targetObject: AnyObject, propertyName: String, initValue: T?, initializer: ((Source<T>) -> ())? = nil) -> Source<T> {
         if let emitter:Source<T> = getEmitter(targetObject, propertyName: propertyName) {
             return emitter
         }
@@ -58,7 +61,7 @@ public class ReactivePropertyGenerator {
         return emitter
     }
 
-    public static func property<T>(targetObject: AnyObject, propertyName: String, initValue: T, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
+    public static func property<T>(targetObject: AnyObject, propertyName: String, initValue: T?, initializer: ((Source<T>) -> ())? = nil) -> Hub<T> {
         let result = source(targetObject, propertyName: propertyName, initValue: initValue, initializer: initializer)
         createObserver(targetObject, propertyName: propertyName, initValue: initValue)
         return result as Hub<T>
