@@ -8,17 +8,18 @@ public class Hub<T>: Node {
     var dispatchQueue: dispatch_queue_t!
     
     func currentValue() -> T {
-        switch (toTry()) {
-        case .Success(let value): return value
-        case .Failure(let error): NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
+        if case .Success(let value) = toTry() {
+            return value
+        }
+        if case .Failure(let error) = toTry() {
+            NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
         }
         fatalError(UNREACHABLE_CODE)
     }
     
     override public func error() -> NSError {
-        switch (toTry()) {
-        case .Failure(let error): return error
-        case .Success(_): fatalError(UNREACHABLE_CODE)
+        if case .Failure(let error) = toTry() {
+            return error
         }
         fatalError(UNREACHABLE_CODE)
     }
@@ -58,15 +59,11 @@ public class Hub<T>: Node {
     }
     
     public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver {
-        return onChangeDo(self, skipInitial: skipInitial) {
-            callback($0)
-        }
+        return onChangeDo(self, skipInitial: skipInitial, callback: callback)
     }
     
     public func onError(callback: (NSError) -> ()) -> ErrorObserver {
-        return onErrorDo(self) {
-            callback($0)
-        }
+        return onErrorDo(self, callback: callback)
     }
     
 }
