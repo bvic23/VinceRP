@@ -37,6 +37,10 @@ class LoginViewControler: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
+        self.emailField.reactiveText.throttle(0.5).name("email").log {
+            "\($0)"
+        }
+        
         // Make this button blue when enabled and gray when disabled
         setupLoginButtonUI()
         
