@@ -16,20 +16,22 @@ struct NamedHub<T> {
         self.name = name
         self.hub = hub
         loggables.append(self)
-
     }
     
     func log(format: Format? = nil) -> Hub<T> {
-        var f = format
-        if f == nil {
-            f =  {
-                "\($0)"
-            }
-        }
+        let f = defaultFormatIfNil(format)
         self.hub.onChange { i in
-            print("\(self.name)> \(f!(i))")
+            let formattedMessage = f(i)
+            print("\(self.name)> \(formattedMessage)")
         }
         return self.hub
+    }
+    
+    private func defaultFormatIfNil(format: Format? = nil) -> Format {
+        guard let f = format else {
+            return { "\($0)" }
+        }
+        return f
     }
 
 }
