@@ -37,10 +37,7 @@ class LoginViewControler: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        self.emailField.reactiveText.throttle(0.5).name("email").log {
-            "\($0)"
-        }
-        
+        self.emailField.reactiveText.throttle(0.5).name("email").log()
         // Make this button blue when enabled and gray when disabled
         setupLoginButtonUI()
         
@@ -84,6 +81,10 @@ class LoginViewControler: UIViewController {
             // Show it
             self.presentViewController(alertController, animated: true, completion: nil)
         }.dispatchOnMainQueue()
+        
+        self.loginButton.executing.filter{ $0 == true }.name("loginButton").log {
+            "tap> \($0)"
+        }
         
         // Add a clickhandler
         self.loginButton.clickHandler = definedAs { handler in // Because this block can contain any kind of threading
