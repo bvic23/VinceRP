@@ -8,35 +8,34 @@ import VinceRP
 private var loggables = [Any]()
 typealias Format = (Any) -> String
 
-struct NamedHub<T> {
+class NamedHub<T> {
     private let name: String
-    private let hub: Hub<T>
+    private var format: Format
+    private var hub: Hub<T>
     
     init(name: String, hub: Hub<T>) {
         self.name = name
         self.hub = hub
+        self.format = { "\($0)" }
+        
+        hub.onChange { message in
+            let formattedMessage = self.format(message)
+            print("\(self.name)> \(formattedMessage)")
+        }
+        
         loggables.append(self)
     }
     
     func log(format: Format? = nil) -> Hub<T> {
-        let f = defaultFormatIfNil(format)
-        self.hub.onChange { i in
-            let formattedMessage = f(i)
-            print("\(self.name)> \(formattedMessage)")
+        if let f = format {
+            self.format = f
         }
         return self.hub
-    }
-    
-    private func defaultFormatIfNil(format: Format? = nil) -> Format {
-        guard let f = format else {
-            return { "\($0)" }
-        }
-        return f
     }
 
 }
 
-extension Hub where T: Any {
+extension Hub {
 
     func name(name: String) -> NamedHub<T> {
         return NamedHub(name: name, hub: self)
