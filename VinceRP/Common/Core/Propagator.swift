@@ -16,7 +16,19 @@ public class Propagator {
     static func propagate(nodes: [NodeTuple]) {
         self.propagate(Set(nodes))
     }
+    
+    static func propagate(setCalc: () -> Set<NodeTuple>) {
+        self.dispatch {
+            self.propagateSync(setCalc())
+        }
+    }
 
+    static func propagate(setCalc: () -> [NodeTuple]) {
+        self.dispatch {
+            self.propagateSync(Set(setCalc()))
+        }
+    }
+    
     static func propagate(nodes: Set<NodeTuple>) {
         self.dispatch {
             self.propagateSync(nodes)
