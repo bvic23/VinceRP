@@ -64,8 +64,8 @@ class DynamicVariableSpec: QuickSpec {
                 }.start()
 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-2: 20"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-2: 20"
             }
 
             it("shares the same variable in same thread") {
@@ -76,8 +76,8 @@ class DynamicVariableSpec: QuickSpec {
                 }.start()
 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-1: 20"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-1: 20"
             }
 
             // This test does not pass since there is no hiearchy between NSThreads
@@ -98,8 +98,8 @@ class DynamicVariableSpec: QuickSpec {
                 }
                 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-2: 10"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-2: 10"
             }
             */
         }

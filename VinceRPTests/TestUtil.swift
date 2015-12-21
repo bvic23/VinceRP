@@ -9,7 +9,12 @@ import Quick
 import Nimble
 
 infix operator =~ { associativity left precedence 130 }
+
 func =~<T: Equatable> (left: Expectation<T>, right: T?) -> Void {
+    return left.toEventually(equal(right))
+}
+
+func =~<T: Equatable> (left: Expectation<[T]>, right: [T]?) -> Void {
     return left.toEventually(equal(right))
 }
 

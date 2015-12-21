@@ -3,7 +3,6 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-// TODO: add tests
 public protocol Dispatchable {
     typealias D
     

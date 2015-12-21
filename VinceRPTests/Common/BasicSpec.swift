@@ -327,7 +327,7 @@ class BasicSpec: QuickSpec {
                     a <- e
 
                     // then
-                    expect(error).toEventually(equal(e))
+                    expect(error) =~ e
                 }
 
 
@@ -344,7 +344,7 @@ class BasicSpec: QuickSpec {
                     a <- e
 
                     // then
-                    expect(error).toEventually(equal(e))
+                    expect(error) =~ e
                 }
 
                 it("works with multiple error handlers") {
