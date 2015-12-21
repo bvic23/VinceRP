@@ -5,7 +5,6 @@
 
 import UIKit
 
-// TODO: Add tests for eventhandlers
 public typealias ClickHandler = (UIButton) -> ()
 
 public class ClickHandlerAction: Dispatchable {

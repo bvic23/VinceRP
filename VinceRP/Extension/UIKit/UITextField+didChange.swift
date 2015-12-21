@@ -21,6 +21,7 @@ extension UITextField {
     }
     
     public func removeAllChangeHandler() {
+        self.removeTarget(self, action: Selector("eventHandler:"), forControlEvents: .EditingChanged)
         eventHandlers[self] = []
     }
     

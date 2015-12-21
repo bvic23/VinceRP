@@ -22,6 +22,7 @@ extension NSTextField {
     }
 
     public func removeAllChangeHandler() {
+        self.target = nil
         eventHandlers[self] = []
     }
     

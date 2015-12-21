@@ -10,18 +10,22 @@ private var eventHandlers = [UISearchBar: [EventHandler]]()
 
 extension UISearchBar {
     
-    public func addChangeHandler(actionBlock: (UISearchBar) -> ()) {
+    public func addChangeHandler(handler: (UISearchBar) -> ()) {
         if let handlers = eventHandlers[self] {
-            eventHandlers[self] = handlers.arrayByAppending(actionBlock)
+            eventHandlers[self] = handlers.arrayByAppending(handler)
         } else {
-            eventHandlers[self] = [actionBlock]
+            eventHandlers[self] = [handler]
         }
         self.delegate = self
     }
 
+    public func removeAllChangeHandler() {
+        self.delegate = nil
+        eventHandlers[self] = []
+    }
+    
 }
 
-// TODO: add removeChangeHandler
 extension UISearchBar : UISearchBarDelegate {
     
     public func searchBar(sender: UISearchBar, textDidChange searchText: String) {
