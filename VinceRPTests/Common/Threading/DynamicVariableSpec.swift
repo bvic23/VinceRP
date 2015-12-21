@@ -8,27 +8,6 @@
 import Quick
 import Nimble
 
-class Runnable {
-    typealias Closure = () -> ()
-    let closure: Closure
-    let name: String
-
-    init(_ name:String, _ closure: Closure) {
-        self.name = name
-        self.closure = closure
-    }
-
-    @objc func run() {
-        NSThread.currentThread().name = self.name
-        self.closure()
-    }
-
-    func start() {
-        let thread = NSThread(target:self, selector:"run", object:nil)
-        thread.start()
-    }
-}
-
 class DynamicVariableSpec: QuickSpec {
 
     override func spec() {

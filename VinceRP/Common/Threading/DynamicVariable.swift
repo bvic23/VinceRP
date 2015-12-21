@@ -23,7 +23,7 @@ public class DynamicVariable<T> {
     }
 
     public init(_ value: T?) {
-        self.threadLocal = ThreadLocal(value: value, key: "DynamicVariable")
+        self.threadLocal = ThreadLocal(key: "DynamicVariable", value: value)
     }
 
     public func withValue<S>(newval: T, @noescape _ thunk: () -> S) -> S {

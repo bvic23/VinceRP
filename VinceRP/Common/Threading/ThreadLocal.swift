@@ -17,7 +17,7 @@ public class ThreadLocal<T> {
     
     private let key: NSString
 
-    public init(value: T?, key: NSString) {
+    public init(key: NSString, value: T? = nil) {
         self.key = key
         self.value = value
     }
