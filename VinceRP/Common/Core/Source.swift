@@ -47,9 +47,8 @@ public class Source<T>: Hub<T> {
     
     public func hasValue() -> Bool {
         if !isSuccess()  {
-            switch toTry() {
-            case .Success(_): return true
-            case .Failure(let e): return e !== noValueError
+            if case .Failure(let e) = toTry() {
+                return e !== noValueError
             }
         }
         return true
