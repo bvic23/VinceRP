@@ -58,7 +58,37 @@ class HubOperatorsSpec: QuickSpec {
             // then
             expect(history).toEventually(equal([2, 4]))
         }
+        
+        it("distincts the same elements") {
+            // given
+            let x = reactive(1)
+            let y = x.distinct()
+            var c = 0
+            y.onChange(skipInitial: true) { _ in
+                c++
+            }
+            
+            // when
+            x <- 1
+            x <- 1
+            
+            // then
+            expect(c) =~ 0
+            
+            // when
+            x <- 2
+            
+            // then
+            expect(c) =~ 1
+            
+            // when
+            x <- 2
+            x <- 1
+            x <- 2
 
+            // then
+            expect(c) =~ 3
+        }
         
     }
     
