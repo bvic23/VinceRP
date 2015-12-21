@@ -5,12 +5,12 @@
 
 import AppKit
 
-public typealias EventHandler = (NSTextField) -> ()
+private typealias EventHandler = (NSTextField) -> ()
 private var eventHandlers = [NSTextField: [EventHandler]]()
 
 extension NSTextField {
 
-    public func addChangeHandler(handler: EventHandler) {
+    public func addChangeHandler(handler: (NSTextField) -> ()) {
         if let handlers = eventHandlers[self] {
             eventHandlers[self] = handlers.arrayByAppending(handler)
         } else {

@@ -10,17 +10,20 @@ private var eventHandlers = [UITextField: [EventHandler]]()
 
 extension UITextField {
     
-    public func addChangeHandler(actionBlock: (UITextField) -> ()) {
+    public func addChangeHandler(handler: (UITextField) -> ()) {
         if let handlers = eventHandlers[self] {
-            eventHandlers[self] = handlers.arrayByAppending(actionBlock)
+            eventHandlers[self] = handlers.arrayByAppending(handler)
         } else {
-            eventHandlers[self] = [actionBlock]
+            eventHandlers[self] = [handler]
         }
         
         self.addTarget(self, action: Selector("eventHandler:"), forControlEvents: .EditingChanged)
     }
     
-    // TODO: add removeChangeHandler
+    public func removeAllChangeHandler() {
+        eventHandlers[self] = []
+    }
+    
     public func eventHandler(sender: UITextField) {
         if let handlers = eventHandlers[sender] {
             for handler in handlers {
