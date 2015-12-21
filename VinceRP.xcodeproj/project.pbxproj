@@ -106,6 +106,8 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
+		797C15D41C280BCE007C234A /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C15D31C280BCE007C234A /* UpdateState.swift */; };
+		797C15D51C280BE1007C234A /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C15D31C280BCE007C234A /* UpdateState.swift */; };
 		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
 		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
 		798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
@@ -134,8 +136,6 @@
 		79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		79FF03EA1C0DE26B0096B050 /* Incrementing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E91C0DE26B0096B050 /* Incrementing.swift */; };
 		79FF03EB1C0DE26B0096B050 /* Incrementing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E91C0DE26B0096B050 /* Incrementing.swift */; };
-		79FF03ED1C0DE28E0096B050 /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03EC1C0DE28E0096B050 /* UpdateState.swift */; };
-		79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03EC1C0DE28E0096B050 /* UpdateState.swift */; };
 		ADEAF1F23443C1A82FB7EBDA /* UIButton+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */; };
 		ADEAF8C21D91DB39C2B410D1 /* UITextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */; };
 /* End PBXBuildFile section */
@@ -248,6 +248,7 @@
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
+		797C15D31C280BCE007C234A /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateState.swift; path = Common/Core/UpdateState.swift; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
 		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
@@ -268,7 +269,6 @@
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
 		79FF03E91C0DE26B0096B050 /* Incrementing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Incrementing.swift; path = Common/Core/Incrementing.swift; sourceTree = "<group>"; };
-		79FF03EC1C0DE28E0096B050 /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateState.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
@@ -353,6 +353,7 @@
 				791F30B91C039273004AA9E2 /* ErrorObserver.swift */,
 				791F30BA1C039273004AA9E2 /* Hub.swift */,
 				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
+				79FF03E91C0DE26B0096B050 /* Incrementing.swift */,
 				791F30BB1C039273004AA9E2 /* Mapper.swift */,
 				791F30BC1C039273004AA9E2 /* Node.swift */,
 				791F30BD1C039273004AA9E2 /* NodeTuple.swift */,
@@ -360,9 +361,8 @@
 				791F30BF1C039273004AA9E2 /* Reducer.swift */,
 				791F30C11C039273004AA9E2 /* Source.swift */,
 				791F30C31C039273004AA9E2 /* Throttle.swift */,
+				797C15D31C280BCE007C234A /* UpdateState.swift */,
 				791F30C41C039273004AA9E2 /* Wrapper.swift */,
-				79FF03E91C0DE26B0096B050 /* Incrementing.swift */,
-				79FF03EC1C0DE28E0096B050 /* UpdateState.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1093,6 +1093,7 @@
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
 				791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */,
+				797C15D51C280BE1007C234A /* UpdateState.swift in Sources */,
 				791F311B1C0392CB004AA9E2 /* ReactivePropertyGenerator.swift in Sources */,
 				791F31191C0392CB004AA9E2 /* FunctionalDictionary.swift in Sources */,
 				791F30F01C0392AC004AA9E2 /* AtomicLong.swift in Sources */,
@@ -1110,7 +1111,6 @@
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
 				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
 				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
-				79FF03EE1C0DE28E0096B050 /* UpdateState.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
@@ -1147,7 +1147,6 @@
 				797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */,
 				791F310B1C0392C0004AA9E2 /* FunctionalDictionary.swift in Sources */,
 				791F30C81C039273004AA9E2 /* ErrorObserver.swift in Sources */,
-				79FF03ED1C0DE28E0096B050 /* UpdateState.swift in Sources */,
 				791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */,
 				791F30C71C039273004AA9E2 /* Dynamic.swift in Sources */,
 				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
@@ -1176,6 +1175,7 @@
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
 				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
+				797C15D41C280BCE007C234A /* UpdateState.swift in Sources */,
 				791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */,
 				791F310C1C0392C0004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */,

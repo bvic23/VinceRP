@@ -12,6 +12,7 @@
 + (void)try2InvokeBlock:(void(^)(void))try2Block catch2:(void(^)(NSException*))catch2Block finally:(void(^)(void))finallyBlock {
     NSAssert(try2Block != NULL, @"try2 block cannot be null");
     NSAssert(catch2Block != NULL || finallyBlock != NULL, @"catch2 or finally block must be provided");
+    
     @try {
         try2Block();
     }

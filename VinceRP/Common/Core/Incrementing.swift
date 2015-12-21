@@ -22,17 +22,13 @@ public class Incrementing<T>: Hub<T> {
     }
     
     func makeState() -> UpdateState<T> {
-        fatalError(ABSTRACT_METHOD)
+        abstractMethod()
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         let newState = makeState()
         
         if newState.id <= _state.value.id {
-            return Set()
-        }
-        
-        if newState.value.description == _state.value.value.description {
             return Set()
         }
         
