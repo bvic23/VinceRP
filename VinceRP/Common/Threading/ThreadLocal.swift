@@ -27,7 +27,6 @@ public class ThreadLocal<T> {
             if let v = newValue {
                 NSThread.currentThread().threadDictionary[key] = Box(v)
             } else {
-                // TODO: add test
                 NSThread.currentThread().threadDictionary.removeObjectForKey(key)
             }
         }
