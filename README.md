@@ -176,6 +176,38 @@ print(a.value()) //  true
 print(a.not().value()) //  false
 ```
 
+###distinct
+
+It is applicable for `Equatable` streams and negates the values.
+
+```swift
+// Define a reactive stream variable with '1' as initial value
+let a = reactive(1)
+
+// Define a calculated variable with 'distinct' modifier which ensures it won’t react unless the value has actually changed
+let b = a.distinct()
+
+// Let's count the changes of b
+let counter = 0
+b.onChange(skipInitial: true) { _ in counter++ }
+
+// It's value is 1
+print(c) //  0
+
+// If we push an equal (same) value
+a <- 1
+
+// c is still 0
+print(c) //  0
+
+// If we push a different value
+a <- 2
+
+// c becomes 1
+print(c) //  1
+
+```
+
 ###skipErrors
 
 ```swift
