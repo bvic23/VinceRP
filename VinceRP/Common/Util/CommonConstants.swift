@@ -3,5 +3,10 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-let ABSTRACT_METHOD = "Abstract method: override me"
-let UNREACHABLE_CODE = "Unreachable code: you should not see this"
+@noreturn internal func abstractMethod(fn: String = __FUNCTION__) {
+    fatalError("\(fn) must be overriden in subclass implementations")
+}
+
+@noreturn internal func unreachableCode(fn: String = __FUNCTION__) {
+    fatalError("This part of \(fn) must be unreachable, yous should not see this")
+}

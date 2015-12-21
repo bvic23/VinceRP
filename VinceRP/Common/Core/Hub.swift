@@ -12,15 +12,15 @@ public class Hub<T>: Node {
         case .Success(let value): return value
         case .Failure(let error): NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
         }
-        fatalError(UNREACHABLE_CODE)
+        unreachableCode()
     }
     
     override public func error() -> NSError {
         switch (toTry()) {
         case .Failure(let error): return error
-        case .Success(_): fatalError(UNREACHABLE_CODE)
+        case .Success(_): unreachableCode()
         }
-        fatalError(UNREACHABLE_CODE)
+        unreachableCode()
     }
     
     public func value() -> T {
@@ -43,7 +43,7 @@ public class Hub<T>: Node {
     }
     
     public func toTry() -> Try<T> {
-        fatalError(ABSTRACT_METHOD)
+        abstractMethod()
     }
     
     public func killAll() {

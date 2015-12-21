@@ -36,7 +36,7 @@ public class Node: Hashable {
     }
 
     func error() -> NSError {
-        fatalError(ABSTRACT_METHOD)
+        abstractMethod()
     }
 
     func linkChild(child: Node) {
@@ -50,7 +50,7 @@ public class Node: Hashable {
     }
 
     func ping(incoming: Set<Node>) -> Set<Node> {
-        fatalError(ABSTRACT_METHOD)
+        abstractMethod()
     }
     
     private var alive = true
