@@ -5,33 +5,6 @@
 
 import UIKit
 
-// TODO: Add tests for eventhandlers
-// TODO: move separate file
-public typealias ClickHandler = (UIButton) -> ()
-
-public class ClickHandlerAction: Dispatchable {
-    let handler: ClickHandler
-    var dispatchQueue: dispatch_queue_t!
-    
-    init(handler: ClickHandler) {
-        self.handler = handler
-    }
-    
-    func execute(button:UIButton) {
-        self.handler(button)
-    }
-    
-    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> ClickHandlerAction {
-        self.dispatchQueue = dispatchQueue
-        return self
-    }
-    
-}
-
-public func definedAs(handler: ClickHandler) -> ClickHandlerAction {
-    return ClickHandlerAction(handler: handler)
-}
-
 private var eventHandlers: [UIButton: ClickHandlerAction]  = [UIButton: ClickHandlerAction]()
 private let clickHandlerMethodName = "onClick:"
 

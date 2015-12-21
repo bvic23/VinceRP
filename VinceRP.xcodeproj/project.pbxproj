@@ -106,6 +106,7 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
+		7972D7811C282127000B7894 /* ClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972D7801C282127000B7894 /* ClickHandler.swift */; };
 		7972D7831C2821D7000B7894 /* ThreadLocalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */; };
 		7972D7841C2821D9000B7894 /* ThreadLocalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */; };
 		797C15D41C280BCE007C234A /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C15D31C280BCE007C234A /* UpdateState.swift */; };
@@ -250,6 +251,7 @@
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
+		7972D7801C282127000B7894 /* ClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickHandler.swift; sourceTree = "<group>"; };
 		7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocalSpec.swift; path = Common/Threading/ThreadLocalSpec.swift; sourceTree = "<group>"; };
 		797C15D31C280BCE007C234A /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateState.swift; path = Common/Core/UpdateState.swift; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
@@ -635,17 +637,18 @@
 		ADEAF166AA1D8EC3BCD62741 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7972D7801C282127000B7894 /* ClickHandler.swift */,
 				795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */,
 				ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */,
 				795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */,
 				797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */,
+				02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */,
 				79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */,
 				79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */,
 				797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */,
 				79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */,
 				ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */,
 				795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */,
-				02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1154,6 +1157,7 @@
 				791F30C81C039273004AA9E2 /* ErrorObserver.swift in Sources */,
 				791F30ED1C0392A7004AA9E2 /* Dispatchable.swift in Sources */,
 				791F30C71C039273004AA9E2 /* Dynamic.swift in Sources */,
+				7972D7811C282127000B7894 /* ClickHandler.swift in Sources */,
 				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30CB1C039273004AA9E2 /* Node.swift in Sources */,
 				791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */,
