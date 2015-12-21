@@ -16,6 +16,17 @@ public extension Hub where T: Equatable {
     public func ignore(ignorabeValues: T) -> Hub<T> {
         return self.filter { $0 != ignorabeValues }
     }
+
+    public func distinct() -> Hub<T> {
+        return Reducer(self) { (x, y) in
+            switch (x.value, y) {
+            case (.Success(let v1), .Success(let v2)) where v1 != v2: return UpdateState(y)
+            case (.Failure(_), _): return UpdateState(y)
+            case (_, .Failure(_)): return UpdateState(y)
+            default: return x
+            }
+        }
+    }
     
 }
 
