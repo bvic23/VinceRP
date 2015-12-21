@@ -12,8 +12,30 @@ public class Propagator {
     
     public static var async: Bool = false
     public static let propagationQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+
+    static func propagate(nodes: [NodeTuple]) {
+        self.propagate(Set(nodes))
+    }
     
-    static func dispatch(block: () -> ()) {
+    static func propagate(setCalc: () -> Set<NodeTuple>) {
+        self.dispatch {
+            self.propagateSync(setCalc())
+        }
+    }
+
+    static func propagate(setCalc: () -> [NodeTuple]) {
+        self.dispatch {
+            self.propagateSync(Set(setCalc()))
+        }
+    }
+    
+    static func propagate(nodes: Set<NodeTuple>) {
+        self.dispatch {
+            self.propagateSync(nodes)
+        }
+    }
+    
+    private static func dispatch(block: () -> ()) {
         if async {
             dispatch_async(propagationQueue) {
                 block()
@@ -23,11 +45,7 @@ public class Propagator {
         }
     }
 
-    static func propagate(nodes: [NodeTuple]) {
-        self.propagate(Set(nodes))
-    }
-    
-    static func propagate(nodes: Set<NodeTuple>) {
+    private static func propagateSync(nodes: Set<NodeTuple>) {
         guard nodes.count > 0 else {
             return
         }

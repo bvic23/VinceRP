@@ -35,11 +35,10 @@ public class Hub<T>: Node {
     }
     
     func propagate() {
-        Propagator.dispatch {
-            let mappedTargets = self.children.map {
+        Propagator.propagate {
+            self.children.map {
                 NodeTuple(self, $0)
             }
-            Propagator.propagate(mappedTargets)
         }
     }
     
