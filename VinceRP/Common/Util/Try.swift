@@ -18,12 +18,10 @@ public enum Try<T>: CustomStringConvertible {
     }
 
     public func isSuccess() -> Bool {
-        switch self {
-        case .Success:
+        if case .Success = self {
             return true
-        case .Failure:
-            return false
         }
+        return false
     }
 
     public func isFailure() -> Bool {
