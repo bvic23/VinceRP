@@ -346,6 +346,32 @@ class BasicSpec: QuickSpec {
                 }
 
             }
+            
+            context("asnyc") {
+                
+                beforeEach {
+                    Propagator.async = true
+                }
+                
+                afterEach {
+                    Propagator.async = false
+                }
+                
+                
+                it("propagates asynchronously")  {
+                    // given
+                    Propagator.async = true
+                    let a = reactive(0)
+                    
+                    // when
+                    a <- 1
+                    
+                    // then
+                    expect(a*) =~ 1
+                }                
+                
+            }
+            
         }
 
     }
