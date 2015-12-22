@@ -8,27 +8,6 @@
 import Quick
 import Nimble
 
-class Runnable {
-    typealias Closure = () -> ()
-    let closure: Closure
-    let name: String
-
-    init(_ name:String, _ closure: Closure) {
-        self.name = name
-        self.closure = closure
-    }
-
-    @objc func run() {
-        NSThread.currentThread().name = self.name
-        self.closure()
-    }
-
-    func start() {
-        let thread = NSThread(target:self, selector:"run", object:nil)
-        thread.start()
-    }
-}
-
 class DynamicVariableSpec: QuickSpec {
 
     override func spec() {
@@ -64,8 +43,8 @@ class DynamicVariableSpec: QuickSpec {
                 }.start()
 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-2: 20"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-2: 20"
             }
 
             it("shares the same variable in same thread") {
@@ -76,8 +55,8 @@ class DynamicVariableSpec: QuickSpec {
                 }.start()
 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-1: 20"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-1: 20"
             }
 
             // This test does not pass since there is no hiearchy between NSThreads
@@ -98,8 +77,8 @@ class DynamicVariableSpec: QuickSpec {
                 }
                 
                 // then
-                expect(r1).toEventually(equal("thread-1: 10"))
-                expect(r2).toEventually(equal("thread-2: 10"))
+                expect(r1) =~ "thread-1: 10"
+                expect(r2) =~ "thread-2: 10"
             }
             */
         }

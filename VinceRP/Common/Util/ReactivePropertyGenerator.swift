@@ -5,11 +5,8 @@
 
 public class ReactivePropertyGenerator {
 
-    // TODO: unittest -> check for memory leaks
     private static var propertyMap = [String: Node]()
     private static var observerMap = [String: PropertyObserver]()
-
-    init() {}
 
     static func getKey(targetObject: AnyObject, propertyName: String) -> String {
         return  "\(targetObject.hash)\(propertyName) "
@@ -29,7 +26,7 @@ public class ReactivePropertyGenerator {
 
     static func synthesizeObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> PropertyObserver {
         return PropertyObserver(targetObject: targetObject as! NSObject, propertyName: propertyName) { (currentTargetObject: NSObject, currentPropertyName:String, currentValue:AnyObject)  in
-            if let existingEmitter:Source<T> = getEmitter(currentTargetObject, propertyName: propertyName) {
+            if let existingEmitter: Source<T> = getEmitter(currentTargetObject, propertyName: propertyName) {
                 existingEmitter.update(currentValue as! T)
             }
         }
@@ -68,9 +65,9 @@ public class ReactivePropertyGenerator {
     }
 }
 
-private var propertyObserverContext = 0
 
 class PropertyObserver: NSObject {
+    private var propertyObserverContext = 0
     let targetObject: NSObject
     let propertyName: String
     let propertyChangeHandler: (NSObject, String, AnyObject) -> Void
