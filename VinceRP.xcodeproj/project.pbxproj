@@ -106,6 +106,8 @@
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
 		796D6CB61C29681D00307B51 /* TimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CB51C29681D00307B51 /* TimerSpec.swift */; };
 		796D6CB71C29690400307B51 /* TimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CB51C29681D00307B51 /* TimerSpec.swift */; };
+		796D6CC41C299EFD00307B51 /* DispatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */; };
+		796D6CC51C299FFD00307B51 /* DispatchableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
 		7972D7811C282127000B7894 /* ClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972D7801C282127000B7894 /* ClickHandler.swift */; };
@@ -252,6 +254,7 @@
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
 		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSpec.swift; sourceTree = "<group>"; };
+		796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchableSpec.swift; path = Common/Threading/DispatchableSpec.swift; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
 		7972D7801C282127000B7894 /* ClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickHandler.swift; sourceTree = "<group>"; };
@@ -557,6 +560,7 @@
 			children = (
 				798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */,
 				7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */,
+				796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */,
 			);
 			name = Threading;
 			sourceTree = "<group>";
@@ -1143,6 +1147,7 @@
 				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
 				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				796D6CC51C299FFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7841C2821D9000B7894 /* ThreadLocalSpec.swift in Sources */,
 				798A2D481C078A86000277AA /* TrySpec.swift in Sources */,
 				798A2D491C078A86000277AA /* WeakReferenceTests.swift in Sources */,
@@ -1222,6 +1227,7 @@
 				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
 				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				796D6CC41C299EFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7831C2821D7000B7894 /* ThreadLocalSpec.swift in Sources */,
 				798A2D3C1C0789F5000277AA /* TrySpec.swift in Sources */,
 				798A2D3D1C0789F5000277AA /* WeakReferenceTests.swift in Sources */,
