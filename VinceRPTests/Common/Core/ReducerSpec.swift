@@ -63,7 +63,7 @@ class ReducerSpec: QuickSpec {
             x <- fakeError
             
             // then
-            expect(y*) == 6
+            expect(x.isSuccess()) == false
         }
         
         it("filters all") {
