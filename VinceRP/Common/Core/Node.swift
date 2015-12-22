@@ -46,7 +46,7 @@ public class Node: Hashable {
     }
 
     func ping(incoming: Set<Node>) -> Set<Node> {
-        abstractMethod()
+        return Set()
     }
     
     private var alive = true

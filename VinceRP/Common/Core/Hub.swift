@@ -44,7 +44,7 @@ public class Hub<T>: Node {
     }
     
     public func toTry() -> Try<T> {
-        abstractMethod()
+        return Try(noValueError)
     }
     
     public func killAll() {

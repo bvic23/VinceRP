@@ -29,7 +29,7 @@ public class Incrementing<T>: Hub<T> {
     }
     
     func makeState() -> UpdateState<T> {
-        abstractMethod()
+        return UpdateState(Try(noValueError))
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
