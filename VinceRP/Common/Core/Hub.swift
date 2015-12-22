@@ -26,8 +26,9 @@ public class Hub<T>: Node {
     
     public func value() -> T {
         if let (e, d) = globalDynamic.value {
+            let deps = d ?? []
             linkChild(e)
-            globalDynamic.value = (e, d.arrayByPrepending(self))
+            globalDynamic.value = (e, deps.arrayByPrepending(self))
         } else {
             globalDynamic.value = nil
         }

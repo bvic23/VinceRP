@@ -22,7 +22,7 @@ public class DynamicVariable<T> {
         }
     }
 
-    public init(_ value: T?) {
+    public init(_ value: T? = nil) {
         self.threadLocal = ThreadLocal(key: "DynamicVariable", value: value)
     }
 
