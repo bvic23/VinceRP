@@ -42,6 +42,30 @@ class ReducerSpec: QuickSpec {
             expect(y*) =~ 19
         }
         
+        it("filters the errors") {
+            // given
+            let x = reactive(10)
+            let y = x.filter { $0 > 5 }
+            
+            // when
+            x <- 1
+            
+            // then
+            expect(y*) == 10
+            
+            // when
+            x <- 6
+            
+            // then
+            expect(y*) =~ 6
+            
+            // when
+            x <- fakeError
+            
+            // then
+            expect(y*) == 6
+        }
+        
         it("filters all") {
             // given
             let x = reactive(10)
