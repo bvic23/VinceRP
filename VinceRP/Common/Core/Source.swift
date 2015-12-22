@@ -41,10 +41,6 @@ public class Source<T>: Hub<T> {
         return state.value
     }
     
-    override func ping(incoming: Set<Node>) -> Set<Node> {
-        return children
-    }
-    
     public func hasValue() -> Bool {
         if !isSuccess()  {
             if case .Failure(let e) = toTry() {

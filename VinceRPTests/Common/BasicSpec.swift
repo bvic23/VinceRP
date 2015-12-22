@@ -44,28 +44,6 @@ class BasicSpec: QuickSpec {
                     expect(c*) =~ 6
                 }
 
-//                it("works with options") {
-//                    // given
-//                    let a: Var<Optional<Int>> = Var<Optional<Int>>(nil)
-//                    let b: Var<Int?> = reactive(nil)
-//                    let c: Dynamic<Int?> = definedAs {
-//                        a*.flatMap {
-//                            x in
-//                            b*.map {
-//                                y in
-//                                x + y
-//                            }
-//                        }
-//                    }
-//
-//                    // when
-//                    a <- 1
-//                    b <- 2
-//
-//                    // then
-//                    expect(c*) =~ 3
-//                }
-
                 it("works with a real graph") {
                     // given
                     let (n1, n2, n3, n4, n5, n6) = testGraph()
