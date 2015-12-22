@@ -3,10 +3,9 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class ChangeObserver: Node {
-    
-    private static var changeObservers = Set<ChangeObserver>()
-    var dispatchQueue: dispatch_queue_t!
+private var changeObservers = Set<Node>()
+
+public class ChangeObserver<T>: Hub<T> {    
 
     let source: Node
     let callback: () -> ()
@@ -23,7 +22,7 @@ public class ChangeObserver: Node {
             trigger()
         }
         
-        ChangeObserver.changeObservers.insert(self)
+        changeObservers.insert(self)
     }
     
     override public var parents: Set<Node> {
@@ -53,16 +52,7 @@ public class ChangeObserver: Node {
     
     override public func kill() {
         super.kill()
-        ChangeObserver.changeObservers.remove(self)
-    }
-    
-}
-
-extension ChangeObserver: Dispatchable {
-    
-    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> ChangeObserver {
-        self.dispatchQueue = dispatchQueue
-        return self
+        changeObservers.remove(self)
     }
     
 }

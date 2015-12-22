@@ -33,8 +33,8 @@ public extension Hub where T: Equatable {
 
 public extension Hub {
     
-    public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver {
-        let obs = ChangeObserver(source:self, callback:{callback(self.value())}, skipInitial:skipInitial)
+    public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver<T> {
+        let obs = ChangeObserver<T>(source:self, callback:{callback(self.value())}, skipInitial:skipInitial)
         return obs
     }
     

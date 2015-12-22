@@ -17,7 +17,7 @@ public class Hub<T>: Node {
         unreachableCode()
     }
     
-    override public func error() -> NSError {
+    public func error() -> NSError {
         if case .Failure(let error) = toTry() {
             return error
         }
@@ -58,11 +58,11 @@ public class Hub<T>: Node {
         Propagator.propagate(toSet(NodeTuple(self, self)))
     }
     
-    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver {
+    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver<T> {
         return onChangeDo(self, skipInitial: skipInitial, callback: callback)
     }
     
-    public func onError(callback: (NSError) -> ()) -> ErrorObserver {
+    public func onError(callback: (NSError) -> ()) -> ErrorObserver<T> {
         return onErrorDo(self, callback: callback)
     }
     

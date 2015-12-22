@@ -34,11 +34,7 @@ public class Node: Hashable {
     func isSuccess() -> Bool {
         return true
     }
-
-    func error() -> NSError {
-        abstractMethod()
-    }
-
+    
     func linkChild(child: Node) {
         if (!childrenHolder.value.hasElementPassingTest {$0 == child}) {
             childrenHolder.value.insert(child)
