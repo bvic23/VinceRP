@@ -360,7 +360,6 @@ class BasicSpec: QuickSpec {
                 
                 it("propagates asynchronously")  {
                     // given
-                    Propagator.async = true
                     let a = reactive(0)
                     
                     // when

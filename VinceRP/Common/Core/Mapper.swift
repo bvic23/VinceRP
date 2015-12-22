@@ -13,7 +13,15 @@ class Mapper<T, A>: Wrapper<T, A> {
     }
     
     override var state: UpdateState<A> {
-        return makeState()
+        
+        get {
+            return makeState()
+        }
+        
+        set {
+            
+        }
+        
     }
     
     override func makeState() -> UpdateState<A> {

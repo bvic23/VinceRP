@@ -14,7 +14,14 @@ public class Incrementing<T>: Hub<T> {
     }
     
     var state: UpdateState<T> {
-        return _state.value
+
+        get {
+            return _state.value
+        }
+        
+        set {
+            _state.value = newValue
+        }
     }
     
     func toTry() -> UpdateState<T> {
