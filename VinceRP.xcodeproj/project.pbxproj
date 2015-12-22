@@ -104,6 +104,8 @@
 		795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */; };
 		795FF5541BB817E900E19285 /* UIControl+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */; };
 		795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */; };
+		796D6CB61C29681D00307B51 /* TimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CB51C29681D00307B51 /* TimerSpec.swift */; };
+		796D6CB71C29690400307B51 /* TimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D6CB51C29681D00307B51 /* TimerSpec.swift */; };
 		797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */; };
 		797036961BA72B2C00ED5D1A /* UILabel+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */; };
 		7972D7811C282127000B7894 /* ClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7972D7801C282127000B7894 /* ClickHandler.swift */; };
@@ -249,6 +251,7 @@
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
+		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSpec.swift; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
 		7972D7801C282127000B7894 /* ClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickHandler.swift; sourceTree = "<group>"; };
@@ -516,10 +519,11 @@
 			children = (
 				798A2D4A1C078B39000277AA /* AdvancedSpec.swift */,
 				798A2D4B1C078B39000277AA /* BasicSpec.swift */,
-				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
 				798A2D231C0789BF000277AA /* Convenient */,
 				798A2D201C07899E000277AA /* Core */,
+				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
 				798A2D221C0789B5000277AA /* Threading */,
+				796D6CB51C29681D00307B51 /* TimerSpec.swift */,
 				798A2D211C0789A4000277AA /* Util */,
 			);
 			name = Common;
@@ -1135,6 +1139,7 @@
 				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
 				79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */,
 				798A2D501C078B40000277AA /* AdvancedSpec.swift in Sources */,
+				796D6CB71C29690400307B51 /* TimerSpec.swift in Sources */,
 				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
 				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
@@ -1213,6 +1218,7 @@
 				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
 				79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */,
 				798A2D4D1C078B39000277AA /* AdvancedSpec.swift in Sources */,
+				796D6CB61C29681D00307B51 /* TimerSpec.swift in Sources */,
 				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
 				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
