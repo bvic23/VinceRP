@@ -35,13 +35,7 @@ public class ChangeObserver<T>: Hub<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && source.isSuccess()) {
-            if let q = dispatchQueue {
-                dispatch_async(q) {
-                    self.callback()
-                }
-            } else {
-                callback()
-            }
+            dispatch(callback)
         }
         return Set()
     }

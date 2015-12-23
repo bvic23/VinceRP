@@ -23,11 +23,7 @@ public class Incrementing<T>: Hub<T> {
             _state.value = newValue
         }
     }
-    
-    func toTry() -> UpdateState<T> {
-        return self.state
-    }
-    
+        
     func makeState() -> UpdateState<T> {
         return UpdateState(Try(noValueError))
     }

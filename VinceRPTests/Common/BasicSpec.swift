@@ -275,8 +275,10 @@ class BasicSpec: QuickSpec {
                     // given
                     let a = reactive(1)
                     var errors = 0
+                    var domain = ""
                     var sideeffects = 0
-                    _ = onErrorDo(a) { _ in
+                    _ = onErrorDo(a) { i in
+                        domain = i.domain
                         errors++
                     }
                     _ = onChangeDo(a, skipInitial:true) {  _ in
@@ -289,7 +291,7 @@ class BasicSpec: QuickSpec {
                     // then
                     expect(errors) =~ 1
                     expect(sideeffects) =~ 0
-                    expect(a.error().domain) =~ "VinceRP"
+                    expect(domain) =~ "VinceRP"
                 }
 
                 it("works without storing the error handler") {
@@ -297,8 +299,8 @@ class BasicSpec: QuickSpec {
                     let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
-                    onErrorDo(a) { _ in
-                        error = a.error()
+                    onErrorDo(a) { i in
+                        error = i
                     }
 
                     // when
@@ -314,8 +316,8 @@ class BasicSpec: QuickSpec {
                     let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
-                    onErrorDo(a) {  _ in 
-                        error = a.error()
+                    onErrorDo(a) {  i in
+                        error = i
                     }
 
                     // when

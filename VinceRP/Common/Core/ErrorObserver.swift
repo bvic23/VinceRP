@@ -19,15 +19,10 @@ public class ErrorObserver<T>: ChangeObserver<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && !source.isSuccess()) {
-            if let q = dispatchQueue {
-                dispatch_async(q) {
-                    if let s = self.source as? Hub<T> {
-                        self.errorCallback(s.error())
-                    }
-                }
-            } else {
-                if let s = self.source as? Hub<T> {
-                    self.errorCallback(s.error())
+            dispatch {
+                if let s = self.source as? Hub<T>,
+                   case .Failure(let error) = s.toTry() {
+                    self.errorCallback(error)
                 }
             }
         }

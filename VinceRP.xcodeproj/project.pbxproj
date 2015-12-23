@@ -58,7 +58,6 @@
 		791F30F31C0392AC004AA9E2 /* DynamicVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */; };
 		791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */; };
 		791F30F51C0392B1004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
-		791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
 		791F31081C0392C0004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
 		791F310A1C0392C0004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
@@ -69,7 +68,6 @@
 		791F310F1C0392C0004AA9E2 /* VRPNSObjectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
 		791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
-		791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30F81C0392C0004AA9E2 /* CommonConstants.swift */; };
 		791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */; };
 		791F31171C0392CB004AA9E2 /* Flattenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FB1C0392C0004AA9E2 /* Flattenable.swift */; };
 		791F31181C0392CB004AA9E2 /* FunctionalArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */; };
@@ -221,7 +219,6 @@
 		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dispatchable.swift; path = ../vincerp/Common/Threading/Dispatchable.swift; sourceTree = "<group>"; };
 		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = ../vincerp/Common/Threading/DynamicVariable.swift; sourceTree = "<group>"; };
 		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
-		791F30F81C0392C0004AA9E2 /* CommonConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonConstants.swift; path = ../vincerp/Common/Util/CommonConstants.swift; sourceTree = "<group>"; };
 		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionHandling.swift; path = ../vincerp/Common/Util/ExceptionHandling.swift; sourceTree = "<group>"; };
 		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattenable.swift; path = ../vincerp/Common/Util/Flattenable.swift; sourceTree = "<group>"; };
 		791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArray.swift; path = ../vincerp/Common/Util/FunctionalArray.swift; sourceTree = "<group>"; };
@@ -397,7 +394,6 @@
 		791F30F61C0392B7004AA9E2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				791F30F81C0392C0004AA9E2 /* CommonConstants.swift */,
 				791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */,
 				791F30FB1C0392C0004AA9E2 /* Flattenable.swift */,
 				791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */,
@@ -1123,7 +1119,6 @@
 				791F30D91C039286004AA9E2 /* ErrorObserver.swift in Sources */,
 				791F311C1C0392CB004AA9E2 /* Try.swift in Sources */,
 				791F31161C0392CB004AA9E2 /* ExceptionHandling.swift in Sources */,
-				791F31141C0392CB004AA9E2 /* CommonConstants.swift in Sources */,
 				791F30E41C039286004AA9E2 /* Wrapper.swift in Sources */,
 				791F30F21C0392AC004AA9E2 /* Dispatchable.swift in Sources */,
 				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
@@ -1182,7 +1177,6 @@
 				791F30D31C039273004AA9E2 /* Wrapper.swift in Sources */,
 				795FF5561BB819EF00E19285 /* UIView+VinceRP.swift in Sources */,
 				791F30C51C039273004AA9E2 /* BatchUpdate.swift in Sources */,
-				791F31061C0392C0004AA9E2 /* CommonConstants.swift in Sources */,
 				791F30EF1C0392A7004AA9E2 /* ThreadLocal.swift in Sources */,
 				791F30B41C039260004AA9E2 /* Addable.swift in Sources */,
 				79952B261C0CCCEF00BD7E76 /* Spinlock.swift in Sources */,

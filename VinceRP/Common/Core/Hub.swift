@@ -11,17 +11,12 @@ public class Hub<T>: Node {
         if case .Success(let value) = toTry() {
             return value
         }
+        var exceptionError = noValueError
         if case .Failure(let error) = toTry() {
-            NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
+            exceptionError = error
         }
-        unreachableCode()
-    }
-    
-    public func error() -> NSError {
-        if case .Failure(let error) = toTry() {
-            return error
-        }
-        unreachableCode()
+        NSException(name: "name", reason: "domain", userInfo:["error": exceptionError]).raise()
+        abort()
     }
     
     public func value() -> T {
@@ -73,6 +68,16 @@ extension Hub: Dispatchable {
     public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Hub<T> {
         self.dispatchQueue = dispatchQueue
         return self
+    }
+    
+    public func dispatch(thunk: () -> ()) {
+        if let q = dispatchQueue {
+            dispatch_async(q) {
+                thunk()
+            }
+        } else {
+            thunk()
+        }
     }
     
 }
