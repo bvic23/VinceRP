@@ -20,7 +20,7 @@ class NodeSpec: QuickSpec {
             let r = sut.ping(Set())
             
             // then
-            expect(r).toEventually(beEmpty())
+            expect(r).to(beEmpty())
         }
         
         it("responds with empty set to ping even if incoming is not empty") {
@@ -31,7 +31,7 @@ class NodeSpec: QuickSpec {
             let r = sut.ping(toSet(Node()))
             
             // then
-            expect(r).toEventually(beEmpty())
+            expect(r).to(beEmpty())
         }
     }
     

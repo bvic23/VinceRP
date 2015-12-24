@@ -89,6 +89,7 @@
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		793781E41C2BE419003006FC /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
 		793781E61C2BE4BD003006FC /* IncrementingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793781E51C2BE4BD003006FC /* IncrementingSpec.swift */; };
+		793781E71C2BE52C003006FC /* IncrementingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793781E51C2BE4BD003006FC /* IncrementingSpec.swift */; };
 		794B96DC1C0DF63A006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		794B96DD1C0DF63B006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
@@ -541,11 +542,11 @@
 			children = (
 				796D6CC71C2A002B00307B51 /* DnyamicSpec.swift */,
 				79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */,
+				793781E51C2BE4BD003006FC /* IncrementingSpec.swift */,
 				79552EBD1C08411B00EC284B /* MapperSpec.swift */,
 				799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */,
 				79552EC01C086CF400EC284B /* ReducerSpec.swift */,
 				79552EC31C08827A00EC284B /* ThrottleSpec.swift */,
-				793781E51C2BE4BD003006FC /* IncrementingSpec.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1146,6 +1147,7 @@
 				798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
+				793781E71C2BE52C003006FC /* IncrementingSpec.swift in Sources */,
 				793781E41C2BE419003006FC /* NodeSpec.swift in Sources */,
 				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
 				79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */,
