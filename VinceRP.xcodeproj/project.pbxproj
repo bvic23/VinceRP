@@ -88,6 +88,7 @@
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		793781E41C2BE419003006FC /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
+		793781E61C2BE4BD003006FC /* IncrementingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793781E51C2BE4BD003006FC /* IncrementingSpec.swift */; };
 		794B96DC1C0DF63A006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		794B96DD1C0DF63B006B06EE /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFB18FDE6268B224542C9 /* TestUtil.swift */; };
 		79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */; };
@@ -247,6 +248,7 @@
 		79273CC91BAE05BD00CEF85C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		79273D421BAE05BD00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
 		79273D531BAE05BD00CEF85C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
+		793781E51C2BE4BD003006FC /* IncrementingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementingSpec.swift; path = Common/Core/IncrementingSpec.swift; sourceTree = "<group>"; };
 		79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operatorsSpec.swift"; path = "Common/Core/Hub+operatorsSpec.swift"; sourceTree = "<group>"; };
 		79552EBD1C08411B00EC284B /* MapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapperSpec.swift; path = Common/Core/MapperSpec.swift; sourceTree = "<group>"; };
 		79552EC01C086CF400EC284B /* ReducerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReducerSpec.swift; path = Common/Core/ReducerSpec.swift; sourceTree = "<group>"; };
@@ -254,9 +256,9 @@
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
-		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSpec.swift; sourceTree = "<group>"; };
+		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerSpec.swift; path = Common/TimerSpec.swift; sourceTree = "<group>"; };
 		796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchableSpec.swift; path = Common/Threading/DispatchableSpec.swift; sourceTree = "<group>"; };
-		796D6CC71C2A002B00307B51 /* DnyamicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DnyamicSpec.swift; sourceTree = "<group>"; };
+		796D6CC71C2A002B00307B51 /* DnyamicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DnyamicSpec.swift; path = Common/Core/DnyamicSpec.swift; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
 		7972D7801C282127000B7894 /* ClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickHandler.swift; sourceTree = "<group>"; };
@@ -271,7 +273,7 @@
 		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = vincerpTests/Common/AdvancedSpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = vincerpTests/Common/BasicSpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
-		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeSpec.swift; sourceTree = "<group>"; };
+		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeSpec.swift; path = Common/Core/NodeSpec.swift; sourceTree = "<group>"; };
 		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinlock.swift; path = Common/Threading/Spinlock.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
@@ -543,6 +545,7 @@
 				799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */,
 				79552EC01C086CF400EC284B /* ReducerSpec.swift */,
 				79552EC31C08827A00EC284B /* ThrottleSpec.swift */,
+				793781E51C2BE4BD003006FC /* IncrementingSpec.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1224,6 +1227,7 @@
 				798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
+				793781E61C2BE4BD003006FC /* IncrementingSpec.swift in Sources */,
 				799077CD1C2BE2FD00956AC8 /* NodeSpec.swift in Sources */,
 				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
 				79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */,
