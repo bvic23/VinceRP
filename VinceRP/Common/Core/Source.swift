@@ -29,7 +29,7 @@ public class Source<T>: Hub<T> {
         self.propagate()
     }
     
-    public func updateSilent(newValue:T) {
+    public func updateSilent(newValue: T) {
         self.state.value = Try(newValue)
     }
     

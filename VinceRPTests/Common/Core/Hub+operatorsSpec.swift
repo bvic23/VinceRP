@@ -90,6 +90,60 @@ class HubOperatorsSpec: QuickSpec {
             expect(c) =~ 3
         }
         
+        it("distincts errors") {
+            // given
+            let x = reactive(1)
+            let y = x.distinct().skipErrors()
+            var c = 0
+            y.onChange(skipInitial: true) { _ in
+                c++
+            }
+            
+            // when
+            x <- 1
+            x <- 1
+            
+            // then
+            expect(c) =~ 0
+            
+            // when
+            x <- fakeError
+            
+            // then
+            expect(c) =~ 0
+            
+            // when
+            x <- 2
+            x <- 1
+            x <- 2
+            
+            // then
+            expect(c) =~ 3
+        }
+        
+        
+        it("can ignore specific values") {
+            // given
+            let x = reactive(1)
+            let y = x.ignore(2)
+            var count = 0
+            y.onChange(skipInitial: true) {  _ in
+                count++
+            }
+            
+            // when
+            x <- 2
+            
+            // then
+            expect(count) =~ 0
+
+            // when
+            x <- 3
+            
+            // then
+            expect(count) =~ 1
+        }
+        
     }
     
 }

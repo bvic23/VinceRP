@@ -13,8 +13,8 @@ public extension Hub where T: BooleanType {
 
 public extension Hub where T: Equatable {
     
-    public func ignore(ignorabeValues: T) -> Hub<T> {
-        return self.filter { $0 != ignorabeValues }
+    public func ignore(ignorabeValue: T) -> Hub<T> {
+        return self.filter { $0 != ignorabeValue }
     }
 
     public func distinct() -> Hub<T> {
