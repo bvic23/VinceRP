@@ -6,11 +6,13 @@
 public protocol Dispatchable {
     typealias D
     
+    var dispatchQueue: dispatch_queue_t? { get set }
+    
     func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> D
     func dispatchOnMainQueue() -> D
     func dispatchOnCurrentQueue() -> D
     func dispatchOnBackgroundQueue() -> D
-    
+    func dispatch(thunk: () -> ())
 }
 
 public extension Dispatchable {
@@ -25,6 +27,16 @@ public extension Dispatchable {
     
     public func dispatchOnBackgroundQueue() -> D {
         return self.dispatchOnQueue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)!)
+    }
+    
+    public func dispatch(thunk: () -> ()) {
+        if let q = dispatchQueue {
+            dispatch_async(q) {
+                thunk()
+            }
+        } else {
+            thunk()
+        }
     }
     
 }

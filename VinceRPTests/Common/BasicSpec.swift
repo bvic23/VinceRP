@@ -316,7 +316,7 @@ class BasicSpec: QuickSpec {
                     let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
-                    onErrorDo(a) {  i in
+                    a.onError() {  i in
                         error = i
                     }
 
@@ -352,13 +352,12 @@ class BasicSpec: QuickSpec {
             context("asnyc") {
                 
                 beforeEach {
-                    Propagator.async = true
+                    Propagator.instance.async = true
                 }
                 
                 afterEach {
-                    Propagator.async = false
-                }
-                
+                    Propagator.instance.async = false
+                }                
                 
                 it("propagates asynchronously")  {
                     // given

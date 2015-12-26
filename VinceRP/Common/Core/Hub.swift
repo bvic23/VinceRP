@@ -5,7 +5,7 @@
 
 public class Hub<T>: Node {
     
-    var dispatchQueue: dispatch_queue_t!
+    public var dispatchQueue: dispatch_queue_t?
     
     func currentValue() -> T {
         if case .Success(let value) = toTry() {
@@ -29,7 +29,7 @@ public class Hub<T>: Node {
     }
     
     func propagate() {
-        Propagator.propagate {
+        Propagator.instance.propagate {
             self.children.map {
                 NodeTuple(self, $0)
             }
@@ -48,7 +48,7 @@ public class Hub<T>: Node {
     }
     
     public func recalc() {
-        Propagator.propagate(toSet(NodeTuple(self, self)))
+        Propagator.instance.propagate(toSet(NodeTuple(self, self)))
     }
     
     public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver<T> {
@@ -66,16 +66,6 @@ extension Hub: Dispatchable {
     public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Hub<T> {
         self.dispatchQueue = dispatchQueue
         return self
-    }
-    
-    public func dispatch(thunk: () -> ()) {
-        if let q = dispatchQueue {
-            dispatch_async(q) {
-                thunk()
-            }
-        } else {
-            thunk()
-        }
     }
     
 }

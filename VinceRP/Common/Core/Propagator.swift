@@ -7,45 +7,48 @@ func ==(lhs: NodeTuple, rhs: NodeTuple) -> Bool {
     return lhs.source.hashValue == rhs.source.hashValue && lhs.reactor.hashValue == rhs.source.hashValue
 }
 
+private let propagationQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
 
-public class Propagator {
+public class Propagator: Dispatchable {
     
-    public static var async: Bool = false
-    public static let propagationQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+    static let instance = Propagator()
+    
+    public var dispatchQueue: dispatch_queue_t?
+    
+    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> Propagator {
+        self.dispatchQueue = dispatchQueue
+        return self
+    }
+    
+    var async: Bool = false {
+        didSet {
+            self.dispatchOnQueue(self.async ? propagationQueue : nil)
+        }
+    }
 
-    static func propagate(nodes: [NodeTuple]) {
+    func propagate(nodes: [NodeTuple]) {
         self.propagate(Set(nodes))
     }
     
-    static func propagate(setCalc: () -> Set<NodeTuple>) {
+    func propagate(setCalc: () -> Set<NodeTuple>) {
         self.dispatch {
             self.propagateSync(setCalc())
         }
     }
 
-    static func propagate(setCalc: () -> [NodeTuple]) {
+    func propagate(setCalc: () -> [NodeTuple]) {
         self.dispatch {
             self.propagateSync(Set(setCalc()))
         }
     }
     
-    static func propagate(nodes: Set<NodeTuple>) {
+    func propagate(nodes: Set<NodeTuple>) {
         self.dispatch {
             self.propagateSync(nodes)
         }
     }
-    
-    private static func dispatch(block: () -> ()) {
-        if async {
-            dispatch_async(propagationQueue) {
-                block()
-            }
-        } else {
-            block()
-        }
-    }
 
-    private static func propagateSync(nodes: Set<NodeTuple>) {
+    private func propagateSync(nodes: Set<NodeTuple>) {
         guard nodes.count > 0 else {
             return
         }

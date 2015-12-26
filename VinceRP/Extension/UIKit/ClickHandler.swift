@@ -8,8 +8,8 @@ import UIKit
 public typealias ClickHandler = (UIButton) -> ()
 
 public class ClickHandlerAction: Dispatchable {
+    public var dispatchQueue: dispatch_queue_t?
     let handler: ClickHandler
-    var dispatchQueue: dispatch_queue_t!
     
     init(handler: ClickHandler) {
         self.handler = handler
