@@ -296,7 +296,6 @@ class BasicSpec: QuickSpec {
 
                 it("works without storing the error handler") {
                     // given
-                    let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
                     onErrorDo(a) { i in
@@ -304,16 +303,14 @@ class BasicSpec: QuickSpec {
                     }
 
                     // when
-                    a <- e
+                    a <- fakeError
 
                     // then
-                    expect(error) =~ e
+                    expect(error) =~ fakeError
                 }
-
 
                 it("allows access the error") {
                     // given
-                    let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
                     a.onError() {  i in
@@ -321,10 +318,32 @@ class BasicSpec: QuickSpec {
                     }
 
                     // when
-                    a <- e
+                    a <- fakeError
 
                     // then
-                    expect(error) =~ e
+                    expect(error) =~ fakeError
+                }
+                
+                it("can kill the error observer ") {
+                    // given
+                    let a = reactive(1)
+                    var error: NSError? = nil
+                    let o = a.onError() {  i in
+                        error = i
+                    }
+                    
+                    // when
+                    a <- fakeError
+                    
+                    // then
+                    expect(error) =~ fakeError
+                    
+                    // when
+                    o.kill()
+                    a <- fakeError2
+                    
+                    // then
+                    expect(error) =~ fakeError
                 }
 
                 it("works with multiple error handlers") {
@@ -340,7 +359,7 @@ class BasicSpec: QuickSpec {
                     }
 
                     // when
-                    a <- NSError(domain: "domain.com", code: 1, userInfo: nil)
+                    a <- fakeError
 
                     // then
                     expect(e1) =~ 1
