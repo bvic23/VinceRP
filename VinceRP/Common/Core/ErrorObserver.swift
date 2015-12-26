@@ -9,11 +9,8 @@ private var errorObservers = Set<Node>()
 
 public class ErrorObserver<T>: ChangeObserver<T> {
     
-    private var errorCallback: (NSError) -> ()
-    
-    public init(source: Node, callback: (NSError) -> (), name: String = "") {
-        self.errorCallback = callback
-        super.init(source:source, callback:({}), skipInitial:true)
+    public init(source: Node, callback: (NSError?) -> (), name: String = "") {
+        super.init(source:source, callback: callback, skipInitial:true)
         errorObservers.insert(self)
     }
     
@@ -22,7 +19,7 @@ public class ErrorObserver<T>: ChangeObserver<T> {
             dispatch {
                 if let s = self.source as? Hub<T>,
                    case .Failure(let error) = s.toTry() {
-                    self.errorCallback(error)
+                    self.callback(error)
                 }
             }
         }

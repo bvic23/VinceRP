@@ -34,7 +34,7 @@ public extension Hub where T: Equatable {
 public extension Hub {
     
     public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver<T> {
-        let obs = ChangeObserver<T>(source:self, callback:{callback(self.value())}, skipInitial:skipInitial)
+        let obs = ChangeObserver<T>(source:self, callback:{_ in callback(self.value())}, skipInitial:skipInitial)
         return obs
     }
     

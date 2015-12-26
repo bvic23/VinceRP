@@ -121,7 +121,6 @@ class HubOperatorsSpec: QuickSpec {
             expect(c) =~ 3
         }
         
-        
         it("can ignore specific values") {
             // given
             let x = reactive(1)
@@ -142,6 +141,20 @@ class HubOperatorsSpec: QuickSpec {
             
             // then
             expect(count) =~ 1
+        }
+        
+        it("is dispatchable") {
+            // given
+            let x = reactive(1)
+            let y = definedAs {
+                x* + 2
+            }.dispatchOnCurrentQueue()
+
+            // when
+            x <- 2
+            
+            // then
+            expect(y*) =~ 4
         }
         
     }

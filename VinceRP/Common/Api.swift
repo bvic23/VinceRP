@@ -42,13 +42,13 @@ public func onChangeDo<T>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver
 }
 
 public func onChangeDo<T>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver<T> {
-    return ChangeObserver(source: source, callback: ({
+    return ChangeObserver(source: source, callback: ({_ in 
         callback(source.value())
     }), skipInitial: skipInitial)
 }
 
 public func onErrorDo<T>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver<T> {
-    return ErrorObserver(source: source, callback: callback)
+    return ErrorObserver(source: source, callback: {e in callback(e!)})
 }
 
 public func timer(interval: NSTimeInterval, tick: () -> ()) -> Timer {

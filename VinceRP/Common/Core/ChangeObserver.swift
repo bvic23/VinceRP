@@ -8,9 +8,9 @@ private var changeObservers = Set<Node>()
 public class ChangeObserver<T>: Hub<T> {    
 
     let source: Node
-    let callback: () -> ()
+    let callback: (NSError?) -> ()
     
-    public init(source: Node, callback: () -> (), skipInitial: Bool = false) {
+    public init(source: Node, callback: (NSError?) -> (), skipInitial: Bool = false) {
         self.source = source
         self.callback = callback
         
@@ -35,7 +35,7 @@ public class ChangeObserver<T>: Hub<T> {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && source.isSuccess()) {
-            dispatch(callback)
+            dispatch { self.callback(nil) }
         }
         return Set()
     }
