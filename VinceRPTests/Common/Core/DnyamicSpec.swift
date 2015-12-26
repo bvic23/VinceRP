@@ -21,7 +21,7 @@ class AAADynamicSpec: QuickSpec {
                     d* + 2
                 }
                 let c = reactive("")
-                d.state = UpdateState(toSet(d), 0, 1, Try(fakeError))
+                d.state = UpdateState(Try(fakeError), 0, toSet(d))
 
                 // when
                 let r = d.ping(toSet(c))
@@ -50,7 +50,7 @@ class AAADynamicSpec: QuickSpec {
                 let e = definedAs {
                     d* + 2
                 }
-                d.state = UpdateState(toSet(e), 0, 1, Try(fakeError))
+                d.state = UpdateState(Try(fakeError), 0, toSet(e))
                 
                 // when
                 let r = d.ping(toSet(e))

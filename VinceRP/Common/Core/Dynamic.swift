@@ -30,7 +30,7 @@ public class Dynamic<T>: Incrementing<T> {
 
         let level = levels.max(0)
         
-        return UpdateState(Set(deps), level, startID, newValue)
+        return UpdateState(newValue, startID, Set(deps), level)
     }
     
     func probe(calc: () -> T) ->Try<T> {

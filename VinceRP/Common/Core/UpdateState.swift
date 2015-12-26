@@ -16,18 +16,10 @@ public struct UpdateState<T> {
     let parents: Set<Node>
     let level: long
     
-    init(_ parents: Set<Node>, _ level: long, _ timestamp: long, _ value: Try<T>) {
+    init(_ value: Try<T>, _ timestamp: long = nextID(), _ parents: Set<Node> = Set(), _ level: long = 0) {
         self.parents = parents
         self.level = level
         self.id = timestamp
         self.value = value
-    }
-    
-    init(_ value: Try<T>) {
-        self.init(nextID(), value)
-    }
-    
-    init(_ timestamp: long, _ value: Try<T>) {
-        self.init(Set<Node>(), 0, nextID(), value)
     }
 }

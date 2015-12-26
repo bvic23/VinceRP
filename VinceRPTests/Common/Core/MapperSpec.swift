@@ -31,6 +31,18 @@ class MapperSpec: QuickSpec {
             expect(s*) =~ 6
         }
         
+        it("can set the state without any effect") {
+            // given
+            let x = Hub<Int>()
+            let y = Mapper(x) { $0 }
+            
+            // when
+            y.state = UpdateState(Try(2))
+            
+            // then
+            expect(y.state.value.description) == noValueError.description
+        }
+        
         it("handles division by zero") {
             // given
             let numerator = reactive(4)
