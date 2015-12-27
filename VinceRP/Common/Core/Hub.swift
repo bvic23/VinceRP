@@ -5,45 +5,39 @@
 
 public class Hub<T>: Node {
     
-    var dispatchQueue: dispatch_queue_t!
+    public var dispatchQueue: dispatch_queue_t?
     
     func currentValue() -> T {
-        switch (toTry()) {
-        case .Success(let value): return value
-        case .Failure(let error): NSException(name:"name", reason:"domain", userInfo:["error":error]).raise()
+        if case .Success(let value) = toTry() {
+            return value
         }
-        fatalError(UNREACHABLE_CODE)
-    }
-    
-    override public func error() -> NSError {
-        switch (toTry()) {
-        case .Failure(let error): return error
-        case .Success(_): fatalError(UNREACHABLE_CODE)
+        var exceptionError = noValueError
+        if case .Failure(let error) = toTry() {
+            exceptionError = error
         }
-        fatalError(UNREACHABLE_CODE)
+        NSException(name: "name", reason: "domain", userInfo:["error": exceptionError]).raise()
+        abort()
     }
     
     public func value() -> T {
         if let (e, d) = globalDynamic.value {
+            let deps = d ?? []
             linkChild(e)
-            globalDynamic.value = (e, d.arrayByPrepending(self))
-        } else {
-            globalDynamic.value = nil
-        }
+            globalDynamic.value = (e, deps.arrayByPrepending(self))
+        } 
         return currentValue()
     }
     
     func propagate() {
-        Propagator.dispatch {
-            let mappedTargets = self.children.map {
+        Propagator.instance.propagate {
+            self.children.map {
                 NodeTuple(self, $0)
             }
-            Propagator.propagate(mappedTargets)
         }
     }
     
     public func toTry() -> Try<T> {
-        fatalError(ABSTRACT_METHOD)
+        return Try(noValueError)
     }
     
     public func killAll() {
@@ -54,19 +48,15 @@ public class Hub<T>: Node {
     }
     
     public func recalc() {
-        Propagator.propagate(toSet(NodeTuple(self, self)))
+        Propagator.instance.propagate(toSet(NodeTuple(self, self)))
     }
     
-    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver {
-        return onChangeDo(self, skipInitial: skipInitial) {
-            callback($0)
-        }
+    public func onChange(skipInitial skipInitial: Bool = true, callback: (T) -> ()) -> ChangeObserver<T> {
+        return onChangeDo(self, skipInitial: skipInitial, callback: callback)
     }
     
-    public func onError(callback: (NSError) -> ()) -> ErrorObserver {
-        return onErrorDo(self) {
-            callback($0)
-        }
+    public func onError(callback: (NSError) -> ()) -> ErrorObserver<T> {
+        return onErrorDo(self, callback: callback)
     }
     
 }

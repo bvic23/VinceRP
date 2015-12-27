@@ -44,28 +44,6 @@ class BasicSpec: QuickSpec {
                     expect(c*) =~ 6
                 }
 
-//                it("works with options") {
-//                    // given
-//                    let a: Var<Optional<Int>> = Var<Optional<Int>>(nil)
-//                    let b: Var<Int?> = reactive(nil)
-//                    let c: Dynamic<Int?> = definedAs {
-//                        a*.flatMap {
-//                            x in
-//                            b*.map {
-//                                y in
-//                                x + y
-//                            }
-//                        }
-//                    }
-//
-//                    // when
-//                    a <- 1
-//                    b <- 2
-//
-//                    // then
-//                    expect(c*) =~ 3
-//                }
-
                 it("works with a real graph") {
                     // given
                     let (n1, n2, n3, n4, n5, n6) = testGraph()
@@ -297,8 +275,10 @@ class BasicSpec: QuickSpec {
                     // given
                     let a = reactive(1)
                     var errors = 0
+                    var domain = ""
                     var sideeffects = 0
-                    _ = onErrorDo(a) { _ in
+                    _ = onErrorDo(a) { i in
+                        domain = i.domain
                         errors++
                     }
                     _ = onChangeDo(a, skipInitial:true) {  _ in
@@ -311,40 +291,59 @@ class BasicSpec: QuickSpec {
                     // then
                     expect(errors) =~ 1
                     expect(sideeffects) =~ 0
-                    expect(a.error().domain) =~ "VinceRP"
+                    expect(domain) =~ "VinceRP"
                 }
 
                 it("works without storing the error handler") {
                     // given
-                    let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
-                    onErrorDo(a) { _ in
-                        error = a.error()
+                    onErrorDo(a) { i in
+                        error = i
                     }
 
                     // when
-                    a <- e
+                    a <- fakeError
 
                     // then
-                    expect(error).toEventually(equal(e))
+                    expect(error) =~ fakeError
                 }
-
 
                 it("allows access the error") {
                     // given
-                    let e = NSError(domain: "domain.com", code: 1, userInfo: nil)
                     let a = reactive(1)
                     var error: NSError? = nil
-                    onErrorDo(a) {  _ in 
-                        error = a.error()
+                    a.onError() {  i in
+                        error = i
                     }
 
                     // when
-                    a <- e
+                    a <- fakeError
 
                     // then
-                    expect(error).toEventually(equal(e))
+                    expect(error) =~ fakeError
+                }
+                
+                it("can kill the error observer ") {
+                    // given
+                    let a = reactive(1)
+                    var error: NSError? = nil
+                    let o = a.onError() {  i in
+                        error = i
+                    }
+                    
+                    // when
+                    a <- fakeError
+                    
+                    // then
+                    expect(error) =~ fakeError
+                    
+                    // when
+                    o.kill()
+                    a <- fakeError2
+                    
+                    // then
+                    expect(error) =~ fakeError
                 }
 
                 it("works with multiple error handlers") {
@@ -360,7 +359,7 @@ class BasicSpec: QuickSpec {
                     }
 
                     // when
-                    a <- NSError(domain: "domain.com", code: 1, userInfo: nil)
+                    a <- fakeError
 
                     // then
                     expect(e1) =~ 1
@@ -368,6 +367,30 @@ class BasicSpec: QuickSpec {
                 }
 
             }
+            
+            context("asnyc") {
+                
+                beforeEach {
+                    Propagator.instance.async = true
+                }
+                
+                afterEach {
+                    Propagator.instance.async = false
+                }                
+                
+                it("propagates asynchronously")  {
+                    // given
+                    let a = reactive(0)
+                    
+                    // when
+                    a <- 1
+                    
+                    // then
+                    expect(a*) =~ 1
+                }                
+                
+            }
+            
         }
 
     }

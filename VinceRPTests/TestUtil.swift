@@ -9,7 +9,12 @@ import Quick
 import Nimble
 
 infix operator =~ { associativity left precedence 130 }
+
 func =~<T: Equatable> (left: Expectation<T>, right: T?) -> Void {
+    return left.toEventually(equal(right))
+}
+
+func =~<T: Equatable> (left: Expectation<[T]>, right: [T]?) -> Void {
     return left.toEventually(equal(right))
 }
 
@@ -23,4 +28,25 @@ public func testGraph() -> (Source<Int>, Source<Int>, Dynamic<Int>, Dynamic<Int>
     let n6 = definedAs { n4* - n5* + 4 }
 
     return (n1, n2, n3, n4, n5, n6)
+}
+
+class Runnable {
+    typealias Closure = () -> ()
+    let closure: Closure
+    let name: String
+    
+    init(_ name:String, _ closure: Closure) {
+        self.name = name
+        self.closure = closure
+    }
+    
+    @objc func run() {
+        NSThread.currentThread().name = self.name
+        self.closure()
+    }
+    
+    func start() {
+        let thread = NSThread(target:self, selector:"run", object:nil)
+        thread.start()
+    }
 }

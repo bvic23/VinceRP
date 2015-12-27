@@ -8,8 +8,6 @@ public class Timer {
     private var timer: NSTimer?
     private var tick: (() -> ())?
     
-    private init() {}
-    
     @objc private func timerHandler() {
         self.tick!()
     }

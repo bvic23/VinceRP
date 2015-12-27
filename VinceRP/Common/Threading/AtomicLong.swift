@@ -5,7 +5,7 @@
 
 public typealias long = Int32
 
-public class AtomicLong: Hashable {
+public class AtomicLong {
     
     private let lock = Spinlock()
     
@@ -35,14 +35,5 @@ public class AtomicLong: Hashable {
         self.value = current + 1
         return current
     }
-
-
-    public var hashValue: Int {
-        return value.hashValue
-    }
     
-}
-
-public func ==(lhs: AtomicLong, rhs: AtomicLong) -> Bool {
-    return lhs.value == rhs.value
 }

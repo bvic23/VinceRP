@@ -8,7 +8,7 @@
 import Quick
 import Nimble
 
-let v = AtomicLong(2)
+let v = NSObject()
 
 class WeakReferenceSpec: QuickSpec {
 
@@ -18,7 +18,7 @@ class WeakReferenceSpec: QuickSpec {
 
             it("does not hold it's value") {
                 // when
-                let wr = WeakReference(AtomicLong(2))
+                let wr = WeakReference(NSObject())
 
                 // then
                 expect(wr.value).to(beNil())

@@ -5,25 +5,22 @@
 
 import Foundation
 
-public class ErrorObserver: ChangeObserver {
+private var errorObservers = Set<Node>()
+
+public class ErrorObserver<T>: ChangeObserver<T> {
     
-    private static var errorObservers = Set<ErrorObserver>()
-    private var errorCallback: (NSError) -> ()
-    
-    public init(source: Node, callback: (NSError) -> (), name: String = "") {
-        self.errorCallback = callback
-        super.init(source:source, callback:({}), skipInitial:true)
-        ErrorObserver.errorObservers.insert(self)
+    public init(source: Node, callback: (NSError?) -> (), name: String = "") {
+        super.init(source:source, callback: callback, skipInitial:true)
+        errorObservers.insert(self)
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && !source.isSuccess()) {
-            if let q = dispatchQueue {
-                dispatch_async(q) {
-                    self.errorCallback(self.source.error())
+            dispatch {
+                if let s = self.source as? Hub<T>,
+                   case .Failure(let error) = s.toTry() {
+                    self.callback(error)
                 }
-            } else {
-                self.errorCallback(source.error())
             }
         }
         return Set()
@@ -31,7 +28,7 @@ public class ErrorObserver: ChangeObserver {
     
     override public func kill() {
         super.kill()
-        ErrorObserver.errorObservers.remove(self)
+        errorObservers.remove(self)
     }
     
 }

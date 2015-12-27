@@ -8,11 +8,12 @@ class Throttle<T>: Dynamic<T> {
     private let interval: NSTimeInterval
     private let debounceLevel: long
     private var timer: NSTimer?
-    private var incoming: Set<Node>?
+    private var incoming: Set<Node>
     
     init(source: Hub<T>, interval: NSTimeInterval) {
         self.interval = interval
         self.debounceLevel = source.level + 1
+        self.incoming = Set()
         super.init {
             source.value()
         }
@@ -23,11 +24,13 @@ class Throttle<T>: Dynamic<T> {
     }
     
     @objc func pingAsync() {
-        if let i = self.incoming {
-            if super.ping(i).count > 0 {
-                self.propagate()
-            }
+        if super.ping(incoming).count > 0 {
+            propagate()
         }
+    }
+    
+    func getTimer() -> NSTimer? {
+        return self.timer
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {

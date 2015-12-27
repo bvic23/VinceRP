@@ -34,11 +34,7 @@ public class Node: Hashable {
     func isSuccess() -> Bool {
         return true
     }
-
-    func error() -> NSError {
-        fatalError(ABSTRACT_METHOD)
-    }
-
+    
     func linkChild(child: Node) {
         if (!childrenHolder.value.hasElementPassingTest {$0 == child}) {
             childrenHolder.value.insert(child)
@@ -50,7 +46,7 @@ public class Node: Hashable {
     }
 
     func ping(incoming: Set<Node>) -> Set<Node> {
-        fatalError(ABSTRACT_METHOD)
+        return Set()
     }
     
     private var alive = true

@@ -3,15 +3,14 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-public class ChangeObserver: Node {
-    
-    private static var changeObservers = Set<ChangeObserver>()
-    var dispatchQueue: dispatch_queue_t!
+private var changeObservers = Set<Node>()
+
+public class ChangeObserver<T>: Hub<T> {    
 
     let source: Node
-    let callback: () -> ()
+    let callback: (NSError?) -> ()
     
-    public init(source: Node, callback: () -> (), skipInitial: Bool = false) {
+    public init(source: Node, callback: (NSError?) -> (), skipInitial: Bool = false) {
         self.source = source
         self.callback = callback
         
@@ -23,7 +22,7 @@ public class ChangeObserver: Node {
             trigger()
         }
         
-        ChangeObserver.changeObservers.insert(self)
+        changeObservers.insert(self)
     }
     
     override public var parents: Set<Node> {
@@ -36,13 +35,7 @@ public class ChangeObserver: Node {
     
     override func ping(incoming: Set<Node>) -> Set<Node> {
         if (!parents.intersect(incoming).isEmpty && source.isSuccess()) {
-            if let q = dispatchQueue {
-                dispatch_async(q) {
-                    self.callback()
-                }
-            } else {
-                callback()
-            }
+            dispatch { self.callback(nil) }
         }
         return Set()
     }
@@ -53,16 +46,7 @@ public class ChangeObserver: Node {
     
     override public func kill() {
         super.kill()
-        ChangeObserver.changeObservers.remove(self)
-    }
-    
-}
-
-extension ChangeObserver: Dispatchable {
-    
-    public func dispatchOnQueue(dispatchQueue: dispatch_queue_t?) -> ChangeObserver {
-        self.dispatchQueue = dispatchQueue
-        return self
+        changeObservers.remove(self)
     }
     
 }

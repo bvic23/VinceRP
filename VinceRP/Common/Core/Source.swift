@@ -29,7 +29,7 @@ public class Source<T>: Hub<T> {
         self.propagate()
     }
     
-    public func updateSilent(newValue:T) {
+    public func updateSilent(newValue: T) {
         self.state.value = Try(newValue)
     }
     
@@ -41,15 +41,10 @@ public class Source<T>: Hub<T> {
         return state.value
     }
     
-    override func ping(incoming: Set<Node>) -> Set<Node> {
-        return children
-    }
-    
     public func hasValue() -> Bool {
         if !isSuccess()  {
-            switch toTry() {
-            case .Success(_): return true
-            case .Failure(let e): return e !== noValueError
+            if case .Failure(let e) = toTry() {
+                return e !== noValueError
             }
         }
         return true

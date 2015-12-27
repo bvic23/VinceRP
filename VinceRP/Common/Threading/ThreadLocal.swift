@@ -17,7 +17,7 @@ public class ThreadLocal<T> {
     
     private let key: NSString
 
-    public init(value: T?, key: NSString) {
+    public init(key: NSString, value: T? = nil) {
         self.key = key
         self.value = value
     }
@@ -27,7 +27,6 @@ public class ThreadLocal<T> {
             if let v = newValue {
                 NSThread.currentThread().threadDictionary[key] = Box(v)
             } else {
-                // TODO: add test
                 NSThread.currentThread().threadDictionary.removeObjectForKey(key)
             }
         }

@@ -14,15 +14,18 @@ public class Incrementing<T>: Hub<T> {
     }
     
     var state: UpdateState<T> {
-        return _state.value
-    }
-    
-    func toTry() -> UpdateState<T> {
-        return self.state
+
+        get {
+            return _state.value
+        }
+        
+        set {
+            _state.value = newValue
+        }
     }
     
     func makeState() -> UpdateState<T> {
-        fatalError(ABSTRACT_METHOD)
+        return UpdateState(Try(noValueError))
     }
     
     override func ping(incoming: Set<Node>) -> Set<Node> {

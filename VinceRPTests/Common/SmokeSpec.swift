@@ -218,7 +218,6 @@ class SmokeSpec: QuickSpec {
                     expect(a.hasValue()) =~ true
                 }
                 
-                
                 it("is works with optionals") {
                     // given
                     let a: Source<Int?> = reactive(1)
@@ -237,7 +236,7 @@ class SmokeSpec: QuickSpec {
                     
                     // then
                     expect(a.toTry().isFailure()) =~ true
-                }
+                }                                
 
             }
 

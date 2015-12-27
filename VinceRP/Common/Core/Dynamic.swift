@@ -3,7 +3,7 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
-let globalDynamic: DynamicVariable<(Node, Array<Node>)> = DynamicVariable(nil)
+let globalDynamic: DynamicVariable<(Node, Array<Node>?)> = DynamicVariable()
 
 public class Dynamic<T>: Incrementing<T> {
     private let calc: () -> T
@@ -16,7 +16,7 @@ public class Dynamic<T>: Incrementing<T> {
     override func makeState() -> UpdateState<T> {
         let startID = nextID()
 
-        let (newValue, deps): (Try<T>, Array<Node>) = globalDynamic.withValue((self, [])) {
+        let (newValue, deps): (Try<T>, Array<Node>) = globalDynamic.withValue((self, nil)) {
             let calcResult = self.probe(self.calc)
             guard let deps = globalDynamic.value?.1 else {
                 return (calcResult, [])
@@ -30,7 +30,7 @@ public class Dynamic<T>: Incrementing<T> {
 
         let level = levels.max(0)
         
-        return UpdateState(Set(deps), level, startID, newValue)
+        return UpdateState(newValue, startID, Set(deps), level)
     }
     
     func probe(calc: () -> T) ->Try<T> {

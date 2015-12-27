@@ -13,6 +13,7 @@ func myRandom() -> Int {
 }
 
 let fakeError = NSError(domain: "domain.com", code: 1, userInfo: nil)
+let fakeError2 = NSError(domain: "domain2.com", code: 1, userInfo: nil)
 
 class AdvancedSpec: QuickSpec {
 

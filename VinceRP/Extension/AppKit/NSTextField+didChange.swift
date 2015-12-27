@@ -10,18 +10,22 @@ private var eventHandlers = [NSTextField: [EventHandler]]()
 
 extension NSTextField {
 
-    public func addChangeHandler(actionBlock: (NSTextField) -> ()) {
+    public func addChangeHandler(handler: (NSTextField) -> ()) {
         if let handlers = eventHandlers[self] {
-            eventHandlers[self] = handlers.arrayByAppending(actionBlock)
+            eventHandlers[self] = handlers.arrayByAppending(handler)
         } else {
-            eventHandlers[self] = [actionBlock]
+            eventHandlers[self] = [handler]
         }
 
         self.action = Selector("eventHandler:")
         self.target = self
     }
 
-    // TODO: add removeChangeHandler
+    public func removeAllChangeHandler() {
+        self.target = nil
+        eventHandlers[self] = []
+    }
+    
     public func eventHandler(sender: NSTextField) {
         if let handlers = eventHandlers[sender] {
             for handler in handlers {

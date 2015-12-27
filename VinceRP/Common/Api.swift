@@ -37,18 +37,18 @@ public func reactive<T>() -> Source<T> {
     return Source()
 }
 
-public func onChangeDo<T>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver {
+public func onChangeDo<T>(source: Hub<T>, callback: (T) -> ()) -> ChangeObserver<T> {
     return onChangeDo(source, skipInitial: false, callback: callback)
 }
 
-public func onChangeDo<T>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver {
-    return ChangeObserver(source: source, callback: ({
+public func onChangeDo<T>(source: Hub<T>, skipInitial: Bool, callback: (T) -> ()) -> ChangeObserver<T> {
+    return ChangeObserver(source: source, callback: ({_ in 
         callback(source.value())
     }), skipInitial: skipInitial)
 }
 
-public func onErrorDo<T>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver {
-    return ErrorObserver(source: source, callback: callback)
+public func onErrorDo<T>(source: Hub<T>, callback: (NSError) -> ()) -> ErrorObserver<T> {
+    return ErrorObserver(source: source, callback: {e in callback(e!)})
 }
 
 public func timer(interval: NSTimeInterval, tick: () -> ()) -> Timer {
