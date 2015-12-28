@@ -82,7 +82,7 @@ class LoginViewControler: UIViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
         }.dispatchOnMainQueue()
         
-        self.loginButton.executing.filter{ $0 == true }.name("loginButton").log {
+        self.loginButton.executing.distinct().filter{ $0 == true }.name("loginButton").log {
             "tap> \($0)"
         }
         

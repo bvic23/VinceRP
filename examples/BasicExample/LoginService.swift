@@ -17,6 +17,7 @@ class LoginService {
         // Let's define a stream of bool values which represents the result of the login
         // We'll return this variable as a promise at the end of this method
         let returnValue = reactive(false)
+        returnValue.name("login-to-the-backend").log()
         
         // The necessary parameters for the login, username / password are the dynamic ones
         let params = [
