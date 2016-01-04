@@ -14,10 +14,10 @@ class FunctionalDictionarySpec: QuickSpec {
 
             it("maps empty dic to empty dic") {
                 // given
-                let s = Dictionary<Int, Int>()
+                let s = [Int: Int]()
 
                 // when
-                let r = s.mapValues{$0*2}
+                let r = s.mapValues { $0 * 2 }
 
                 // then
                 expect(r.count) == 0
@@ -25,13 +25,13 @@ class FunctionalDictionarySpec: QuickSpec {
 
             it("maps values correctly") {
                 // given
-                let s:Dictionary<Int, Int> = [1:1, 2:2, 3:3]
+                let s = [1: 1, 2: 2, 3: 3]
                 
                 // when
-                let r = s.mapValues{$0*2}
+                let r = s.mapValues { $0 * 2 }
                 
                 // then
-                expect(r) == [1:2, 2:4, 3:6]
+                expect(r) == [1: 2, 2: 4, 3: 6]
             }
             
         }

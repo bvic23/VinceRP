@@ -18,10 +18,7 @@ extension Dictionary {
 
     public func map<S>(transform: (Key, Value) -> S) -> [S] {
         var results = [S]()
-        for k in self.keys {
-            guard let v = self[k] else {
-                continue
-            }
+        for (k, v) in self {
             results.append(transform(k, v))
         }
         return results
