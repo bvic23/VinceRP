@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @interface VRPNSObjectHelper : NSObject
+
 + (void)try2InvokeBlock:(void(^)(void))try2Block catch2:(void(^)(NSException*))catch2Block finally:(void(^)(void))finallyBlock;
-+ (id)try2InvokeBlockWithReturn:(id(^)(void))try2Block catch2:(id(^)(NSException*))catch2Block finally:(void(^)(void))finallyBlock;
-+ (void)throwExceptionNamed:(NSString *)name message:(NSString *)message;
+
 @end

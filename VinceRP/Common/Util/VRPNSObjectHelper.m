@@ -28,29 +28,4 @@
     }
 }
 
-+ (id)try2InvokeBlockWithReturn:(id(^)(void))try2Block catch2:(id(^)(NSException*))catch2Block finally:(void(^)(void))finallyBlock {
-    NSAssert(try2Block != NULL, @"try2 block cannot be null");
-    NSAssert(catch2Block != NULL || finallyBlock != NULL, @"catch2 or finally block must be provided");
-    
-    id returnValue = nil;
-    @try {
-        returnValue = try2Block();
-    }
-    @catch (NSException *ex) {
-        if(catch2Block != NULL) {
-            returnValue = catch2Block(ex);
-        }
-    }
-    @finally {
-        if(finallyBlock != NULL) {
-            finallyBlock();
-        }
-    }
-    return returnValue;
-}
-
-+ (void)throwExceptionNamed:(NSString *)name message:(NSString *)message {
-    [NSException raise:name format:@"message:%@", message];
-}
-
 @end
