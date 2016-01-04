@@ -10,6 +10,14 @@ import Nimble
 
 let v = NSObject()
 
+class Foo: Hashable {
+    let hashValue = 5
+}
+
+func ==(lhs: Foo, rhs: Foo) -> Bool {
+    return lhs.hashValue == rhs.hashValue
+}
+
 class WeakReferenceSpec: QuickSpec {
 
     override func spec() {
@@ -32,6 +40,58 @@ class WeakReferenceSpec: QuickSpec {
                 expect(wr.value) == v
             }
 
+        }
+        
+        describe("hash") {
+
+            it("'s hash is not 0 if reference is valid") {
+                // when
+                let wr = WeakReference(v)
+                
+                // then
+                expect(wr.hashValue) != 0
+            }
+
+            it("'s hash is 0 if reference is gone") {
+                // when
+                let wr = WeakReference(NSObject())
+                
+                // then
+                expect(wr.hashValue) == 0
+            }
+            
+        }
+        
+        describe("equality") {
+            
+            it("holds equality for same instances") {
+                // when
+                let w1 = WeakReference(v)
+                let w2 = WeakReference(v)
+                
+                // then
+                expect(w1) == w2
+            }
+            
+            it("holds equality for nil reference") {
+                // when
+                let w1 = WeakReference(NSObject())
+                let w2 = WeakReference(NSObject())
+                
+                // then
+                expect(w1) == w2
+                expect(w1.hashValue) == 0
+            }
+            
+            it("holds equality the same hasValue") {
+                // when
+                let w1 = WeakReference(Foo())
+                let w2 = WeakReference(Foo())
+                
+                // then
+                expect(w1) == w2
+            }
+            
         }
 
     }
