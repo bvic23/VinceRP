@@ -10,14 +10,6 @@ import Nimble
 
 let v = NSObject()
 
-class Foo: Hashable {
-    let hashValue = 5
-}
-
-func ==(lhs: Foo, rhs: Foo) -> Bool {
-    return lhs.hashValue == rhs.hashValue
-}
-
 class WeakReferenceSpec: QuickSpec {
 
     override func spec() {

@@ -50,3 +50,15 @@ class Runnable {
         thread.start()
     }
 }
+
+class Foo: Hashable {
+    let hashValue: Int
+    
+    init(hashValue: Int = 5) {
+        self.hashValue = hashValue
+    }
+}
+
+func ==(lhs: Foo, rhs: Foo) -> Bool {
+    return lhs.hashValue == rhs.hashValue
+}

@@ -56,14 +56,6 @@ public class WeakSet<T: Hashable where T: AnyObject> {
     public func hasElementPassingTest(@noescape filterFunc: (T) -> Bool) -> Bool {
         return self.array().hasElementPassingTest(filterFunc)
     }
-
-    public func map<U>(@noescape transform: (T) -> U) -> WeakSet<U> {
-        return WeakSet<U>(self.array().map(transform))
-    }
-    
-    public func flatMap<U>(@noescape transform: (T) -> U?) -> WeakSet<U> {
-        return WeakSet<U>(self.array().flatMap(transform))
-    }
     
     private func array() -> Array<T> {
         var result = Array<T>()
