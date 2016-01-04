@@ -18,23 +18,6 @@ extension Array {
         let result = mutableCopy
         return result
     }
-    
-    public func arrayByRemoving(@noescape predicate: (Element) throws -> Bool)  -> [Element] {
-        var mutableCopy = self
-        mutableCopy.remove(predicate)
-        let result = mutableCopy
-        return result
-    }
-
-    public mutating func remove(@noescape predicate: (Element) throws -> Bool) {
-        do {
-            if let index = try indexOf(predicate) {
-                self.removeAtIndex(index)
-            }
-        } catch {
-            return
-        }
-    }
 
 }
 
@@ -45,4 +28,3 @@ extension Array where Element: SequenceType {
     }
     
 }
-
