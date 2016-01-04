@@ -76,12 +76,6 @@ extension Set: Flattenable {
         return Set<U.Generator.Element>(result)
     }
     
-    public func flatMap<T>(@noescape transform: (Element) -> T?) -> Set<T> {
-        let arr = Array(self)
-        let result = arr.flatMap(transform)
-        return Set<T>(result)
-    }
-    
 }
 
 extension Set where Element:SequenceType, Element.Generator.Element: Hashable {
@@ -95,8 +89,4 @@ extension Set where Element:SequenceType, Element.Generator.Element: Hashable {
 infix operator ++ { associativity left precedence 160 }
 public func ++<T:Hashable>(left: Set<T>, right: Set<T>) -> Set<T> {
     return left.union(right)
-}
-
-public func ++<T:Hashable>(left: Set<T>, right: T) -> Set<T> {
-    return left ++ toSet(right)
 }
