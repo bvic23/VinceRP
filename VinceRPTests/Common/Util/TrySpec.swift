@@ -8,17 +8,13 @@
 import Quick
 import Nimble
 
-struct TestFailure {
-    static let error = NSError(domain:"Wrappers Tests", code:100, userInfo:[NSLocalizedDescriptionKey:"Testing"])
-}
-
 class TrySpec: QuickSpec {
 
     override func spec() {
 
         describe("basic") {
 
-            it("maps error to non-success") {
+            it("successful for non-error") {
                 // when
                 let result = Try(false)
 
@@ -26,7 +22,7 @@ class TrySpec: QuickSpec {
                 expect(result.isSuccess()) == true
             }
 
-            it("maps false to non-failure") {
+            it("is not failure for non-error") {
                 // when
                 let result = Try(false)
 
@@ -34,23 +30,50 @@ class TrySpec: QuickSpec {
                 expect(result.isFailure()) == false
             }
 
-
-            it("maps error to failure") {
+            it("is failure for error") {
                 // when
-                let result = Try<Bool>(TestFailure.error)
+                let result = Try<Bool>(fakeError)
 
                 // then
                 expect(result.isFailure()) == true
             }
 
-            it("maps false to success") {
+            it("is not successful for error") {
                 // when
-                let result = Try<Bool>(TestFailure.error)
+                let result = Try<Bool>(fakeError)
 
                 // then
                 expect(result.isSuccess()) == false
             }
 
+        }
+        
+        describe("map") {
+            
+            it("maps error to error") {
+                // given
+                let a = Try<Int>(fakeError)
+                
+                // when
+                let result = a.map { $0 * 2 }
+                
+                // then
+                expect(result.isFailure()) == true
+                expect(result.description) == fakeError.description
+            }
+            
+            it("maps non-error correctly") {
+                // given
+                let a = Try(2)
+                
+                // when
+                let result = a.map { $0 * 2 }
+                
+                // then
+                expect(result.isSuccess()) == true
+                expect(result.description) == "4"
+            }
+            
         }
 
     }
