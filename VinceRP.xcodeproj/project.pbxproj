@@ -120,6 +120,8 @@
 		797C15D51C280BE1007C234A /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C15D31C280BCE007C234A /* UpdateState.swift */; };
 		797CD1291C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */; };
 		797CD12A1C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */; };
+		797CD1351C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */; };
+		797CD1361C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */; };
 		798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */; };
 		798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */; };
 		798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */; };
@@ -268,6 +270,7 @@
 		7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocalSpec.swift; path = Common/Threading/ThreadLocalSpec.swift; sourceTree = "<group>"; };
 		797C15D31C280BCE007C234A /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateState.swift; path = Common/Core/UpdateState.swift; sourceTree = "<group>"; };
 		797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakSetSpec.swift; path = Common/Util/WeakSetSpec.swift; sourceTree = "<group>"; };
+		797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactivePropertyGeneratorSpec.swift; path = Common/Util/ReactivePropertyGeneratorSpec.swift; sourceTree = "<group>"; };
 		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
 		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
 		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
@@ -560,6 +563,7 @@
 				798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */,
 				798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */,
 				798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */,
+				797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */,
 				798A2D361C0789F5000277AA /* TrySpec.swift */,
 				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
 				797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */,
@@ -1148,6 +1152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797CD1361C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift in Sources */,
 				798A2D451C078A86000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
@@ -1231,6 +1236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797CD1351C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift in Sources */,
 				798A2D391C0789F5000277AA /* FunctionalArraySpec.swift in Sources */,
 				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,

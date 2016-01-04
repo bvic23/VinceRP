@@ -54,7 +54,7 @@ class Runnable {
 class Foo: Hashable {
     let hashValue: Int
     
-    init(hashValue: Int = 5) {
+    init(hashValue: Int = 1) {
         self.hashValue = hashValue
     }
 }

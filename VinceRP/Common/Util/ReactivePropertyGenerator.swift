@@ -9,7 +9,7 @@ public class ReactivePropertyGenerator {
     private static var observerMap = [String: PropertyObserver]()
 
     static func getKey(targetObject: AnyObject, propertyName: String) -> String {
-        return  "\(targetObject.hash)\(propertyName) "
+        return "\(targetObject.hashValue)\(propertyName)"
     }
 
     static func getEmitter<T>(targetObject: AnyObject, propertyName: String) -> Source<T>? {
