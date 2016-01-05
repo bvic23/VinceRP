@@ -8,7 +8,7 @@
 import Quick
 import Nimble
 
-class AAADynamicSpec: QuickSpec {
+class DynamicSpec: QuickSpec {
     
     override func spec() {
         
