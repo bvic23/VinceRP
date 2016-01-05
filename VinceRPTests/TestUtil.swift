@@ -51,12 +51,31 @@ class Runnable {
     }
 }
 
-class Foo: Hashable {
+class Foo: AnyObject, Hashable {
+    
     let hashValue: Int
     
     init(hashValue: Int = 1) {
         self.hashValue = hashValue
     }
+    
+}
+
+class FooReactive: NSObject {
+    
+    let v: Int
+    
+    var name: String
+    
+    init(hashValue: Int = 1) {
+        self.v = hashValue
+        self.name = "test"
+    }
+    
+    override var hash: Int {
+        return self.v
+    }
+    
 }
 
 func ==(lhs: Foo, rhs: Foo) -> Bool {
