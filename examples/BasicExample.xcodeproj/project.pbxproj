@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795C5AC31C24AFAD00CFB907 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795C5AC21C24AFAD00CFB907 /* Logger.swift */; };
 		7970368D1BA70A5B00ED5D1A /* UIImage+FromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970368C1BA70A5B00ED5D1A /* UIImage+FromColor.swift */; };
 		799E46B91B9B88B2005D5F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46B71B9B88B2005D5F6F /* Main.storyboard */; };
 		799E46BB1B9B88B2005D5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BA1B9B88B2005D5F6F /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		795C5AC21C24AFAD00CFB907 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Logger/Logger.swift; sourceTree = "<group>"; };
 		7970368C1BA70A5B00ED5D1A /* UIImage+FromColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FromColor.swift"; sourceTree = "<group>"; };
 		799E46AB1B9B88B1005D5F6F /* BasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799E46B81B9B88B2005D5F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795C5ABE1C24AFA100CFB907 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				795C5AC21C24AFAD00CFB907 /* Logger.swift */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
 		799E46A21B9B88B1005D5F6F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		799E46AD1B9B88B1005D5F6F /* BasicExample */ = {
 			isa = PBXGroup;
 			children = (
+				795C5ABE1C24AFA100CFB907 /* Logger */,
 				79EFAA671BA1C698008D976A /* AppDelegate.swift */,
 				799E46BA1B9B88B2005D5F6F /* Assets.xcassets */,
 				79E1A5B21BCEC909003C8036 /* FlickrPhotoCell.swift */,
@@ -272,6 +283,7 @@
 				79CB58041BCEAC2200070BEF /* FlickrService.swift in Sources */,
 				79F5A9C61BBA98C90062D4A3 /* FlickrViewController.swift in Sources */,
 				79DAC5431B9B8BBC0054086D /* LoginViewControler.swift in Sources */,
+				795C5AC31C24AFAD00CFB907 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
