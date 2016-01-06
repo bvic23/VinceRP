@@ -143,6 +143,8 @@
 		799077CD1C2BE2FD00956AC8 /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
 		79952B261C0CCCEF00BD7E76 /* Spinlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B251C0CCCEF00BD7E76 /* Spinlock.swift */; };
 		79952B271C0CCCEF00BD7E76 /* Spinlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B251C0CCCEF00BD7E76 /* Spinlock.swift */; };
+		79A192D91C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
+		79A192DA1C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
@@ -282,6 +284,7 @@
 		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
 		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeSpec.swift; path = Common/Core/NodeSpec.swift; sourceTree = "<group>"; };
 		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinlock.swift; path = Common/Threading/Spinlock.swift; sourceTree = "<group>"; };
+		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddableSpec.swift; path = Common/Convenient/AddableSpec.swift; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
@@ -584,6 +587,7 @@
 		798A2D231C0789BF000277AA /* Convenient */ = {
 			isa = PBXGroup;
 			children = (
+				79A192D81C3D38040097C920 /* AddableSpec.swift */,
 			);
 			name = Convenient;
 			sourceTree = "<group>";
@@ -1165,6 +1169,7 @@
 				798A2D511C078B43000277AA /* BasicSpec.swift in Sources */,
 				79552EBC1C078CCB00EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				79A192DA1C3D38040097C920 /* AddableSpec.swift in Sources */,
 				797CD12A1C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */,
 				796D6CC51C299FFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7841C2821D9000B7894 /* ThreadLocalSpec.swift in Sources */,
@@ -1249,6 +1254,7 @@
 				798A2D4E1C078B39000277AA /* BasicSpec.swift in Sources */,
 				79552EBB1C078C5100EC284B /* Hub+operatorsSpec.swift in Sources */,
 				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
+				79A192D91C3D38040097C920 /* AddableSpec.swift in Sources */,
 				797CD1291C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */,
 				796D6CC41C299EFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7831C2821D7000B7894 /* ThreadLocalSpec.swift in Sources */,
