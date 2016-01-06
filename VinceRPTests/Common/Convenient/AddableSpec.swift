@@ -17,10 +17,9 @@ class AddableSpec: QuickSpec {
             it("works") {
                 // given
                 let left = reactive(1)
-                let right = 2
                 
                 // when
-                left += right
+                left += 2
                 
                 // then
                 expect(left*) == 3
