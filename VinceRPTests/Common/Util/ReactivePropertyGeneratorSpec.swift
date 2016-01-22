@@ -15,7 +15,8 @@ import Nimble
 */
 
 class ReactivePropertyGeneratorSpec: QuickSpec {
-    
+    let target = FooReactive()
+
     override func spec() {
         
         describe("basic") {
@@ -96,6 +97,18 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 expect(o).notTo(beNil())
             }
             
+            it("triggers a propertyObserver if no existing emitter") {
+                // given
+                let o = sut.synthesizeObserver(self.target, propertyName: "name", initValue: 1)
+                let e = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
+                
+                // when
+                o.propertyChangeHandler(o.targetObject, o.propertyName, 2)
+                
+                // then
+                expect(e.value()) == 2
+            }
+            
             it("creates an observer") {
                 // when
                 let o = sut.createObserver(FooReactive(), propertyName: "name", initValue: 1)
@@ -104,6 +117,47 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 expect(o).notTo(beNil())
             }
             
+            it("fetches the existing source") {
+                // given
+                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
+                
+                // when
+                let e2 = sut.source(self.target, propertyName: "name", initValue: 1)
+                
+                // then
+                expect(e1) == e2
+            }
+            
+            it("creates a new source") {
+                // given
+                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
+                
+                // when
+                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1)
+                
+                // then
+                expect(e1).notTo(equal(e2))
+            }
+            
+            it("creates a new source and calls the initilizer immediately") {
+                // when
+                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1) {
+                    $0.update(3)
+                }
+                
+                // then
+                expect(e2.value()) == 3
+            }
+            
+            it("creates a property") {
+                // when
+                let o = sut.property(self.target, propertyName: "name", initValue: 1) {
+                    $0.update(4)
+                }
+                
+                // then
+                expect(o.value()) == 4
+            }
         }
         
     }
