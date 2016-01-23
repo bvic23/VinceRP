@@ -18,7 +18,6 @@ class PropertyObserverSpec: QuickSpec {
             var result: Int? = nil
             var sut: PropertyObserver!
             
-            
             beforeEach {
                 sut = PropertyObserver(targetObject: target, propertyName: "name") {
                     result = $0.2 as? Int
@@ -55,6 +54,22 @@ class PropertyObserverSpec: QuickSpec {
                 
                 // then
                 expect(result) == 2
+            }
+            
+            it("removes itself as the obsever on deinit") {
+                // given
+                weak var po: PropertyObserver?
+                    
+                do {
+                    let strongPo = PropertyObserver(targetObject: target, propertyName: "name") {
+                        result = $0.2 as? Int
+                    }
+                    
+                    po = strongPo
+                }
+                
+                // then
+                expect(po).to(beNil())
             }
             
         }

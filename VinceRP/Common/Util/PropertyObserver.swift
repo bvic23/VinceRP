@@ -31,4 +31,5 @@ class PropertyObserver: NSObject {
     deinit {
         self.targetObject.removeObserver(self, forKeyPath: propertyName, context: &propertyObserverContext)
     }
+    
 }
