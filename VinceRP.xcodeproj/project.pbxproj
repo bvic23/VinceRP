@@ -16,10 +16,6 @@
 		02C8B38B1BE3F89C00203CF2 /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* VinceRP.framework */; };
 		02C8B3961BE3FD6C00203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C8B3971BE3FD7200203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		791CB9801C53BBE10008685F /* PropertyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB97F1C53BBE10008685F /* PropertyObserver.swift */; };
-		791CB9811C53BBE10008685F /* PropertyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB97F1C53BBE10008685F /* PropertyObserver.swift */; };
-		791CB9831C53BC090008685F /* PropertyObserverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB9821C53BC090008685F /* PropertyObserverSpec.swift */; };
-		791CB9841C53BC090008685F /* PropertyObserverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB9821C53BC090008685F /* PropertyObserverSpec.swift */; };
 		791F30AC1C03924C004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
 		791F30B01C03924C004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
 		791F30B41C039260004AA9E2 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B31C039260004AA9E2 /* Addable.swift */; };
@@ -149,9 +145,17 @@
 		79952B271C0CCCEF00BD7E76 /* Spinlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B251C0CCCEF00BD7E76 /* Spinlock.swift */; };
 		79A192D91C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
 		79A192DA1C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
+		79C7D9DD1C53D6B800BAEA5B /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; };
+		79C7D9DF1C53D7F200BAEA5B /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */; };
+		79C7D9E21C53D85900BAEA5B /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79C7D9E41C53D87D00BAEA5B /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79CB58351BD1227E00070BEF /* UISearchBar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */; };
 		79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */; };
 		79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */; };
+		79EA39D21C53DABF0052C7C5 /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */; };
+		79EA39D31C53DAC70052C7C5 /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79EA39D41C53DAE40052C7C5 /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; };
+		79EA39D51C53DAEB0052C7C5 /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
 		79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
@@ -187,6 +191,7 @@
 			files = (
 				02C8B3871BE3F80C00203CF2 /* Nimble.framework in Copy Carthage frameworks */,
 				02C8B3881BE3F80C00203CF2 /* Quick.framework in Copy Carthage frameworks */,
+				79EA39D31C53DAC70052C7C5 /* PMKVObserver.framework in Copy Carthage frameworks */,
 			);
 			name = "Copy Carthage frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +204,29 @@
 			files = (
 				795FF5301BB6DD7B00E19285 /* Quick.framework in Copy Carthage frameworks */,
 				795FF5311BB6DD7B00E19285 /* Nimble.framework in Copy Carthage frameworks */,
+				79EA39D51C53DAEB0052C7C5 /* PMKVObserver.framework in Copy Carthage frameworks */,
+			);
+			name = "Copy Carthage frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79C7D9E01C53D81B00BAEA5B /* Copy Carthage frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79C7D9E21C53D85900BAEA5B /* PMKVObserver.framework in Copy Carthage frameworks */,
+			);
+			name = "Copy Carthage frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79C7D9E31C53D86700BAEA5B /* Copy Carthage frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79C7D9E41C53D87D00BAEA5B /* PMKVObserver.framework in Copy Carthage frameworks */,
 			);
 			name = "Copy Carthage frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +240,6 @@
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		02C8B3831BE3F7FE00203CF2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		02C8B3841BE3F7FE00203CF2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		791CB97F1C53BBE10008685F /* PropertyObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyObserver.swift; path = Common/Util/PropertyObserver.swift; sourceTree = "<group>"; };
-		791CB9821C53BC090008685F /* PropertyObserverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyObserverSpec.swift; path = Common/Util/PropertyObserverSpec.swift; sourceTree = "<group>"; };
 		791F30A61C03924C004AA9E2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../vincerp/Common/Api.swift; sourceTree = "<group>"; };
 		791F30AA1C03924C004AA9E2 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../vincerp/Common/Timer.swift; sourceTree = "<group>"; };
 		791F30B31C039260004AA9E2 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addable.swift; path = ../vincerp/Common/Convenient/Addable.swift; sourceTree = "<group>"; };
@@ -291,6 +317,8 @@
 		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeSpec.swift; path = Common/Core/NodeSpec.swift; sourceTree = "<group>"; };
 		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinlock.swift; path = Common/Threading/Spinlock.swift; sourceTree = "<group>"; };
 		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddableSpec.swift; path = Common/Convenient/AddableSpec.swift; sourceTree = "<group>"; };
+		79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = ../../vincerp/VinceRP/Carthage/Build/iOS/PMKVObserver.framework; sourceTree = "<group>"; };
+		79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = ../../vincerp/VinceRP/Carthage/Build/Mac/PMKVObserver.framework; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+didChange.swift"; sourceTree = "<group>"; };
 		79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChange.swift"; sourceTree = "<group>"; };
@@ -311,6 +339,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C7D9DF1C53D7F200BAEA5B /* PMKVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79EA39D21C53DABF0052C7C5 /* PMKVObserver.framework in Frameworks */,
 				02C8B38B1BE3F89C00203CF2 /* VinceRP.framework in Frameworks */,
 				02C8B3891BE3F81600203CF2 /* Nimble.framework in Frameworks */,
 				02C8B38A1BE3F81600203CF2 /* Quick.framework in Frameworks */,
@@ -328,6 +358,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C7D9DD1C53D6B800BAEA5B /* PMKVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +369,7 @@
 				79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */,
 				792178441BB6DB890039F457 /* Quick.framework in Frameworks */,
 				792178451BB6DB890039F457 /* Nimble.framework in Frameworks */,
+				79EA39D41C53DAE40052C7C5 /* PMKVObserver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +457,6 @@
 				791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */,
 				791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */,
 				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
-				791CB97F1C53BBE10008685F /* PropertyObserver.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -577,7 +608,6 @@
 				798A2D361C0789F5000277AA /* TrySpec.swift */,
 				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
 				797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */,
-				791CB9821C53BC090008685F /* PropertyObserverSpec.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -661,11 +691,13 @@
 		8EA5DB600A65270836171DE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */,
+				79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */,
 				791F31211C03947D004AA9E2 /* AppKit.framework */,
 				02C8B3831BE3F7FE00203CF2 /* Nimble.framework */,
+				792178431BB6DB890039F457 /* Nimble.framework */,
 				02C8B3841BE3F7FE00203CF2 /* Quick.framework */,
 				792178421BB6DB890039F457 /* Quick.framework */,
-				792178431BB6DB890039F457 /* Nimble.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -730,7 +762,7 @@
 				02C489591BE35487004FD281 /* Sources */,
 				02C4895A1BE35487004FD281 /* Frameworks */,
 				02C4895B1BE35487004FD281 /* Headers */,
-				02C4895C1BE35487004FD281 /* Resources */,
+				79C7D9E31C53D86700BAEA5B /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -767,7 +799,7 @@
 				79F2567C1ADE77250077730C /* Sources */,
 				79F2567D1ADE77250077730C /* Frameworks */,
 				79F2567E1ADE77250077730C /* Headers */,
-				79F2567F1ADE77250077730C /* Resources */,
+				79C7D9E01C53D81B00BAEA5B /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -1089,21 +1121,7 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		02C4895C1BE35487004FD281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		02C489651BE35488004FD281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79F2567F1ADE77250077730C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1131,7 +1149,6 @@
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
-				791CB9811C53BBE10008685F /* PropertyObserver.swift in Sources */,
 				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
 				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
@@ -1170,7 +1187,6 @@
 				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
 				793781E71C2BE52C003006FC /* IncrementingSpec.swift in Sources */,
-				791CB9841C53BC090008685F /* PropertyObserverSpec.swift in Sources */,
 				793781E41C2BE419003006FC /* NodeSpec.swift in Sources */,
 				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
 				79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */,
@@ -1217,7 +1233,6 @@
 				79952B261C0CCCEF00BD7E76 /* Spinlock.swift in Sources */,
 				791F30D21C039273004AA9E2 /* Throttle.swift in Sources */,
 				02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */,
-				791CB9801C53BBE10008685F /* PropertyObserver.swift in Sources */,
 				795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */,
 				791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */,
 				791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */,
@@ -1257,7 +1272,6 @@
 				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
 				793781E61C2BE4BD003006FC /* IncrementingSpec.swift in Sources */,
-				791CB9831C53BC090008685F /* PropertyObserverSpec.swift in Sources */,
 				799077CD1C2BE2FD00956AC8 /* NodeSpec.swift in Sources */,
 				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
 				79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */,
@@ -1304,7 +1318,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = VinceRP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1325,7 +1342,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = VinceRP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1470,7 +1490,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VinceRP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1490,7 +1513,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VinceRP/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
