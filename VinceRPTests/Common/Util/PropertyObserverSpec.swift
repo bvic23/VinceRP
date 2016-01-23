@@ -1,5 +1,5 @@
 //
-// Created by Viktor Belényesi on 04/01/16.
+// Created by Viktor Belényesi on 23/01/16.
 // Copyright (c) 2016 Viktor Belenyesi. All rights reserved.
 //
 
@@ -8,17 +8,18 @@
 import Quick
 import Nimble
 
-class ReactivePropertyGeneratorSpec: QuickSpec {
-    let target = FooReactive()
-
+class PropertyObserverSpec: QuickSpec {
+    
     override func spec() {
         
         describe("basic") {
             
-            var sut: ReactivePropertyGenerator!
+            var sut: PropertyObserver!
             
             beforeEach {
-                sut = ReactivePropertyGenerator()
+                sut = PropertyObserver(FooReactive(), "name") {
+                    
+                }
             }
             
             it("generates a proper key") {
@@ -32,7 +33,7 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             it("does not contain any emitter initially") {
                 // when
                 let e: Source<Int>? = sut.getEmitter(FooReactive(), propertyName: "name")
-
+                
                 // then
                 expect(e).to(beNil())
             }
@@ -40,7 +41,7 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             it("returns with the same emitter to the same hash") {
                 // given
                 let e1: Source<Int> = sut.createEmitter(FooReactive(), propertyName: "name", initValue: nil)
-
+                
                 // when
                 let e2: Source<Int> = sut.getEmitter(FooReactive(), propertyName: "name")!
                 
@@ -91,18 +92,6 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 expect(o).notTo(beNil())
             }
             
-            it("triggers a propertyObserver if no existing emitter") {
-                // given
-                let o = sut.synthesizeObserver(self.target, propertyName: "name", initValue: 1)
-                let e = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
-                
-                // when
-                o.propertyChangeHandler(o.targetObject, o.propertyName, 2)
-                
-                // then
-                expect(e.value()) == 2
-            }
-            
             it("creates an observer") {
                 // when
                 let o = sut.createObserver(FooReactive(), propertyName: "name", initValue: 1)
@@ -111,47 +100,6 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 expect(o).notTo(beNil())
             }
             
-            it("fetches the existing source") {
-                // given
-                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
-                
-                // when
-                let e2 = sut.source(self.target, propertyName: "name", initValue: 1)
-                
-                // then
-                expect(e1) == e2
-            }
-            
-            it("creates a new source") {
-                // given
-                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
-                
-                // when
-                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1)
-                
-                // then
-                expect(e1).notTo(equal(e2))
-            }
-            
-            it("creates a new source and calls the initilizer immediately") {
-                // when
-                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1) {
-                    $0.update(3)
-                }
-                
-                // then
-                expect(e2.value()) == 3
-            }
-            
-            it("creates a property") {
-                // when
-                let o = sut.property(self.target, propertyName: "name", initValue: 1) {
-                    $0.update(4)
-                }
-                
-                // then
-                expect(o.value()) == 4
-            }
         }
         
     }

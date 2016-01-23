@@ -8,6 +8,7 @@ class AtomicReference<T> {
     private let lock = Spinlock()
     
     private var _value: T
+<<<<<<< Updated upstream
     
     var value: T {
         
@@ -29,3 +30,29 @@ class AtomicReference<T> {
     }
     
 }
+=======
+    private let lock : UnsafeMutablePointer<pthread_mutex_t>
+    
+    public var value: T {
+        get {
+            pthread_mutex_lock(self.lock)
+            let value = _value
+            pthread_mutex_unlock(self.lock)
+            return value
+        }
+        set {
+            pthread_mutex_lock(self.lock)
+            _value = newValue
+            pthread_mutex_unlock(self.lock)
+        }
+    }
+
+    public init(_ value: T) {
+        self.lock = UnsafeMutablePointer.alloc(sizeof(pthread_mutex_t))
+        
+        pthread_mutex_init(self.lock, nil)
+        _value = value
+    }
+
+  }
+>>>>>>> Stashed changes

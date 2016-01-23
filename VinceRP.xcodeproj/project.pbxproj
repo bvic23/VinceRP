@@ -16,6 +16,10 @@
 		02C8B38B1BE3F89C00203CF2 /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4895E1BE35487004FD281 /* VinceRP.framework */; };
 		02C8B3961BE3FD6C00203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02C8B3971BE3FD7200203CF2 /* VinceRP.h in Headers */ = {isa = PBXBuildFile; fileRef = 79F256861ADE77250077730C /* VinceRP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		791CB9801C53BBE10008685F /* PropertyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB97F1C53BBE10008685F /* PropertyObserver.swift */; };
+		791CB9811C53BBE10008685F /* PropertyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB97F1C53BBE10008685F /* PropertyObserver.swift */; };
+		791CB9831C53BC090008685F /* PropertyObserverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB9821C53BC090008685F /* PropertyObserverSpec.swift */; };
+		791CB9841C53BC090008685F /* PropertyObserverSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CB9821C53BC090008685F /* PropertyObserverSpec.swift */; };
 		791F30AC1C03924C004AA9E2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30A61C03924C004AA9E2 /* Api.swift */; };
 		791F30B01C03924C004AA9E2 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30AA1C03924C004AA9E2 /* Timer.swift */; };
 		791F30B41C039260004AA9E2 /* Addable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F30B31C039260004AA9E2 /* Addable.swift */; };
@@ -208,6 +212,8 @@
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		02C8B3831BE3F7FE00203CF2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		02C8B3841BE3F7FE00203CF2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		791CB97F1C53BBE10008685F /* PropertyObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyObserver.swift; path = Common/Util/PropertyObserver.swift; sourceTree = "<group>"; };
+		791CB9821C53BC090008685F /* PropertyObserverSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyObserverSpec.swift; path = Common/Util/PropertyObserverSpec.swift; sourceTree = "<group>"; };
 		791F30A61C03924C004AA9E2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../vincerp/Common/Api.swift; sourceTree = "<group>"; };
 		791F30AA1C03924C004AA9E2 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../vincerp/Common/Timer.swift; sourceTree = "<group>"; };
 		791F30B31C039260004AA9E2 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addable.swift; path = ../vincerp/Common/Convenient/Addable.swift; sourceTree = "<group>"; };
@@ -419,6 +425,7 @@
 				791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */,
 				791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */,
 				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
+				791CB97F1C53BBE10008685F /* PropertyObserver.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -570,6 +577,7 @@
 				798A2D361C0789F5000277AA /* TrySpec.swift */,
 				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
 				797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */,
+				791CB9821C53BC090008685F /* PropertyObserverSpec.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1123,6 +1131,7 @@
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
+				791CB9811C53BBE10008685F /* PropertyObserver.swift in Sources */,
 				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
 				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
@@ -1161,6 +1170,7 @@
 				798A2D461C078A86000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D431C078A81000277AA /* DynamicVariableSpec.swift in Sources */,
 				793781E71C2BE52C003006FC /* IncrementingSpec.swift in Sources */,
+				791CB9841C53BC090008685F /* PropertyObserverSpec.swift in Sources */,
 				793781E41C2BE419003006FC /* NodeSpec.swift in Sources */,
 				798A2D521C078B45000277AA /* SmokeSpec.swift in Sources */,
 				79552EBF1C08411E00EC284B /* MapperSpec.swift in Sources */,
@@ -1207,6 +1217,7 @@
 				79952B261C0CCCEF00BD7E76 /* Spinlock.swift in Sources */,
 				791F30D21C039273004AA9E2 /* Throttle.swift in Sources */,
 				02C489DE1BE3CBE6004FD281 /* UIResponder+VinceRP.swift in Sources */,
+				791CB9801C53BBE10008685F /* PropertyObserver.swift in Sources */,
 				795FF5521BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift in Sources */,
 				791F31091C0392C0004AA9E2 /* Flattenable.swift in Sources */,
 				791F30CE1C039273004AA9E2 /* Reducer.swift in Sources */,
@@ -1246,6 +1257,7 @@
 				798A2D3A1C0789F5000277AA /* FunctionalDictionarySpec.swift in Sources */,
 				798A2D311C0789E4000277AA /* DynamicVariableSpec.swift in Sources */,
 				793781E61C2BE4BD003006FC /* IncrementingSpec.swift in Sources */,
+				791CB9831C53BC090008685F /* PropertyObserverSpec.swift in Sources */,
 				799077CD1C2BE2FD00956AC8 /* NodeSpec.swift in Sources */,
 				798A2D4F1C078B39000277AA /* SmokeSpec.swift in Sources */,
 				79552EBE1C08411B00EC284B /* MapperSpec.swift in Sources */,
