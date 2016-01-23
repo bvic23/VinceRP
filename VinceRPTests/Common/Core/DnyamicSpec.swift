@@ -28,6 +28,7 @@ class DynamicSpec: QuickSpec {
                 
                 // then
                 expect(r).to(beEmpty())
+                expect(e).toNot(beNil())
             }
             
             it("pings not empty Set if incoming contains self") {
@@ -42,6 +43,7 @@ class DynamicSpec: QuickSpec {
                 
                 // then
                 expect(r).toNot(beEmpty())
+                expect(e).toNot(beNil())
             }
             
             it("pings not empty Set if intersect is not empty") {
