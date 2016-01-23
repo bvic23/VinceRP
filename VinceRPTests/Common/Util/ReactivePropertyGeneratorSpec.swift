@@ -9,16 +9,17 @@ import Quick
 import Nimble
 
 class ReactivePropertyGeneratorSpec: QuickSpec {
-    let target = FooReactive()
 
     override func spec() {
         
         describe("basic") {
             
             var sut: ReactivePropertyGenerator!
+            var target: FooReactive!
             
             beforeEach {
                 sut = ReactivePropertyGenerator()
+                target = FooReactive()
             }
             
             it("generates a proper key") {
@@ -90,17 +91,18 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 // then
                 expect(o).notTo(beNil())
             }
-            
+
             it("triggers a propertyObserver if no existing emitter") {
                 // given
-                let o = sut.synthesizeObserver(self.target, propertyName: "name", initValue: 1)
-                let e = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
-                
+                let o = sut.createObserver(target, propertyName: "name", initValue: "")
+                let e = sut.createEmitter(target, propertyName: "name", initValue: "")
+                 
                 // when
-                o.propertyChangeHandler(o.targetObject, o.propertyName, 2)
+                target.name = "test"
                 
                 // then
-                expect(e.value()) == 2
+                expect(o).notTo(beNil())
+                expect(e.value()) =~ "test"
             }
             
             it("creates an observer") {
@@ -113,10 +115,10 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             
             it("fetches the existing source") {
                 // given
-                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
+                let e1 = sut.createEmitter(target, propertyName: "name", initValue: 1)
                 
                 // when
-                let e2 = sut.source(self.target, propertyName: "name", initValue: 1)
+                let e2 = sut.source(target, propertyName: "name", initValue: 1)
                 
                 // then
                 expect(e1) == e2
@@ -124,10 +126,10 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             
             it("creates a new source") {
                 // given
-                let e1 = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
+                let e1 = sut.createEmitter(target, propertyName: "name", initValue: 1)
                 
                 // when
-                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1)
+                let e2 = sut.source(target, propertyName: "not-name", initValue: 1)
                 
                 // then
                 expect(e1).notTo(equal(e2))
@@ -135,7 +137,7 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             
             it("creates a new source and calls the initilizer immediately") {
                 // when
-                let e2 = sut.source(self.target, propertyName: "not-name", initValue: 1) {
+                let e2 = sut.source(target, propertyName: "not-name", initValue: 1) {
                     $0.update(3)
                 }
                 
@@ -145,12 +147,23 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
             
             it("creates a property") {
                 // when
-                let o = sut.property(self.target, propertyName: "name", initValue: 1) {
+                let o = sut.property(target, propertyName: "name", initValue: 1) {
                     $0.update(4)
                 }
                 
                 // then
                 expect(o.value()) == 4
+            }
+            
+            it("creates a property") {
+                // given
+                let o = sut.property(target, propertyName: "name", initValue: "")
+                
+                // when
+                target.name = "test"
+                
+                // then
+                expect(o.value()) =~ "test"
             }
         }
         

@@ -3,12 +3,14 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import PMKVObserver
+
 public class ReactivePropertyGenerator {
 
     static let instance = ReactivePropertyGenerator()
 
     private var propertyMap = [String: Node]()
-    private var observerMap = [String: PropertyObserver]()
+    private var observerMap = [String: KVObserver]()
     
     func getKey(targetObject: AnyObject, propertyName: String) -> String {
         return "\(targetObject.hashValue)\(propertyName)"
@@ -26,10 +28,12 @@ public class ReactivePropertyGenerator {
         return Source<T>(initValue: i)
     }
 
-    func synthesizeObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> PropertyObserver {
-        return PropertyObserver(targetObject: targetObject as! NSObject, propertyName: propertyName) { (currentTargetObject: NSObject, currentPropertyName:String, currentValue:AnyObject)  in
-            if let existingEmitter: Source<T> = self.getEmitter(currentTargetObject, propertyName: propertyName) {
-                existingEmitter.update(currentValue as! T)
+    func synthesizeObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> KVObserver {
+        return KVObserver(object: targetObject, keyPath: propertyName, options: [.New]) { object, change, _ in
+            if let existingEmitter: Source<T> = self.getEmitter(object, propertyName: propertyName),
+               let new = change.new as? String,
+               let t = new as? T {
+                existingEmitter.update(t)
             }
         }
     }
@@ -41,7 +45,7 @@ public class ReactivePropertyGenerator {
         return result
     }
 
-    func createObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> PropertyObserver {
+    func createObserver<T>(targetObject: AnyObject, propertyName: String, initValue: T?) -> KVObserver {
         let result = synthesizeObserver(targetObject, propertyName: propertyName, initValue: initValue)
         let key = getKey(targetObject, propertyName: propertyName)
         observerMap[key] = result

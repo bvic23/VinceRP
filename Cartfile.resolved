@@ -1,2 +1,3 @@
-github "Quick/Nimble" "c2aafa5da886f4e44ee29b4faaaa20fdac8a9369"
-github "Quick/Quick" "5fff1989f54b73f9d51725727e04aafb9557b41e"
+github "Quick/Nimble" "5b8ff027c297443b0148f41e460bdfcb8517d471"
+github "postmates/PMKVObserver" "v1.0.1"
+github "Quick/Quick" "31a63ce0e98bda0424624e55ef723b53dfe30dc6"

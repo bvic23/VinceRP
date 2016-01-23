@@ -65,7 +65,7 @@ class FooReactive: NSObject {
     
     let v: Int
     
-    var name: String
+    dynamic var name: String
     
     init(hashValue: Int = 1) {
         self.v = hashValue
