@@ -3,8 +3,9 @@
 // Copyright (c) 2016 Viktor Belenyesi. All rights reserved.
 //
 
+var propertyObserverContext = 0
+
 class PropertyObserver: NSObject {
-    private var propertyObserverContext = 0
     let targetObject: NSObject
     let propertyName: String
     let propertyChangeHandler: (NSObject, String, AnyObject) -> Void
@@ -24,8 +25,6 @@ class PropertyObserver: NSObject {
                     self.propertyChangeHandler(self.targetObject, self.propertyName, newValue)
                 }
             }
-        } else {
-            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
         }
     }
     
