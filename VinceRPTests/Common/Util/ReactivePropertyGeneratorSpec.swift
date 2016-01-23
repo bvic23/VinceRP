@@ -90,19 +90,7 @@ class ReactivePropertyGeneratorSpec: QuickSpec {
                 // then
                 expect(o).notTo(beNil())
             }
-            
-            it("triggers a propertyObserver if no existing emitter") {
-                // given
-                let o = sut.synthesizeObserver(self.target, propertyName: "name", initValue: 1)
-                let e = sut.createEmitter(self.target, propertyName: "name", initValue: 1)
-                
-                // when
-                o.propertyChangeHandler(o.targetObject, o.propertyName, 2)
-                
-                // then
-                expect(e.value()) == 2
-            }
-            
+
             it("creates an observer") {
                 // when
                 let o = sut.createObserver(FooReactive(), propertyName: "name", initValue: 1)
