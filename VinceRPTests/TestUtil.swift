@@ -78,6 +78,20 @@ class FooReactive: NSObject {
     
 }
 
+class ObservableFooReactive: FooReactive {
+    var hasObserver = false
+    
+    override func addObserver(observer: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions, context: UnsafeMutablePointer<Void>) {
+        hasObserver = true
+        super.addObserver(observer, forKeyPath: keyPath, options: options, context: context)
+    }
+    
+    override func removeObserver(observer: NSObject, forKeyPath keyPath: String) {
+        hasObserver = false
+        super.removeObserver(observer, forKeyPath: keyPath)
+    }
+}
+
 func ==(lhs: Foo, rhs: Foo) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }

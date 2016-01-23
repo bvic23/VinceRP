@@ -14,7 +14,7 @@ class PropertyObserverSpec: QuickSpec {
         
         describe("basic") {
             var otherContext = 0
-            let target = FooReactive()
+            let target = ObservableFooReactive()
             var result: Int? = nil
             var sut: PropertyObserver!
             
@@ -59,16 +59,20 @@ class PropertyObserverSpec: QuickSpec {
             it("removes itself as the obsever on deinit") {
                 // given
                 weak var po: PropertyObserver?
-                    
+                
                 do {
+                    // when
                     let strongPo = PropertyObserver(targetObject: target, propertyName: "name") {
                         result = $0.2 as? Int
                     }
-                    
                     po = strongPo
-                }
-                
+
+                    // then
+                    expect(target.hasObserver) == true
+                }                
+
                 // then
+                expect(target.hasObserver) == false
                 expect(po).to(beNil())
             }
             
