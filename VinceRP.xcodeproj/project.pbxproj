@@ -153,8 +153,6 @@
 		79EA39D41C53DAE40052C7C5 /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; };
 		79EA39D51C53DAEB0052C7C5 /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79F2568D1ADE77250077730C /* VinceRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F256811ADE77250077730C /* VinceRP.framework */; };
-		79F531061C54A79E00CD5F1B /* String+vincerpSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F531051C54A79E00CD5F1B /* String+vincerpSpec.swift */; };
-		79F531071C54A7AD00CD5F1B /* String+vincerpSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F531051C54A79E00CD5F1B /* String+vincerpSpec.swift */; };
 		79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E61C0DE1F10096B050 /* AtomicReference.swift */; };
 		79FF03EA1C0DE26B0096B050 /* Incrementing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF03E91C0DE26B0096B050 /* Incrementing.swift */; };
@@ -323,7 +321,6 @@
 		79F256861ADE77250077730C /* VinceRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinceRP.h; sourceTree = "<group>"; };
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79F531051C54A79E00CD5F1B /* String+vincerpSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+vincerpSpec.swift"; sourceTree = "<group>"; };
 		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicReference.swift; sourceTree = "<group>"; };
 		79FF03E91C0DE26B0096B050 /* Incrementing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incrementing.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
@@ -654,7 +651,6 @@
 			isa = PBXGroup;
 			children = (
 				798A2D1F1C078996000277AA /* Common */,
-				79F531021C54A58600CD5F1B /* Extension */,
 				79F256911ADE77250077730C /* Supporting Files */,
 				ADEAFB18FDE6268B224542C9 /* TestUtil.swift */,
 			);
@@ -667,30 +663,6 @@
 				79F256921ADE77250077730C /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		79F531021C54A58600CD5F1B /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				79F531031C54A59300CD5F1B /* Common */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		79F531031C54A59300CD5F1B /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				79F531041C54A78900CD5F1B /* Foundation */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		79F531041C54A78900CD5F1B /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				79F531051C54A79E00CD5F1B /* String+vincerpSpec.swift */,
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		8EA5DB600A65270836171DE2 /* Frameworks */ = {
@@ -1199,7 +1171,6 @@
 				79552EC21C086CF400EC284B /* ReducerSpec.swift in Sources */,
 				79A192DA1C3D38040097C920 /* AddableSpec.swift in Sources */,
 				797CD12A1C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */,
-				79F531071C54A7AD00CD5F1B /* String+vincerpSpec.swift in Sources */,
 				796D6CC51C299FFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7841C2821D9000B7894 /* ThreadLocalSpec.swift in Sources */,
 				796D6CC91C2A002B00307B51 /* DnyamicSpec.swift in Sources */,
@@ -1283,7 +1254,6 @@
 				79552EC11C086CF400EC284B /* ReducerSpec.swift in Sources */,
 				79A192D91C3D38040097C920 /* AddableSpec.swift in Sources */,
 				797CD1291C3AB01900BCA9F1 /* WeakSetSpec.swift in Sources */,
-				79F531061C54A79E00CD5F1B /* String+vincerpSpec.swift in Sources */,
 				796D6CC41C299EFD00307B51 /* DispatchableSpec.swift in Sources */,
 				7972D7831C2821D7000B7894 /* ThreadLocalSpec.swift in Sources */,
 				796D6CC81C2A002B00307B51 /* DnyamicSpec.swift in Sources */,
