@@ -81,8 +81,6 @@
 		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
 		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
 		791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */; };
-		791F31361C039885004AA9E2 /* String+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+VinceRP.swift */; };
-		791F31371C0398B6004AA9E2 /* String+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+VinceRP.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		793781E41C2BE419003006FC /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
@@ -275,7 +273,6 @@
 		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+didChange.swift"; sourceTree = "<group>"; };
 		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
 		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
-		791F31351C039885004AA9E2 /* String+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+VinceRP.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79273A431BAE05BC00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
@@ -459,22 +456,6 @@
 				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		791F31311C039863004AA9E2 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				791F31341C039879004AA9E2 /* Foundation */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		791F31341C039879004AA9E2 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				791F31351C039885004AA9E2 /* String+VinceRP.swift */,
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		79273A441BAE05BC00CEF85C /* Products */ = {
@@ -749,7 +730,6 @@
 			isa = PBXGroup;
 			children = (
 				024BC3681BEA4BED009FCBC2 /* AppKit */,
-				791F31311C039863004AA9E2 /* Common */,
 				ADEAF166AA1D8EC3BCD62741 /* UIKit */,
 			);
 			path = Extension;
@@ -1173,7 +1153,6 @@
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
-				791F31371C0398B6004AA9E2 /* String+VinceRP.swift in Sources */,
 				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
@@ -1265,7 +1244,6 @@
 				791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */,
 				79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */,
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
-				791F31361C039885004AA9E2 /* String+VinceRP.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
 				797C15D41C280BCE007C234A /* UpdateState.swift in Sources */,
 				791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */,
