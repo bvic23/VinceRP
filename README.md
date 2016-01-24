@@ -89,7 +89,7 @@ let s = reactive(1)
 let s2 = definedAs{ "s*2 = \(s.value() * 2)" }
 let s3 = definedAs{ s2* + s* }
 ```
-However XCode gives a weird error message it's about the missing `<string> + <int>` operator.
+You might see a weird error message but it's all about the missing `<string> + <int>` operator.
 
 ##Side effects
 
@@ -177,8 +177,6 @@ print(a.not().value()) //  false
 ```
 
 ###distinct
-
-It is applicable for `Equatable` streams and negates the values.
 
 ```swift
 // Define a reactive stream variable with '1' as initial value
