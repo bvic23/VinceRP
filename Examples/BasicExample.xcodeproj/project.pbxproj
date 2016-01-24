@@ -11,6 +11,7 @@
 		799E46B91B9B88B2005D5F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46B71B9B88B2005D5F6F /* Main.storyboard */; };
 		799E46BB1B9B88B2005D5F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BA1B9B88B2005D5F6F /* Assets.xcassets */; };
 		799E46BE1B9B88B2005D5F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46BC1B9B88B2005D5F6F /* LaunchScreen.storyboard */; };
+		79A788551C54C7ED00A4608B /* String+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A788541C54C7ED00A4608B /* String+VinceRP.swift */; };
 		79CB58041BCEAC2200070BEF /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CB58031BCEAC2200070BEF /* FlickrService.swift */; };
 		79DAC5431B9B8BBC0054086D /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */; };
 		79DD8C841BCCFFFC00BAC168 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD8C831BCCFFFC00BAC168 /* LoginService.swift */; };
@@ -82,6 +83,7 @@
 		799E46BA1B9B88B2005D5F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799E46BD1B9B88B2005D5F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799E46BF1B9B88B2005D5F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A788541C54C7ED00A4608B /* String+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+VinceRP.swift"; sourceTree = "<group>"; };
 		79CB58031BCEAC2200070BEF /* FlickrService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
 		79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControler.swift; sourceTree = "<group>"; };
 		79DD8C831BCCFFFC00BAC168 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				79DD8C831BCCFFFC00BAC168 /* LoginService.swift */,
 				79DAC5421B9B8BBC0054086D /* LoginViewControler.swift */,
 				799E46B71B9B88B2005D5F6F /* Main.storyboard */,
+				79A788541C54C7ED00A4608B /* String+VinceRP.swift */,
 				7970368C1BA70A5B00ED5D1A /* UIImage+FromColor.swift */,
 			);
 			path = BasicExample;
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A788551C54C7ED00A4608B /* String+VinceRP.swift in Sources */,
 				7970368D1BA70A5B00ED5D1A /* UIImage+FromColor.swift in Sources */,
 				79EFAA681BA1C698008D976A /* AppDelegate.swift in Sources */,
 				79E1A5B31BCEC909003C8036 /* FlickrPhotoCell.swift in Sources */,

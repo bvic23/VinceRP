@@ -3,6 +3,8 @@
 // Copyright (c) 2015 Viktor Belenyesi. All rights reserved.
 //
 
+import Foundation
+
 public extension String {
     
     public var length: Index.Distance {

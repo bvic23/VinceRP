@@ -8,24 +8,20 @@ import UIKit
 public extension UIView {
     
     public var reactiveHidden: Hub<Bool> {
+        
         get {
             return reactiveProperty(forProperty: "hidden", initValue: self.hidden)
         }
         
         set {
             newValue.onChange {
-                self.hidden = self.mapReactiveHidden($0)
+                self.hidden = $0
                 self.reactiveHiddenDidChange()
             }.dispatchOnMainQueue()
         }
+        
     }
     
-    public func mapReactiveHidden(value: Bool) -> Bool {
-        return value
-    }
-    
-    public func reactiveHiddenDidChange() {
-    }
+    public func reactiveHiddenDidChange() {}
     
 }
-

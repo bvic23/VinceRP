@@ -81,10 +81,6 @@
 		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
 		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
 		791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */; };
-		791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
-		791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
-		791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
-		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		793781E41C2BE419003006FC /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
@@ -234,49 +230,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSView+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSView+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
+		02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+VinceRP.swift"; sourceTree = "<group>"; };
 		02C4895E1BE35487004FD281 /* VinceRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinceRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489671BE35488004FD281 /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		02C8B3831BE3F7FE00203CF2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		02C8B3841BE3F7FE00203CF2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		791F30A61C03924C004AA9E2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = ../vincerp/Common/Api.swift; sourceTree = "<group>"; };
-		791F30AA1C03924C004AA9E2 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = ../vincerp/Common/Timer.swift; sourceTree = "<group>"; };
-		791F30B31C039260004AA9E2 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Addable.swift; path = ../vincerp/Common/Convenient/Addable.swift; sourceTree = "<group>"; };
-		791F30B61C039273004AA9E2 /* BatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BatchUpdate.swift; path = ../vincerp/Common/Core/BatchUpdate.swift; sourceTree = "<group>"; };
-		791F30B71C039273004AA9E2 /* ChangeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeObserver.swift; path = ../vincerp/Common/Core/ChangeObserver.swift; sourceTree = "<group>"; };
-		791F30B81C039273004AA9E2 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = ../vincerp/Common/Core/Dynamic.swift; sourceTree = "<group>"; };
-		791F30B91C039273004AA9E2 /* ErrorObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorObserver.swift; path = ../vincerp/Common/Core/ErrorObserver.swift; sourceTree = "<group>"; };
-		791F30BA1C039273004AA9E2 /* Hub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hub.swift; path = ../vincerp/Common/Core/Hub.swift; sourceTree = "<group>"; };
-		791F30BB1C039273004AA9E2 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ../vincerp/Common/Core/Mapper.swift; sourceTree = "<group>"; };
-		791F30BC1C039273004AA9E2 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../vincerp/Common/Core/Node.swift; sourceTree = "<group>"; };
-		791F30BD1C039273004AA9E2 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeTuple.swift; path = ../vincerp/Common/Core/NodeTuple.swift; sourceTree = "<group>"; };
-		791F30BE1C039273004AA9E2 /* Propagator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Propagator.swift; path = ../vincerp/Common/Core/Propagator.swift; sourceTree = "<group>"; };
-		791F30BF1C039273004AA9E2 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ../vincerp/Common/Core/Reducer.swift; sourceTree = "<group>"; };
-		791F30C01C039273004AA9E2 /* Hub+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operators.swift"; path = "../vincerp/Common/Core/Hub+operators.swift"; sourceTree = "<group>"; };
-		791F30C11C039273004AA9E2 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Source.swift; path = ../vincerp/Common/Core/Source.swift; sourceTree = "<group>"; };
-		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = ../vincerp/Common/Core/Throttle.swift; sourceTree = "<group>"; };
-		791F30C41C039273004AA9E2 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapper.swift; path = ../vincerp/Common/Core/Wrapper.swift; sourceTree = "<group>"; };
-		791F30E61C0392A7004AA9E2 /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicLong.swift; path = ../vincerp/Common/Threading/AtomicLong.swift; sourceTree = "<group>"; };
-		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dispatchable.swift; path = ../vincerp/Common/Threading/Dispatchable.swift; sourceTree = "<group>"; };
-		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariable.swift; path = ../vincerp/Common/Threading/DynamicVariable.swift; sourceTree = "<group>"; };
-		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocal.swift; path = ../vincerp/Common/Threading/ThreadLocal.swift; sourceTree = "<group>"; };
-		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionHandling.swift; path = ../vincerp/Common/Util/ExceptionHandling.swift; sourceTree = "<group>"; };
-		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flattenable.swift; path = ../vincerp/Common/Util/Flattenable.swift; sourceTree = "<group>"; };
-		791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArray.swift; path = ../vincerp/Common/Util/FunctionalArray.swift; sourceTree = "<group>"; };
-		791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionary.swift; path = ../vincerp/Common/Util/FunctionalDictionary.swift; sourceTree = "<group>"; };
-		791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSet.swift; path = ../vincerp/Common/Util/FunctionalSet.swift; sourceTree = "<group>"; };
-		791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactivePropertyGenerator.swift; path = ../vincerp/Common/Util/ReactivePropertyGenerator.swift; sourceTree = "<group>"; };
-		791F31001C0392C0004AA9E2 /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Try.swift; path = ../vincerp/Common/Util/Try.swift; sourceTree = "<group>"; };
-		791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VRPNSObjectHelper.h; path = ../vincerp/Common/Util/VRPNSObjectHelper.h; sourceTree = "<group>"; };
-		791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VRPNSObjectHelper.m; path = ../vincerp/Common/Util/VRPNSObjectHelper.m; sourceTree = "<group>"; };
-		791F31041C0392C0004AA9E2 /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakSet.swift; path = ../vincerp/Common/Util/WeakSet.swift; sourceTree = "<group>"; };
+		791F30A61C03924C004AA9E2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		791F30AA1C03924C004AA9E2 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		791F30B31C039260004AA9E2 /* Addable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Addable.swift; sourceTree = "<group>"; };
+		791F30B61C039273004AA9E2 /* BatchUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchUpdate.swift; sourceTree = "<group>"; };
+		791F30B71C039273004AA9E2 /* ChangeObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeObserver.swift; sourceTree = "<group>"; };
+		791F30B81C039273004AA9E2 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		791F30B91C039273004AA9E2 /* ErrorObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorObserver.swift; sourceTree = "<group>"; };
+		791F30BA1C039273004AA9E2 /* Hub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
+		791F30BB1C039273004AA9E2 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		791F30BC1C039273004AA9E2 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		791F30BD1C039273004AA9E2 /* NodeTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTuple.swift; sourceTree = "<group>"; };
+		791F30BE1C039273004AA9E2 /* Propagator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Propagator.swift; sourceTree = "<group>"; };
+		791F30BF1C039273004AA9E2 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		791F30C01C039273004AA9E2 /* Hub+operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hub+operators.swift"; sourceTree = "<group>"; };
+		791F30C11C039273004AA9E2 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		791F30C31C039273004AA9E2 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
+		791F30C41C039273004AA9E2 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		791F30E61C0392A7004AA9E2 /* AtomicLong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicLong.swift; sourceTree = "<group>"; };
+		791F30E81C0392A7004AA9E2 /* Dispatchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatchable.swift; sourceTree = "<group>"; };
+		791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicVariable.swift; sourceTree = "<group>"; };
+		791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
+		791F30FA1C0392C0004AA9E2 /* ExceptionHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionHandling.swift; sourceTree = "<group>"; };
+		791F30FB1C0392C0004AA9E2 /* Flattenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flattenable.swift; sourceTree = "<group>"; };
+		791F30FC1C0392C0004AA9E2 /* FunctionalArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArray.swift; sourceTree = "<group>"; };
+		791F30FD1C0392C0004AA9E2 /* FunctionalDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalDictionary.swift; sourceTree = "<group>"; };
+		791F30FE1C0392C0004AA9E2 /* FunctionalSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalSet.swift; sourceTree = "<group>"; };
+		791F30FF1C0392C0004AA9E2 /* ReactivePropertyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactivePropertyGenerator.swift; sourceTree = "<group>"; };
+		791F31001C0392C0004AA9E2 /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
+		791F31011C0392C0004AA9E2 /* VRPNSObjectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRPNSObjectHelper.h; sourceTree = "<group>"; };
+		791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPNSObjectHelper.m; sourceTree = "<group>"; };
+		791F31041C0392C0004AA9E2 /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
 		791F31211C03947D004AA9E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+didChange.swift"; path = "vincerp/Extension/AppKit/NSTextField+didChange.swift"; sourceTree = SOURCE_ROOT; };
-		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextField+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSTextField+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
-		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSResponder+VinceRP.swift"; path = "vincerp/Extension/AppKit/NSResponder+VinceRP.swift"; sourceTree = SOURCE_ROOT; };
-		791F31321C039876004AA9E2 /* NSObject+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+vincerp.swift"; path = "vincerp/Extension/Common/NSObject+vincerp.swift"; sourceTree = SOURCE_ROOT; };
-		791F31351C039885004AA9E2 /* String+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+vincerp.swift"; path = "vincerp/Extension/Common/Foundation/String+vincerp.swift"; sourceTree = SOURCE_ROOT; };
+		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+didChange.swift"; sourceTree = "<group>"; };
+		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
+		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79273A431BAE05BC00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
@@ -287,36 +281,36 @@
 		79273CC91BAE05BD00CEF85C /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		79273D421BAE05BD00CEF85C /* Box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Box.xcodeproj; sourceTree = "<group>"; };
 		79273D531BAE05BD00CEF85C /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Result.xcodeproj; sourceTree = "<group>"; };
-		793781E51C2BE4BD003006FC /* IncrementingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementingSpec.swift; path = Common/Core/IncrementingSpec.swift; sourceTree = "<group>"; };
-		79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Hub+operatorsSpec.swift"; path = "Common/Core/Hub+operatorsSpec.swift"; sourceTree = "<group>"; };
-		79552EBD1C08411B00EC284B /* MapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapperSpec.swift; path = Common/Core/MapperSpec.swift; sourceTree = "<group>"; };
-		79552EC01C086CF400EC284B /* ReducerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReducerSpec.swift; path = Common/Core/ReducerSpec.swift; sourceTree = "<group>"; };
-		79552EC31C08827A00EC284B /* ThrottleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThrottleSpec.swift; path = Common/Core/ThrottleSpec.swift; sourceTree = "<group>"; };
+		793781E51C2BE4BD003006FC /* IncrementingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementingSpec.swift; sourceTree = "<group>"; };
+		79552EBA1C078C5100EC284B /* Hub+operatorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hub+operatorsSpec.swift"; sourceTree = "<group>"; };
+		79552EBD1C08411B00EC284B /* MapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperSpec.swift; sourceTree = "<group>"; };
+		79552EC01C086CF400EC284B /* ReducerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReducerSpec.swift; sourceTree = "<group>"; };
+		79552EC31C08827A00EC284B /* ThrottleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrottleSpec.swift; sourceTree = "<group>"; };
 		795FF5511BB814D400E19285 /* UIActivityIndicatorView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+VinceRP.swift"; sourceTree = "<group>"; };
 		795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VinceRP.swift"; sourceTree = "<group>"; };
-		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerSpec.swift; path = Common/TimerSpec.swift; sourceTree = "<group>"; };
-		796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DispatchableSpec.swift; path = Common/Threading/DispatchableSpec.swift; sourceTree = "<group>"; };
-		796D6CC71C2A002B00307B51 /* DnyamicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DnyamicSpec.swift; path = Common/Core/DnyamicSpec.swift; sourceTree = "<group>"; };
+		796D6CB51C29681D00307B51 /* TimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSpec.swift; sourceTree = "<group>"; };
+		796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchableSpec.swift; sourceTree = "<group>"; };
+		796D6CC71C2A002B00307B51 /* DnyamicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DnyamicSpec.swift; sourceTree = "<group>"; };
 		797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+VinceRP.swift"; sourceTree = "<group>"; };
 		797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+VinceRP.swift"; sourceTree = "<group>"; };
 		7972D7801C282127000B7894 /* ClickHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickHandler.swift; sourceTree = "<group>"; };
-		7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadLocalSpec.swift; path = Common/Threading/ThreadLocalSpec.swift; sourceTree = "<group>"; };
-		797C15D31C280BCE007C234A /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateState.swift; path = Common/Core/UpdateState.swift; sourceTree = "<group>"; };
-		797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakSetSpec.swift; path = Common/Util/WeakSetSpec.swift; sourceTree = "<group>"; };
-		797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactivePropertyGeneratorSpec.swift; path = Common/Util/ReactivePropertyGeneratorSpec.swift; sourceTree = "<group>"; };
-		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicVariableSpec.swift; path = ../vincerpTests/Common/Threading/DynamicVariableSpec.swift; sourceTree = "<group>"; };
-		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalArraySpec.swift; path = vincerpTests/Common/Util/FunctionalArraySpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalDictionarySpec.swift; path = vincerpTests/Common/Util/FunctionalDictionarySpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FunctionalSetSpec.swift; path = vincerpTests/Common/Util/FunctionalSetSpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D361C0789F5000277AA /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrySpec.swift; path = vincerpTests/Common/Util/TrySpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D371C0789F5000277AA /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeakReferenceTests.swift; path = vincerpTests/Common/Util/WeakReferenceTests.swift; sourceTree = SOURCE_ROOT; };
-		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedSpec.swift; path = vincerpTests/Common/AdvancedSpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicSpec.swift; path = vincerpTests/Common/BasicSpec.swift; sourceTree = SOURCE_ROOT; };
-		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmokeSpec.swift; path = vincerpTests/Common/SmokeSpec.swift; sourceTree = SOURCE_ROOT; };
-		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeSpec.swift; path = Common/Core/NodeSpec.swift; sourceTree = "<group>"; };
-		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spinlock.swift; path = Common/Threading/Spinlock.swift; sourceTree = "<group>"; };
-		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddableSpec.swift; path = Common/Convenient/AddableSpec.swift; sourceTree = "<group>"; };
+		7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocalSpec.swift; sourceTree = "<group>"; };
+		797C15D31C280BCE007C234A /* UpdateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateState.swift; sourceTree = "<group>"; };
+		797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakSetSpec.swift; sourceTree = "<group>"; };
+		797CD1341C3AB58F00BCA9F1 /* ReactivePropertyGeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactivePropertyGeneratorSpec.swift; sourceTree = "<group>"; };
+		798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicVariableSpec.swift; sourceTree = "<group>"; };
+		798A2D331C0789F5000277AA /* FunctionalArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalArraySpec.swift; sourceTree = "<group>"; };
+		798A2D341C0789F5000277AA /* FunctionalDictionarySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalDictionarySpec.swift; sourceTree = "<group>"; };
+		798A2D351C0789F5000277AA /* FunctionalSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalSetSpec.swift; sourceTree = "<group>"; };
+		798A2D361C0789F5000277AA /* TrySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrySpec.swift; sourceTree = "<group>"; };
+		798A2D371C0789F5000277AA /* WeakReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReferenceTests.swift; sourceTree = "<group>"; };
+		798A2D4A1C078B39000277AA /* AdvancedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSpec.swift; sourceTree = "<group>"; };
+		798A2D4B1C078B39000277AA /* BasicSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicSpec.swift; sourceTree = "<group>"; };
+		798A2D4C1C078B39000277AA /* SmokeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokeSpec.swift; sourceTree = "<group>"; };
+		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeSpec.swift; sourceTree = "<group>"; };
+		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinlock.swift; sourceTree = "<group>"; };
+		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddableSpec.swift; sourceTree = "<group>"; };
 		79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/iOS/PMKVObserver.framework; sourceTree = "<group>"; };
 		79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/Mac/PMKVObserver.framework; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
@@ -327,8 +321,8 @@
 		79F256861ADE77250077730C /* VinceRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinceRP.h; sourceTree = "<group>"; };
 		79F2568C1ADE77250077730C /* VinceRPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinceRPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F256921ADE77250077730C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtomicReference.swift; path = Common/Threading/AtomicReference.swift; sourceTree = "<group>"; };
-		79FF03E91C0DE26B0096B050 /* Incrementing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Incrementing.swift; path = Common/Core/Incrementing.swift; sourceTree = "<group>"; };
+		79FF03E61C0DE1F10096B050 /* AtomicReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicReference.swift; sourceTree = "<group>"; };
+		79FF03E91C0DE26B0096B050 /* Incrementing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incrementing.swift; sourceTree = "<group>"; };
 		ADEAFA6B6FB7040353334EAB /* UIButton+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+VinceRP.swift"; sourceTree = "<group>"; };
 		ADEAFB18FDE6268B224542C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+VinceRP.swift"; sourceTree = "<group>"; };
@@ -380,24 +374,24 @@
 			isa = PBXGroup;
 			children = (
 				791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */,
-				791F31231C039580004AA9E2 /* NSTextField+didChange.swift */,
 				791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */,
+				791F31231C039580004AA9E2 /* NSTextField+didChange.swift */,
 				02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */,
 			);
-			name = AppKit;
+			path = AppKit;
 			sourceTree = "<group>";
 		};
 		791F30A51C039237004AA9E2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				791F30A61C03924C004AA9E2 /* Api.swift */,
 				791F30B21C039257004AA9E2 /* Convenient */,
 				791F30B51C03926B004AA9E2 /* Core */,
 				791F30E51C03929F004AA9E2 /* Threading */,
-				791F30AA1C03924C004AA9E2 /* Timer.swift */,
 				791F30F61C0392B7004AA9E2 /* Util */,
+				791F30A61C03924C004AA9E2 /* Api.swift */,
+				791F30AA1C03924C004AA9E2 /* Timer.swift */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		791F30B21C039257004AA9E2 /* Convenient */ = {
@@ -405,7 +399,7 @@
 			children = (
 				791F30B31C039260004AA9E2 /* Addable.swift */,
 			);
-			name = Convenient;
+			path = Convenient;
 			sourceTree = "<group>";
 		};
 		791F30B51C03926B004AA9E2 /* Core */ = {
@@ -415,8 +409,8 @@
 				791F30B71C039273004AA9E2 /* ChangeObserver.swift */,
 				791F30B81C039273004AA9E2 /* Dynamic.swift */,
 				791F30B91C039273004AA9E2 /* ErrorObserver.swift */,
-				791F30BA1C039273004AA9E2 /* Hub.swift */,
 				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
+				791F30BA1C039273004AA9E2 /* Hub.swift */,
 				79FF03E91C0DE26B0096B050 /* Incrementing.swift */,
 				791F30BB1C039273004AA9E2 /* Mapper.swift */,
 				791F30BC1C039273004AA9E2 /* Node.swift */,
@@ -428,20 +422,20 @@
 				797C15D31C280BCE007C234A /* UpdateState.swift */,
 				791F30C41C039273004AA9E2 /* Wrapper.swift */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		791F30E51C03929F004AA9E2 /* Threading */ = {
 			isa = PBXGroup;
 			children = (
-				79FF03E61C0DE1F10096B050 /* AtomicReference.swift */,
 				791F30E61C0392A7004AA9E2 /* AtomicLong.swift */,
+				79FF03E61C0DE1F10096B050 /* AtomicReference.swift */,
 				791F30E81C0392A7004AA9E2 /* Dispatchable.swift */,
 				791F30E91C0392A7004AA9E2 /* DynamicVariable.swift */,
-				791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */,
 				79952B251C0CCCEF00BD7E76 /* Spinlock.swift */,
+				791F30EA1C0392A7004AA9E2 /* ThreadLocal.swift */,
 			);
-			name = Threading;
+			path = Threading;
 			sourceTree = "<group>";
 		};
 		791F30F61C0392B7004AA9E2 /* Util */ = {
@@ -458,24 +452,7 @@
 				791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */,
 				791F31041C0392C0004AA9E2 /* WeakSet.swift */,
 			);
-			name = Util;
-			sourceTree = "<group>";
-		};
-		791F31311C039863004AA9E2 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				791F31341C039879004AA9E2 /* Foundation */,
-				791F31321C039876004AA9E2 /* NSObject+vincerp.swift */,
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
-		791F31341C039879004AA9E2 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				791F31351C039885004AA9E2 /* String+vincerp.swift */,
-			);
-			name = Foundation;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		79273A441BAE05BC00CEF85C /* Products */ = {
@@ -572,16 +549,16 @@
 		798A2D1F1C078996000277AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				798A2D4A1C078B39000277AA /* AdvancedSpec.swift */,
-				798A2D4B1C078B39000277AA /* BasicSpec.swift */,
 				798A2D231C0789BF000277AA /* Convenient */,
 				798A2D201C07899E000277AA /* Core */,
-				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
 				798A2D221C0789B5000277AA /* Threading */,
-				796D6CB51C29681D00307B51 /* TimerSpec.swift */,
 				798A2D211C0789A4000277AA /* Util */,
+				798A2D4A1C078B39000277AA /* AdvancedSpec.swift */,
+				798A2D4B1C078B39000277AA /* BasicSpec.swift */,
+				798A2D4C1C078B39000277AA /* SmokeSpec.swift */,
+				796D6CB51C29681D00307B51 /* TimerSpec.swift */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		798A2D201C07899E000277AA /* Core */ = {
@@ -595,7 +572,7 @@
 				79552EC01C086CF400EC284B /* ReducerSpec.swift */,
 				79552EC31C08827A00EC284B /* ThrottleSpec.swift */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		798A2D211C0789A4000277AA /* Util */ = {
@@ -609,17 +586,17 @@
 				798A2D371C0789F5000277AA /* WeakReferenceTests.swift */,
 				797CD1281C3AB01900BCA9F1 /* WeakSetSpec.swift */,
 			);
-			name = Util;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		798A2D221C0789B5000277AA /* Threading */ = {
 			isa = PBXGroup;
 			children = (
+				796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */,
 				798A2D2E1C0789E4000277AA /* DynamicVariableSpec.swift */,
 				7972D7821C2821D7000B7894 /* ThreadLocalSpec.swift */,
-				796D6CC31C299EFD00307B51 /* DispatchableSpec.swift */,
 			);
-			name = Threading;
+			path = Threading;
 			sourceTree = "<group>";
 		};
 		798A2D231C0789BF000277AA /* Convenient */ = {
@@ -627,16 +604,16 @@
 			children = (
 				79A192D81C3D38040097C920 /* AddableSpec.swift */,
 			);
-			name = Convenient;
+			path = Convenient;
 			sourceTree = "<group>";
 		};
 		79F256771ADE77250077730C = {
 			isa = PBXGroup;
 			children = (
-				79F256831ADE77250077730C /* VinceRP */,
-				79F256901ADE77250077730C /* VinceRPTests */,
 				8EA5DB600A65270836171DE2 /* Frameworks */,
 				79F256821ADE77250077730C /* Products */,
+				79F256831ADE77250077730C /* VinceRP */,
+				79F256901ADE77250077730C /* VinceRPTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -667,7 +644,7 @@
 			children = (
 				79F256851ADE77250077730C /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		79F256901ADE77250077730C /* VinceRPTests */ = {
@@ -685,7 +662,7 @@
 			children = (
 				79F256921ADE77250077730C /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8EA5DB600A65270836171DE2 /* Frameworks */ = {
@@ -711,11 +688,11 @@
 				795FF5531BB817E900E19285 /* UIControl+VinceRP.swift */,
 				797036951BA72B2C00ED5D1A /* UILabel+VinceRP.swift */,
 				02C489DD1BE3CBE6004FD281 /* UIResponder+VinceRP.swift */,
-				79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */,
 				79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */,
+				79CB58361BD122CF00070BEF /* UISearchBar+didChange.swift */,
 				797036911BA719B600ED5D1A /* UIStepper+VinceRP.swift */,
-				79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */,
 				ADEAFEC1441FCC8836E9E10D /* UITextField+VinceRP.swift */,
+				79E6CE171BB6D4CB006E67C6 /* UITextField+didChange.swift */,
 				795FF5551BB819EF00E19285 /* UIView+VinceRP.swift */,
 			);
 			path = UIKit;
@@ -724,7 +701,6 @@
 		ADEAF73F3574E00F07BEF656 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				791F31311C039863004AA9E2 /* Common */,
 				024BC3681BEA4BED009FCBC2 /* AppKit */,
 				ADEAF166AA1D8EC3BCD62741 /* UIKit */,
 			);
@@ -1149,7 +1125,6 @@
 				791F311A1C0392CB004AA9E2 /* FunctionalSet.swift in Sources */,
 				791F30E31C039286004AA9E2 /* Throttle.swift in Sources */,
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
-				791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */,
 				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
@@ -1170,7 +1145,6 @@
 				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
 				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
-				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
@@ -1221,7 +1195,6 @@
 				7972D7811C282127000B7894 /* ClickHandler.swift in Sources */,
 				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30CB1C039273004AA9E2 /* Node.swift in Sources */,
-				791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */,
 				79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */,
 				791F30AC1C03924C004AA9E2 /* Api.swift in Sources */,
@@ -1242,7 +1215,6 @@
 				791F31121C0392C0004AA9E2 /* WeakSet.swift in Sources */,
 				79FF03E71C0DE1F10096B050 /* AtomicReference.swift in Sources */,
 				791F30D01C039273004AA9E2 /* Source.swift in Sources */,
-				791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */,
 				797036921BA719B600ED5D1A /* UIStepper+VinceRP.swift in Sources */,
 				797C15D41C280BCE007C234A /* UpdateState.swift in Sources */,
 				791F31101C0392C0004AA9E2 /* VRPNSObjectHelper.m in Sources */,
@@ -1323,7 +1295,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VinceRP/Info.plist;
+				INFOPLIST_FILE = "VinceRP/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1347,7 +1319,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VinceRP/Info.plist;
+				INFOPLIST_FILE = "VinceRP/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1367,7 +1339,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = VinceRPTests/Info.plist;
+				INFOPLIST_FILE = "VinceRPTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.VinceRP-MacTests";
 				PRODUCT_NAME = VinceRPTests;
@@ -1383,7 +1355,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = VinceRPTests/Info.plist;
+				INFOPLIST_FILE = "VinceRPTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.VinceRP-MacTests";
 				PRODUCT_NAME = VinceRPTests;
@@ -1494,7 +1466,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VinceRP/Info.plist;
+				INFOPLIST_FILE = "VinceRP/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1517,7 +1489,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VinceRP/Info.plist;
+				INFOPLIST_FILE = "VinceRP/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1537,7 +1509,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = VinceRPTests/Info.plist;
+				INFOPLIST_FILE = "VinceRPTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1551,7 +1523,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VinceRPTests/Info.plist;
+				INFOPLIST_FILE = "VinceRPTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bvic23.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
