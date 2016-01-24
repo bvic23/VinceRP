@@ -81,10 +81,8 @@
 		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
 		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
 		791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */; };
-		791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		791F31361C039885004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
 		791F31371C0398B6004AA9E2 /* String+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31351C039885004AA9E2 /* String+vincerp.swift */; };
-		791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31321C039876004AA9E2 /* NSObject+vincerp.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
 		793781E41C2BE419003006FC /* NodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */; };
@@ -277,7 +275,6 @@
 		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+didChange.swift"; sourceTree = "<group>"; };
 		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
 		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
-		791F31321C039876004AA9E2 /* NSObject+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+vincerp.swift"; sourceTree = "<group>"; };
 		791F31351C039885004AA9E2 /* String+vincerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+vincerp.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -468,7 +465,6 @@
 			isa = PBXGroup;
 			children = (
 				791F31341C039879004AA9E2 /* Foundation */,
-				791F31321C039876004AA9E2 /* NSObject+vincerp.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1198,7 +1194,6 @@
 				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
 				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
-				791F31381C0398B9004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
@@ -1250,7 +1245,6 @@
 				7972D7811C282127000B7894 /* ClickHandler.swift in Sources */,
 				791F30CC1C039273004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30CB1C039273004AA9E2 /* Node.swift in Sources */,
-				791F31331C039876004AA9E2 /* NSObject+vincerp.swift in Sources */,
 				79CB58371BD122CF00070BEF /* UISearchBar+didChange.swift in Sources */,
 				79E6CE181BB6D4CB006E67C6 /* UITextField+didChange.swift in Sources */,
 				791F30AC1C03924C004AA9E2 /* Api.swift in Sources */,
