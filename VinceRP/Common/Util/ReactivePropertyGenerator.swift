@@ -7,7 +7,7 @@ import PMKVObserver
 
 public class ReactivePropertyGenerator {
 
-    static let instance = ReactivePropertyGenerator()
+    public static let instance = ReactivePropertyGenerator()
 
     private var propertyMap = [String: Node]()
     private var observerMap = [String: KVObserver]()
