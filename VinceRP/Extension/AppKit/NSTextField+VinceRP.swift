@@ -9,7 +9,7 @@ extension NSTextField {
 
     public var reactiveText: Hub<String> {
         get {
-            return reactiveProperty(forProperty: "text", initValue: self.stringValue) { emitter in
+            return reactiveProperty(forProperty: "stringValue", initValue: self.stringValue) { emitter in
                 self.addChangeHandler() { textField in
                     emitter <- textField.stringValue
                 }

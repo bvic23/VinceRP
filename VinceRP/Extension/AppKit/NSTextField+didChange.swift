@@ -8,7 +8,7 @@ import AppKit
 private typealias EventHandler = (NSTextField) -> ()
 private var eventHandlers = [NSTextField: [EventHandler]]()
 
-extension NSTextField {
+extension NSTextField: NSTextFieldDelegate {
 
     public func addChangeHandler(handler: (NSTextField) -> ()) {
         if let handlers = eventHandlers[self] {
@@ -17,21 +17,20 @@ extension NSTextField {
             eventHandlers[self] = [handler]
         }
 
-        self.action = Selector("eventHandler:")
-        self.target = self
+        self.delegate = self
     }
 
+    override public func controlTextDidChange(obj: NSNotification) {
+        if let handlers = eventHandlers[self] {
+            for handler in handlers {
+                handler(self)
+            }
+        }
+    }
+    
     public func removeAllChangeHandler() {
         self.target = nil
         eventHandlers[self] = []
     }
     
-    public func eventHandler(sender: NSTextField) {
-        if let handlers = eventHandlers[sender] {
-            for handler in handlers {
-                handler(sender)
-            }
-        }
-    }
-
 }
