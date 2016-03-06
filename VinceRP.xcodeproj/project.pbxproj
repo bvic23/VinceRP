@@ -79,7 +79,6 @@
 		791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 791F31021C0392C0004AA9E2 /* VRPNSObjectHelper.m */; };
 		791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31041C0392C0004AA9E2 /* WeakSet.swift */; };
 		791F31281C0395B4004AA9E2 /* NSTextField+didChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31231C039580004AA9E2 /* NSTextField+didChange.swift */; };
-		791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */; };
 		791F31301C0397C7004AA9E2 /* NSResponder+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */; };
 		792178441BB6DB890039F457 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178421BB6DB890039F457 /* Quick.framework */; };
 		792178451BB6DB890039F457 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792178431BB6DB890039F457 /* Nimble.framework */; };
@@ -141,6 +140,8 @@
 		79952B271C0CCCEF00BD7E76 /* Spinlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79952B251C0CCCEF00BD7E76 /* Spinlock.swift */; };
 		79A192D91C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
 		79A192DA1C3D38040097C920 /* AddableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A192D81C3D38040097C920 /* AddableSpec.swift */; };
+		79BD6EF91C8C747700430D07 /* NSToolbar+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6EF81C8C747700430D07 /* NSToolbar+VinceRP.swift */; };
+		79BD6EFA1C8C74B800430D07 /* NSTextField+VinceRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6EEE1C8C737300430D07 /* NSTextField+VinceRP.swift */; };
 		79C7D9DD1C53D6B800BAEA5B /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; };
 		79C7D9DF1C53D7F200BAEA5B /* PMKVObserver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */; };
 		79C7D9E21C53D85900BAEA5B /* PMKVObserver.framework in Copy Carthage frameworks */ = {isa = PBXBuildFile; fileRef = 79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -269,7 +270,6 @@
 		791F31041C0392C0004AA9E2 /* WeakSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakSet.swift; sourceTree = "<group>"; };
 		791F31211C03947D004AA9E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		791F31231C039580004AA9E2 /* NSTextField+didChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+didChange.swift"; sourceTree = "<group>"; };
-		791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
 		791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSResponder+VinceRP.swift"; sourceTree = "<group>"; };
 		792178421BB6DB890039F457 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		792178431BB6DB890039F457 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -312,6 +312,7 @@
 		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinlock.swift; sourceTree = "<group>"; };
 		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddableSpec.swift; sourceTree = "<group>"; };
 		79BD6EEE1C8C737300430D07 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
+		79BD6EF81C8C747700430D07 /* NSToolbar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSToolbar+VinceRP.swift"; sourceTree = "<group>"; };
 		79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/iOS/PMKVObserver.framework; sourceTree = "<group>"; };
 		79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/Mac/PMKVObserver.framework; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
@@ -377,8 +378,8 @@
 				791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */,
 				791F31231C039580004AA9E2 /* NSTextField+didChange.swift */,
 				79BD6EEE1C8C737300430D07 /* NSTextField+VinceRP.swift */,
-				791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */,
 				02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */,
+				79BD6EF81C8C747700430D07 /* NSToolbar+VinceRP.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -1129,6 +1130,8 @@
 				02BA6E6B1BFB58520077B5BB /* NSView+VinceRP.swift in Sources */,
 				79FF03E81C0DE1FE0096B050 /* AtomicReference.swift in Sources */,
 				791F30DA1C039286004AA9E2 /* Hub.swift in Sources */,
+				79BD6EF91C8C747700430D07 /* NSToolbar+VinceRP.swift in Sources */,
+				79BD6EFA1C8C74B800430D07 /* NSTextField+VinceRP.swift in Sources */,
 				791F311E1C0392CB004AA9E2 /* VRPNSObjectHelper.m in Sources */,
 				791F31201C0392CB004AA9E2 /* WeakSet.swift in Sources */,
 				797C15D51C280BE1007C234A /* UpdateState.swift in Sources */,
@@ -1147,7 +1150,6 @@
 				791F30DD1C039286004AA9E2 /* NodeTuple.swift in Sources */,
 				791F30E11C039286004AA9E2 /* Source.swift in Sources */,
 				791F30E01C039286004AA9E2 /* Hub+operators.swift in Sources */,
-				791F312D1C039612004AA9E2 /* NSTextField+VinceRP.swift in Sources */,
 				791F30DE1C039286004AA9E2 /* Propagator.swift in Sources */,
 				791F30D71C039286004AA9E2 /* ChangeObserver.swift in Sources */,
 				791F30F41C0392AC004AA9E2 /* ThreadLocal.swift in Sources */,

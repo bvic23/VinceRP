@@ -3,8 +3,7 @@
 //  Copyright © 2016 Viktor Belenyesi. All rights reserved.
 //
 
-import VinceRP
-import Cocoa
+import AppKit
 
 extension NSToolbar {
     
