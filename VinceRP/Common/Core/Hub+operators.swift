@@ -30,7 +30,6 @@ public extension Hub where T: Equatable {
     
 }
 
-
 public extension Hub {
     
     public func foreach(skipInitial: Bool = false, callback: T -> ()) -> ChangeObserver<T> {
@@ -40,6 +39,19 @@ public extension Hub {
     
     public func skipErrors() -> Hub<T> {
         return filterAll { $0.isSuccess() }
+    }
+    
+    // TODO: Add test
+    public func flatMap<A>(f: T -> Hub<A>) -> Hub<A> {
+        let result: Source<A> = reactive()
+        
+        self.onChange(skipInitial: false) {
+            let v = f($0)
+            v.onChange {
+                result <- $0
+            }
+        }
+        return result
     }
     
 }
