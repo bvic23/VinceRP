@@ -311,6 +311,7 @@
 		799077CC1C2BE2FD00956AC8 /* NodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeSpec.swift; sourceTree = "<group>"; };
 		79952B251C0CCCEF00BD7E76 /* Spinlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinlock.swift; sourceTree = "<group>"; };
 		79A192D81C3D38040097C920 /* AddableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddableSpec.swift; sourceTree = "<group>"; };
+		79BD6EEE1C8C737300430D07 /* NSTextField+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+VinceRP.swift"; sourceTree = "<group>"; };
 		79C7D9DC1C53D6B800BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/iOS/PMKVObserver.framework; sourceTree = "<group>"; };
 		79C7D9DE1C53D7F200BAEA5B /* PMKVObserver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKVObserver.framework; path = Carthage/Build/Mac/PMKVObserver.framework; sourceTree = "<group>"; };
 		79CB58341BD1227E00070BEF /* UISearchBar+VinceRP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+VinceRP.swift"; sourceTree = "<group>"; };
@@ -374,8 +375,9 @@
 			isa = PBXGroup;
 			children = (
 				791F312E1C0397C2004AA9E2 /* NSResponder+VinceRP.swift */,
-				791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */,
 				791F31231C039580004AA9E2 /* NSTextField+didChange.swift */,
+				79BD6EEE1C8C737300430D07 /* NSTextField+VinceRP.swift */,
+				791F31241C039580004AA9E2 /* NSTextField+VinceRP.swift */,
 				02BA6E691BFB58520077B5BB /* NSView+VinceRP.swift */,
 			);
 			path = AppKit;
@@ -409,8 +411,8 @@
 				791F30B71C039273004AA9E2 /* ChangeObserver.swift */,
 				791F30B81C039273004AA9E2 /* Dynamic.swift */,
 				791F30B91C039273004AA9E2 /* ErrorObserver.swift */,
-				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
 				791F30BA1C039273004AA9E2 /* Hub.swift */,
+				791F30C01C039273004AA9E2 /* Hub+operators.swift */,
 				79FF03E91C0DE26B0096B050 /* Incrementing.swift */,
 				791F30BB1C039273004AA9E2 /* Mapper.swift */,
 				791F30BC1C039273004AA9E2 /* Node.swift */,
