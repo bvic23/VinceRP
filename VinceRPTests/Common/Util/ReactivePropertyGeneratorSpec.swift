@@ -1,7 +1,7 @@
 //
 // Created by Viktor Belényesi on 04/01/16.
 // Copyright (c) 2016 Viktor Belenyesi. All rights reserved.
-//
+// 
 
 @testable import VinceRP
 
