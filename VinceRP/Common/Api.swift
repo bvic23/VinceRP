@@ -23,6 +23,11 @@ public func <-<T>(left: Source<T>, right: T) -> Source<T> {
     return left
 }
 
+public func <-<T>(left: Source<T?>, right: T?) -> Source<T?> {
+    left.update(right)
+    return left
+}
+
 /* API functions */
 
 public func definedAs<T>(calc: () -> T) -> Dynamic<T> {
