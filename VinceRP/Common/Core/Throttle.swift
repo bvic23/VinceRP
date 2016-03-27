@@ -39,7 +39,7 @@ class Throttle<T>: Dynamic<T> {
             t.invalidate()
             self.timer = nil
         }
-        self.timer = callSelectorAsync(Selector("pingAsync"), object:nil, delay: self.interval)
+        self.timer = callSelectorAsync(#selector(Throttle.pingAsync), object:nil, delay: self.interval)
         return Set()
     }
     

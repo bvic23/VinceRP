@@ -4,7 +4,7 @@
 //
 
 public protocol Dispatchable {
-    typealias D
+    associatedtype D
     
     var dispatchQueue: dispatch_queue_t? { get set }
     

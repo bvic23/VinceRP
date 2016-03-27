@@ -279,10 +279,10 @@ class BasicSpec: QuickSpec {
                     var sideeffects = 0
                     _ = onErrorDo(a) { i in
                         domain = i.domain
-                        errors++
+                        errors += 1
                     }
                     _ = onChangeDo(a, skipInitial:true) {  _ in
-                        sideeffects++
+                        sideeffects += 1
                     }
 
                     // when
@@ -352,10 +352,10 @@ class BasicSpec: QuickSpec {
                     var e1 = 0
                     var e2 = 0
                     onErrorDo(a) {  _ in
-                        e1++
+                        e1 += 1
                     }
                     onErrorDo(a) {  _ in
-                        e2++
+                        e2 += 1
                     }
 
                     // when
