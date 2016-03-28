@@ -46,7 +46,7 @@ class Runnable {
     }
     
     func start() {
-        let thread = NSThread(target:self, selector:"run", object:nil)
+        let thread = NSThread(target:self, selector:#selector(Runnable.run), object:nil)
         thread.start()
     }
 }

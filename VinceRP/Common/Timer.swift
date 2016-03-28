@@ -22,7 +22,7 @@ public class Timer {
     
     class func timer(interval: NSTimeInterval, tick: () ->()) -> Timer {
         let result = Timer()
-        let t = NSTimer.scheduledTimerWithTimeInterval(interval, target: result, selector: Selector("timerHandler"), userInfo: nil, repeats: true)
+        let t = NSTimer.scheduledTimerWithTimeInterval(interval, target: result, selector: #selector(Timer.timerHandler), userInfo: nil, repeats: true)
         result.tick = tick
         result.timer = t
         return result

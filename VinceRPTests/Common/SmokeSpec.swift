@@ -123,7 +123,7 @@ class SmokeSpec: QuickSpec {
 
                     // when
                     _ = onChangeDo(a) { _ in
-                        counter++
+                        counter += 1
                     }
 
                     // then
@@ -136,7 +136,7 @@ class SmokeSpec: QuickSpec {
                     
                     var counter = 0
                     _ = onChangeDo(a) { _ in
-                        counter++
+                        counter += 1
                     }
 
                     // when
@@ -155,7 +155,7 @@ class SmokeSpec: QuickSpec {
                     }
                     var counter = 0
                     _ = onChangeDo(c) { _ in
-                        counter++
+                        counter += 1
                     }
 
                     // when
@@ -181,7 +181,7 @@ class SmokeSpec: QuickSpec {
                     }
                     var counter = 0
                     _ = onChangeDo(c) {  _ in
-                        counter++
+                        counter += 1
                     }
                     
                     // when

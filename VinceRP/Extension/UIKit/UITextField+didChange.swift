@@ -17,11 +17,11 @@ extension UITextField {
             eventHandlers[self] = [handler]
         }
         
-        self.addTarget(self, action: Selector("eventHandler:"), forControlEvents: .EditingChanged)
+        self.addTarget(self, action: #selector(UITextField.eventHandler(_:)), forControlEvents: .EditingChanged)
     }
     
     public func removeAllChangeHandler() {
-        self.removeTarget(self, action: Selector("eventHandler:"), forControlEvents: .EditingChanged)
+        self.removeTarget(self, action: #selector(UITextField.eventHandler(_:)), forControlEvents: .EditingChanged)
         eventHandlers[self] = []
     }
     

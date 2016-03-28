@@ -29,7 +29,7 @@ class HubOperatorsSpec: QuickSpec {
             let y = definedAs { x* + 1 }.skipErrors()
             var count = 0
             onErrorDo(y) {  _ in
-                count++
+                count += 1
             }
             
             // when
@@ -65,7 +65,7 @@ class HubOperatorsSpec: QuickSpec {
             let y = x.distinct()
             var c = 0
             y.onChange(skipInitial: true) { _ in
-                c++
+                c += 1
             }
             
             // when
@@ -96,7 +96,7 @@ class HubOperatorsSpec: QuickSpec {
             let y = x.distinct().skipErrors()
             var c = 0
             y.onChange(skipInitial: true) { _ in
-                c++
+                c += 1
             }
             
             // when
@@ -127,7 +127,7 @@ class HubOperatorsSpec: QuickSpec {
             let y = x.ignore(2)
             var count = 0
             y.onChange(skipInitial: true) {  _ in
-                count++
+                count += 1
             }
             
             // when

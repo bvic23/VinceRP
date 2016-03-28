@@ -21,7 +21,7 @@ class TimerSpec: QuickSpec {
                 // given
                 counter = 0
                 t = timer(0.01) {
-                    counter++
+                    counter += 1
                 }
             }
             
